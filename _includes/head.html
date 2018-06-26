@@ -1,0 +1,22 @@
+<head>
+
+  <meta charset="utf-8">
+
+  <title>
+    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
+    {% else %}{{ site.title | escape }}{% endif %}
+  </title>
+
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+<link href="https://fonts.googleapis.com/css?family=Capriola|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+<link rel="stylesheet" href="{{"/assets/main.scss" | relative_url }}">
+
+{% include analytics.html %}
+
+</head>
