@@ -1,2 +1,5 @@
-name: The Oppia Foundation
+title: The Oppia Foundation
 markdown: kramdown
+
+sass:
+  sass_dir: css
