@@ -26,5 +26,16 @@ $cyan:    #17a2b8 !default;
 
 @import url('https://fonts.googleapis.com/css?family=Capriola|Roboto:300,400,400i,700|Material+Icons');
 
-$base-font-family:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:     'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $brand-font-family: 'Capriola', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-monospace:     'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$headings-font-family:  'Capriola',  Helvetica, Arial, sans-serif !default;
+
+// Buttons
+$btn-border-radius:       0 !default;
+$btn-border-radius-lg:    0 !default;
+$btn-border-radius-sm:    0  !default;
+$btn-border-width:       2px !default;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$navbar-dark-color:  white !default;
