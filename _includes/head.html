@@ -1,21 +1,20 @@
 <head>
-
+  {% if jekyll.environment == 'production' %}
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46829952-2"></script>
+   <script>
+     // Google Analytics
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-46829952-2');
+   </script>
+   {% endif %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
-  </title>
-
-<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
-<link href="https://fonts.googleapis.com/css?family=Capriola|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-
-<link rel="stylesheet" href="{{"/css/main.css" | relative_url }}">
-
-{% include analytics.html %}
-
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="stylesheet" href="{{"/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 </head>

@@ -1,4 +1,5 @@
 $primary: #01a99c; // burgundy
+$secondary: #094142; // burgundy
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -22,3 +23,8 @@ $yellow:  #fbb03b !default;
 $green:   #094142 !default;
 $teal:    #01a99c !default;
 $cyan:    #17a2b8 !default;
+
+@import url('https://fonts.googleapis.com/css?family=Capriola|Roboto:300,400,400i,700|Material+Icons');
+
+$base-font-family:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$brand-font-family: 'Capriola', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
