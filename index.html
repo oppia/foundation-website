@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="oppiaFoundationWebsite">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Oppia Foundation">
+
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+
+    <script src="app.js"></script>
+    <title ng-bind="$root.title"></title>
+  </head>
+
+  <body>
+    <div class="outer">
+      <header role="banner">
+        <div ng-include="'pages/navbar.html'"></div>
+      </header>
+
+      <section>
+        <!--A container to make a grid with a fixed column-->
+        <main class="row main-content">
+          <!-- Content will be injected here. -->
+          <div class="column" ng-view autoscroll="true"></div>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>
