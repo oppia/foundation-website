@@ -1,0 +1,37 @@
+<nav class="site-nav">
+  <div class="navbar">
+    <ul>
+      <li><a ng-class="{active: isActive('/')}" href="#/!">Oppia Foundation</a></li>
+      <li><a ng-class="{active: isActive('/about')}" href="#!about">About</a></li>
+      <li><a ng-class="{active: isActive('/partnerships')}" href="#!partnerships">Partnerships</a></li>
+      <li><a ng-class="{active: isActive('/volunteer')}" href="#!volunteer">Volunteer</a></li>
+      <li><a ng-class="{active: isActive('/donate')}" href="#!donate">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #05a69a;
+  }
+
+  .navbar li {
+    float: left;
+  }
+
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navbar li a:hover {
+    background-color: #046d65;
+  }
+</style>
