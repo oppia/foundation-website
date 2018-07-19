@@ -14,13 +14,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
 
     <script src="app.js"></script>
+    <script src="pages/navbar/NavigationBarDirective.js"></script>
     <title ng-bind="$root.title"></title>
   </head>
 
   <body>
     <div class="outer">
       <header role="banner">
-        <div ng-include="'pages/navbar.html'"></div>
+        <navigation-bar></navigation-bar>
       </header>
 
       <section>
