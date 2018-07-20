@@ -13,7 +13,7 @@
 // limitations under the License.
 
 var oppiaFoundationWebsite = angular.module(
-  'oppiaFoundationWebsite', ['ngRoute']);
+  'oppiaFoundationWebsite', ['ngMaterial', 'ngRoute']);
 
 oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
