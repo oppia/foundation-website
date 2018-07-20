@@ -11,11 +11,27 @@
 
   md-nav-bar .md-nav-bar {
     background: #05a69a;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
 
   md-nav-bar ._md-nav-button-text {
     color: white;
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+
+  md-nav-bar .md-nav-item:first-of-type {
+    margin-left: 30px;
+  }
+
+  md-nav-bar .md-nav-item:last-of-type {
+    line-height: 50%;
+    background-color: rgba(0,0,0,0.2);
+    margin-right: 30px;
+  }
+
+  md-nav-bar .md-nav-item:last-of-type:hover, .md-nav-iten:last-of-type:focus {
+    background-color: rgba(5, 190, 178, 1);
+    color: rgba(255,255,255,1);
   }
 
 </style>
