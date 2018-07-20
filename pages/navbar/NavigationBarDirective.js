@@ -17,8 +17,8 @@ oppiaFoundationWebsite.directive('navigationBar', [function() {
     restrict: 'E',
     scope: {},
     templateUrl: '/pages/navbar/navbar.html',
-    controller: [function($scope, $rootScope) {
-
-    }]
+    controller: ['$scope', '$rootScope',
+      function($scope, $rootScope) {
+      }]
   };
 }]);
