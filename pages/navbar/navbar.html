@@ -1,9 +1,38 @@
 <md-nav-bar md-no-ink-bar=true nav-bar-aria-label="navigation links">
-  <md-nav-item md-nav-href="#!">The Oppia Foundation</md-nav-item>
+  <md-nav-item md-nav-href="#!" aria-label="Oppia Logo">
+    <a ng-href="#!" aria-label="Oppia Logo">
+      <img src="/static/images/_288px_oppia_white.png" class="oppia-logo" layout="row"></img>
+    </a>
+  </md-nav-item>
   <span flex></span>
-  <md-nav-item md-nav-href="#!about">About</md-nav-item>
-  <md-nav-item md-nav-href="#!partnerships">Partnerships</md-nav-item>
-  <md-nav-item md-nav-href="#!volunteer">Volunteer</md-nav-item>
+  <md-nav-item md-nav-href="#!about" hide-xs>About</md-nav-item>
+  <md-nav-item md-nav-href="#!partnerships" hide-xs>Partnerships</md-nav-item>
+  <md-nav-item md-nav-href="#!volunteer" hide-xs>Volunteer</md-nav-item>
+  <md-menu md-position-mode="target-left target" hide-gt-xs>
+    <md-button aria-label="Open links menu" ng-click="$mdMenu.open()">
+      <md-icon md-svg-src="/static/icons/baseline-explore-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+      </md-button>
+    <md-menu-content width="2">
+    <md-menu-item>
+      <md-button ng-href="#!about">
+        <md-icon md-svg-src="/static/icons/round-info-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        About
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!partnerships">
+        <md-icon md-svg-src="/static/icons/round-business_center-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        Partnerships
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!volunteer">
+        <md-icon md-svg-src="/static/icons/round-people_outline-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        Volunteer
+      </md-button>
+    </md-menu-item>
+    </md-menu-content>
+  </md-menu>
   <md-nav-item md-nav-href="#!donate">Donate</md-nav-item>
 </md-nav-bar>
 
@@ -11,11 +40,49 @@
 
   md-nav-bar .md-nav-bar {
     background: #05a69a;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  md-nav-bar .oppia-logo {
+    width: 110px; 
+    height: 45px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
   }
 
   md-nav-bar ._md-nav-button-text {
     color: white;
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  md-nav-bar .md-nav-item:last-of-type {
+    background-color: rgba(0,0,0,0.2);
+    margin-right: 30px;
+  }
+
+  md-nav-bar .md-nav-item:last-of-type:hover, .md-nav-iten:last-of-type:focus {
+    background-color: rgba(5, 190, 178, 1);
+    color: rgba(255,255,255,1);
+  }
+
+  md-nav-bar .md-button.md-accent {
+    color: rgba(0,0,0,0.2);
+  }
+
+  md-menu-content {
+    background: #04b3a7da;;
+  }
+
+  md-menu-item .md-button {
+    background: #04b3a7da;
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  md-menu-item .md-button:hover, .md-button:focus {
+    color: rgba(255,255,255,1);
   }
 
 </style>
