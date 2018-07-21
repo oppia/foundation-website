@@ -18,7 +18,7 @@ var oppiaFoundationWebsite = angular.module(
 oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'pages/home.html',
+      templateUrl: 'pages/home/home.html',
       projectTag: 'Home'
     })
     .when('/about', {
