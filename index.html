@@ -26,18 +26,18 @@
     <title ng-bind="$root.title"></title>
   </head>
 
-  <body>
+  <body layout="row" aria-label="Oppia Foundation Page">
     <div class="outer">
       <header role="banner">
         <navigation-bar></navigation-bar>
       </header>
 
       <section>
-        <!--A container to make a grid with a fixed column-->
-        <main class="row main-content">
-          <!-- Content will be injected here. -->
-          <div class="column" ng-view autoscroll="true"></div>
-        </main>
+          <div layout="column" flex class="layout-column flex" role="index">
+            <md-content md-scroll-y layout="column" flex>
+              <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
+            </md-content>
+          </div>
       </section>
     </div>
   </body>
