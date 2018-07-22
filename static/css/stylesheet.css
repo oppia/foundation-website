@@ -321,9 +321,58 @@ Full-Width Styles
   float: left;
 }
 
-.green-background {
-  background: #05a69a;
+.oppia-foundation-button-horizontal-padding {
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+.oppia-foundation-horizontal-padding {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.oppia-foundation-vertical-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.oppia-foundation-gray-background {
+  background-color: #F4F4F4;
+}
+
+.oppia-foundation-green-background {
+  background-color: #05a69a;
+}
+
+.oppia-foundation-white-background {
+  background-color: white;
+}
+
+.oppia-foundation-black-text{
+  color: black;
+}
+
+.oppia-foundation-green-text {
+  color: #05a69a;
+}
+
+.oppia-foundation-white-text{
+  color: white;
+}
+
+.md-button.oppia-foundation-gold-border-button {
+  border: 3px outset goldenrod;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.md-button.oppia-foundation-gold-border-button:hover,
+.md-button.oppia-foundation-gold-border-button:focus {
+  background-color: rgba(255,255,255,1);
+  color: #05a69a;
+}
+
+
 
 /*******************************************************************************
 Small Device Styles
