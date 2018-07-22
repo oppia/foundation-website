@@ -128,7 +128,7 @@ body {
   color: #373737;
   background: #f2f2f2;
   font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   max-width: 100%;
@@ -143,8 +143,7 @@ h5,
 h6 {
   margin: 10px 0;
   font-weight: 700;
-  color: #222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -178,6 +177,12 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
+}
+
+center {
+  font-size: 16px;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 footer p {
@@ -265,7 +270,7 @@ table {
 }
 
 th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   padding: 10px;
   background: #373737;
   color: #fff;
@@ -314,6 +319,10 @@ Full-Width Styles
 .column {
   display: block;
   float: left;
+}
+
+.green-background {
+  background: #05a69a;
 }
 
 /*******************************************************************************
