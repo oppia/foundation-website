@@ -9,6 +9,7 @@
 
     <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
     <link rel="stylesheet" type="text/css" media="screen" href="static/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/devices.min.css">
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.9/angular-material.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="https://fonts.googleapis.com/css?family=Capriola|Rubik|Roboto|Material+Icons|Open+Sans:400,600">
@@ -33,10 +34,8 @@
       </header>
 
       <section>
-        <div layout="column" flex class="layout-column flex" role="index">
-          <md-content md-scroll-y layout="column" flex>
-            <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
-          </md-content>
+        <div layout="column" flex role="index">
+          <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
         </div>
       </section>
     </div>
