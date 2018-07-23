@@ -321,6 +321,11 @@ Full-Width Styles
   float: left;
 }
 
+.oppia-foundation-clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
 .oppia-foundation-button-horizontal-padding {
   padding-left: 20px;
   padding-right: 20px;
