@@ -3,16 +3,18 @@
   <md-card layout-fill style="position: relative;">
     <div id="home-page-welcome-image-container" flex layout="column" layout-fill class="oppia-foundation-clearfix">
       <img ng-src="https://placekitten.com/3000/1200" class="home-page-welcome-image">
-      <md-card-content layout="column" layout-align="center center" class="home-page-welcome-image-overlay horizontal-padding">
+      <md-card-content layout="column" layout-align="center center" class="home-page-welcome-image-overlay horizontal-padding oppia-foundation-green-background">
         <div class="home-page-welcome-text-overlay">
-          <h1 hide-xs hide-sm class="oppia-foundation-horizontal-padding">
-            We're building a global classroom
-          </h1>
-          <p></p>
-          <h3 hide-xs hide-sm class="oppia-foundation-horizontal-padding">
-            Students from every corner of the world deserve access to engaging, personalized education.
-          </h3>
-          <p hide-gt-sm style="font-size: 10pt; font-weight: bold;">
+          <div class="home-page-welcome-text-box">
+            <h1 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-display-1">
+              We're building a global classroom
+            </h1>
+            <p></p>
+            <h3 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-title">
+              Students from every corner of the world deserve access to engaging, personalized education.
+            </h3>
+          </div>
+          <p hide-gt-sm style="font-size: 14pt; font-weight: bold;">
             We're building a global classroom
           </p>
           <p hide-gt-sm style="font-size: 7pt;">
@@ -160,18 +162,18 @@
 </section>
 <style>
   #home-page-welcome-image-container {
-    position: relative;
     height: 100%;
     z-index: 10;
   }
 
   .home-page-welcome-image-overlay {
-    width: 50%;
-    position: absolute;
-    opacity: 0.8;
-    top: 0;
     bottom: 0;
-    background-color: black;
+    -webkit-box-shadow: 2px 0 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 2px 0 1px 1px rgba(0,0,0,0.5);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 50%;
   }
 
   .home-page-welcome-text-overlay { 
@@ -214,6 +216,10 @@
   md-card .md-actions, md-card md-card-actions {
     margin-top: 20px;
     margin-left: 0px;
+  }
+
+  .home-page-welcome-text-box {
+    max-width: 650px;
   }
 
   .home-page-donation-text-box {
