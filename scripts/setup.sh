@@ -17,6 +17,11 @@
 # This file should not be invoked directly, but sourced from other sh scripts.
 # Bash execution environent set up for all scripts.
 
+if [ "$SETUP_DONE" ]; then
+  echo 'Environment setup completed.'
+  return 0
+fi
+
 if [ -z "$BASH_VERSION" ]
 then
   echo ""
@@ -38,8 +43,12 @@ fi
 
 export FOUNDATION_DIR=`pwd`
 export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
+export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
 export MACHINE_TYPE=`uname -m`
 export OS=`uname`
+
+mkdir -p $THIRD_PARTY_DIR/js
+mkdir -p $THIRD_PARTY_DIR/css
 
 # This function takes a command for python as its only input.
 # It checks this input for a specific version of python and returns false
@@ -85,12 +94,8 @@ if ! test_python_version $PYTHON_CMD; then
     return 1
   fi
 fi
+
 export PYTHON_CMD
 
 # This should be placed at the very end of the setup script.
 export SETUP_DONE=true
-
-if [ "$SETUP_DONE" ]; then
-  echo 'Environment setup completed.'
-  return 0
-fi

@@ -40,6 +40,9 @@ fi
 set -e
 source $(dirname $0)/setup.sh || exit 1
 
+# Install third party dependencies.
+bash scripts/install_third_party.sh
+
 # Check that there isn't a server already running.
 if ( nc -vz localhost 8181 >/dev/null 2>&1 ); then
   echo ""
