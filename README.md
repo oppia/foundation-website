@@ -8,7 +8,5 @@ as a standalone Angular application.
 Fork and clone this repo, then run
 
 ```
-   python -m SimpleHTTPServer 8181
+   bash scripts/start.sh
 ```
-
-Then navigate to `localhost:8181` in a browser.
