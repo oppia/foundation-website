@@ -21,6 +21,6 @@ source $(dirname $0)/setup.sh || exit 1
 echo "Installing third-party JS libraries and zip files."
 
 if [ ! -f $THIRD_PARTY_DIR/css/devices.min.css ]; then
-    echo "Downloading devices.css"
-    curl -o $THIRD_PARTY_DIR/css/devices.min.css https://raw.githubusercontent.com/picturepan2/devices.css/master/dist/devices.min.css
+  echo "Downloading devices.css"
+  curl -o $THIRD_PARTY_DIR/css/devices.min.css https://raw.githubusercontent.com/picturepan2/devices.css/master/dist/devices.min.css
 fi
