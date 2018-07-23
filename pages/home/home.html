@@ -2,23 +2,23 @@
 <section id="main-content">
   <md-card layout-fill style="position: relative;">
     <div id="home-page-welcome-image-container" flex layout="column" layout-fill class="oppia-foundation-clearfix">
-      <img ng-src="https://placekitten.com/3000/1200" class="home-page-welcome-image">
+      <img src="/static/images/cheering-child.png" class="home-page-welcome-image">
       <md-card-content layout="column" layout-align="center center" class="home-page-welcome-image-overlay horizontal-padding oppia-foundation-green-background">
-        <div class="home-page-welcome-text-overlay">
-          <div class="home-page-welcome-text-box">
-            <h1 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-display-1">
+        <div class="home-page-welcome-text-overlay home-page-welcome-text-box">
+          <md-card-title class="home-page-body-card-title">
+            <h1 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-display-2">
               We're building a global classroom
             </h1>
-            <p></p>
-            <h3 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-title">
-              Students from every corner of the world deserve access to engaging, personalized education.
-            </h3>
-          </div>
-          <p hide-gt-sm style="font-size: 14pt; font-weight: bold;">
-            We're building a global classroom
-          </p>
-          <p hide-gt-sm style="font-size: 7pt;">
+            <p hide-gt-sm style="font-size: 14pt; font-weight: bold;">
+              We're building a global classroom
+            </p>
+          </md-card-title>
+          <p></p>
+          <h3 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-title">
             Students from every corner of the world deserve access to engaging, personalized education.
+          </h3>
+          <p hide-gt-sm style="font-size: 7pt;">
+              Students from every corner of the world deserve access to engaging, personalized education.
           </p>
         </div>
       </md-card-content>
@@ -161,6 +161,12 @@
   </md-card>
 </section>
 <style>
+
+  .home-page-body-card-title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   #home-page-welcome-image-container {
     height: 100%;
     z-index: 10;
@@ -183,7 +189,6 @@
   .home-page-welcome-image {
     border: 0;
     height: auto;
-    max-height: 800px;
     width: 100%;
   }
 
