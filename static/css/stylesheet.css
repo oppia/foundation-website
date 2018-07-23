@@ -128,9 +128,11 @@ body {
   color: #373737;
   background: #f2f2f2;
   font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 h1,
@@ -141,8 +143,7 @@ h5,
 h6 {
   margin: 10px 0;
   font-weight: 700;
-  color: #222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -176,6 +177,12 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
+}
+
+center {
+  font-size: 16px;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 footer p {
@@ -263,7 +270,7 @@ table {
 }
 
 th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   padding: 10px;
   background: #373737;
   color: #fff;
@@ -313,6 +320,64 @@ Full-Width Styles
   display: block;
   float: left;
 }
+
+.oppia-foundation-clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.oppia-foundation-button-horizontal-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.oppia-foundation-horizontal-padding {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.oppia-foundation-vertical-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.oppia-foundation-gray-background {
+  background-color: #F4F4F4;
+}
+
+.oppia-foundation-green-background {
+  background-color: #05a69a;
+}
+
+.oppia-foundation-white-background {
+  background-color: white;
+}
+
+.oppia-foundation-black-text{
+  color: black;
+}
+
+.oppia-foundation-green-text {
+  color: #05a69a;
+}
+
+.oppia-foundation-white-text{
+  color: white;
+}
+
+.md-button.oppia-foundation-gold-border-button {
+  border: 3px outset goldenrod;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.md-button.oppia-foundation-gold-border-button:hover,
+.md-button.oppia-foundation-gold-border-button:focus {
+  background-color: rgba(255,255,255,1);
+  color: #05a69a;
+}
+
+
 
 /*******************************************************************************
 Small Device Styles
