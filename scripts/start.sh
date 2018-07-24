@@ -77,6 +77,6 @@ else
 fi
 
 echo Starting SimpleHTTPServer at port 8181
-$PYTHON_CMD -m SimpleHTTPServer 8181
+$PYTHON_CMD $FOUNDATION_DIR/scripts/serve.py 8181
 
 echo Done!
