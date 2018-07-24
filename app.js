@@ -22,7 +22,7 @@ oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
       projectTag: 'Home'
     })
     .when('/about', {
-      templateUrl: 'pages/about.html',
+      templateUrl: 'pages/about/about.html',
       projectTag: 'About'
     })
     .when('/partnerships', {
