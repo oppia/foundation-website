@@ -326,6 +326,11 @@ Full-Width Styles
   zoom: 1;
 }
 
+.oppia-foundation-no-horizontal-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .oppia-foundation-button-horizontal-padding {
   padding-left: 20px;
   padding-right: 20px;
@@ -377,8 +382,20 @@ Full-Width Styles
   color: #05a69a;
 }
 
+.md-button.oppia-foundation-green-button {
+  background-color: rgb(9, 65, 66);
+  color: white;
+  width: 150px;
+}
+
+.md-button.oppia-foundation-green-button:hover,
+.md-button.oppia-foundation-green-button:focus {
+  background-color: #05a69a;
+  color: white;
+}
 
 
+ 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
