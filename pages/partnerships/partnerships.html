@@ -273,7 +273,8 @@
     padding: 16px 20px;
   }
   .partnerships-page-icon-description-text-box {
-    max-width: 220px;
+    /* Need textbox to be exactly 2 lines long*/
+    max-width: 250px;
   }
   .partnerships-page-quote-overlay {
     z-index: 11;
@@ -285,6 +286,8 @@
     .partnerships-page-quote-overlay {
       position: relative;
       bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   @media screen and (min-width: 1000px) {
