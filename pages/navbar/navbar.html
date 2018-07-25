@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<md-nav-bar md-no-ink-bar="true" nav-bar-aria-label="navigation links">
-  <md-nav-item md-nav-href="#!" aria-label="Oppia Logo">
-    <a ng-href="#!" aria-label="Oppia Logo">
-      <img src="/static/images/oppia_foundation_logo.png" layout="row">
-    </a>
+<md-nav-bar md-no-ink-bar="true" nav-bar-aria-label="navigation links" style="min-height: 48px"> 
+  <md-nav-item md-nav-href="#!" aria-label="Oppia Logo" layout="column" layout-align="center" >
+    <img src="/static/images/oppia_foundation_logo.png" class="nav-bar-icon" layout="row">
   </md-nav-item>
   <span flex></span>
   <md-nav-item md-nav-href="#!about" hide-xs>About</md-nav-item>
@@ -11,30 +9,36 @@
   <md-nav-item md-nav-href="#!volunteer" hide-xs>Volunteer</md-nav-item>
   <md-menu md-position-mode="target-left target" hide-gt-xs>
     <md-button aria-label="Open links menu" ng-click="$mdMenu.open()">
-      <md-icon md-svg-src="/static/icons/baseline-explore-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+      <md-icon md-svg-src="/static/icons/baseline-explore-24px.svg" aria-label="Links Menu" style="color:white;"></md-icon>
       </md-button>
     <md-menu-content width="2">
     <md-menu-item>
       <md-button ng-href="#!about">
-        <md-icon md-svg-src="/static/icons/round-info-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        <md-icon md-svg-src="/static/icons/round-info-24px.svg" aria-label="About" style="color:white;"></md-icon>
         About
       </md-button>
     </md-menu-item>
     <md-menu-item>
       <md-button ng-href="#!partnerships">
-        <md-icon md-svg-src="/static/icons/round-business_center-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        <md-icon md-svg-src="/static/icons/round-business_center-24px.svg" aria-label="Partnerships" style="color:white;"></md-icon>
         Partnerships
       </md-button>
     </md-menu-item>
     <md-menu-item>
       <md-button ng-href="#!volunteer">
-        <md-icon md-svg-src="/static/icons/round-people_outline-24px.svg" aria-label="Android" style="color:white;"></md-icon>
+        <md-icon md-svg-src="/static/icons/round-people_outline-24px.svg" aria-label="Volunteer" style="color:white;"></md-icon>
         Volunteer
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!donate">
+        <md-icon md-svg-src="/static/icons/cards-heart.svg" aria-label="Donate" style="color:white;"></md-icon>
+        Donate
       </md-button>
     </md-menu-item>
     </md-menu-content>
   </md-menu>
-  <md-nav-item md-nav-href="#!donate">Donate</md-nav-item>
+  <md-nav-item hide-xs md-nav-href="#!donate">Donate</md-nav-item>
 </md-nav-bar>
 
 <style>
@@ -49,6 +53,7 @@
     color: white;
     font-family: "Capriola", "Roboto", Arial, sans-serif;
     font-weight: bold;
+    min-height: 60px;
   }
 
   md-nav-bar .md-nav-item:last-of-type {
@@ -77,6 +82,13 @@
 
   md-menu-item .md-button:hover, .md-button:focus {
     color: rgba(255,255,255,1);
+  }
+
+  .nav-bar-icon {
+    border: 0;
+    display: block;
+    margin: auto;
+    min-height: 15px;
   }
 
 </style>
