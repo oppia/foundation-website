@@ -179,6 +179,13 @@ p {
   margin: 10px 0 15px 0;
 }
 
+blockquote {
+  color: black;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
 center {
   font-size: 16px;
   font-family: "Capriola", "Roboto", Arial, sans-serif;
