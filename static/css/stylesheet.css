@@ -381,20 +381,6 @@ Full-Width Styles
   background-color: rgba(255,255,255,1);
   color: #05a69a;
 }
-
-.md-button.oppia-foundation-green-button {
-  background-color: rgb(9, 65, 66);
-  color: white;
-  width: 150px;
-}
-
-.md-button.oppia-foundation-green-button:hover,
-.md-button.oppia-foundation-green-button:focus {
-  background-color: #05a69a;
-  color: white;
-}
-
-
  
 /*******************************************************************************
 Small Device Styles
