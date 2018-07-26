@@ -34,7 +34,7 @@ oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
       projectTag: 'Volunteer'
     })
     .when('/donate', {
-      templateUrl: 'pages/donate.html',
+      templateUrl: 'pages/donate/donate.html',
       projectTag: 'Donate'
     })
     .otherwise({
