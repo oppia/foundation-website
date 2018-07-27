@@ -327,8 +327,8 @@ Full-Width Styles
 }
 
 .oppia-foundation-no-horizontal-padding {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .oppia-foundation-button-horizontal-padding {
