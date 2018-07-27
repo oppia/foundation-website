@@ -326,6 +326,11 @@ Full-Width Styles
   zoom: 1;
 }
 
+.oppia-foundation-no-horizontal-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .oppia-foundation-button-horizontal-padding {
   padding-left: 20px;
   padding-right: 20px;
@@ -376,9 +381,7 @@ Full-Width Styles
   background-color: rgba(255,255,255,1);
   color: #05a69a;
 }
-
-
-
+ 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/

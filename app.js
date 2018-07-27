@@ -13,7 +13,7 @@
 // limitations under the License.
 
 var oppiaFoundationWebsite = angular.module(
-  'oppiaFoundationWebsite', ['ngMaterial', 'ngRoute']);
+  'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages', 'ngRoute']);
 
 oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
@@ -26,7 +26,7 @@ oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
       projectTag: 'About'
     })
     .when('/partnerships', {
-      templateUrl: 'pages/partnerships.html',
+      templateUrl: 'pages/partnerships/partnerships.html',
       projectTag: 'Partnerships'
     })
     .when('/volunteer', {
