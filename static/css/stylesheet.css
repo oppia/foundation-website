@@ -127,7 +127,6 @@ body {
   box-sizing: border-box;
   color: #373737;
   background: #f2f2f2;
-  font-size: 16px;
   font-family: "Capriola", "Roboto", Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -321,9 +320,24 @@ Full-Width Styles
   float: left;
 }
 
+.oppia-foundation-blockquote {
+  border: 0;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
 .oppia-foundation-clearfix {
   overflow: auto;
   zoom: 1;
+}
+
+.oppia-foundation-no-margin {
+  margin: 0;
+}
+
+.oppia-foundation-no-padding {
+  padding :0;
 }
 
 .oppia-foundation-no-horizontal-padding {
@@ -363,11 +377,23 @@ Full-Width Styles
 }
 
 .oppia-foundation-green-text {
-  color: #05a69a;
+  color: #18AA9D;
 }
 
-.oppia-foundation-white-text{
+.oppia-foundation-white-text {
   color: white;
+}
+
+.oppia-foundation-bold-text {
+  font-weight: bold;
+}
+
+.oppia-foundation-italic-text {
+  font-style: italic;
+}
+
+.oppia-foundation-uppercase-text {
+  text-transform: uppercase;
 }
 
 .md-button.oppia-foundation-gold-border-button {
@@ -381,6 +407,72 @@ Full-Width Styles
 .md-button.oppia-foundation-gold-border-button:focus {
   background-color: rgba(255,255,255,1);
   color: #05a69a;
+}
+
+.md-button.oppia-foundation-white-button {
+  background-color: rgba(255,255,255,1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #18AA9D;
+  padding: 0px 15px;
+  max-width: 250px;
+  max-height: 50px;
+  
+}
+
+.md-button.oppia-foundation-white-button:hover,
+.md-button.oppia-foundation-white-button:focus {
+  background-color: #18AA9D;
+  color: rgba(255,255,255,1);
+}
+
+.oppia-foundation-quote-box {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 16px 20px;
+  
+}
+@media screen and (min-width: 100px) and (max-width: 499px) {
+  .oppia-foundation-quote-box {
+    max-width: 90vw;
+  }
+}
+@media screen and (min-width: 550px) {
+  .oppia-foundation-quote-box {
+    width: 50vw;
+  }
+}
+
+.oppia-foundation-quote-box-overlay {
+  z-index: 11;
+  position: relative;
+  bottom: 50px;
+}
+@media screen and (min-width: 100px) and (max-width: 999px) {
+  .oppia-foundation-quote-box-overlay {
+    position: relative;
+    bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.oppia-foundation-cite-text-box {
+  text-align: right; 
+  margin-top: 20px;
+}
+
+/* Responsive font size on large view width. */
+html {
+    font-size: 20px;
+}
+@media(max-width: 1580px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media(max-width: 980px) {
+  html {
+    font-size: 16px;
+  }
 }
  
 /*******************************************************************************
