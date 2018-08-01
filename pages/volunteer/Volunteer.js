@@ -94,7 +94,7 @@ oppiaFoundationWebsite.controller('volunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketingTab.html'
     };
-    var createSlide = function(profileSlides, slideId) {
+    var createSlide = function(profileSlides, profileImage, slideId) {
       profileSlides.push({
         image: profileImage,
         id: slideId

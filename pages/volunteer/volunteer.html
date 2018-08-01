@@ -46,7 +46,7 @@
       <md-content layout-fill>
         <md-tabs hide-xs hide-sm md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
           <md-tab ng-repeat="tab in tabs"
-                  md-on-select="onTabSelected($index%4)"
+                  md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
             <md-tab-body>
               <ng-include src="tab.templateUrl"></ng-include>
