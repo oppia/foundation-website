@@ -541,7 +541,6 @@ Small Device Styles
 .active {
   color: #222222;
   /* Disables the link completely instead of just cursor: default; */
-  font-weight: 600;
   pointer-events: none;
   text-decoration: none;
 }

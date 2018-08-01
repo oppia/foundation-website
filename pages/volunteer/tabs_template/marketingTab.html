@@ -13,21 +13,23 @@
     <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
   </md-content>
   <span flex></span>
-  <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding">
-    <md-card layout-fill class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-      <img src="/static/images/volunteer_design_profile_image.png">
-      <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
-        <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-              I worked for an education software company for 13 years and saw the tremendous impact it can have on students. My work at Oppia helps me continue shaping the future of education technology.
-            <span>&rdquo;</span>
-        </blockquote>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Joe Lastname</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">Job Title</span>
-        </cite>
-      </md-card-content>
-    </md-card>
+  <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding">
+    <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides" style="color: black;">
+      <uib-slide uib-slide ng-repeat="slide in marketingSlides track by slide.id" index="slide.id">
+        <md-card class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
+          <img ng-src="{{slide.image}}" style="margin:auto;">
+          <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding" style="font-size: 13px;">
+            <center>
+              <span>&ldquo;</span>{{marketingSlideQuotes[slide.id]}}<span>&rdquo;</span>
+            </center>
+            <cite class="oppia-foundation-cite-text-box">
+              <span class="oppia-foundation-bold-text">- {{marketingSlideNames[slide.id]}}</span>
+              <p class="oppia-foundation-no-margin"></p>
+              <span class="oppia-foundation-italic-text">{{marketingSlideJobTitles[slide.id]}}</span>
+            </cite>
+          </md-card-content>
+        </md-card>
+      </uib-slide>
+    </uib-carousel>
   </div>
 </div>
