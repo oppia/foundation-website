@@ -19,62 +19,27 @@ oppiaFoundationWebsite.controller('volunteerPage', [
     $scope.researchSlides = [];
     $scope.marketingSlides = [];
     /**
-    * Shuffles array in place.
-    * @param {Array} a items An array containing the items.
-    */
-    var shuffle = function(a){
-      var j, x, i;
-      for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
-      }
-      return a;
-    };
-
-    var getRandomProfileNames = function(volunteerProfiles) {
-      var profileNames = [];
-      volunteerProfiles.forEach(function(volunteerProfile) {
-        profileNames.push(volunteerProfile.fullName);
-      });
-      shuffle(profileNames);
-      // Only adding 3 profiles currently.
-      profileNames.slice(0, 3);
-      return profileNames;
-    };
-
-    var filterProfiles = function (profileNames, profiles) {
+     * Select 3 unique random volunteer profiles.
+     * @param {Array} volunteerProfiles - Profiles of all volunteers.
+     */
+    var getRandomProfiles = function(volunteerProfiles) {
       var slides = [];
-      profileNames.forEach(function(name) {
-        // Expecting all unique names.
-        var profileByName = profiles.filter(function(
-            profile) {
-          return profile.fullName === name;
-        });
-        slides.push(profileByName[0]);
-      });
-      return slides;
+      for (var i = volunteerProfiles.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * volunteerProfiles.length);
+        slides.push(volunteerProfiles[randomIndex]);
+        if (slides.length === 3) {
+          // Only adding 3 profiles currently.
+          return slides;
+        }
+        volunteerProfiles.splice(randomIndex, 1);
+      }
     };
 
-    var loadDesignSlides = function() {
-      $scope.designSlides = filterProfiles(getRandomProfileNames(
-        VOLUNTEER_INFO.design), VOLUNTEER_INFO.design);
-    };
-
-    var loadDevelopmentSlides = function() {
-      $scope.developmentSlides = filterProfiles(getRandomProfileNames(
-        VOLUNTEER_INFO.development), VOLUNTEER_INFO.development);
-    };
-
-    var loadResearchSlides = function() {
-      $scope.researchSlides = filterProfiles(getRandomProfileNames(
-        VOLUNTEER_INFO.research), VOLUNTEER_INFO.research);
-    };
-
-    var loadMarketingSlides = function() {
-      $scope.marketingSlides = filterProfiles(getRandomProfileNames(
-        VOLUNTEER_INFO.marketing), VOLUNTEER_INFO.marketing);
+    var initSlides = function() {
+      $scope.designSlides = getRandomProfiles(VOLUNTEER_INFO.design);
+      $scope.developmentSlides = getRandomProfiles(VOLUNTEER_INFO.development);
+      $scope.researchSlides = getRandomProfiles(VOLUNTEER_INFO.research);
+      $scope.marketingSlides = getRandomProfiles(VOLUNTEER_INFO.marketing);
     };
 
     var designTab = {
@@ -101,10 +66,7 @@ oppiaFoundationWebsite.controller('volunteerPage', [
       $scope.tabId = tabId;
       $scope.templateUrl = tabs[tabId].templateUrl;
     };
+    initSlides();
     $scope.slideInterval = 0;
     $scope.noWrapSlides = false;
-    loadDesignSlides();
-    loadDevelopmentSlides();
-    loadResearchSlides();
-    loadMarketingSlides();
   }]);
