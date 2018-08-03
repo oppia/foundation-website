@@ -14,83 +14,68 @@
 
 oppiaFoundationWebsite.controller('volunteerPage', [
   '$scope', 'VOLUNTEER_INFO', function($scope, VOLUNTEER_INFO) {
-    var designSlideImages = [];
-    var designSlideQuotes = [];
-    var designSlideNames = [];
-    var designSlideJobTitles = [];
-    VOLUNTEER_INFO.design.forEach(function(designerProfile) {
-      designSlideImages.push(designerProfile.profilePictureImageFilename);
-      designSlideQuotes.push(designerProfile.professionalQuote);
-      designSlideNames.push(designerProfile.fullName);
-      designSlideJobTitles.push(designerProfile.jobTitle);
-    });
-    $scope.designSlideQuotes = designSlideQuotes;
-    $scope.designSlideNames = designSlideNames;
-    $scope.designSlideJobTitles = designSlideJobTitles;
-
-    var developmentSlideImages = [];
-    var developmentSlideQuotes = [];
-    var developmentSlideNames = [];
-    var developmentSlideJobTitles = [];
-    VOLUNTEER_INFO.development.forEach(function(developerProfile) {
-      developmentSlideImages.push(developerProfile.profilePictureImageFilename);
-      developmentSlideQuotes.push(developerProfile.professionalQuote);
-      developmentSlideNames.push(developerProfile.fullName);
-      developmentSlideJobTitles.push(developerProfile.jobTitle);
-    });
-    $scope.developmentSlideQuotes = developmentSlideQuotes;
-    $scope.developmentSlideNames = developmentSlideNames;
-    $scope.developmentSlideJobTitles = developmentSlideJobTitles;
-
-    var researchSlideImages = [];
-    var researchSlideQuotes = [];
-    var researchSlideNames = [];
-    var researchSlideJobTitles = [];
-    VOLUNTEER_INFO.research.forEach(function(researcherProfile) {
-      researchSlideImages.push(researcherProfile.profilePictureImageFilename);
-      researchSlideQuotes.push(researcherProfile.professionalQuote);
-      researchSlideNames.push(researcherProfile.fullName);
-      researchSlideJobTitles.push(researcherProfile.jobTitle);
-    });
-    $scope.researchSlideQuotes = researchSlideQuotes;
-    $scope.researchSlideNames = researchSlideNames;
-    $scope.researchSlideJobTitles = researchSlideJobTitles;
-
-    var marketingSlideImages = [];
-    var marketingSlideQuotes = [];
-    var marketingSlideNames = [];
-    var marketingSlideJobTitles = [];
-    VOLUNTEER_INFO.marketing.forEach(function(marketerProfile) {
-      marketingSlideImages.push(marketerProfile.profilePictureImageFilename);
-      marketingSlideQuotes.push(marketerProfile.professionalQuote);
-      marketingSlideNames.push(marketerProfile.fullName);
-      marketingSlideJobTitles.push(marketerProfile.jobTitle);
-    });
-    $scope.marketingSlideQuotes = marketingSlideQuotes;
-    $scope.marketingSlideNames = marketingSlideNames;
-    $scope.marketingSlideJobTitles = marketingSlideJobTitles;
-
-    var createSlide = function(profileSlides, profileImage, slideId) {
-      profileSlides.push({
-        image: profileImage,
-        id: slideId
-      });
-    };
     $scope.designSlides = [];
     $scope.developmentSlides = [];
     $scope.researchSlides = [];
     $scope.marketingSlides = [];
-    // Only adding 3 profiles currently.
-    for (var i = 0; i < 3; i++) {
-      // Increase image dimension to get a diffent image per request
-      // from unsplash API
-      var newWidth = 600 + i;
-      var imageUrl = 'https://unsplash.it/' + newWidth + '/300';
-      createSlide($scope.designSlides, imageUrl, i);
-      createSlide($scope.developmentSlides, imageUrl, i);
-      createSlide($scope.researchSlides, imageUrl, i);
-      createSlide($scope.marketingSlides, imageUrl, i);
-    }
+    /**
+    * Shuffles array in place.
+    * @param {Array} a items An array containing the items.
+    */
+    var shuffle = function(a){
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+      return a;
+    };
+
+    var getRandomProfileNames = function(volunteerProfiles) {
+      var profileNames = [];
+      volunteerProfiles.forEach(function(volunteerProfile) {
+        profileNames.push(volunteerProfile.fullName);
+      });
+      shuffle(profileNames);
+      // Only adding 3 profiles currently.
+      profileNames.slice(0, 3);
+      return profileNames;
+    };
+
+    var filterProfiles = function (profileNames, profiles) {
+      var slides = [];
+      profileNames.forEach(function(name) {
+        // Expecting all unique names.
+        var profileByName = profiles.filter(function(
+            profile) {
+          return profile.fullName === name;
+        });
+        slides.push(profileByName[0]);
+      });
+      return slides;
+    };
+
+    var loadDesignSlides = function() {
+      $scope.designSlides = filterProfiles(getRandomProfileNames(
+        VOLUNTEER_INFO.design), VOLUNTEER_INFO.design);
+    };
+
+    var loadDevelopmentSlides = function() {
+      $scope.developmentSlides = filterProfiles(getRandomProfileNames(
+        VOLUNTEER_INFO.development), VOLUNTEER_INFO.development);
+    };
+
+    var loadResearchSlides = function() {
+      $scope.researchSlides = filterProfiles(getRandomProfileNames(
+        VOLUNTEER_INFO.research), VOLUNTEER_INFO.research);
+    };
+
+    var loadMarketingSlides = function() {
+      $scope.marketingSlides = filterProfiles(getRandomProfileNames(
+        VOLUNTEER_INFO.marketing), VOLUNTEER_INFO.marketing);
+    };
 
     var designTab = {
       title: 'Design',
@@ -118,5 +103,8 @@ oppiaFoundationWebsite.controller('volunteerPage', [
     };
     $scope.slideInterval = 0;
     $scope.noWrapSlides = false;
-    $scope.active = 0;
+    loadDesignSlides();
+    loadDevelopmentSlides();
+    loadResearchSlides();
+    loadMarketingSlides();
   }]);
