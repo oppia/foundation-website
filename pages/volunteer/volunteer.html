@@ -76,19 +76,17 @@
       </md-content>
     </md-card-content>
     <uib-carousel uib-carousel active="designSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide ng-repeat="slide in designSlides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+      <uib-slide uib-slide ng-repeat="slide in designSlides track by $index" index="$index">
+        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
         <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
           <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <md-content layout="column" layout-align="center center" class="oppia-foundation-gray-background oppia-foundation-black-text">
-              <center>
-                <span>&ldquo;</span>{{designSlideQuotes[slide.id]}}<span>&rdquo;</span>
-              </center>
-            </md-content>
+            <center>
+              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
+            </center>
             <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{designSlideNames[slide.id]}}</span>
+              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
               <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{designSlideJobTitles[slide.id]}}</span>
+              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
             </cite>
           </md-card-content>
         </div>
@@ -115,19 +113,17 @@
       </md-content>
     </md-card-content>
     <uib-carousel uib-carousel active="developmentSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in designSlides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+      <uib-slide uib-slide  ng-repeat="slide in developmentSlides track by $index" index="$index">
+        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
         <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
           <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <md-content layout="column" layout-align="center center" class="oppia-foundation-gray-background oppia-foundation-black-text">
-              <center>
-                <span>&ldquo;</span>{{developmentSlideQuotes[slide.id]}}<span>&rdquo;</span>
-              </center>
-            </md-content>
+            <center>
+              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
+            </center>
             <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{developmentSlideNames[slide.id]}}</span>
+              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
               <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{developmentSlideJobTitles[slide.id]}}</span>
+              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
             </cite>
           </md-card-content>
         </div>
@@ -154,19 +150,17 @@
       </md-content>
     </md-card-content>
     <uib-carousel uib-carousel active="researchSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in designSlides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+      <uib-slide uib-slide  ng-repeat="slide in researchSlides track by $index" index="$index">
+        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
         <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
           <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <md-content layout="column" layout-align="center center" class="oppia-foundation-gray-background oppia-foundation-black-text">
-              <center>
-                <span>&ldquo;</span>{{researchSlideQuotes[slide.id]}}<span>&rdquo;</span>
-              </center>
-            </md-content>
+            <center>
+              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
+            </center>
             <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{researchSlideNames[slide.id]}}</span>
+              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
               <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{researchSlideJobTitles[slide.id]}}</span>
+              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
             </cite>
           </md-card-content>
         </div>
@@ -193,19 +187,17 @@
       </md-content>
     </md-card-content>
     <uib-carousel uib-carousel active="marketingSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in designSlides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+      <uib-slide uib-slide  ng-repeat="slide in marketingSlides track by $index" index="$index">
+        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
         <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
           <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <md-content layout="column" layout-align="center center" class="oppia-foundation-gray-background oppia-foundation-black-text">
-              <center>
-                <span>&ldquo;</span>{{marketingSlideQuotes[slide.id]}}<span>&rdquo;</span>
-              </center>
-            </md-content>
+            <center>
+              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
+            </center>
             <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{marketingSlideNames[slide.id]}}</span>
+              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
               <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{marketingSlideJobTitles[slide.id]}}</span>
+              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
             </cite>
           </md-card-content>
         </div>
