@@ -15,12 +15,6 @@
 oppiaFoundationWebsite.controller('volunteerPage', [
   '$scope', 'VolunteerProfilesService', function(
       $scope, VolunteerProfilesService) {
-    $scope.designSlides = VolunteerProfilesService.getDesignProfiles();
-    $scope.developmentSlides =
-      VolunteerProfilesService.getDevelopmentProfiles();
-    $scope.researchSlides = VolunteerProfilesService.getResearchProfiles();
-    $scope.marketingSlides = VolunteerProfilesService.getMarketingProfiles();
-
     var designTab = {
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/designTab.html'

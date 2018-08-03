@@ -75,23 +75,7 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <uib-carousel uib-carousel active="designSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide ng-repeat="slide in designSlides track by $index" index="$index">
-        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
-        <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-          <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <center>
-              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
-            </center>
-            <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
-              <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
-            </cite>
-          </md-card-content>
-        </div>
-      </uib-slide>
-    </uib-carousel>
+    <profile-carousel mobile="true" tab="Design"></profile-carousel>
   </md-card>
   <md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
     <md-card-content class="oppia-foundation-white-background">
@@ -112,23 +96,7 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <uib-carousel uib-carousel active="developmentSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in developmentSlides track by $index" index="$index">
-        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
-        <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-          <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <center>
-              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
-            </center>
-            <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
-              <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
-            </cite>
-          </md-card-content>
-        </div>
-      </uib-slide>
-    </uib-carousel>
+    <profile-carousel mobile="true" tab="Development"></profile-carousel>
   </md-card>
   <md-card md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
     <md-card-content class="oppia-foundation-white-background">
@@ -149,23 +117,7 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <uib-carousel uib-carousel active="researchSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in researchSlides track by $index" index="$index">
-        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
-        <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-          <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <center>
-              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
-            </center>
-            <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
-              <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
-            </cite>
-          </md-card-content>
-        </div>
-      </uib-slide>
-    </uib-carousel>
+    <profile-carousel mobile="true" tab="Research"></profile-carousel>
   </md-card>
   <md-card md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
     <md-card-content class="oppia-foundation-white-background">
@@ -186,23 +138,7 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <uib-carousel uib-carousel active="marketingSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
-      <uib-slide uib-slide  ng-repeat="slide in marketingSlides track by $index" index="$index">
-        <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
-        <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-          <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <center>
-              <span>&ldquo;</span>{{slide.professionalQuote}}<span>&rdquo;</span>
-            </center>
-            <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
-              <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
-            </cite>
-          </md-card-content>
-        </div>
-      </uib-slide>
-    </uib-carousel>
+    <profile-carousel mobile="true" tab="Marketing"></profile-carousel>
   </md-card>
   <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
     <md-card-content layout="column" layout-gt-sm="row">

@@ -396,6 +396,10 @@ Full-Width Styles
   text-transform: uppercase;
 }
 
+.oppia-foundation-left-align-text {
+  text-align: left;
+}
+
 .md-button.oppia-foundation-gold-border-button {
   border: 3px outset goldenrod;
   min-width: 200px;
