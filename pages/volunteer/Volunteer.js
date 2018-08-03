@@ -13,8 +13,8 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('volunteerPage', [
-  '$scope', 'VolunteerProfilesService', function(
-      $scope, VolunteerProfilesService) {
+  '$scope', function(
+      $scope) {
     var designTab = {
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/designTab.html'
