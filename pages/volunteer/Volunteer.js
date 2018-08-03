@@ -13,34 +13,13 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('volunteerPage', [
-  '$scope', 'VOLUNTEER_INFO', function($scope, VOLUNTEER_INFO) {
-    $scope.designSlides = [];
-    $scope.developmentSlides = [];
-    $scope.researchSlides = [];
-    $scope.marketingSlides = [];
-    /**
-     * Select 3 unique random volunteer profiles.
-     * @param {Array} volunteerProfiles - Profiles of all volunteers.
-     */
-    var getRandomProfiles = function(volunteerProfiles) {
-      var slides = [];
-      for (var i = volunteerProfiles.length - 1; i >= 0; i--) {
-        var randomIndex = Math.floor(Math.random() * volunteerProfiles.length);
-        slides.push(volunteerProfiles[randomIndex]);
-        if (slides.length === 3) {
-          // Only adding 3 profiles currently.
-          return slides;
-        }
-        volunteerProfiles.splice(randomIndex, 1);
-      }
-    };
-
-    var initSlides = function() {
-      $scope.designSlides = getRandomProfiles(VOLUNTEER_INFO.design);
-      $scope.developmentSlides = getRandomProfiles(VOLUNTEER_INFO.development);
-      $scope.researchSlides = getRandomProfiles(VOLUNTEER_INFO.research);
-      $scope.marketingSlides = getRandomProfiles(VOLUNTEER_INFO.marketing);
-    };
+  '$scope', 'VolunteerProfilesService', function(
+      $scope, VolunteerProfilesService) {
+    $scope.designSlides = VolunteerProfilesService.getDesignProfiles();
+    $scope.developmentSlides =
+      VolunteerProfilesService.getDevelopmentProfiles();
+    $scope.researchSlides = VolunteerProfilesService.getResearchProfiles();
+    $scope.marketingSlides = VolunteerProfilesService.getMarketingProfiles();
 
     var designTab = {
       title: 'Design',
@@ -66,7 +45,48 @@ oppiaFoundationWebsite.controller('volunteerPage', [
       $scope.tabId = tabId;
       $scope.templateUrl = tabs[tabId].templateUrl;
     };
-    initSlides();
     $scope.slideInterval = 0;
     $scope.noWrapSlides = false;
+  }]);
+
+oppiaFoundationWebsite.factory('VolunteerProfilesService', [
+  'VOLUNTEER_INFO', function(VOLUNTEER_INFO) {
+    /**
+     * Select 3 unique random volunteer profiles.
+     * @param {Array} volunteerProfiles - Profiles of all volunteers.
+     */
+    var getRandomProfiles = function(volunteerProfiles) {
+      // Cloning volunteerProfiles to prevent changes to the original profiles.
+      var volunteerProfiles = Object.assign([], volunteerProfiles);
+      var slides = [];
+      for (var i = volunteerProfiles.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * volunteerProfiles.length);
+        slides.push(volunteerProfiles[randomIndex]);
+        if (slides.length === 3) {
+          // Only adding 3 profiles currently.
+          return slides;
+        }
+        volunteerProfiles.splice(randomIndex, 1);
+      }
+    };
+    var designProfiles = getRandomProfiles(VOLUNTEER_INFO.design);
+    var developmentProfiles = getRandomProfiles(VOLUNTEER_INFO.development);
+    var researchProfiles = getRandomProfiles(VOLUNTEER_INFO.research);
+    var marketingProfiles = getRandomProfiles(VOLUNTEER_INFO.marketing);
+
+    var VolunteerProfilesService = {
+      getDesignProfiles: function() {
+        return designProfiles;
+      },
+      getDevelopmentProfiles: function() {
+        return developmentProfiles;
+      },
+      getResearchProfiles: function() {
+        return researchProfiles;
+      },
+      getMarketingProfiles: function() {
+        return marketingProfiles;
+      }
+    };
+    return VolunteerProfilesService;
   }]);

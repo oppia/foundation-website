@@ -14,7 +14,7 @@
   </md-content>
   <span flex></span>
   <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding">
-    <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides">
+    <uib-carousel uib-carousel active="designSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
       <uib-slide uib-slide ng-repeat="slide in designSlides track by $index" index="$index">
         <md-card class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
           <img ng-src="{{slide.profilePictureImageFilename}}" style="margin:auto;">
