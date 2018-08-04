@@ -32,23 +32,31 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
         volunteerProfiles.splice(randomIndex, 1);
       }
     };
-    var designProfiles = getRandomProfiles(VOLUNTEER_INFO.design);
-    var developmentProfiles = getRandomProfiles(VOLUNTEER_INFO.development);
-    var researchProfiles = getRandomProfiles(VOLUNTEER_INFO.research);
-    var marketingProfiles = getRandomProfiles(VOLUNTEER_INFO.marketing);
+    var DESIGN = 'design';
+    var DEVELOPMENT = 'development';
+    var RESEARCH = 'research';
+    var MARKETING = 'marketing';
+    var volunteers = [];
+    Object.keys(VOLUNTEER_INFO).forEach(function(volunteerCategory) {
+      volunteers[volunteerCategory] = getRandomProfiles(
+        VOLUNTEER_INFO[volunteerCategory]);
+    });
 
     var VolunteerProfilesService = {
       getDesignProfiles: function() {
-        return designProfiles;
+        return volunteers[DESIGN];
       },
       getDevelopmentProfiles: function() {
-        return developmentProfiles;
+        return volunteers[DEVELOPMENT];
       },
       getResearchProfiles: function() {
-        return researchProfiles;
+        return volunteers[RESEARCH];
       },
       getMarketingProfiles: function() {
-        return marketingProfiles;
+        return volunteers[MARKETING];
+      },
+      getSlidesForTab: function(tab) {
+        return volunteers[tab.toLowerCase()];
       }
     };
     return VolunteerProfilesService;
