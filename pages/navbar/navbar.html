@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <md-nav-bar md-no-ink-bar="true" nav-bar-aria-label="navigation links" style="min-height: 48px"> 
-  <md-nav-item md-nav-href="#!" aria-label="Oppia Logo" layout="column" layout-align="center">
-    <p style="display: none;">The Oppia Foundation</p>
-    <img src="/static/images/oppia_foundation_logo.png" class="nav-bar-icon" layout="row">
+  <md-nav-item md-nav-href="#!" aria-label="Home" layout="column" layout-align="center">
+    <p style="display: none">The Oppia Foundation</p>
+    <img src="/static/images/oppia_foundation_logo.png" class="nav-bar-icon" layout="row" aria-label="Oppia Foundation Logo">
   </md-nav-item>
   <span flex></span>
-  <md-nav-item md-nav-href="#!about" hide-xs>About</md-nav-item>
-  <md-nav-item md-nav-href="#!partnerships" hide-xs>Partnerships</md-nav-item>
-  <md-nav-item md-nav-href="#!volunteer" hide-xs>Volunteer</md-nav-item>
-  <md-menu md-position-mode="target-left target" hide-gt-xs>
+  <md-nav-item md-nav-href="#!about" aria-label="About" hide-xs hide-sm>About</md-nav-item>
+  <md-nav-item md-nav-href="#!partnerships" aria-label="Partnership" hide-xs hide-sm>Partnerships</md-nav-item>
+  <md-nav-item md-nav-href="#!volunteer" aria-label="Volunteer" hide-xs hide-sm>Volunteer</md-nav-item>
+  <md-menu md-position-mode="target-left target" hide-gt-sm>
     <md-button aria-label="Open links menu" ng-click="$mdMenu.open()">
       <md-icon md-svg-src="/static/icons/baseline-explore-24px.svg" aria-label="Links Menu" style="color:white;"></md-icon>
       </md-button>
@@ -39,7 +39,7 @@
     </md-menu-item>
     </md-menu-content>
   </md-menu>
-  <md-nav-item hide-xs md-nav-href="#!donate">Donate</md-nav-item>
+  <md-nav-item hide-xs hide-sm md-nav-href="#!donate" aria-label="Donate">Donate</md-nav-item>
 </md-nav-bar>
 
 <style>
