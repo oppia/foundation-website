@@ -12,50 +12,56 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+oppiaFoundationWebsite.constant('CAROUSEL_TYPE_DESKTOP', 'desktop');
+oppiaFoundationWebsite.constant('CAROUSEL_TYPE_MOBILE', 'mobile');
+oppiaFoundationWebsite.constant('DESIGN_TAB', 'design');
+oppiaFoundationWebsite.constant('DEVELOPMENT_TAB', 'development');
+oppiaFoundationWebsite.constant('RESEARCH_TAB', 'research');
+oppiaFoundationWebsite.constant('MARKETING_TAB', 'marketing');
+
 oppiaFoundationWebsite.directive('profileCarousel', [function() {
   return {
     restrict: 'E',
     scope: {
-      desktopCarousel: '@desktop',
-      mobileCarousel: '@mobile',
-      activeTab: '@tab'
+      carouselType: '@',
+      correspondingTabName: '@'
     },
-    templateUrl: '/pages/volunteer/profileCarouselTemplate.html',
-    controller: ['$scope', 'VolunteerProfilesService',
-      function($scope, VolunteerProfilesService) {
+    templateUrl: '/pages/volunteer/profile_carousel_directive.html',
+    controller: [
+      '$scope', 'VolunteerProfilesService', 'CAROUSEL_TYPE_DESKTOP',
+      'CAROUSEL_TYPE_MOBILE', 'DESIGN_TAB', 'DEVELOPMENT_TAB', 'RESEARCH_TAB',
+      'MARKETING_TAB',
+      function(
+          $scope, VolunteerProfilesService, CAROUSEL_TYPE_DESKTOP,
+          CAROUSEL_TYPE_MOBILE, DESIGN_TAB, DEVELOPMENT_TAB, RESEARCH_TAB,
+          MARKETING_TAB) {
+        if ($scope.carouselType === CAROUSEL_TYPE_DESKTOP) {
+          $scope.displayDesktopCarousel = true;
+          $scope.displayMobileCarousel = false;
+        }
+        if ($scope.carouselType === CAROUSEL_TYPE_MOBILE) {
+          $scope.displayDesktopCarousel = false;
+          $scope.displayMobileCarousel = true;
+        }
+        // Please visit https://angular-ui.github.io/bootstrap/#!#carousel
+        // for more info on available directives.
+        // Time interval to cycle through the slides. 0 for no auto-cycling.
         $scope.slideInterval = 0;
+        // Prevent looping of slides.
         $scope.noWrapSlides = false;
-        var DESIGN_TAB = 'Design';
-        var DEVELOPMENT_TAB = 'Development';
-        var RESEARCH_TAB = 'Research';
-        var MARKETING_TAB = 'Marketing';
-        var designSlide = {
-          active: true
-        };
-        var developmentSlide = {
-          active: true
-        };
-        var researchSlide = {
-          active: true
-        };
-        var marketingSlide = {
-          active: true
-        };
-        if ($scope.activeTab === DESIGN_TAB) {
+        // Index of current active slide.
+        $scope.active = 0;
+        if ($scope.correspondingTabName === DESIGN_TAB) {
           $scope.slides = VolunteerProfilesService.getDesignProfiles();
-          $scope.active = designSlide.active;
         }
-        if ($scope.activeTab === DEVELOPMENT_TAB) {
+        if ($scope.correspondingTabName === DEVELOPMENT_TAB) {
           $scope.slides = VolunteerProfilesService.getDevelopmentProfiles();
-          $scope.active = developmentSlide.active;
         }
-        if ($scope.activeTab === RESEARCH_TAB) {
+        if ($scope.correspondingTabName === RESEARCH_TAB) {
           $scope.slides = VolunteerProfilesService.getResearchProfiles();
-          $scope.active = researchSlide.active;
         }
-        if ($scope.activeTab === MARKETING_TAB) {
+        if ($scope.correspondingTabName === MARKETING_TAB) {
           $scope.slides = VolunteerProfilesService.getMarketingProfiles();
-          $scope.active = marketingSlide.active;
         }
       }]
   };

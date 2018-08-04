@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding"
-    ng-if="desktopCarousel">
+    ng-if="displayDesktopCarousel">
   <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
       <md-card class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
@@ -18,7 +18,7 @@
   </uib-carousel>
 </div>
 
-<md-card layout-fill layout="column" ng-if="mobileCarousel">
+<md-card layout-fill layout="column" ng-if="displayMobileCarousel">
   <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
       <img ng-src="{{slide.profilePictureImageFilename}}">
