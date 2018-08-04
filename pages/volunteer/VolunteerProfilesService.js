@@ -20,7 +20,7 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
      */
     var getRandomProfiles = function(volunteerProfiles) {
       // Cloning volunteerProfiles to prevent changes to the original profiles.
-      var volunteerProfiles = Object.assign([], volunteerProfiles);
+      volunteerProfiles = angular.copy(volunteerProfiles);
       var slides = [];
       for (var i = volunteerProfiles.length - 1; i >= 0; i--) {
         var randomIndex = Math.floor(Math.random() * volunteerProfiles.length);
@@ -51,8 +51,8 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       getMarketingProfiles: function() {
         return volunteersByCategory.marketing;
       },
-      getSlidesForTab: function(tab) {
-        return volunteersByCategory[tab.toLowerCase()];
+      getSlidesForTab: function(tabName) {
+        return volunteersByCategory[tabName.toLowerCase()];
       }
     };
     return VolunteerProfilesService;
