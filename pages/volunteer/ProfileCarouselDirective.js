@@ -46,7 +46,7 @@ oppiaFoundationWebsite.directive('profileCarousel', [function() {
         // Please visit https://angular-ui.github.io/bootstrap/#!#carousel
         // for more info on available directives.
         // Time interval to cycle through the slides. 0 for no auto-cycling.
-        $scope.slideInterval = 0;
+        $scope.slideIntervalInMS = 0;
         // Prevent looping of slides.
         $scope.noWrapSlides = false;
         // Index of current active slide.
