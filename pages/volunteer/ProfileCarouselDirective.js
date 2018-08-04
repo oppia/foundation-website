@@ -24,10 +24,10 @@ oppiaFoundationWebsite.directive('profileCarousel', [function() {
     },
     templateUrl: '/pages/volunteer/profile_carousel_directive.html',
     controller: [
-      '$scope', '$log', 'VolunteerProfilesService', 'CAROUSEL_TYPE_DESKTOP',
+      '$scope', 'VolunteerProfilesService', 'CAROUSEL_TYPE_DESKTOP',
       'CAROUSEL_TYPE_MOBILE',
       function(
-          $scope, $log, VolunteerProfilesService, CAROUSEL_TYPE_DESKTOP,
+          $scope, VolunteerProfilesService, CAROUSEL_TYPE_DESKTOP,
           CAROUSEL_TYPE_MOBILE) {
         if ($scope.carouselType === CAROUSEL_TYPE_DESKTOP) {
           $scope.displayDesktopCarousel = true;
@@ -36,11 +36,7 @@ oppiaFoundationWebsite.directive('profileCarousel', [function() {
           $scope.displayDesktopCarousel = false;
           $scope.displayMobileCarousel = true;
         } else {
-          try {
-            throw Error('Incorrect carousel type used in markup file.');
-          } catch (error) {
-            $log.error(error);
-          }
+          throw Error('Incorrect carousel type used in markup file.');
         }
         // Please visit https://angular-ui.github.io/bootstrap/#!#carousel
         // for more info on available directives.
