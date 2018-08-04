@@ -424,6 +424,19 @@ Full-Width Styles
   color: rgba(255,255,255,1);
 }
 
+.md-button.oppia-foundation-scroll-to-top-button {
+  cursor: pointer;
+  position: fixed !important;
+  padding: 0;
+  margin: auto;
+  outline-style: none;
+  transform: scale(0);
+}
+
+.md-button.oppia-foundation-scroll-to-top-button.scrolling {
+  transform: scale(1);
+}
+
 .oppia-foundation-quote-box {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 16px 20px;

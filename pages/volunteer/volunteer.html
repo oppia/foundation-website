@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<section id="volunteer">
+<section id="volunteer" ng-controller="volunteerPage">
   <md-card flex layout-gt-sm="row" layout="column" layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
     <md-card-content layout="column" flex="50">
       <md-content layout="column" class ="oppia-foundation-white-text oppia-foundation-green-background">
@@ -22,6 +22,7 @@
         <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
           Contributing to Oppia is an opportunity to impact the lives of millions of students.
         </h6>
+        <div id="heroCard"></div>
         <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
           It doesn&rsquo;t matter where you come from, what language you speak, or how young or old you are - this is a community project, and all are welcome!
         </h6>
@@ -32,12 +33,12 @@
     </div>
     <md-card-content hide-gt-sm layout="column" layout-align="center">
       <md-card-actions layout="row" layout-align="start">
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
+        <md-button ng-href="" data-ng-click="goToCard('mobileDesignCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
+        <md-button ng-href="" ng-click="goToCard('mobileDevelopmentCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
       </md-card-actions>
       <md-card-actions layout="row" layout-align="start">
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
+        <md-button ng-href="" ng-click="goToCard('mobileResearchCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
+        <md-button ng-href="" ng-click="goToCard('mobileMarketingCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
       </md-card-actions>
     </md-card-content>
   </md-card>
@@ -206,7 +207,7 @@
       </md-content>
     </md-card-content>
 
-    <md-card-content show-xs show-sm hide-gt-sm>
+    <md-card-content show-xs show-sm hide-gt-sm id="mobileDesignCard">
       <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
@@ -243,9 +244,10 @@
           <span class="oppia-foundation-italic-text">UX Design Lead</span>
         </cite>
       </md-card-content>
+      <div></div>
     </div>
 
-    <md-card-content show-xs show-sm hide-gt-sm>
+    <md-card-content show-xs show-sm hide-gt-sm id="mobileDevelopmentCard">
       <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
@@ -283,7 +285,7 @@
       </md-card-content>
     </div>
 
-    <md-card-content show-xs show-sm hide-gt-sm>
+    <md-card-content show-xs show-sm hide-gt-sm id="mobileResearchCard">
       <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
@@ -301,28 +303,29 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <div show-xs show-sm hide-gt-sm>
-      <img src="/static/images/volunteer_design_profile_image.png" class="volunteer-page-design-profile-image">
-    </div>
-    <div show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-      <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-white-background">
-        <md-content layout="column" layout-align="center none" class="oppia-foundation-white-background oppia-foundation-white-background oppia-foundation-black-text">
-          <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-            I love that Oppia is striving to make learning and education more fun and accessible to all. Volunteering gives me a chance to gain exp as a user researcher while giving back to a cause that I value.
-            <span>&rdquo;</span>
-          </blockquote>
-        </md-content>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Rachen Chan</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">User Researcher Lead</span>
-        </cite>
-      </md-card-content>
-    </div>
-
-    <md-card-content show-xs show-sm hide-gt-sm>
-      <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
+    <!-- <uib-carousel uib-carousel active="researchSlide.active" interval="slideInterval" no-wrap="noWrapSlides">
+      <uib-slide uib-slide  ng-repeat="slide in designSlides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div layout="column"  layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
+          <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-gray-background">
+            <md-content layout="column" layout-align="center center" class="oppia-foundation-gray-background oppia-foundation-black-text">
+              <center>
+                <span>&ldquo;</span>{{researchSlideQuotes[slide.id]}}<span>&rdquo;</span>
+              </center>
+            </md-content>
+            <cite class="oppia-foundation-cite-text-box">
+              <span class="oppia-foundation-bold-text">- {{researchSlideNames[slide.id]}}</span>
+              <p class="oppia-foundation-no-margin"></p>
+              <span class="oppia-foundation-italic-text">{{researchSlideJobTitles[slide.id]}}</span>
+            </cite>
+          </md-card-content>
+        </div>
+      </uib-slide>
+    </uib-carousel> -->
+  </md-card>
+  <md-card id="mobileMarketingCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -410,6 +413,9 @@
       </md-card>
     </md-card-content>
   </md-card>
+   <md-button id="div1" hide-gt-sm ng-href="" data-ng-click="goToCard('heroCard')" class="md-primary md-fab md-fab-bottom-right oppia-foundation-scroll-to-top-button" aria-label="Scroll to top" style="margin: auto;" md-colors="{background: 'teal-900'}">
+    <md-icon ng-href="" md-svg-src="static/icons/baseline-keyboard_arrow_up-24px.svg" style="color: white;"></md-icon>
+  </md-button>
 </section>
 <style>
   md-card-content md-card-title {
