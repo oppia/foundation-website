@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding"
     ng-if="displayDesktopCarousel">
-  <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides">
+  <uib-carousel uib-carousel active="activeSlideIndex" interval="slideIntervalInMillisecs" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
       <md-card class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
         <img ng-src="{{slide.profilePictureImageFilename}}">
@@ -19,7 +19,7 @@
 </div>
 
 <md-card layout-fill layout="column" ng-if="displayMobileCarousel">
-  <uib-carousel uib-carousel active="active" interval="slideInterval" no-wrap="noWrapSlides">
+  <uib-carousel uib-carousel active="activeSlideIndex" interval="slideIntervalInMillisecs" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
       <img ng-src="{{slide.profilePictureImageFilename}}">
       <div layout="column" layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
