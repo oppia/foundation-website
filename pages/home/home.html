@@ -1,123 +1,140 @@
 <!DOCTYPE html>
 <section id="main-content">
+  <md-card show-xs hide-gt-sm layout-fill style="width: 100%">
+    <md-card-content layout="column" class="oppia-foundation-green-background oppia-foundation-white-text">
+      <md-card-title class="home-page-body-card-title">
+        <h1>
+          We&rsquo;re building a global classroom
+        </h1>
+      </md-card-title>
+      <md-content class="oppia-foundation-green-background oppia-foundation-white-text">
+        <h4>
+          Students from every corner of the world deserve access to engaging, personalized education.
+        </h4>
+      </md-content>
+    </md-card-content>
+  </md-card>
   <md-card layout-fill style="position: relative;">
-    <div id="home-page-welcome-image-container" flex layout="column" layout-fill class="oppia-foundation-clearfix">
-      <img src="/static/images/home_cheering_child.png" class="home-page-welcome-image">
-      <md-card-content layout="column" layout-align="center center" class="home-page-welcome-image-overlay horizontal-padding oppia-foundation-green-background">
+    <div id="home-page-welcome-image-container" flex layout="column" class="oppia-foundation-clearfix">
+      <img src="/static/images/home/home_cheering_child.png" class="home-page-welcome-image" aria-label="Cheering child image" alt="Cheering child image">
+      <md-card-content hide-xs hide-sm layout="column" layout-align="center" class="home-page-welcome-image-overlay oppia-foundation-conditional-horizontal-padding oppia-foundation-green-background">
         <div class="home-page-welcome-text-overlay home-page-welcome-text-box">
           <md-card-title class="home-page-body-card-title">
-            <h1 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-display-2">
-              We're building a global classroom
+            <h1>
+              We&rsquo;re building a global classroom
             </h1>
-            <p hide-gt-sm style="font-size: 14pt; font-weight: bold;">
-              We're building a global classroom
-            </p>
           </md-card-title>
           <p></p>
-          <h3 hide-xs hide-sm class="oppia-foundation-horizontal-padding md-title">
+          <h3>
             Students from every corner of the world deserve access to engaging, personalized education.
           </h3>
-          <p hide-gt-sm style="font-size: 7pt;">
-            Students from every corner of the world deserve access to engaging, personalized education.
-          </p>
         </div>
       </md-card-content>
     </div>
   </md-card>
   <md-card layout-fill class="oppia-foundation-vertical-padding">
-    <md-card-content layout="column" layout-align="center">
-      <center>More than 250 million children worldwide have not achieved basic literacy and numeracy.</center>
-      <p></p>
-      <center class="oppia-foundation-green-text">The Oppia Foundation is working to change that.</center>
+    <md-card-content layout="row" layout-align="center">
+      <md-content layout="column" class="oppia-foundation-white-background home-page-history-text-box oppia-foundation-center-align-text">
+        <p>More than 250 million children worldwide have not achieved basic literacy and numeracy.</p>
+        <p class="oppia-foundation-green-text">The Oppia Foundation is working to change that.</p>
+      </md-content>
     </md-card-content>
   </md-card>
-  <md-card layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding ">
-    <md-card-content layout-align="center stretch" class="oppia-foundation-green-background" layout-gt-md="row" layout-xs="column">
-      <md-content layout="column" class="oppia-foundation-green-background oppia-foundation-white-text oppia-foundation-horizontal-padding" layout-align="center stretch">
+  <md-card layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding" layout-gt-md="row" layout="column">
+    <div show-xs show-sm hide-gt-md style="width: 100%">
+      <div class="macbook">
+        <div class="screen">
+          <div class="viewport"></div>
+        </div>
+        <div class="base"></div>
+        <div class="notch"></div>
+      </div>
+    </div>
+    <md-card-content layout-align="center" class="oppia-foundation-green-background" layout="column">
+      <md-content layout="column" class="oppia-foundation-conditional-horizontal-padding oppia-foundation-green-background oppia-foundation-white-text" layout-align="center">
         <h3>A new approach to online learning </h3>
         <p>
           Oppia is a free and open-source online learning platform for collaboratively creating and sharing interactive lessons.
         </p>
         <p>
-          Oppia’s lesson builder allows educators to provide students with targeted, personalized   feedback that simulates conversation with an intelligent, virtual tutor.
+          Oppia&rsquo;s lesson builder allows educators to provide students with targeted, personalized   feedback that simulates conversation with an intelligent, virtual tutor.
         </p>
-        <md-card-actions layout-xs="column">
-          <md-button class="oppia-foundation-black-text md-raised md-no-ink oppia-foundation-gold-border-button md-raised">
+        <md-card-actions layout-xs="column" layout-align="center center">
+          <md-button class="oppia-foundation-black-text oppia-foundation-gold-border-button md-raised">
             Visit Oppia.org
           </md-button>
         </md-card-actions>
       </md-content>
-      <div layout="column" layout-align="center stretch">
-        <div layout="column" hide-md hide-sm hide-xs>
-          <div class="columns">
-            <div class="column col-12">
-              <div class="device device-surface-book">
-                <div class="device-frame">
-                </div>
-                <div class="device-stripe"></div>
-                <div class="device-header"></div>
-                <div class="device-sensors"></div>
-                <div class="device-btns"></div>
-                <div class="device-power"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </md-card-content>
+    <div hide-xs hide-sm hide-md style="width: 100%">
+      <div class="macbook">
+        <div class="screen">
+          <div class="viewport"></div>
+        </div>
+        <div class="base"></div>
+        <div class="notch"></div>
+      </div>
+    </div>
   </md-card>
-  <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding">
-    <md-card-content layout-align= "center center" layout-gt-md="row" layout-xs="column">
-      <img src="/static/images/home_impact.jpg" class="home-page-impact-image oppia-foundation-horizontal-padding" hide-xs>
-      <md-content layout="column" class="oppia-foundation-black-text oppia-foundation-white-background oppia-foundation-horizontal-padding" layout-align="center stretch">
-        <h3>Impacting students around the world</h3>
-        <p>
-          Oppia was built to meet the unique needs of the developing world, where educational resources are scarce and methodologies are outdated. 
-        </p>
-        <p>
-          Our storytelling-based approach to learning requires less bandwidth than educational videos, making it accessible in areas with limited internet connections. Adaptive lessons with personalized feedback create a safe, interactive learning environment otherwise unavailable to underserved communities.
-        </p>
-        <p>
-          By uniting a global community of volunteers and educators, Oppia’s lessons are continually translated into new languages and adapted for different cultures.
-        </p>
-      </md-content>
+  <md-card layout-fill layout-gt-md="row"  layout-align="space-around center" class="oppia-foundation-white-background oppia-foundation-conditional-vertical-padding">
+    <div hide-gt-xs class="oppia-foundation-conditional-horizontal-padding">
+      <img src="/static/images/home/home_impact.jpg" class="home-page-impact-image" aria-label="Clapping students image" alt="Clapping students image">
+    </div>
+    <div hide-xs show-gt-xs class="oppia-foundation-horizontal-padding">
+      <img src="/static/images/home/home_impact.jpg" class="home-page-impact-image" aria-label="Clapping students image" alt="Clapping students image">
+    </div>
+    <md-card-content layout="column" class="oppia-foundation-conditional-vertical-padding oppia-foundation-conditional-horizontal-padding oppia-foundation-black-text oppia-foundation-white-background" layout-align="end" style="padding-bottom: 40px">
+      <h3 style="margin-top: 0;">Impacting students around the world</h3>
+      <p>
+        Oppia was built to meet the unique needs of the developing world, where educational resources are scarce and methodologies are outdated. 
+      </p>
+      <p>
+        Our storytelling-based approach to learning requires less bandwidth than educational videos, making it accessible in areas with limited internet connections. Adaptive lessons with personalized feedback create a safe, interactive learning environment otherwise unavailable to underserved communities.
+      </p>
+      <p>
+        By uniting a global community of volunteers and educators, Oppia&rsquo;s lessons are continually translated into new languages and adapted for different cultures.
+      </p>
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding">
     <md-card-content layout="row" layout-align="center">
       <md-content layout="column" class="oppia-foundation-white-text oppia-foundation-green-background home-page-history-text-box">
-        <center>
+        <p class="oppia-foundation-center-align-text">
           Since launching Oppia.org in 2015, over 800,000 learners in more than 20 countries have used our platform to explore, grow, and learn.
-        </center>
+        </p>
       </md-content>
     </md-card-content>
   </md-card>
-  <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding">
-    <md-card-content layout-gt-md="row" layout-xs="column">
-      <md-content layout="column" class="oppia-foundation-black-text oppia-foundation-white-background oppia-foundation-horizontal-padding" layout-align="center none">
-        <h3>Get involved</h3>
-        <p>
-          The Oppia Foundation is a community of open-source developers, researchers, and educators around the world who volunteer to make our vision a reality.
-        </p>
-        <p>
-          We are looking for organizations that want to join us on our journey to transform how students learn online.
-        </p>
-        <p>
-          With your help, we aim to improve our platform by conducting randomly controlled trials, fund a dedicated team of lesson creators, and manage the costs of scaling the Oppia project to serve learners across the world.
-        </p>
-        <md-card-actions layout-xs="column" layout-align="center center">
-          <md-button class="oppia-foundation-black-text md-raised md-no-ink oppia-foundation-white-background oppia-foundation-gold-border-button md-raised">
-            Learn More
-          </md-button>
-        </md-card-actions>
-      </md-content>
-      <img src="/static/images/home_get_involved.png" class="home-page-get-involved-image">
+  <md-card layout-fill layout-gt-sm="row" layout="column" class="oppia-foundation-white-background oppia-foundation-vertical-padding">
+    <img hide-gt-sm src="/static/images/home/home_get_involved.png" class="home-page-get-involved-image" aria-label="Get involved image" alt="Get involved image">
+    <md-card-content>
+      <md-content layout="column" class="oppia-foundation-conditional-horizontal-padding oppia-foundation-black-text oppia-foundation-white-background home-page-get-involved-text-box">
+      <h3>Get involved</h3>
+      <p>
+        The Oppia Foundation is a community of open-source developers, researchers, and educators around the world who volunteer to make our vision a reality.
+      </p>
+      <p>
+        We are looking for organizations that want to join us on our journey to transform how students learn online.
+      </p>
+      <p>
+        With your help, we aim to improve our platform by conducting randomly controlled trials, fund a dedicated team of lesson creators, and manage the costs of scaling the Oppia project to serve learners across the world.
+      </p>
+      <md-card-actions layout-xs="column" layout-align="center center">
+        <md-button class="oppia-foundation-black-text oppia-foundation-gold-border-button md-raised">
+          Learn More
+        </md-button>
+      </md-card-actions>
+    </md-content>
     </md-card-content>
+    
+    <img hide-xs hide-sm src="/static/images/home/home_get_involved.png" class="home-page-get-involved-image" aria-label="Get involved image" alt="Get involved image">
   </md-card>
-  <md-card layout-fill class="oppia-foundation-vertical-padding oppia-foundation-gray-background">
-    <md-card-content layout-gt-md="row" layout-xs="column">
-      <img src="/static/images/home_partner.png" class="home-page-partner-image">
-      <md-content layout="column" class="oppia-foundation-black-text oppia-foundation-gray-background oppia-foundation-horizontal-padding" layout-align="center none">
+  <md-card layout-gt-sm="row" layout="column" layout-align="space-around" layout-fill class="oppia-foundation-vertical-padding oppia-foundation-gray-background">
+    <div layout="column" layout-align="start">
+      <img src="/static/images/home/home_partner.png" class="home-page-partner-image" aria-label="Partner with us image" alt="Partner with us image">
+    </div>
+    <md-card-content>
+      <md-content layout="column"  layout-align="center" class="oppia-foundation-conditional-horizontal-padding oppia-foundation-black-text oppia-foundation-gray-background home-page-get-involved-text-box">
         <h3>Partner with us</h3>
         <p>
           We are looking for organizations that want to join us on our journey to transform how students learn online.
@@ -126,7 +143,7 @@
           With your help, we aim to improve our platform by conducting randomly controlled trials, fund a dedicated team of lesson creators, and manage the costs of scaling the Oppia project to serve learners across the world.
         </p>
         <md-card-actions layout-xs="column" layout-align="center center">
-          <md-button class="oppia-foundation-black-text md-raised md-no-ink oppia-foundation-white-background oppia-foundation-gold-border-button md-raised">
+          <md-button class="oppia-foundation-black-text oppia-foundation-gold-border-button md-raised">
             Learn More
           </md-button>
         </md-card-actions>
@@ -134,44 +151,41 @@
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-vertical-padding oppia-foundation-white-background">
-    <md-card-content layout="row" layout-align="center">
+    <md-card-content layout="column" layout-align="center center">
       <md-content layout="column" class="oppia-foundation-black-text oppia-foundation-white-background home-page-donation-text-box" layout-align="center center">
         <center>
           <h3>Make a donation</h3>
         </center>
         <center>
           <p>
-            By making a donation to The Oppia Foundation, you are helping to change millions of students’ lives. Together, we can revolutionize the way students around the world use the internet to learn.
+            By making a donation to The Oppia Foundation, you are helping to change millions of students&rsquo; lives. Together, we can revolutionize the way students around the world use the internet to learn.
           </p>
         </center>
-        <md-card-actions layout="row" layout-align="center center">
-          <div class="oppia-foundation-button-horizontal-padding">
-            <md-button class="oppia-foundation-black-text md-raised md-no-ink oppia-foundation-white-background oppia-foundation-gold-border-button md-raised">
+        <md-list layout="column" layout-gt-xs="row" layout-align="space-between center">
+          <md-list-item>
+            <md-button class="oppia-foundation-black-text oppia-foundation-gold-border-button md-raised">
               Credit Card
             </md-button>
-          </div>
-          <div class="oppia-foundation-button-horizontal-padding">
-            <md-button class="oppia-foundation-black-text md-raised md-no-ink oppia-foundation-white-background oppia-foundation-gold-border-button md-raised">
+          </md-list-item>
+          <md-list-item>
+            <md-button class="oppia-foundation-black-text oppia-foundation-gold-border-button md-raised">
               Paypal
             </md-button>
-          </div>
-        </md-card-actions>
+          </md-list-item>
+        </md-list>
       </md-content>
     </md-card-content>
   </md-card>
 </section>
 <style>
-
   .home-page-body-card-title {
     padding-left: 0;
     padding-right: 0;
   }
-
   #home-page-welcome-image-container {
     height: 100%;
     z-index: 10;
   }
-
   .home-page-welcome-image-overlay {
     bottom: 0;
     -webkit-box-shadow: 2px 0 1px 1px rgba(0,0,0,0.5);
@@ -180,36 +194,31 @@
     position: absolute;
     top: 0;
     width: 50%;
+    height: 100%;
   }
-
   .home-page-welcome-text-overlay { 
     color: white;
   }
-
   .home-page-welcome-image {
     border: 0;
-    height: auto;
+    max-height: auto;
     width: 100%;
   }
-
   .home-page-impact-image {
     border: 0;
     display: block;
     margin: auto;
-    max-height: 600px;
-    max-width: 600px;
     padding-bottom: 20px;
+    max-height: 35em;
+    max-width: 35em;
   }
-
   .home-page-get-involved-image {
     border: 0;
     display: block;
     margin: auto;
     max-height: 500px;
     max-width: 500px;
-    padding-left: 20px;
   }
-
   .home-page-partner-image {
     border: 0;
     display: block;
@@ -217,21 +226,109 @@
     max-height: 600px;
     max-width: 600px;
   }
-
   md-card .md-actions, md-card md-card-actions {
     margin-top: 20px;
     margin-left: 0px;
   }
-
+  .home-page-impact-text-box {
+    width: 750px;
+  }
+  .home-page-donation-text-box, 
   .home-page-welcome-text-box {
     max-width: 650px;
   }
-
-  .home-page-donation-text-box {
-    max-width: 500px;
-  }
-
   .home-page-history-text-box {
     max-width: 500px;
+  }
+  .home-page-get-involved-text-box{
+    max-width: 850px;
+  }
+  .macbook {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  @media screen and (max-width: 640px) {
+    .macbook {
+      padding: 20px;
+    }
+  }
+  .screen {
+    background: #000;
+    border-radius: 3% 3% 0.5% 0.5% / 5%;
+    margin: 0 auto;
+    /* for aspect ratio */
+    position: relative;
+    width: 80%;
+  }
+  .screen:before {
+    border: 2px solid #cacacc;
+    border-radius: 3% 3% 0.5% 0.5% / 5%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+    content: "";
+    display: block;
+    /* for aspect ratio ~67:100 */
+    padding-top: 67%;
+  }
+  .screen:after {
+    content: "";
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    bottom: 0.75%;
+    left: 0.5%;
+    padding-top: 1%;
+    width: 99%;
+  }
+  .viewport {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 4.3% 3.2%;
+    background-color: white;
+    background-image: url('/static/images/home/home_partner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .base {
+    /* for aspect ratio */
+    position: relative;
+    width: 100%;
+  }
+  .base:before {
+    content: "";
+    display: block;
+    /* for aspect ratio ~33:1000*/
+    padding-top: 3.3%;
+    background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
+    border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+  }
+  .base::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+    content: "";
+    height: 53%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .notch {
+    background: #ddd;
+    border-radius: 0 0 7% 7% / 0 0 95% 95%;
+    box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3.5%;
+    z-index: 2;
+    /* for aspect ratio */
+    position: relative;
+    width: 14%;
+  }
+  .notch:before {
+    content: "";
+    display: block;
+    /* for aspect ratio ~1:10 */
+    padding-top: 10%;
   }
 </style>
