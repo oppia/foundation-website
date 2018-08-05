@@ -12,43 +12,49 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', function($scope) {
-  $scope.tabs = [{
-    title: 'Design',
-    templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
-  }, {
-    title: 'Development',
-    templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
-  }, {
-    title: 'Research',
-    templateUrl: '/pages/volunteer/tabs_template/research_tab.html'
-  }, {
-    title: 'Marketing',
-    templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
-  }];
-  $scope.activeTabId = 0;
-  $scope.templateUrl = $scope.tabs[0].templateUrl;
-  $scope.onTabSelected = function(activeTabId) {
-    $scope.activeTabId = activeTabId;
-  };
-  $document.bind('scroll', function() {
-  // Only display scrollTop button on scroll event.
-    if ($window.scrollY > 0 && !scrollToTopButton.hasClass('scrolling')) {
-      scrollToTopButton.addClass('scrolling');
-    }
-    if ($window.scrollY === 0) {
-    // Remove scrollTop button after reaching navbar.
-      scrollToTopButton.removeClass('scrolling');
-    }
-  });
-  /**
- * Scroll to an element with given Id.
- * @param {String} card - id of element to scroll to
- */
-  $scope.goToCard = function(card) {
-    var offset = 0;
-    var duration = 2000; // milliseconds
-    var someElement = angular.element(document.getElementById(card));
-    $document.scrollToElement(someElement, offset, duration);
-  };
-}]);
+oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', '$document',
+  '$window', function($scope, $document, $window) {
+    $scope.tabs = [{
+      title: 'Design',
+      templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
+    }, {
+      title: 'Development',
+      templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
+    }, {
+      title: 'Research',
+      templateUrl: '/pages/volunteer/tabs_template/research_tab.html'
+    }, {
+      title: 'Marketing',
+      templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
+    }];
+    $scope.activeTabId = 0;
+    $scope.templateUrl = $scope.tabs[0].templateUrl;
+    $scope.onTabSelected = function(activeTabId) {
+      $scope.activeTabId = activeTabId;
+    };
+    var scrollToTopButton = angular.element(document.querySelector(
+      '#scrollToTopButton'));
+    $document.bind('scroll', function() {
+      // Only display scrollToTop button on scroll event.
+      if ($window.scrollY > 0 && !scrollToTopButton.hasClass('scrolling')) {
+        scrollToTopButton.addClass('scrolling');
+      }
+      if ($window.scrollY === 0) {
+        // Hide button after reaching navbar.
+        scrollToTopButton.removeClass('scrolling');
+      }
+    });
+    $scope.goToElement = function(elementId) {
+      // Vertical offset distance from element after scrolling.
+      var offset = 0;
+      var durationInMilliseconds = 2000;
+      var destinationElement = angular.element(
+        document.getElementById(elementId));
+      if (destinationElement.length) {
+        $document.scrollToElement(
+          destinationElement, offset, durationInMilliseconds);
+      } else {
+        throw Error('No such element');
+      }
+    };
+  }]);
