@@ -124,7 +124,8 @@ Theme Styles (based on Slate Theme for GitHub Pages by Jason Costello,
 *******************************************************************************/
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #373737;
   background: #f2f2f2;
   font-family: "Capriola", "Roboto", Arial, sans-serif;
@@ -415,7 +416,8 @@ Full-Width Styles
 
 .md-button.oppia-foundation-white-button {
   background-color: rgba(255,255,255,1);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: #18AA9D;
   padding: 0px 15px;
   max-width: 250px;
@@ -446,7 +448,8 @@ Full-Width Styles
 }
 
 .oppia-foundation-quote-box {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 16px 20px;
 }
 @media screen and (min-width: 100px) and (max-width: 499px) {
