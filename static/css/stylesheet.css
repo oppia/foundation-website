@@ -396,6 +396,10 @@ Full-Width Styles
   text-transform: uppercase;
 }
 
+.oppia-foundation-left-align-text {
+  text-align: left;
+}
+
 .md-button.oppia-foundation-gold-border-button {
   border: 3px outset goldenrod;
   min-width: 200px;
@@ -422,6 +426,23 @@ Full-Width Styles
 .md-button.oppia-foundation-white-button:focus {
   background-color: #18AA9D;
   color: rgba(255,255,255,1);
+}
+
+.md-button.oppia-foundation-scroll-to-top-button {
+  cursor: pointer;
+  position: fixed !important;
+  padding: 0;
+  margin: auto;
+  outline-style: none;
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.md-button.oppia-foundation-scroll-to-top-button.scrolling {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .oppia-foundation-quote-box {
@@ -541,7 +562,6 @@ Small Device Styles
 .active {
   color: #222222;
   /* Disables the link completely instead of just cursor: default; */
-  font-weight: 600;
   pointer-events: none;
   text-decoration: none;
 }

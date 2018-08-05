@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<section id="volunteer">
+<section id="volunteer" ng-controller="VolunteerPage">
   <md-card flex layout-gt-sm="row" layout="column" layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
     <md-card-content layout="column" flex="50">
       <md-content layout="column" class ="oppia-foundation-white-text oppia-foundation-green-background">
@@ -32,182 +32,33 @@
     </div>
     <md-card-content hide-gt-sm layout="column" layout-align="center">
       <md-card-actions layout="row" layout-align="start">
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
+        <md-button ng-href="" data-ng-click="goToElement('mobileDesignCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
+        <md-button ng-href="" ng-click="goToElement('mobileDevelopmentCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
       </md-card-actions>
       <md-card-actions layout="row" layout-align="start">
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
-        <md-button class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
+        <md-button ng-href="" ng-click="goToElement('mobileResearchCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
+        <md-button ng-href="" ng-click="goToElement('mobileMarketingCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
       </md-card-actions>
     </md-card-content>
   </md-card>
-  <md-card layout-fill flex layout-gt-sm="row" layout="column" class="oppia-foundation-gray-background volunteer-page-conditional-horizontal-padding oppia-foundation-vertical-padding">
-    <md-card-content layout-gt-md="row" layout="column">
-      <md-content>
+  <md-card hide-xs hide-sm show-gt-sm layout-fill flex layout-gt-sm="row" layout="column" class="oppia-foundation-gray-background volunteer-page-conditional-horizontal-padding oppia-foundation-vertical-padding">
+    <md-card-content layout-gt-md="row" layout="column" layout-fill>
+      <md-content layout-fill>
         <md-tabs hide-xs hide-sm md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
-          <md-tab>
-            <md-tab-label>
-              Design
-            </md-tab-label>
-            <md-tab-body layout="row">
-              <div layout="row" flex class="oppia-foundation-white-background">
-                <md-content layout="column" flex="60" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding oppia-foundation-white-background" layout-align-gt-md="center">
-                  <p>Effective design is a huge part of making Oppia a powerful tool for learning. We&rsquo;re on working on a huge variety of projects that requires help from all sort of designers.</p>
-                  <p>Contributing to Oppia is a great opportunity to grow your skills, work with an international team of UX and graphic designers, and positively impact the lives of millions of students.</p>
-                  <p class="oppia-foundation-bold-text">What we do:</p>
-                  <ul>
-                    <li>Improve the user experience for students and lesson creators</li>
-                    <li>Create graphics for lessons</li>
-                    <li>Integrate user feedback and new features</li>
-                  </ul>
-                  <span flex="5"></span>
-                  <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
-                </md-content>
-                <span flex></span>
-                <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding">
-                  <md-card layout-fill class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-                    <img src="/static/images/volunteer_design_profile_image.png">
-                    <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
-                      <blockquote class="oppia-foundation-blockquote">
-                          <span>&ldquo;</span>
-                            As a former teacher, I am motivated to create a platform that gives everyone equal access to education.
-                            Working with Oppia is a powerful opportunity to leverage design for social justice.
-                          <span>&rdquo;</span>
-                      </blockquote>
-                      <cite class="oppia-foundation-cite-text-box">
-                        <span class="oppia-foundation-bold-text">- Jordan Movish</span>
-                        <p class="oppia-foundation-no-margin"></p>
-                        <span class="oppia-foundation-italic-text">UX Design Lead</span>
-                      </cite>
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </div>
-            </md-tab-body>
-          </md-tab>
-          <md-tab>
-            <md-tab-label>
-              Development
-            </md-tab-label>
-            <md-tab-body layout="row">
-              <div layout="row" flex class="oppia-foundation-white-background">
-                <md-content layout="column" flex="60" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding oppia-foundation-white-background" layout-align-gt-md="center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate.</p>
-                  <p>Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
-                  <p class="oppia-foundation-bold-text">What we do:</p>
-                  <ul>
-                    <li>Implement designs and fix bugs impacting the user experience.</li>
-                    <li>Mentor and guide new developers.</li>
-                    <li>Improve collaboration for lesson creators.</li>
-                  </ul>
-                  <span flex="5"></span>
-                  <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
-                </md-content>
-                <span flex></span>
-                <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding">
-                  <md-card layout-fill class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-                    <img src="/static/images/volunteer_design_profile_image.png">
-                    <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
-                      <blockquote class="oppia-foundation-blockquote">
-                          <span>&ldquo;</span>
-                            I&rsquo;m excited to help build a platform that makes students feel like they are learning from a personal tutor that acts as a guide and can respond to their progress. 
-                          <span>&rdquo;</span>
-                      </blockquote>
-                      <cite class="oppia-foundation-cite-text-box">
-                        <span class="oppia-foundation-bold-text">- Anmol Shukla</span>
-                        <p class="oppia-foundation-no-margin"></p>
-                        <span class="oppia-foundation-italic-text">Developer, Machine Learning</span>
-                      </cite>
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </div>
-            </md-tab-body>
-          </md-tab>
-          <md-tab>
-            <md-tab-label>
-              Research
-            </md-tab-label>
+          <md-tab ng-repeat="tab in tabs"
+                  md-on-select="onTabSelected($index % 4)"
+                  label="{{tab.title}}">
             <md-tab-body>
-              <div layout="row" flex class="oppia-foundation-white-background">
-                <md-content layout="column" flex="60" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding oppia-foundation-white-background" layout-align-gt-md="center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate.</p>
-                  <p>Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
-                  <p class="oppia-foundation-bold-text">What we do:</p>
-                  <ul>
-                    <li>Conduct usability tests for new features.</li>
-                    <li>Identify areas for improving lessons.</li>
-                    <li>Get feedback from students and lessons creators.</li>
-                  </ul>
-                  <span flex="5"></span>
-                  <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
-                </md-content>
-                <span flex></span>
-                <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding">
-                  <md-card layout-fill class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-                    <img src="/static/images/volunteer_design_profile_image.png">
-                    <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
-                      <blockquote class="oppia-foundation-blockquote">
-                          <span>&ldquo;</span>
-                            I love that Oppia is striving to make learning and education more fun and accessible to all. Volunteering gives me a chance to gain exp as a user researcher while giving back to a cause that I value.
-                          <span>&rdquo;</span>
-                      </blockquote>
-                      <cite class="oppia-foundation-cite-text-box">
-                        <span class="oppia-foundation-bold-text">- Rachel Chan</span>
-                        <p class="oppia-foundation-no-margin"></p>
-                        <span class="oppia-foundation-italic-text">User Researcher Lead</span>
-                      </cite>
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </div>
-            </md-tab-body>
-          </md-tab>
-          <md-tab>
-            <md-tab-label>
-              Marketing
-            </md-tab-label>
-            <md-tab-body>
-              <div layout="row" flex class="oppia-foundation-white-background">
-                <md-content layout="column" flex="60" class="oppia-foundation-vertical-padding oppia-foundation-horizontal-padding oppia-foundation-white-background" layout-align-gt-md="center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate.</p>
-                  <p>Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
-                  <p class="oppia-foundation-bold-text">What we do:</p>
-                  <ul>
-                    <li>Find ways to reach underserved students.</li>
-                    <li>Create materials to communicate our vision to stakeholders and partners.</li>
-                    <li>Build online presence using social media.</li>
-                  </ul>
-                  <span flex="5"></span>
-                  <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
-                </md-content>
-                <span flex></span>
-                <div layout="row" layout-align="end center" class="oppia-foundation-vertical-padding">
-                  <md-card layout-fill class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-                    <img src="/static/images/volunteer_design_profile_image.png">
-                    <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
-                      <blockquote class="oppia-foundation-blockquote">
-                          <span>&ldquo;</span>
-                            I worked for an education software company for 13 years and saw the tremendous impact it can have on students. My work at Oppia helps me continue shaping the future of education technology.
-                          <span>&rdquo;</span>
-                      </blockquote>
-                      <cite class="oppia-foundation-cite-text-box">
-                        <span class="oppia-foundation-bold-text">- Joe Lastname</span>
-                        <p class="oppia-foundation-no-margin"></p>
-                        <span class="oppia-foundation-italic-text">Job Title</span>
-                      </cite>
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </div>
+              <ng-include src="tabs[activeTabId].templateUrl"></ng-include>
             </md-tab-body>
           </md-tab>
         </md-tabs>
       </md-content>
     </md-card-content>
-
-    <md-card-content show-xs show-sm hide-gt-sm>
-      <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
+  </md-card>
+  <md-card id="mobileDesignCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -224,29 +75,11 @@
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <div show-xs show-sm hide-gt-sm>
-      <img src="/static/images/volunteer_design_profile_image.png" class="volunteer-page-design-profile-image">
-    </div>
-    <div show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-      <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-white-background">
-        <md-content layout="column" layout-align="center none" class="oppia-foundation-white-background oppia-foundation-white-background oppia-foundation-black-text">
-          <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-            As a former teacher, I am motivated to create a platform that gives everyone equal access to education.
-            Working with Oppia is a powerful opportunity to leverage design for social justice.
-            <span>&rdquo;</span>
-          </blockquote>
-        </md-content>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Jordan Movish</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">UX Design Lead</span>
-        </cite>
-      </md-card-content>
-    </div>
-
-    <md-card-content show-xs show-sm hide-gt-sm>
-      <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="design"></profile-carousel>
+  </md-card>
+  <md-card id="mobileDevelopmentCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -256,35 +89,18 @@
         </md-card-title>
         <p class="oppia-foundation-bold-text">What we do:</p>
         <ul>
-          <li>Implement designs and fix bugs impacting the user experience.</li>
-          <li>Mentor and guide new developers.</li>
-          <li>Improve collaboration for lesson creators.</li>
+          <li>Build features that enable students to learn effectively.</li>
+          <li>Provide infrastructure that can deliver lessons at scale.</li>
+          <li>Apply ML techniques to provide better responses to students' answers.</li>
         </ul>
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <div show-xs show-sm hide-gt-sm>
-      <img src="/static/images/volunteer_design_profile_image.png" class="volunteer-page-design-profile-image">
-    </div>
-    <div show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-      <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-white-background">
-        <md-content layout="column" layout-align="center none" class="oppia-foundation-white-background oppia-foundation-white-background oppia-foundation-black-text">
-          <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-            I&rsquo;m excited to help build a platform that makes students feel like they are learning from a personal tutor that acts as a guide and can respond to their progress.
-            <span>&rdquo;</span>
-          </blockquote>
-        </md-content>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Anmol Shukla</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">Developer, Machine Learning</span>
-        </cite>
-      </md-card-content>
-    </div>
-
-    <md-card-content show-xs show-sm hide-gt-sm>
-      <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="development"></profile-carousel>
+  </md-card>
+  <md-card id="mobileResearchCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -294,35 +110,18 @@
         </md-card-title>
         <p class="oppia-foundation-bold-text">What we do:</p>
         <ul>
-          <li>Conduct usability tests for new features.</li>
-          <li>Identify areas for improving lessons.</li>
-          <li>Get feedback from students and lessons creators.</li>
+          <li>Conduct user studies to gain insights on the effect of Oppia&rsquo;s lessons.</li>
+          <li>Identify and find ways to address key issues that students face.</li>
+          <li>Write reports that summarize research findings and suggest next steps.</li>
         </ul>
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <div show-xs show-sm hide-gt-sm>
-      <img src="/static/images/volunteer_design_profile_image.png" class="volunteer-page-design-profile-image">
-    </div>
-    <div show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-      <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-white-background">
-        <md-content layout="column" layout-align="center none" class="oppia-foundation-white-background oppia-foundation-white-background oppia-foundation-black-text">
-          <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-            I love that Oppia is striving to make learning and education more fun and accessible to all. Volunteering gives me a chance to gain exp as a user researcher while giving back to a cause that I value.
-            <span>&rdquo;</span>
-          </blockquote>
-        </md-content>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Rachen Chan</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">User Researcher Lead</span>
-        </cite>
-      </md-card-content>
-    </div>
-
-    <md-card-content show-xs show-sm hide-gt-sm>
-      <md-content class="oppia-foundation-gray-background oppia-foundation-black-text">
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="research"></profile-carousel>
+  </md-card>
+  <md-card id="mobileMarketingCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -332,32 +131,14 @@
         </md-card-title>
         <p class="oppia-foundation-bold-text">What we do:</p>
         <ul>
-          <li>Find ways to reach underserved students.</li>
-          <li>Create materials to communicate our vision to stakeholders and partners.</li>
-          <li>Build online presence using social media.</li>
+          <li>Plan campaigns to raise awareness of Oppia's free lessons among students, teachers and parents.</li>
+          <li>Find ways to share Oppia's story, so that people know that they can make a difference.</li>
+          <li>Ensure that the stories we tell remain true to the organization's mission.</li>
         </ul>
         <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
-    <div show-xs show-sm hide-gt-sm>
-      <img src="/static/images/volunteer_design_profile_image.png" class="volunteer-page-design-profile-image">
-    </div>
-    <div show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-      <md-card-content layout="column" layout-align="center none" class="oppia-foundation-quote-box oppia-foundation-white-background">
-        <md-content layout="column" layout-align="center none" class="oppia-foundation-white-background oppia-foundation-white-background oppia-foundation-black-text">
-          <blockquote class="oppia-foundation-blockquote">
-            <span>&ldquo;</span>
-            I worked for an education software company for 13 years and saw the tremendous impact it can have on students. My work at Oppia helps me continue shaping the future of education technology.
-            <span>&rdquo;</span>
-          </blockquote>
-        </md-content>
-        <cite class="oppia-foundation-cite-text-box">
-          <span class="oppia-foundation-bold-text">- Joe Lastname</span>
-          <p class="oppia-foundation-no-margin"></p>
-          <span class="oppia-foundation-italic-text">Job Title</span>
-        </cite>
-      </md-card-content>
-    </div>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing"></profile-carousel>
   </md-card>
   <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
     <md-card-content layout="column" layout-gt-sm="row">
@@ -410,6 +191,9 @@
       </md-card>
     </md-card-content>
   </md-card>
+   <md-button id="scrollToTopButton" hide-gt-sm ng-href="" data-ng-click="goToElement('navigationBar')" class="md-primary md-fab md-fab-bottom-right oppia-foundation-scroll-to-top-button" aria-label="Scroll to top" style="margin: auto;" md-colors="{background: 'teal-900'}">
+    <md-icon ng-href="" md-svg-src="static/icons/baseline-keyboard_arrow_up-24px.svg" style="color: white;"></md-icon>
+  </md-button>
 </section>
 <style>
   md-card-content md-card-title {
@@ -475,5 +259,20 @@
   .volunteer-page-desktop-profile-card {
     font-size: 15px;
     width: 28vw;
+  }
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+  }
+  a.left.carousel-control, a.right.carousel-control {
+    position: absolute !important;
+    top: 50%;
+    height: 39px;
+    z-index: 2;
+  }
+  .carousel-indicators li {
+    background-color: grey;
+  }
+  .carousel-indicators .active {
+    background-color: black;
   }
 </style>
