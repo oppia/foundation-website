@@ -4,10 +4,10 @@
     <md-card-content layout="column" layout-align="center center" class="oppia-foundation-white-text">
       <md-content layout-wrap class="oppia-foundation-green-background oppia-foundation-white-text">
         <center>
-          <img src="/static/images/about_page_logo.png" style="width: 250px;">
-          <md-card-title>
+          <img src="/static/images/about_page_logo.png" class="about-page-oppia-logo" alt="Oppia logo">
+          <md-card-title class="oppia-foundation-no-padding">
             <md-card-title-text>
-              <h1 class="md-display-2">
+              <h1>
                 The Oppia Foundation
               </h1>
             </md-card-title-text>
@@ -23,7 +23,7 @@
     <md-card-content layout="column" layout-align="center center" class="oppia-foundation-black-text">
       <md-content class="oppia-foundation-white-background">
         <md-card-title class="about-page-body-card-title">
-          <h1 strong class="about-page-body-card-title">
+          <h1 strong>
             Our Call to Action
           </h1>
         </md-card-title>
@@ -39,7 +39,7 @@
       </md-content>
       <md-content class="oppia-foundation-white-background">
         <md-card-title class="about-page-body-card-title">
-          <h1 strong class="about-page-body-card-title">
+          <h1 strong>
             Our Mission
           </h1>
         </md-card-title>
@@ -55,7 +55,7 @@
       </md-content>
       <md-content class="oppia-foundation-white-background">
         <md-card-title class="about-page-body-card-title">
-          <h1 strong class="about-page-body-card-title">
+          <h1 strong>
             Our Impact
           </h1>
         </md-card-title>
@@ -66,70 +66,57 @@
           Additionally, we have been conducting user studies and pilots with students from around the world, including Cameroon, Zimbabwe, India and the United States. Feedback from these students has illustrated the powerful impact of the Oppia platform and serves as a guide for our efforts to improve the platform.
         </p>
       </md-content>
-      <md-list>
-        <md-list-item layout-gt-md="row" layout-sm="column" layout-xs="column" layout-align="center center">
+      <md-content class="oppia-foundation-white-background about-page-press-box" layout="column" layout-align="center start">
+        <md-card-title class="about-page-body-card-title">
           <h1 strong>
             As seen in
           </h1>
-        </md-list-item>
-        <md-list layout="row" layout-xs="column" layout-sm="column" layout-align="center center">
-          <md-list-item>
-            <md-button md-no-ink aria-label="TechCrunch Press">
-              <img src="/static/images/techcrunch.png" class="about-page-reference-logo">
-            </md-button>
-          </md-list-item>
-          <md-list-item>
-            <md-button md-no-ink aria-label="Tnw Press">
-              <img src="/static/images/tnw.png" class="about-page-reference-logo about-page-tnw-logo">
-            </md-button>
-          </md-list-item>
-          <md-list-item>
-            <md-button md-no-ink aria-label="Google Press">
-              <img src="/static/images/google.png" class="about-page-reference-logo">
-            </md-button>
-          </md-list-item>
-          <md-list-item>
-            <md-button md-no-ink aria-label="Edx Press">
-              <img src="/static/images/edx.png" class="about-page-reference-logo">
-            </md-button>
-          </md-list-item>
-        </md-list>
-      </md-list>
+        </md-card-title>
+        <md-card-actions layout-gt-sm="row" layout="column" layout-align="center center" layout-fill>
+          <md-button md-no-ink aria-label="TechCrunch Press">
+            <img src="/static/images/techcrunch.png" class="about-page-reference-logo" alt="TechCrunch logo">
+          </md-button>
+          <md-button md-no-ink aria-label="Tnw Press">
+            <img src="/static/images/tnw.png" class="about-page-reference-logo" alt="Tnw Press logo">
+          </md-button>
+           <md-button md-no-ink aria-label="Google Press">
+            <img src="/static/images/google.png" class="about-page-reference-logo" alt="Google Press logo">
+          </md-button>
+           <md-button md-no-ink aria-label="Edx Press">
+            <img src="/static/images/edx.png" class="about-page-reference-logo" alt="Edx Press logo">
+          </md-button>
+        </md-card-actions>
+      </md-content>
     </md-card-content>
   </md-card>
 </section>
-
 <style>
-
   .about-page-subtitle-text-box {
-    max-width: 500px;
+    max-width: 650px;
   }
-
   .about-page-body-description-text-box {
     max-width: 1000px;
   }
-
   .about-page-body-card-title {
     padding-left: 0;
     padding-right: 0;
   }
-
+  .about-page-oppia-logo {
+    width: 16em;
+  }
   .about-page-reference-logo {
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 30px;
+    height: 3em;
     width: auto;
   }
-
-  .about-page-tnw-logo {
-    height: 25px;
+  .about-page-press-box {
+    width: 100%;
   }
-
   @media only screen and (min-width : 1000px) {
     .about-page-press-box {
-    min-width: 1000px;
+      width: 1000px;
     }
   }
-
 </style>
