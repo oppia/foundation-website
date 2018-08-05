@@ -180,7 +180,6 @@ p {
 }
 
 center {
-  font-size: 16px;
   font-family: "Capriola", "Roboto", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -356,9 +355,23 @@ Full-Width Styles
   padding-right: 40px;
 }
 
+@media screen and (min-width: 799px) {
+  .oppia-foundation-conditional-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 .oppia-foundation-vertical-padding {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+@media screen and (min-width: 799px) {
+  .oppia-foundation-conditional-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .oppia-foundation-gray-background {
@@ -395,6 +408,10 @@ Full-Width Styles
 
 .oppia-foundation-uppercase-text {
   text-transform: uppercase;
+}
+
+.oppia-foundation-center-align-text {
+  text-align: center;
 }
 
 .oppia-foundation-left-align-text {
@@ -503,7 +520,7 @@ Small Device Styles
 
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
   h1 {
     font-size: 28px;
