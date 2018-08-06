@@ -46,7 +46,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', '$document',
     });
     $scope.goToElement = function(elementId) {
       // Please visit https://github.com/oblador/angular-scroll
-      // for more info on angular-scroll APIs
+      // for more info on angular-scroll APIs.
       // Vertical offset distance from element after scrolling.
       var offset = 0;
       var durationInMilliseconds = 2000;
