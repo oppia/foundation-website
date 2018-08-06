@@ -15,14 +15,16 @@
 oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   design: [{
     fullName: 'Jordan Movish',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'Jordan_profile_image.jpg',
     professionalQuote: 'As a former teacher, I am motivated to create a ' +
     'platform that gives everyone equal access to education. Working with ' +
     'Oppia is a powerful opportunity to leverage design for social justice.',
     position: 'UX Design Lead'
   }, {
     fullName: 'Milton Glaser',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'The public is more familiar with bad design than ' +
     'good design. It is, in effect, conditioned to prefer bad design, ' +
     'because that is what it lives with. The new becomes threatening, the ' +
@@ -30,27 +32,31 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Graphic Designer'
   }, {
     fullName: 'Paul Rand',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'You can have an art experience in front of a ' +
     'Rembrandt… or in front of a piece of graphic design.',
     position: 'Art Director'
   }],
   development: [{
     fullName: 'Anmol Shukla',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'I’m excited to help build a platform that makes ' +
     'students feel like they are learning from a personal tutor that acts as ' +
     'a guide and can respond to their progress.',
     position: 'Developer, Machine Learning'
   }, {
     fullName: 'Bill Gates',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'Measuring programming progress by lines of code is ' +
     'like measuring aircraft building progress by weight.',
     position: 'Co-Founder and Technology Advisor of Microsoft'
   }, {
     fullName: 'Steve McConnell',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'It´s better to wait for a productive programmer to ' +
     'become available than it is to wait for the first available programmer ' +
     'to become productive.',
@@ -58,7 +64,8 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   }],
   research: [{
     fullName: 'Rachen Chan',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'I love that Oppia is striving to make learning and ' +
     'education more fun and accessible to all. Volunteering gives me a ' +
     'chance to gain exp as a user researcher while giving back to a cause ' +
@@ -66,34 +73,39 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'User Researcher Lead'
   }, {
     fullName: 'Billy Gregory',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'When UX doesn’t consider ALL users, shouldn’t it be ' +
     'known as “SOME User Experience” or… SUX?',
     position: 'Senior Accessibility Engineer'
   }, {
     fullName: 'Blake Ross',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'The next big thing is the one that makes the last ' +
     'big thing usable.',
     position: 'Co-Founder of Mozilla Firefox'
   }],
   marketing: [{
     fullName: 'Joe Yannaphol',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'I worked for an education software company for 13 ' +
     'years and saw the tremendous impact it can have on students. My work at ' +
     'Oppia helps me continue shaping the future of education technology.',
     position: 'Marketing Lead'
   }, {
     fullName: 'Steve Wozniak',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'You need the kind of objectivity that makes you ' +
     'forget everything you’ve heard, clear the table, and do a factual study ' +
     'like a scientist would.',
     position: 'Co-Founder of Apple'
   }, {
     fullName: 'Ann Handley',
-    profilePictureImageFilename: '/static/images/sample_profile_image.jpeg',
+    profilePictureImageFilename: '/static/images/volunteer/profile_images/' +
+      'sample_profile_image.jpeg',
     professionalQuote: 'Good content isn’t about good storytelling. It’s ' +
     'about telling a true story well.',
     position: 'Digital Marketing Pioneer, Writer, Speaker'
