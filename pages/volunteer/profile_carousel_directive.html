@@ -4,7 +4,7 @@
   <uib-carousel uib-carousel active="activeSlideIndex" interval="slideIntervalInMillisecs" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
       <md-card class="oppia-foundation-gray-background volunteer-page-desktop-profile-card">
-        <img ng-src="{{slide.profilePictureImageFilename}}">
+        <img ng-src="{{slide.profilePictureImageFilename}}" alt="Volunteer profile image">
         <md-card-content layout="column" class="oppia-foundation-gray-background oppia-foundation-horizontal-padding">
           <span class="oppia-foundation-left-align-text">&ldquo;{{slide.professionalQuote}}&rdquo;</span>
           <cite class="oppia-foundation-cite-text-box">
@@ -21,7 +21,7 @@
 <md-card layout-fill layout="column" ng-if="displayMobileCarousel">
   <uib-carousel uib-carousel active="activeSlideIndex" interval="slideIntervalInMillisecs" no-wrap="noWrapSlides">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
-      <img ng-src="{{slide.profilePictureImageFilename}}">
+      <img ng-src="{{slide.profilePictureImageFilename}}" alt="Volunteer profile image" style="width: 100%">
       <div layout="column" layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
         <md-card-content layout="column" class="oppia-foundation-quote-box oppia-foundation-gray-background">
           <span class="oppia-foundation-left-align-text">&ldquo;{{slide.professionalQuote}}&rdquo;</span>
