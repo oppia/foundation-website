@@ -378,6 +378,10 @@ Full-Width Styles
   }
 }
 
+.oppia-foundation-bottom-padding {
+  padding-bottom: 40px;
+}
+
 .oppia-foundation-gray-background {
   background-color: #F4F4F4;
 }
