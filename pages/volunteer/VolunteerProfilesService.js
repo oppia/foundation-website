@@ -18,12 +18,17 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
      * Select 3 unique random volunteer profiles.
      * @param {Array} volunteerProfiles - Profiles of all volunteers.
      */
+    var PROFILE_IMAGE_ABSOLUTE_PATH =
+      '/static/images/volunteer/profile_images/';
     var getRandomProfiles = function(volunteerProfiles) {
       // Cloning volunteerProfiles to prevent changes to the original profiles.
       volunteerProfiles = angular.copy(volunteerProfiles);
       var slides = [];
       for (var i = volunteerProfiles.length - 1; i >= 0; i--) {
         var randomIndex = Math.floor(Math.random() * volunteerProfiles.length);
+        volunteerProfiles[randomIndex].profilePictureImageFilename =
+          PROFILE_IMAGE_ABSOLUTE_PATH +
+          volunteerProfiles[randomIndex].profilePictureImageFilename;
         slides.push(volunteerProfiles[randomIndex]);
         if (slides.length === 3) {
           // Only adding 3 profiles currently.
