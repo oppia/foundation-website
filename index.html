@@ -34,6 +34,7 @@
     <script src="pages/volunteer/Volunteer.js"></script>
     <script src="pages/volunteer/VolunteerProfilesService.js"></script>
     <script src="pages/volunteer/ProfileCarouselDirective.js"></script>
+    <script src="pages/footer/FooterDirective.js"></script>
     <title ng-bind="$root.title"></title>
   </head>
 
@@ -42,12 +43,16 @@
       <header role="banner">
         <navigation-bar></navigation-bar>
       </header>
-
-      <section>
-        <div layout="column" flex>
-          <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
-        </div>
-      </section>
+      <main>
+        <section>
+          <div layout="column" flex>
+            <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <bottom-navigation></bottom-navigation>
+      </footer>
     </div>
   </body>
 </html>
