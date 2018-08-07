@@ -12,12 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.directive('navigationBar', [function() {
+oppiaFoundationWebsite.directive('bottomNavigation', [function() {
   return {
     restrict: 'E',
     scope: {},
-    templateUrl: '/pages/navbar/navbar.html',
+    templateUrl: '/pages/footer/footer.html',
     controller: ['$scope', function($scope) {
+      $scope.currentYear = (new Date()).getUTCFullYear();
     }]
   };
 }]);

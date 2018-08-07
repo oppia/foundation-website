@@ -211,6 +211,10 @@ a:focus {
 }
 
 footer a {
+  color: #F2F2F2; 
+}
+
+footer a:active, a:hover {
   color: #F2F2F2;
   text-decoration: underline;
 }
