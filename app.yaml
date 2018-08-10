@@ -11,16 +11,10 @@ handlers:
   http_headers:
     Cache-Control: 'public, max-age=2592000'
 
-- url: /
+- url: /.*
   static_files: app/index.html
   upload: app/index.html
   secure: always
   expiration: 30d
   http_headers:
     Cache-Control: 'public, max-age=2592000'
-
-- url: /static
-  static_dir: app/static
-  secure: always
-  http_headers:
-    Cache-Control: 'public, max-age=60'
