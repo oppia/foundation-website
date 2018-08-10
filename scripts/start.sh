@@ -39,6 +39,7 @@ fi
 
 set -e
 source $(dirname $0)/setup.sh || exit 1
+source $(dirname $0)/setup_gae.sh || exit 1
 
 # Install third party dependencies.
 bash scripts/install_third_party.sh
@@ -56,7 +57,7 @@ fi
 # Set up a local dev instance.
 echo Starting GAE development server
 
-(dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . $*)&
+($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . $*)&
 
 # Wait for the servers to come up.
 while ! nc -vz localhost 8080 >/dev/null 2>&1; do sleep 1; done
