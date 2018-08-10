@@ -4,16 +4,16 @@ threadsafe: true
 
 handlers:
 - url: /(.+)
-  static_files: app/\1
-  upload: app/.*
+  static_files: static/\1
+  upload: static/.*
   secure: always
   expiration: 30d
   http_headers:
     Cache-Control: 'public, max-age=2592000'
 
 - url: /.*
-  static_files: app/index.html
-  upload: app/index.html
+  static_files: static/index.html
+  upload: static/index.html
   secure: always
   expiration: 30d
   http_headers:
