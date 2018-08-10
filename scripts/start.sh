@@ -44,39 +44,67 @@ source $(dirname $0)/setup.sh || exit 1
 bash scripts/install_third_party.sh
 
 # Check that there isn't a server already running.
-if ( nc -vz localhost 8181 >/dev/null 2>&1 ); then
+if ( nc -vz localhost 8080 >/dev/null 2>&1 ); then
   echo ""
   echo "  WARNING"
   echo "  Could not start new server. There is already an existing server"
-  echo "  running at port 8181."
+  echo "  running at port 8080."
   echo ""
   exit 1
 fi
 
+# Set up a local dev instance.
+echo Starting GAE development server
+
+(dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . $*)&
+
+# Wait for the servers to come up.
+while ! nc -vz localhost 8080 >/dev/null 2>&1; do sleep 1; done
+
 # Launch a browser window.
 if [ ${OS} == "Linux" ]; then
-  echo ""
-  echo "  INFORMATION"
-  echo "  Setting up a local development server at localhost:8181. Opening a"
-  echo "  default browser window pointing to this server."
-  echo ""
-  (sleep 5; xdg-open http://localhost:8181/ )&
+  detect_virtualbox="$(ls -1 /dev/disk/by-id/)"
+  if [[ $detect_virtualbox = *"VBOX"* ]]; then
+    echo ""
+    echo "  INFORMATION"
+    echo "  Setting up a local development server. You can access this server"
+    echo "  by navigating to localhost:8080 in a browser window."
+    echo ""
+  else
+    echo ""
+    echo "  INFORMATION"
+    echo "  Setting up a local development server at localhost:8080. Opening a"
+    echo "  default browser window pointing to this server."
+    echo ""
+    (sleep 5; xdg-open http://localhost:8080/ )&
+  fi
 elif [ ${OS} == "Darwin" ]; then
   echo ""
   echo "  INFORMATION"
-  echo "  Setting up a local development server at localhost:8181. Opening a"
+  echo "  Setting up a local development server at localhost:8080. Opening a"
   echo "  default browser window pointing to this server."
   echo ""
-  (sleep 5; open http://localhost:8181/ )&
+  (sleep 5; open http://localhost:8080/ )&
 else
   echo ""
   echo "  INFORMATION"
   echo "  Setting up a local development server. You can access this server"
-  echo "  by navigating to localhost:8181 in a browser window."
+  echo "  by navigating to localhost:8080 in a browser window."
   echo ""
 fi
 
-echo Starting SimpleHTTPServer at port 8181
-$PYTHON_CMD $FOUNDATION_DIR/scripts/serve.py 8181
-
 echo Done!
+
+# Function for waiting for the servers to go down.
+function cleanup {
+  echo ""
+  echo "  INFORMATION"
+  echo "  Cleaning up the servers."
+  echo ""
+  while ( nc -vz localhost 8080 >/dev/null 2>&1 ); do echo "Waiting for port 8080 to reopen." && sleep 1; done
+}
+
+# Runs cleanup function on exit.
+trap cleanup Exit
+
+wait

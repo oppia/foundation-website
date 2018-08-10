@@ -1,0 +1,28 @@
+application: oppiafoundationwebsite
+version: default
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.+)
+  static_files: app/\1
+  upload: app/.*
+  secure: always
+  expiration: 30d
+  http_headers:
+    Cache-Control: 'public, max-age=2592000'
+
+- url: /
+  static_files: app/index.html
+  upload: app/index.html
+  secure: always
+  expiration: 30d
+  http_headers:
+    Cache-Control: 'public, max-age=2592000'
+
+- url: /static
+  static_dir: app/static
+  secure: always
+  http_headers:
+    Cache-Control: 'public, max-age=60'
