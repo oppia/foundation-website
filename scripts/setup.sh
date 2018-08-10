@@ -15,7 +15,7 @@
 ##########################################################################
 
 # This file should not be invoked directly, but sourced from other sh scripts.
-# Bash execution environent set up for all scripts.
+# Bash execution environment set up for all scripts.
 
 if [ "$SETUP_DONE" ]; then
   echo 'Environment setup completed.'
@@ -43,10 +43,12 @@ fi
 
 export FOUNDATION_DIR=`pwd`
 export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
+export TOOLS_DIR=$COMMON_DIR/oppia_tools
 export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
 export MACHINE_TYPE=`uname -m`
 export OS=`uname`
 
+mkdir -p $TOOLS_DIR
 mkdir -p $THIRD_PARTY_DIR/js
 mkdir -p $THIRD_PARTY_DIR/css
 

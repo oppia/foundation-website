@@ -19,7 +19,7 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
      * @param {Array} volunteerProfiles - Profiles of all volunteers.
      */
     var PROFILE_IMAGE_ABSOLUTE_PATH =
-      '/static/images/volunteer/profile_images/';
+      '/assets/images/volunteer/profile_images/';
     var getRandomProfiles = function(volunteerProfiles) {
       // Cloning volunteerProfiles to prevent changes to the original profiles.
       volunteerProfiles = angular.copy(volunteerProfiles);
