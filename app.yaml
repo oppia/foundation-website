@@ -19,6 +19,6 @@ handlers:
   http_headers:
     Cache-Control: 'public, max-age=2592000'
 
-- url: /_ah/mail/.*
-  script: main_mail.app
+- url: /.*
+  script: core/main.app
   secure: always

@@ -14,14 +14,14 @@
 
 oppiaFoundationWebsite.controller(
   'PartnershipsPage', ['$scope', function($scope) {
-    var requestParams = {
-      fullName: null,
-      email: null,
-      organization: null,
-      comment: null,
-    };
     $scope.submitContactUsForm = function(
         fullName, email, organization, comment) {
+      var requestParams = {
+        fullName: null,
+        email: null,
+        organization: null,
+        comment: null,
+      };
       requestParams.fullName = fullName;
       requestParams.email = email;
       requestParams.organization = organization;
