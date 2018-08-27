@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<section id="partnerships">
+<section id="partnerships"
+         ng-controller="PartnershipsPage">
   <md-card layout="column"
            layout-fill
            class="partnerships-page-conditional-horizontal-padding
@@ -11,7 +12,8 @@
          layout-xs="column"
          layout-align="space-between none"
          layout-fill>
-      <div flex-gt-md="80" flex="100">
+      <div flex-gt-md="80"
+           flex="100">
         <md-card-content layout="column"
                          layout-align="space-between center"
                          class="oppia-foundation-white-text">
@@ -19,15 +21,19 @@
                              oppia-foundation-green-background">
             <md-card-title>
               <md-card-title-text>
-                <h1 class="md-display-3" hide-xs>
+                <h1 class="md-display-3"
+                    hide-xs>
                   We're looking for partners
                 </h1>
-                <h3 class="md-display-1" show-xs hide-gt-xs>
+                <h3 class="md-display-1"
+                    show-xs
+                    hide-gt-xs>
                   We're looking for partners
                 </h3>
               </md-card-title-text>
             </md-card-title>
-              <h4 class="md-headline partnerships-page-title-box" hide-xs>
+              <h4 class="md-headline partnerships-page-title-box"
+                  hide-xs>
                 The Oppia Foundation has already helped over 800,000 learners. 
                 Help us bring engaging, effective lessons to students around
                 the worlds.
@@ -128,7 +134,8 @@
            class="oppia-foundation-white-background
                   partnerships-page-conditional-horizontal-padding
                   oppia-foundation-vertical-padding">
-    <md-card-content layout-gt-md="row" layout-xs="column">
+    <md-card-content layout-gt-md="row"
+                     layout-xs="column">
       <img src="/assets/images/partnerships/partnerships_our_approach.jpg"
            class="partnerships-page-approach-image"
            alt="Our approach image">
@@ -370,25 +377,28 @@
         </p>
       </md-content>
     </md-card-content>
-    <div flex-gt-sm="10"></div>
-    <md-card class="oppia-foundation-white-background
-                    oppia-foundation-black-text md-no-momentum
+    <div flex-gt-sm="10">
+    </div>
+    <md-card class="md-no-momentum
+                    oppia-foundation-white-background
+                    oppia-foundation-black-text 
                     oppia-foundation-vertical-padding"
              flex-gt-sm="45">
-      <form name="userContactsForm"
+      <form name="partnershipsEmailForm"
             class="oppia-foundation-white-background">
         <md-input-container class="md-block">
           <label class="oppia-foundation-uppercase-text">
             Name
           </label>
-          <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg">
+          <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg"
+                   aria-label="Email form person icon">
           </md-icon>
           <input placeholder=""
                  required
                  md-no-asterisk
                  name="fullName"
-                 ng-model="userContacts.fullName">
-          <div ng-messages="userContactsForm.fullName.$error">
+                 ng-model="fullName">
+          <div ng-messages="partnershipsEmailForm.fullName.$error">
             <div ng-message="required">
               Please enter your full name.
             </div>
@@ -398,17 +408,18 @@
           <label class="oppia-foundation-uppercase-text">
             Email
           </label>
-          <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg">
+          <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg"
+                   aria-label="Email form email icon">
           </md-icon>
           <input placeholder=""
                  required md-no-asterisk
                  name="email"
                  md-maxlength="100"
-                 ng-model="userContacts.email"
+                 ng-model="email"
                  ng-pattern="/^.+@.+\..+$/"
                  minlength="10"
                  maxlength="100">
-          <div ng-messages="userContactsForm.email.$error" multiple>
+          <div ng-messages="partnershipsEmailForm.email.$error" multiple>
             <div ng-message="required">
               Email address is required.
             </div>
@@ -427,21 +438,23 @@
           <label class="oppia-foundation-uppercase-text">
             Organization
           </label>
-          <md-icon md-svg-src="/assets/icons/baseline-business-24px.svg">
+          <md-icon md-svg-src="/assets/icons/baseline-business-24px.svg"
+                   aria-label="Email form business icon">
           </md-icon>
           <input placeholder=""
                  md-no-asterisk
                  name="organization"
-                 ng-model="userContacts.organization">
+                 ng-model="organization">
         </md-input-container>
         <md-input-container class="md-block">
           <label class="oppia-foundation-uppercase-text">
             Message
           </label>
-          <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg">
+          <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg"
+                   aria-label="Email form comment icon">
           </md-icon>
           <textarea placeholder=""
-                    ng-model="userContacts.comment"
+                    ng-model="comment"
                     name="comment"
                     rows="5"
                     md-select-on-focus>
@@ -450,7 +463,8 @@
         <md-button class="oppia-foundation-button-horizontal-padding
                           oppia-foundation-gold-border-button"
                    type="submit"
-                   ng-click="updateFormData()">
+                   ng-click="submitContactUsForm(
+                     fullName, email, organization, comment)">
                    Submit
         </md-button>
       </form>

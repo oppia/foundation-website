@@ -18,3 +18,7 @@ handlers:
   expiration: 30d
   http_headers:
     Cache-Control: 'public, max-age=2592000'
+
+- url: /_ah/mail/.*
+  script: main_mail.app
+  secure: always
