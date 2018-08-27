@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""URL routing definitions"""
+"""URL routing definitions."""
 
 import feconf
-from controllers import outgoing_emails
+from core.controllers import outgoing_emails
 import webapp2
 
 MAIL_HANDLER_URL = '/ajax/mailhandler'

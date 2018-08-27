@@ -20,5 +20,5 @@ handlers:
     Cache-Control: 'public, max-age=2592000'
 
 - url: /.*
-  script: core/main.app
+  script: main.app
   secure: always
