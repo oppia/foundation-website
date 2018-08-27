@@ -12,16 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import feconf
-from google.appengine.api import app_identity
+"""Provides email services."""
+
+from core import feconf
 from google.appengine.api import mail
 
 
-"""Provides email services."""
-
-
 def send_mail(
-    sender_email, recipient_email, subject, plaintext_body, bcc_admin=False):
+    sender_email, recipient_email, subject, plaintext_body):
     """Sends an email using App Engine's Mail API.
     
     Arguments:
@@ -30,7 +28,6 @@ def send_mail(
         recipient_email: str. The email address of the recipient
         subject: str. The subject of the email. 
         plaintext_body: str. The text content of the email.
-        bcc_admin: bool. Whether to bcc feconf.ADMIN_EMAIL_ADDRESS.
     
     Raises:
         ValueError: If 'sender_email' or 'recipient_email' is invalid, according
@@ -44,6 +41,4 @@ def send_mail(
     message = mail.EmailMessage(
         sender=sender_email, to=recipient_email, subject=subject,
         body=plaintext_body)
-    if bcc_admin:
-        message.bcc = [feconf.ADMIN_EMAIL_ADDRESS]
     message.send()

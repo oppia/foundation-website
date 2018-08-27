@@ -12,14 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import email_manager
-import feconf
+"""Controllers for sending outgoing emails."""
+
+from core.domains import email_manager
+from core import feconf
+import json
 import webapp2
 
 
-class ThankYouMailHandler(webapp2.RequestHandler):
-    """Handler for sending thank you emails."""
-    def get(self, user_full_name, user_email):
-        email_manager.send_thank_you_email(user_full_name, user_email)
+class AdminNotificationEmailHandler(webapp2.RequestHandler):
+    """Handler for sending notification email to admin email address after
+        user submits Contact us's form."""
+    def post(self):
+        """Handles POST requests."""
+        data = self.request.body
+        email_contents = json.loads(data)
+        email_subject = 'Oppia Foundation Website - Notification email'
+        email_manager.send_mail_to_admin(email_subject, email_contents)
         self.response.content_type = 'text/plain'
-        self.response.write('Sending Thank you email.')
+        self.response.write('Sending notification email.')
+        

@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Main controller for URL routing for sending emails."""
+"""URL routing definitions"""
 
 import feconf
-from core.controller import outgoing_emails
+from controllers import outgoing_emails
 import webapp2
 
+MAIL_HANDLER_URL = '/ajax/mailhandler'
 
-URL = '/_ah/mail/thank_you'
-
-app = webapp2.WSGIApplication(
-    (URL, outgoing_emails.ThankYouMailHandler), debug=feconf.DEBUG)
+app = webapp2.WSGIApplication([
+    (MAIL_HANDLER_URL, outgoing_emails.AdminNotificationEmailHandler),
+], debug=feconf.DEBUG)
