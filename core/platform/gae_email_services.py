@@ -14,7 +14,6 @@
 
 """Provides email services."""
 
-from core import feconf
 from google.appengine.api import mail
 
 

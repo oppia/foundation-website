@@ -15,6 +15,8 @@
 """Stores various configuration options and constants for Oppia Foundation page.
 """
 
-ADMIN_EMAIL_ADDRESS = 'example@domain.com'
+SYSTEM_EMAIL_ADDRESS = 'system_email@domain.com'
+
+ADMIN_EMAIL_ADDRESS = 'admin_email@domain.com'
 
 DEBUG = False

@@ -14,23 +14,20 @@
 
 """Config functions for managing email notifications."""
 
-from core import feconf
+import config
 from core.platform import gae_email_services
-from google.appengine.api import app_identity
 
 
 def send_mail_to_admin(email_subject, email_body):
     """Send an email to the admin email address.
 
-    The email is sent to the ADMIN_EMAIL_ADDRESS set in feconf.py.
+    The email is sent to the ADMIN_EMAIL_ADDRESS set in config.py.
 
     Args:
         email_subject: str. Subject of the email.
         email_body: str. Body (message) of the email.
     """
 
-    app_id = app_identity.get_application_id()
-    body = '(Sent from %s)\n\n%s' % (app_id, email_body)
-
-    gae_email_services.send_mail(feconf.ADMIN_EMAIL_ADDRESS, email_subject,
-        body, body.replace('\n', '<br/>'))
+    gae_email_services.send_mail(
+        config.SYSTEM_EMAIL_ADDRESS, config.ADMIN_EMAIL_ADDRESS, email_subject,
+        email_body)

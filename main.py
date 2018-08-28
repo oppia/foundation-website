@@ -14,12 +14,14 @@
 
 """URL routing definitions."""
 
-import feconf
+import config
 from core.controllers import outgoing_emails
 import webapp2
 
-MAIL_HANDLER_URL = '/ajax/mailhandler'
 
-app = webapp2.WSGIApplication([
+MAIL_HANDLER_URL = '/ajax/mailhandler'
+URLS = [
     (MAIL_HANDLER_URL, outgoing_emails.AdminNotificationEmailHandler),
-], debug=feconf.DEBUG)
+]
+
+app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)

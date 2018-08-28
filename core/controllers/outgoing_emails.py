@@ -15,7 +15,6 @@
 """Controllers for sending outgoing emails."""
 
 from core.domains import email_manager
-from core import feconf
 import json
 import webapp2
 
