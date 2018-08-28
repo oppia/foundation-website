@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Stores various configuration options and constants for Oppia Foundation page.
-"""
+import json
 
-SYSTEM_EMAIL_ADDRESS = 'system_email@domain.com'
+class JSONEncoderForHTML(json.JSONEncoder):
+    """Encodes JSON that is safe to embed in HTML."""
 
-ADMIN_EMAIL_ADDRESS = 'admin_email@domain.com'
+    def encode(self, o):
+        chunks = self.iterencode(o, True)
+        return ''.join(chunks) if self.ensure_ascii else u''.join(chunks)
 
-DEBUG = False
-
-# The type of the response returned by a handler when an exception is raised.
-HANDLER_TYPE_HTML = 'html'
-HANDLER_TYPE_JSON = 'json'
-
-# Prefix for data sent from the server to the client via JSON.
-XSSI_PREFIX = ')]}\'\n'
+    def iterencode(self, o, _one_shot=False):
+        chunks = super(
+            JSONEncoderForHTML, self).iterencode(o, _one_shot=_one_shot)
+        for chunk in chunks:
+            yield chunk.replace('&', '\\u0026').replace(
+                '<', '\\u003c').replace('>', '\\u003e')
