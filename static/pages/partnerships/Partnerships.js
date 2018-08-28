@@ -23,9 +23,9 @@ oppiaFoundationWebsite.controller(
         email: email,
         comment: comment,
       }).then(function() {
-        $scope.setStatusMessage = 'Thank you for email!';
+        $scope.statusMessage = 'Thank you for email!';
       }, function(errorResponse) {
-        $scope.setStatusMessage = 'Server error: ' + errorResponse.data.error;
+        $scope.statusMessage = 'Server error: ' + errorResponse.data.error;
       });
     };
   }]);

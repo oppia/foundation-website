@@ -3,6 +3,11 @@ api_version: 1
 threadsafe: true
 
 handlers:
+
+- url: /ajax/.*
+  script: main.app
+  secure: always
+
 - url: /(.+)
   static_files: static/\1
   upload: static/.*
@@ -10,10 +15,6 @@ handlers:
   expiration: 30d
   http_headers:
     Cache-Control: 'public, max-age=2592000'
-
-- url: /ajax/.*
-  script: main.app
-  secure: always
 
 - url: /.*
   static_files: static/index.html
