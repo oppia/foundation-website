@@ -18,13 +18,15 @@ from google.appengine.api import mail
 
 
 def send_mail(
-    sender_email, recipient_email, subject, plaintext_body):
+    sender_email, reply_to_email, recipient_email,subject, plaintext_body):
     """Sends an email using App Engine's Mail API.
     
     Arguments:
         sender_email: str. The email address of the sender. This should be in
             the form 'SENDER NAME <SENDER_EMAIL_ADDRESS>
         recipient_email: str. The email address of the recipient
+        reply_to_email: str. The email address that the admin can reply to
+            directly.
         subject: str. The subject of the email. 
         plaintext_body: str. The text content of the email.
     
@@ -38,6 +40,6 @@ def send_mail(
         raise ValueError(
             'Malformed recipient email address: %s' % recipient_email)
     message = mail.EmailMessage(
-        sender=sender_email, to=recipient_email, subject=subject,
-        body=plaintext_body)
+        sender=sender_email, reply_to=reply_to_email, to=recipient_email,
+        subject=subject, body=plaintext_body)
     message.send()

@@ -46,6 +46,7 @@ class BaseHandler(webapp2.RequestHandler):
         self.response.headers['Strict-Transport-Security'] = (
             'max-age=31536000; includeSubDomains')
         self.response.headers['X-Content-Type-Options'] = 'nosniff'
+        self.response.headers['X-Xss-Protection'] = '1; mode=block'
 
         json_output = json.dumps(
             values, cls=custom_json_encoder.JSONEncoderForHTML)

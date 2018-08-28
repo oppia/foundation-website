@@ -41,6 +41,3 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
             email_subject, email_contents, user_email_address)
 
         self.render_json({})
-
-        
-        

@@ -14,6 +14,7 @@
 
 import json
 
+
 class JSONEncoderForHTML(json.JSONEncoder):
     """Encodes JSON that is safe to embed in HTML."""
 
