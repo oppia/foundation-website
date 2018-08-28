@@ -21,7 +21,7 @@ import webapp2
 
 MAIL_HANDLER_URL = '/ajax/mailhandler'
 URLS = [
-    (MAIL_HANDLER_URL, outgoing_emails.AdminNotificationEmailHandler),
+    (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
 ]
 
 app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)

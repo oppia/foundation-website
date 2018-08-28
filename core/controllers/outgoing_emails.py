@@ -14,20 +14,33 @@
 
 """Controllers for sending outgoing emails."""
 
+import base
 from core.domains import email_manager
 import json
 import webapp2
 
 
-class AdminNotificationEmailHandler(webapp2.RequestHandler):
-    """Handler for sending notification email to admin email address after
-        user submits Contact us's form."""
+class ForwardToAdminEmailHandler(base.BaseHandler):
+    """Handler for forwarding email to admin email address after
+        user submits Contact us form."""
     def post(self):
         """Handles POST requests."""
-        data = self.request.body
-        email_contents = json.loads(data)
-        email_subject = 'Oppia Foundation Website - Notification email'
-        email_manager.send_mail_to_admin(email_subject, email_contents)
-        self.response.content_type = 'text/plain'
-        self.response.write('Sending notification email.')
+        payload = json.loads(self.request.body)
+
+        user_email_address = payload['email']
+        user_organization = payload['organization']
+        user_comment = payload['comment']
+
+        email_contents = ('Organization: %s\n' % user_organization)
+        email_contents += user_comment
+        email_subject = (
+            'Oppia Foundation Website - Email forwarded from %s'
+            % user_email_address)
+
+        email_manager.send_mail_to_admin(
+            email_subject, email_contents, user_email_address)
+
+        self.render_json({})
+
+        
         
