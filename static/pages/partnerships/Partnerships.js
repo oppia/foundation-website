@@ -13,18 +13,19 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller(
-  'PartnershipsPage', ['$scope', function($scope) {
+  'PartnershipsPage', ['$scope', '$http', function($scope, $http) {
     $scope.submitContactUsForm = function(
         fullName, email, organization, comment) {
-      var requestParams = {
-        fullName: null,
-        email: null,
-        organization: null,
-        comment: null,
-      };
-      requestParams.fullName = fullName;
-      requestParams.email = email;
-      requestParams.organization = organization;
-      requestParams.comment = comment;
+      var _MAILHANDLER_URL = '/ajax/mailhandler';
+      $http.post(_MAILHANDLER_URL, {
+        name: fullName,
+        organization: organization,
+        email: email,
+        comment: comment,
+      }).then(function() {
+        $scope.setStatusMessage = 'Thank you for email!';
+      }, function(errorResponse) {
+        $scope.setStatusMessage = 'Server error: ' + errorResponse.data.error;
+      });
     };
   }]);
