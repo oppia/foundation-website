@@ -21,12 +21,34 @@ import webapp2
 
 
 def write_email_contents(user_organization, user_comment):
+    """Compose email body with given user info.
+    
+    Arguments:
+        user_organization: str. User's organization name to be written at the
+            top of the email body.
+        user_comment: str. User's comment to be used as the primary email
+            content.
+    
+    Returns:
+        str. Email body to be sent.
+    """
+
     email_contents = ('Organization: %s\n' % user_organization)
     email_contents += user_comment
     return email_contents
 
 
 def write_email_subject(user_email_address):
+    """Append user email to the email subject.
+    
+    Arguments:
+        user_email_address: str. User's email address to be included in the
+            subject.
+    
+    Returns:
+        str. The subject of the email to be sent.
+    """
+
     return (
         'Oppia Foundation Website - Email forwarded from %s'
         % user_email_address)
