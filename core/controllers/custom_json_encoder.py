@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Controller for encoding JSON with safe HTML codes."""
+
 import json
 
 
@@ -19,10 +21,12 @@ class JSONEncoderForHTML(json.JSONEncoder):
     """Encodes JSON that is safe to embed in HTML."""
 
     def encode(self, o):
+        """Encode given JSON with safe HTML codes."""
         chunks = self.iterencode(o, True)
         return ''.join(chunks) if self.ensure_ascii else u''.join(chunks)
 
     def iterencode(self, o, _one_shot=False):
+        """Replace '&', '<' or '>' symbol with corresponding HTML code."""
         chunks = super(
             JSONEncoderForHTML, self).iterencode(o, _one_shot=_one_shot)
         for chunk in chunks:
