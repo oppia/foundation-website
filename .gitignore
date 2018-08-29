@@ -2,3 +2,4 @@ third_party/*
 .DS_Store
 .vscode
 *.pyc
+.coverage

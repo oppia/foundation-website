@@ -19,7 +19,12 @@ SYSTEM_EMAIL_ADDRESS = 'system_email@domain.com'
 
 ADMIN_EMAIL_ADDRESS = 'admin_email@domain.com'
 
+# Whether to unconditionally log info messages.
 DEBUG = False
+
+# The platform for the storage backend. This is used in the model-switching
+# code in core/platform.
+PLATFORM = 'gae'
 
 # The type of the response returned by a handler when an exception is raised.
 HANDLER_TYPE_HTML = 'html'
