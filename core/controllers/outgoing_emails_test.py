@@ -22,7 +22,7 @@ class OutgoingEmailTests(app_engine_test_base.GenericTestBase):
 
     def test_write_email_subject(self):
         pass
-    
+
     def test_write_email_contents(self):
         pass
 

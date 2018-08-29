@@ -14,8 +14,6 @@
 
 """Base class for unit tests."""
 
-import config
-import json
 import unittest
 
 
@@ -27,7 +25,7 @@ class TestBase(unittest.TestCase):
         should override this method.
         """
         raise NotImplementedError
-    
+
     def tearDown(self):
         """Cleans up the fixture after the test runs. Subclasses of
         TestBase should override this method.

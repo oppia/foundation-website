@@ -15,13 +15,13 @@
 """Base handlers."""
 
 import config
-import custom_json_encoder
+from core.controllers import custom_json_encoder
 import datetime
 import json
 import webapp2
 
 
-class BaseHandler(webapp2.RequestHandler): 
+class BaseHandler(webapp2.RequestHandler):
     """Base class for all handlers."""
 
     def __init__(self, request, response):
@@ -33,7 +33,7 @@ class BaseHandler(webapp2.RequestHandler):
             self.payload = json.loads(self.request.get('payload'))
         else:
             self.payload = None
-    
+
     def render_json(self, values):
         """Prepares JSON response to be sent to the client.
 
@@ -51,4 +51,3 @@ class BaseHandler(webapp2.RequestHandler):
         json_output = json.dumps(
             values, cls=custom_json_encoder.JSONEncoderForHTML)
         self.response.write('%s%s' % (config.XSSI_PREFIX, json_output))
-    

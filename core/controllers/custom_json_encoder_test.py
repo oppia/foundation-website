@@ -22,6 +22,6 @@ class CustomJsonEncoderTest(app_engine_test_base.GenericTestBase):
 
     def test_encode(self):
         pass
-    
+
     def test_iterencode(self):
         pass

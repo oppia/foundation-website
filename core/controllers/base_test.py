@@ -14,7 +14,6 @@
 
 """Tests for generic controller behaviors."""
 
-from core.controllers import base
 from core.tests import app_engine_test_base
 
 class BaseHandlerTest(app_engine_test_base.GenericTestBase):

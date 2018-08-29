@@ -17,7 +17,7 @@
 import config
 import main
 import os
-import unit_test_base
+from core.tests import unit_test_base
 import webtest
 
 from google.appengine.ext import testbed
@@ -53,7 +53,7 @@ class AppEngineTestBase(unit_test_base.TestBase):
 
         # Set up the app to be tested.
         self.testapp = webtest.TestApp(main.app)
-    
+
     def tearDown(self):
         self.testbed.deactivate()
 

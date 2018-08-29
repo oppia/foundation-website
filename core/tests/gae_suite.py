@@ -23,7 +23,6 @@ from the oppia/ root folder.
 """
 
 import argparse
-import config
 import os
 import sys
 import unittest
@@ -71,8 +70,8 @@ def main():
         else:
             for test in suite:
                 for subtest in _iterate(test):
-                    yield subtest 
-    
+                    yield subtest
+
     for directory in DIRS_TO_ADD_TO_SYS_PATH:
         if not os.path.exists(os.path.dirname(directory)):
             raise Exception('Directory %s does not exist.' % directory)
