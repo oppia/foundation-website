@@ -20,22 +20,31 @@ import json
 import webapp2
 
 
+def write_email_contents(user_organization, user_comment):
+    email_contents = ('Organization: %s\n' % user_organization)
+    email_contents += user_comment
+    return email_contents
+
+
+def write_email_subject(user_email_address):
+    return (
+        'Oppia Foundation Website - Email forwarded from %s'
+        % user_email_address)
+
+
 class ForwardToAdminEmailHandler(base.BaseHandler):
     """Handler for forwarding email to admin email address after
         user submits Contact us form."""
+
     def post(self):
         """Handles POST requests."""
         payload = json.loads(self.request.body)
 
         user_email_address = payload['email']
-        user_organization = payload['organization']
-        user_comment = payload['comment']
 
-        email_contents = ('Organization: %s\n' % user_organization)
-        email_contents += user_comment
-        email_subject = (
-            'Oppia Foundation Website - Email forwarded from %s'
-            % user_email_address)
+        email_subject = write_email_subject(user_email_address)
+        email_contents = write_email_contents(
+            payload['organization'], payload['comment'])
 
         email_manager.send_mail_to_admin(
             email_subject, email_contents, user_email_address)
