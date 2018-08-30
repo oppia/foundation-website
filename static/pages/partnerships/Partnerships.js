@@ -17,8 +17,10 @@ oppiaFoundationWebsite.controller(
     $scope.submitContactUsForm = function(
         fullName, email, organization, comment) {
       var _MAILHANDLER_URL = '/ajax/mailhandler';
+      var PARTNERSHIPS_EMAIL_TYPE = 'PARTNERSHIPS';
+
       $http.post(_MAILHANDLER_URL, {
-        page: 'Partnerships',
+        email_type: PARTNERSHIPS_EMAIL_TYPE,
         name: fullName,
         organization: organization,
         email: email,

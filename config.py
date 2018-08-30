@@ -33,7 +33,16 @@ HANDLER_TYPE_JSON = 'json'
 # Prefix for data sent from the server to the client via JSON.
 XSSI_PREFIX = ')]}\'\n'
 
+# Type of email sent from front-end.
+EMAIL_TYPE_PARTNERSHIPS = 'PARTNERSHIPS'
+EMAIL_TYPE_VOLUNTEER = 'VOLUNTEER'
+EMAIL_TYPE_DEFAULT = 'DEFAULT'
+EMAIL_TYPES = (
+    EMAIL_TYPE_PARTNERSHIPS, EMAIL_TYPE_VOLUNTEER, EMAIL_TYPE_DEFAULT,)
+
 # Type of email subject to be used for admin email.
-PARTNERSHIPS_TYPE = 'PARTNERSHIPS'
-VOLUNTEER_TYPE = 'VOLUNTEER'
-DEFAULT_TYPE = 'DEFAULT'
+EMAIL_SUBJECTS = {
+    EMAIL_TYPE_PARTNERSHIPS: 'Partnering with Oppia',
+    EMAIL_TYPE_VOLUNTEER: 'Volunteering with Oppia',
+    EMAIL_TYPE_DEFAULT: 'General question about Oppia Foundation',
+}

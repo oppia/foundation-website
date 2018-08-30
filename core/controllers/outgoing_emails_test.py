@@ -14,12 +14,15 @@
 
 """Tests for processing contact form submissions. """
 
+from core.tests import app_engine_test_base
 from core.controllers import outgoing_emails
 from core.utility import string_validator
-from core.tests import app_engine_test_base
+
 import config
 import main
 
+
+FORWARD_EMAIL_HANDLER = outgoing_emails.ForwardToAdminEmailHandler()
 
 class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
     """Test for utility functions to write an email."""
@@ -28,23 +31,24 @@ class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
         """Test write_email_subject returns the correct email subject."""
         partnerships_type = 'Partnerships'
         self.assertEqual(
-            outgoing_emails.write_email_subject.__func__(partnerships_type),
+            FORWARD_EMAIL_HANDLER.write_email_subject(partnerships_type),
             'Partnering with Oppia')
 
         volunteer_type = 'VoLuNTEEr'
         self.assertEqual(
-            outgoing_emails.write_email_subject.__func__(volunteer_type),
+            FORWARD_EMAIL_HANDLER.write_email_subject(volunteer_type),
             'Volunteering with Oppia')
 
         bad_type = None
         with self.assertRaisesRegexp(
             string_validator.InvalidStringException,
             'None string type for %s.' % bad_type):
-            outgoing_emails.write_email_subject.__func__(bad_type)
+            FORWARD_EMAIL_HANDLER.write_email_subject(bad_type)
 
-        non_existent_type = 'About'
-        with self.assertRaisesRegexp(KeyError, 'Invalid subject type'):
-            outgoing_emails.write_email_subject.__func__(non_existent_type)
+        non_existent_email_type = 'Non-existent type'
+        with self.assertRaisesRegexp(KeyError, 'Invalid email type'):
+            FORWARD_EMAIL_HANDLER.write_email_subject(non_existent_email_type)
+
 
     def test_write_email_contents(self):
         """Test write_email_contents composes the email body completely."""
@@ -53,7 +57,7 @@ class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
         email_content = ''
 
         self.assertEqual(email_content, '')
-        email_content = outgoing_emails.write_email_contents.__func__(
+        email_content = FORWARD_EMAIL_HANDLER.write_email_contents(
             user_organization, user_comment)
         self.assertIn(user_organization, email_content)
         self.assertIn(user_comment, email_content)
@@ -77,6 +81,16 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
             main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
         self.assertIn(response.status_int, [500], msg=main.MAIL_HANDLER_URL)
 
+        # Test for invalid email type.
+        bad_form_contents = {
+            'email_type': 'Invalid',
+            'email': 'user1@example.com',
+            'comment': 'We are looking for partners.',
+        }
+        response = self.testapp.post(
+            main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
+        self.assertIn(response.status_int, [500], msg=main.MAIL_HANDLER_URL)
+
     def test_email_is_forwarded(self):
         """Test email is sent to admin email address."""
         # NOTE: 'email' and 'comment' are required fields provided by front-end.
@@ -95,7 +109,7 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
         self.assertEqual(1, len(messages))
 
         form_contents = {
-            'page' : config.VOLUNTEER_TYPE,
+            'email_type' : config.EMAIL_TYPE_VOLUNTEER,
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
         }
@@ -107,7 +121,7 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
         self.assertEqual(2, len(messages))
 
         form_contents = {
-            'page' : config.PARTNERSHIPS_TYPE,
+            'email_type' : config.EMAIL_TYPE_PARTNERSHIPS,
             'organization': 'Non-profit organization 1',
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
