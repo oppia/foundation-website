@@ -14,8 +14,9 @@
 
 """Tests for the GAE mail API wrapper."""
 
-from core.platform import gae_email_services
 from core.tests import app_engine_test_base
+from core.platform import gae_email_services
+
 import config
 
 
