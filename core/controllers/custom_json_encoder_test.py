@@ -14,14 +14,19 @@
 
 """Tests for custom JSON encoder."""
 
+from core.controllers import custom_json_encoder
 from core.tests import app_engine_test_base
 
 
 class CustomJsonEncoderTest(app_engine_test_base.GenericTestBase):
     """Test for JSON to get encoded with correct HTML codes."""
 
-    def test_encode(self):
-        pass
+    def test_encode_json(self):
+        encoder = custom_json_encoder.JSONEncoderForHTML()
+        json_with_escaped_char = {'big_value': u'\n<script>={{'}
 
-    def test_iterencode(self):
-        pass
+        self.assertIn('<script>', json_with_escaped_char['big_value'])
+        encoded_json = encoder.encode(json_with_escaped_char)
+        self.assertNotIn('<script>', encoded_json)
+        self.assertIn(
+            '\\n\\u003cscript\\u003e={{', encoded_json)

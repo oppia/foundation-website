@@ -36,6 +36,9 @@ def send_mail(
     """
     if not mail.is_email_valid(sender_email):
         raise ValueError('Malformed sender email address: %s' % sender_email)
+    if not mail.is_email_valid(reply_to_email):
+        raise ValueError(
+            'Malformed reply-to email address: %s' % reply_to_email)
     if not mail.is_email_valid(recipient_email):
         raise ValueError(
             'Malformed recipient email address: %s' % recipient_email)

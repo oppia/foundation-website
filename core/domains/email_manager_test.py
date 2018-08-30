@@ -14,10 +14,21 @@
 
 """Test for sending email to admin."""
 
+from core.domains import email_manager
 from core.tests import app_engine_test_base
+import config
 
 class SendEmailToAdminTest(app_engine_test_base.GenericTestBase):
     """Test for email to be sent to admin email address."""
 
     def test_send_mail_to_admin(self):
-        pass
+        user_email = 'user1@example.com'
+
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(0, len(messages))
+        email_manager.send_mail_to_admin(
+            'subject', 'content', user_email)
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))

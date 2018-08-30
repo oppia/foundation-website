@@ -14,17 +14,49 @@
 
 """Tests for sending outgoing mails. """
 
+from core.controllers import outgoing_emails
 from core.tests import app_engine_test_base
+import config
+import main
 
-
-class OutgoingEmailTests(app_engine_test_base.GenericTestBase):
+class OutgoingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
     """Test for sending an email with the content from Contact Us form."""
 
     def test_write_email_subject(self):
-        pass
+        user_email = 'user1@mail.com'
+        email_subject = ''
+
+        self.assertEqual(email_subject, '')
+        email_subject = outgoing_emails.write_email_subject(user_email)
+        self.assertEqual(
+            email_subject, 'Oppia Foundation Website - Email forwarded from %s'
+            % user_email)
 
     def test_write_email_contents(self):
-        pass
+        user_organization = 'Non-profit Organization 1'
+        user_comment = 'Looking to get more info about Oppia!'
+        email_content = ''
 
-    def test_that_email_is_sent(self):
-        pass
+        self.assertEqual(email_content, '')
+        email_content = outgoing_emails.write_email_contents(
+            user_organization, user_comment)
+        self.assertIn(user_organization, email_content)
+        self.assertIn(user_comment, email_content)
+
+class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
+    """Backend integration tests for forwarding email to admin email address."""
+
+    def test_email_is_forwarded(self):
+        form_contents = {
+            'email': 'user1@example.com',
+            'organization': 'Non-profit organization 1',
+            'comment': 'We are looking for partners.'
+        }
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+
+        self.assertEqual(0, len(messages))
+        self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))

@@ -59,6 +59,12 @@ then
   return 1
 fi
 
+if (( $# > 2 )); then
+    echo "Please provide no more than 2 arguments:"
+    echo "--generate_coverate_report or --test_target"
+    exit 1
+fi
+
 set -e
 source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_gae.sh || exit 1
@@ -85,7 +91,6 @@ for ((i=0; i<"${#args[@]}"; i++)); do
   case ${args[i]} in
       --generate_coverage_report)
     unset args[i];
-    unset args[i+1];
     RUN_TESTS_WITH_COVERAGE=true;
     break;;
   esac
@@ -94,7 +99,7 @@ filtered_args=${args[@]}
 
 if $RUN_TESTS_WITH_COVERAGE ;then
   echo 'Running backend tests with coverage report'
-  $PYTHON_CMD $COVERAGE_HOME/coverage run core/tests/gae_suite.py $filtered_args
+  $PYTHON_CMD $COVERAGE_HOME/coverage run -p core/tests/gae_suite.py $filtered_args
   $PYTHON_CMD $COVERAGE_HOME/coverage combine
   $PYTHON_CMD $COVERAGE_HOME/coverage report --omit="$TOOLS_DIR/*","$THIRD_PARTY_DIR/*","/usr/share/*" --show-missing
 else

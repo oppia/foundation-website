@@ -14,11 +14,47 @@
 
 """Tests for the GAE mail API wrapper."""
 
+from core.platform import gae_email_services
 from core.tests import app_engine_test_base
+import config
 
 
 class EmailTests(app_engine_test_base.GenericTestBase):
     """Tests for sending emails."""
 
     def test_send_mail(self):
-        pass
+        user_email = 'user1@domain.com'
+
+        bad_sender_email = 42
+        with self.assertRaisesRegexp(
+            ValueError, 'Malformed sender email address: %s'
+            % bad_sender_email):
+            gae_email_services.send_mail(
+                bad_sender_email, user_email, config.ADMIN_EMAIL_ADDRESS,
+                'subject', 'body')
+
+        bad_reply_email = ' '
+        with self.assertRaisesRegexp(
+            ValueError, 'Malformed reply-to email address: %s'
+            % bad_reply_email):
+            gae_email_services.send_mail(
+                config.SYSTEM_EMAIL_ADDRESS, bad_reply_email,
+                config.ADMIN_EMAIL_ADDRESS, 'subject', 'body')
+
+        bad_recipient_email = None
+        with self.assertRaisesRegexp(
+            ValueError, 'Malformed recipient email address: %s'
+            % bad_recipient_email):
+            gae_email_services.send_mail(
+                config.SYSTEM_EMAIL_ADDRESS, user_email, bad_recipient_email,
+                'subject', 'body')
+
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(0, len(messages))
+        gae_email_services.send_mail(
+            config.SYSTEM_EMAIL_ADDRESS, user_email, config.ADMIN_EMAIL_ADDRESS,
+            'subject', 'body')
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))
