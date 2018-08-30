@@ -18,11 +18,7 @@
 
 class InvalidStringException(Exception):
     """The specified string is invalid."""
-
-
-def is_ascii(string):
-    """Returns whether a string is in ASCII."""
-    return all(ord(c) < 128 for c in string)
+    pass
 
 
 def invalid_string_reason(string):
@@ -33,16 +29,14 @@ def invalid_string_reason(string):
         string: str. The string to check.
 
     Returns:
-        A string that indicates the reason why a string is invalid; otherwise
-        returns `None`.
+        str|None. A string that indicates the reason why the input string is
+            invalid; otherwise returns `None`.
     """
     if string is None:
         return 'None string type for %s.' % string
 
     if not isinstance(string, basestring):
         return 'Invalid string type for %s.' % string
-    if not is_ascii(string):
-        return 'Not an ASCII string.'
     stripped_string = string.strip()
     if not stripped_string:
         return 'String is empty.'
@@ -67,7 +61,6 @@ def check_string_valid(string):
 
     Arguments:
         string: str. The string to check.
-        field: str. Field to check.
 
     Raises:
         InvalidStringException: Specified string is invalid.

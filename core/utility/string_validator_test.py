@@ -15,18 +15,12 @@
 
 """Test for string validation utilities."""
 
-from core.utility import string_validator
 from core.tests import app_engine_test_base
+from core.utility import string_validator
 
 
 class StringValidationTests(app_engine_test_base.AppEngineTestBase):
     """Test for various string validation utility methods"""
-
-    def test_is_ascii(self):
-        """Test is_ascii returns True for ASCII strings and False otherwise.
-        """
-        self.assertTrue(string_validator.is_ascii('a'))
-        self.assertFalse(string_validator.is_ascii(u'å'))
 
     def test_invalid_string_reason(self):
         """Test invalid_string_reason returns the corresponding reason why
@@ -35,11 +29,6 @@ class StringValidationTests(app_engine_test_base.AppEngineTestBase):
         bad_string = None
         self.assertEqual(
             'None string type for None.',
-            string_validator.invalid_string_reason(bad_string))
-
-        bad_string = u'å'
-        self.assertEqual(
-            'Not an ASCII string.',
             string_validator.invalid_string_reason(bad_string))
 
         bad_string = 42
