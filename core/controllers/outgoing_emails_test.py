@@ -22,7 +22,7 @@ import main
 
 
 class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
-    """Test for sending an email with the content from Contact Us form."""
+    """Test for utility functions to write an email."""
 
     def test_write_email_subject(self):
         """Test write_email_subject returns the correct email subject."""

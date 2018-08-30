@@ -32,3 +32,8 @@ HANDLER_TYPE_JSON = 'json'
 
 # Prefix for data sent from the server to the client via JSON.
 XSSI_PREFIX = ')]}\'\n'
+
+# Type of email subject to be used for admin email.
+PARTNERSHIPS_TYPE = 'PARTNERSHIPS'
+VOLUNTEER_TYPE = 'VOLUNTEER'
+DEFAULT_TYPE = 'DEFAULT'

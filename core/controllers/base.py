@@ -14,10 +14,11 @@
 
 """Base handlers."""
 
-import config
-from core.controllers import custom_json_encoder
 import json
 import webapp2
+
+import config
+from core.controllers import custom_json_encoder
 
 
 class BaseHandler(webapp2.RequestHandler):

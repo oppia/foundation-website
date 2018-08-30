@@ -14,11 +14,12 @@
 
 """Base class for App Engine tests."""
 
+import os
+import webtest
+
 import config
 import main
-import os
 from core.tests import unit_test_base
-import webtest
 
 from google.appengine.ext import testbed
 

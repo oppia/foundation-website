@@ -23,16 +23,16 @@ def send_mail(
 
     Arguments:
         sender_email: str. The email address of the sender. This should be in
-            the form 'SENDER NAME <SENDER_EMAIL_ADDRESS>
-        recipient_email: str. The email address of the recipient
+            the form 'SENDER NAME <SENDER_EMAIL_ADDRESS>.
+        recipient_email: str. The email address of the recipient.
         reply_to_email: str. The email address that the admin can reply to
             directly.
         subject: str. The subject of the email.
         plaintext_body: str. The text content of the email.
 
     Raises:
-        ValueError: If 'sender_email' or 'recipient_email' is invalid, according
-            to App Engine.
+        ValueError: If 'sender_email', 'reply_to_email' or 'recipient_email' is
+            invalid, according to App Engine.
     """
     if not mail.is_email_valid(sender_email):
         raise ValueError('Malformed sender email address: %s' % sender_email)

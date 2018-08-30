@@ -23,6 +23,9 @@ class EmailTests(app_engine_test_base.GenericTestBase):
     """Tests for sending emails."""
 
     def test_send_mail(self):
+        """Test send_mail raises exceptions with invalid email addresses and
+        sends email to admin email address.
+        """
         user_email = 'user1@domain.com'
 
         bad_sender_email = 42
