@@ -16,23 +16,12 @@
 
 import config
 from core.controllers import custom_json_encoder
-import datetime
 import json
 import webapp2
 
 
 class BaseHandler(webapp2.RequestHandler):
     """Base class for all handlers."""
-
-    def __init__(self, request, response):
-        self.initialize(request, response)
-
-        self.start_time = datetime.datetime.utcnow()
-
-        if self.request.get('payload'):
-            self.payload = json.loads(self.request.get('payload'))
-        else:
-            self.payload = None
 
     def render_json(self, values):
         """Prepares JSON response to be sent to the client.
