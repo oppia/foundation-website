@@ -18,6 +18,7 @@ oppiaFoundationWebsite.controller(
         fullName, email, organization, comment) {
       var _MAILHANDLER_URL = '/ajax/mailhandler';
       $http.post(_MAILHANDLER_URL, {
+        page: 'Partnerships',
         name: fullName,
         organization: organization,
         email: email,

@@ -12,33 +12,48 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Tests for sending outgoing mails. """
+"""Tests for processing contact form submissions. """
 
 from core.controllers import outgoing_emails
+from core.utility import string_validator
 from core.tests import app_engine_test_base
 import config
 import main
 
-class OutgoingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
+
+class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
     """Test for sending an email with the content from Contact Us form."""
 
     def test_write_email_subject(self):
-        user_email = 'user1@mail.com'
-        email_subject = ''
-
-        self.assertEqual(email_subject, '')
-        email_subject = outgoing_emails.write_email_subject(user_email)
+        """Test write_email_subject returns the correct email subject."""
+        partnerships_type = 'Partnerships'
         self.assertEqual(
-            email_subject, 'Oppia Foundation Website - Email forwarded from %s'
-            % user_email)
+            outgoing_emails.write_email_subject.__func__(partnerships_type),
+            'Partnering with Oppia')
+
+        volunteer_type = 'VoLuNTEEr'
+        self.assertEqual(
+            outgoing_emails.write_email_subject.__func__(volunteer_type),
+            'Volunteering with Oppia')
+
+        bad_type = None
+        with self.assertRaisesRegexp(
+            string_validator.InvalidStringException,
+            'None string type for %s.' % bad_type):
+            outgoing_emails.write_email_subject.__func__(bad_type)
+
+        non_existent_type = 'About'
+        with self.assertRaisesRegexp(KeyError, 'Invalid subject type'):
+            outgoing_emails.write_email_subject.__func__(non_existent_type)
 
     def test_write_email_contents(self):
+        """Test write_email_contents composes the email body completely."""
         user_organization = 'Non-profit Organization 1'
         user_comment = 'Looking to get more info about Oppia!'
         email_content = ''
 
         self.assertEqual(email_content, '')
-        email_content = outgoing_emails.write_email_contents(
+        email_content = outgoing_emails.write_email_contents.__func__(
             user_organization, user_comment)
         self.assertIn(user_organization, email_content)
         self.assertIn(user_comment, email_content)
@@ -46,17 +61,60 @@ class OutgoingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
 class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
     """Backend integration tests for forwarding email to admin email address."""
 
-    def test_email_is_forwarded(self):
-        form_contents = {
-            'email': 'user1@example.com',
-            'organization': 'Non-profit organization 1',
-            'comment': 'We are looking for partners.'
+    def test_get_500_errors_from_missing_fields(self):
+        """Expect missing required fields to return 500s."""
+        bad_form_contents = {
+            'comment' : 'Hi!',
         }
+        response = self.testapp.post(
+            main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
+        self.assertIn(response.status_int, [500], msg=main.MAIL_HANDLER_URL)
+
+        bad_form_contents = {
+            'email' : 'user1@domain.com',
+        }
+        response = self.testapp.post(
+            main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
+        self.assertIn(response.status_int, [500], msg=main.MAIL_HANDLER_URL)
+
+    def test_email_is_forwarded(self):
+        """Test email is sent to admin email address."""
+        # NOTE: 'email' and 'comment' are required fields provided by front-end.
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
+
+        form_contents = {
+            'email': 'user1@example.com',
+            'comment': 'We are looking for partners.'
+        }
 
         self.assertEqual(0, len(messages))
         self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
         self.assertEqual(1, len(messages))
+
+        form_contents = {
+            'page' : config.VOLUNTEER_TYPE,
+            'email': 'user1@example.com',
+            'comment': 'We are looking for partners.'
+        }
+
+        self.assertEqual(1, len(messages))
+        self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(2, len(messages))
+
+        form_contents = {
+            'page' : config.PARTNERSHIPS_TYPE,
+            'organization': 'Non-profit organization 1',
+            'email': 'user1@example.com',
+            'comment': 'We are looking for partners.'
+        }
+
+        self.assertEqual(2, len(messages))
+        self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(3, len(messages))

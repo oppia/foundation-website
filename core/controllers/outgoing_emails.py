@@ -12,45 +12,67 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Controllers for sending outgoing emails."""
+"Controllers for processing contact form submissions."
 
-from core.controllers import base
-from core.domains import email_manager
 import json
 
+from core.controllers import base
+from core.domain import email_manager
+from core.utility import string_validator
+import config
 
-def write_email_contents(user_organization, user_comment):
+@staticmethod
+def write_email_contents(user_comment, user_organization):
     """Compose email body with given user info.
 
     Arguments:
-        user_organization: str. User's organization name to be written at the
-            top of the email body.
         user_comment: str. User's comment to be used as the primary email
             content.
+        user_organization: str|None. User's organization name to be written at
+            the top of the email body.
 
     Returns:
         str. Email body to be sent.
-    """
 
-    email_contents = ('Organization: %s\n' % user_organization)
+    Raises:
+        InvalidStringException: The provided string is invalid.
+    """
+    email_contents = ''
+    if user_organization is not None:
+        string_validator.check_string_valid(user_organization)
+        email_contents = ('Organization: %s\n' % user_organization)
+
+    string_validator.check_string_valid(user_comment)
     email_contents += user_comment
     return email_contents
 
 
-def write_email_subject(user_email_address):
+@staticmethod
+def write_email_subject(subject_type):
     """Append user email to the email subject.
 
     Arguments:
-        user_email_address: str. User's email address to be included in the
-            subject.
+        subject_type: str. The type of email subject to be returned.
 
     Returns:
         str. The subject of the email to be sent.
-    """
 
-    return (
-        'Oppia Foundation Website - Email forwarded from %s'
-        % user_email_address)
+    Raises:
+        InvalidStringException: The provided string is invalid.
+    """
+    string_validator.check_string_valid(subject_type)
+    subject_type = subject_type.upper()
+    email_subject = ''
+
+    if subject_type == config.PARTNERSHIPS_TYPE:
+        email_subject = 'Partnering with Oppia'
+    elif subject_type == config.VOLUNTEER_TYPE:
+        email_subject = 'Volunteering with Oppia'
+    elif subject_type == config.DEFAULT_TYPE:
+        email_subject = 'General question about Oppia Foundation'
+    else:
+        raise KeyError('Invalid subject type')
+    return email_subject
 
 
 class ForwardToAdminEmailHandler(base.BaseHandler):
@@ -61,13 +83,22 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
         """Handles POST requests."""
         payload = json.loads(self.request.body)
 
-        user_email_address = payload['email']
+        if 'page' not in payload:
+            subject_type = config.DEFAULT_TYPE
+        else:
+            subject_type = payload['page']
+        # __func__ exposes the function as a read-only attribute/property.
+        # https://bugs.python.org/issue5982
+        email_subject = write_email_subject.__func__(subject_type)
 
-        email_subject = write_email_subject(user_email_address)
-        email_contents = write_email_contents(
-            payload['organization'], payload['comment'])
+        if 'organization' not in payload:
+            user_organization = None
+        else:
+            user_organization = payload['organization']
+        email_contents = write_email_contents.__func__(
+            payload['comment'], user_organization)
 
         email_manager.send_mail_to_admin(
-            email_subject, email_contents, user_email_address)
+            email_subject, email_contents, payload['email'])
 
         self.render_json({})

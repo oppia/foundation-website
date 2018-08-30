@@ -454,11 +454,17 @@
                    aria-label="Email form comment icon">
           </md-icon>
           <textarea placeholder=""
+                    required
                     ng-model="comment"
                     name="comment"
                     rows="5"
                     md-select-on-focus>
           </textarea>
+          <div ng-messages="partnershipsEmailForm.comment.$error" multiple>
+            <div ng-message="required">
+              Message cannot be empty.
+            </div>
+          </div>
         </md-input-container>
         <md-button class="oppia-foundation-button-horizontal-padding
                           oppia-foundation-gold-border-button"
