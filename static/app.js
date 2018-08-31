@@ -43,6 +43,12 @@ oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
+oppiaFoundationWebsite.config(['$mdThemingProvider',
+  function($mdThemingProvider) {
+    $mdThemingProvider.theme('default').primaryPalette('teal');
+  }
+]);
+
 oppiaFoundationWebsite.run([
   '$location', '$rootScope', function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {

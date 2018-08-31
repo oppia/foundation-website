@@ -414,11 +414,9 @@
           <input placeholder=""
                  required md-no-asterisk
                  name="email"
-                 md-maxlength="100"
                  ng-model="email"
                  ng-pattern="/^.+@.+\..+$/"
-                 minlength="10"
-                 maxlength="100">
+                 minlength="10">
           <div ng-messages="partnershipsEmailForm.email.$error" multiple>
             <div ng-message="required">
               Email address is required.
@@ -428,9 +426,6 @@
             </div>
             <div ng-message="minlength">
               Email must be longer than 10 characters
-            </div>
-            <div ng-message="maxlength">
-              Email must be between 10 and 100 characters
             </div>
           </div>
         </md-input-container>
@@ -470,7 +465,8 @@
                           oppia-foundation-gold-border-button"
                    type="submit"
                    ng-click="submitContactUsForm(
-                     fullName, email, organization, comment)">
+                     fullName, email, organization, comment, $event)"
+                   ng-disabled="partnershipsEmailForm.$invalid">
                    Submit
         </md-button>
       </form>
