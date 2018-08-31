@@ -22,7 +22,7 @@ import config
 import main
 
 
-FORWARD_EMAIL_HANDLER = outgoing_emails.ForwardToAdminEmailHandler()
+ForwardEmailHandler = outgoing_emails.ForwardToAdminEmailHandler
 
 class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
     """Test for utility functions to write an email."""
@@ -31,23 +31,23 @@ class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
         """Test write_email_subject returns the correct email subject."""
         partnerships_type = 'Partnerships'
         self.assertEqual(
-            FORWARD_EMAIL_HANDLER.write_email_subject(partnerships_type),
+            ForwardEmailHandler.write_email_subject(partnerships_type),
             'Partnering with Oppia')
 
         volunteer_type = 'VoLuNTEEr'
         self.assertEqual(
-            FORWARD_EMAIL_HANDLER.write_email_subject(volunteer_type),
+            ForwardEmailHandler.write_email_subject(volunteer_type),
             'Volunteering with Oppia')
 
         bad_type = None
         with self.assertRaisesRegexp(
             string_validator.InvalidStringException,
             'None string type for %s.' % bad_type):
-            FORWARD_EMAIL_HANDLER.write_email_subject(bad_type)
+            ForwardEmailHandler.write_email_subject(bad_type)
 
         non_existent_email_type = 'Non-existent type'
         with self.assertRaisesRegexp(KeyError, 'Invalid email type'):
-            FORWARD_EMAIL_HANDLER.write_email_subject(non_existent_email_type)
+            ForwardEmailHandler.write_email_subject(non_existent_email_type)
 
 
     def test_write_email_contents(self):
@@ -57,7 +57,7 @@ class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
         email_content = ''
 
         self.assertEqual(email_content, '')
-        email_content = FORWARD_EMAIL_HANDLER.write_email_contents(
+        email_content = ForwardEmailHandler.write_email_contents(
             user_organization, user_comment)
         self.assertIn(user_organization, email_content)
         self.assertIn(user_comment, email_content)

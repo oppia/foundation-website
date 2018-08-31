@@ -29,7 +29,7 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
 
     @classmethod
     def write_email_subject(cls, email_type):
-        """Append user email to the email subject.
+        """Generate a corresponding subject for the email type.
 
         Arguments:
             email_type: str. The type of email subject to be returned.
@@ -79,7 +79,6 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
             email_type = config.EMAIL_TYPE_DEFAULT
         else:
             email_type = payload['email_type']
-            email_type = email_type.upper()
 
         email_subject = ForwardToAdminEmailHandler.write_email_subject(
             email_type)
