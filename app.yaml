@@ -3,6 +3,10 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /ajax/.*
+  script: main.app
+  secure: always
+
 - url: /(.+)
   static_files: static/\1
   upload: static/.*

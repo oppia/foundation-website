@@ -190,7 +190,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
+  color: black;
   text-shadow: none;
   transition: color 0.5s ease;
   transition: text-shadow 0.5s ease;
@@ -208,14 +208,15 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
+  color: darkolivegreen;
 }
 
 footer a {
-  color: #F2F2F2; 
+  color: white; 
 }
 
-footer a:active, a:hover {
-  color: #F2F2F2;
+footer a:active, footer a:hover {
+  color: white;
   text-decoration: underline;
 }
 
