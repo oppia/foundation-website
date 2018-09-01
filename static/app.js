@@ -61,3 +61,10 @@ oppiaFoundationWebsite.run([
     };
   }
 ]);
+
+oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
+
+// Message to be displayed when user submits the 'Contact us' form.
+oppiaFoundationWebsite.constant(
+  'THANKYOU_MESSAGE', 'Your message has been forwarded to the Oppia admins ' +
+  'and we will get back to you shortly.');

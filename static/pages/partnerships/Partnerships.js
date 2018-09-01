@@ -13,17 +13,16 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller(
-  'PartnershipsPage', ['$scope', '$http', '$mdDialog', '$log',
-    function($scope, $http, $mdDialog, $log) {
+  'PartnershipsPage', [
+    '$scope', '$http', '$mdDialog', '$log',
+    'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
+    function(
+        $scope, $http, $mdDialog, $log,
+        MAILHANDLER_URL, THANKYOU_MESSAGE) {
       $scope.submitContactUsForm = function(
-          fullName, email, organization, comment, event) {
-        var _MAILHANDLER_URL = '/ajax/mailhandler';
-        var PARTNERSHIPS_EMAIL_TYPE = 'PARTNERSHIPS';
-        var THANKYOU_MESSAGE = 'Your message has been forwarded to the Oppia ' +
-         'admins and we will get back to you shortly.';
-
-        $http.post(_MAILHANDLER_URL, {
-          email_type: PARTNERSHIPS_EMAIL_TYPE,
+          fullName, email, organization, comment, evt) {
+        $http.post(MAILHANDLER_URL, {
+          email_type: 'PARTNERSHIPS',
           name: fullName,
           organization: organization,
           email: email,
@@ -36,7 +35,7 @@ oppiaFoundationWebsite.controller(
               .textContent(THANKYOU_MESSAGE)
               .ariaLabel('Thank you dialog')
               .ok('Got it!')
-              .targetEvent(event)
+              .targetEvent(evt)
           );
         }, function(errorResponse) {
           $log.error('Server error: ' + errorResponse.data.error);
