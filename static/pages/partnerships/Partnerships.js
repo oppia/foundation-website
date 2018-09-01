@@ -14,15 +14,15 @@
 
 oppiaFoundationWebsite.controller(
   'PartnershipsPage', [
-    '$scope', '$http', '$mdDialog', '$log', 'MAILHANDLER_URL',
-    'PARTNERSHIPS_EMAIL_TYPE', 'THANKYOU_MESSAGE',
+    '$scope', '$http', '$mdDialog', '$log',
+    'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
     function(
-        $scope, $http, $mdDialog, $log, MAILHANDLER_URL,
-        PARTNERSHIPS_EMAIL_TYPE, THANKYOU_MESSAGE) {
+        $scope, $http, $mdDialog, $log,
+        MAILHANDLER_URL, THANKYOU_MESSAGE) {
       $scope.submitContactUsForm = function(
-          fullName, email, organization, comment, event) {
+          fullName, email, organization, comment, evt) {
         $http.post(MAILHANDLER_URL, {
-          email_type: PARTNERSHIPS_EMAIL_TYPE,
+          email_type: 'PARTNERSHIPS',
           name: fullName,
           organization: organization,
           email: email,
@@ -35,7 +35,7 @@ oppiaFoundationWebsite.controller(
               .textContent(THANKYOU_MESSAGE)
               .ariaLabel('Thank you dialog')
               .ok('Got it!')
-              .targetEvent(event)
+              .targetEvent(evt)
           );
         }, function(errorResponse) {
           $log.error('Server error: ' + errorResponse.data.error);

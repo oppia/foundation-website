@@ -16,10 +16,6 @@ var oppiaFoundationWebsite = angular.module(
   'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages', 'ngRoute', 'duScroll',
     'ui.bootstrap']);
 
-for (var constantName in constants) {
-  oppiaFoundationWebsite.constant(constantName, constants[constantName]);
-}
-
 oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -65,3 +61,10 @@ oppiaFoundationWebsite.run([
     };
   }
 ]);
+
+oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
+
+// Message to be displayed when user submits the 'Contact us' form.
+oppiaFoundationWebsite.constant(
+  'THANKYOU_MESSAGE', 'Your message has been forwarded to the Oppia admins ' +
+  'and we will get back to you shortly.');

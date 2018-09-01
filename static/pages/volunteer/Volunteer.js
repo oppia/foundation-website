@@ -14,10 +14,10 @@
 
 oppiaFoundationWebsite.controller('VolunteerPage', [
   '$scope', '$document', '$http', '$mdDialog', '$log', '$window',
-  'MAILHANDLER_URL', 'VOLUNTEER_EMAIL_TYPE', 'THANKYOU_MESSAGE',
+  'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
   function(
-      $scope, $document, $http, $mdDialog, $log, $window, MAILHANDLER_URL,
-      VOLUNTEER_EMAIL_TYPE, THANKYOU_MESSAGE) {
+      $scope, $document, $http, $mdDialog, $log, $window,
+      MAILHANDLER_URL, THANKYOU_MESSAGE) {
     $scope.tabs = [{
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
@@ -64,9 +64,9 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       }
     };
     $scope.submitContactUsForm = function(
-        fullName, email, comment, event) {
+        fullName, email, comment, evt) {
       $http.post(MAILHANDLER_URL, {
-        email_type: VOLUNTEER_EMAIL_TYPE,
+        email_type: 'VOLUNTEER',
         name: fullName,
         email: email,
         comment: comment,
@@ -78,7 +78,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
             .textContent(THANKYOU_MESSAGE)
             .ariaLabel('Thank you dialog')
             .ok('Got it!')
-            .targetEvent(event)
+            .targetEvent(evt)
         );
       }, function(errorResponse) {
         $log.error('Server error: ' + errorResponse.data.error);
