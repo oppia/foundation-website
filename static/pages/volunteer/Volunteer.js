@@ -53,7 +53,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       // for more info on angular-scroll APIs.
       // Vertical offset distance from element after scrolling.
       var offset = 0;
-      var durationInMilliseconds = 2000;
+      var durationInMilliseconds = 1000;
       var destinationElement = angular.element(
         document.getElementById(elementId));
       if (destinationElement.length) {
