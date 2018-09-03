@@ -11,14 +11,16 @@ handlers:
   static_files: static/\1
   upload: static/.*
   secure: always
-  expiration: 30d
+  expiration: 10m
   http_headers:
-    Cache-Control: 'public, max-age=2592000'
+    Cache-Control: 'public, max-age=600'
+    Vary: Accept-Encoding
 
 - url: /.*
   static_files: static/index.html
   upload: static/index.html
   secure: always
-  expiration: 30d
+  expiration: 10m
   http_headers:
-    Cache-Control: 'public, max-age=2592000'
+    Cache-Control: 'public, max-age=600'
+    Vary: Accept-Encoding
