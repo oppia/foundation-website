@@ -44,7 +44,7 @@
   <md-card hide-xs hide-sm show-gt-sm layout-fill flex layout-gt-sm="row" layout="column" class="oppia-foundation-gray-background volunteer-page-conditional-horizontal-padding oppia-foundation-vertical-padding">
     <md-card-content layout-gt-md="row" layout="column" layout-fill>
       <md-content layout-fill>
-        <md-tabs hide-xs hide-sm md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
+        <md-tabs md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
           <md-tab ng-repeat="tab in tabs"
                   md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
@@ -153,7 +153,7 @@
           Whatever your skills, there are ways to help the Oppia Foundation. We invite you to reach out and see how your help can make a difference.
         </p>
         <p>
-          Fill out this form or send us an email at <a>partnerships@oppiafoundation.org</a> and we&rsquo;ll get 
+          Fill out this form or send us an email at <a>partnerships@oppiafoundation.org</a> and we&rsquo;ll get back to you right away!
         </p>
       </md-content>
       <div flex-gt-sm="10"></div>
@@ -300,6 +300,38 @@
   .volunteer-page-desktop-profile-card {
     width: 28vw;
   }
+  @media screen and (max-width: 499px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 550px;
+    }
+    .carousel-inner {
+      height: 550px;
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 599px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 650px;
+    }
+    .carousel-inner {
+      height: 650px;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 750px;
+    }
+    .carousel-inner {
+      min-height: 750px;
+    }
+  }
+  @media screen and (min-width: 801px) and (max-width: 960px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 850px;
+    }
+    .carousel-inner {
+      min-height: 850px;
+    }
+  }
   .carousel-control.left, .carousel-control.right {
     background-image: none;
   }
@@ -308,14 +340,18 @@
     height: 39px;
     z-index: 2;
   }
-  .carousel-inner {
-    height: 650px;
+  .volunteer-page-desktop-profile-carousel {
+    min-height: 650px;
+  }
+  @media screen and (min-width: 961px) {
+    .carousel-inner {
+      height: 650px;
+    }
   }
   .carousel-indicators {
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    position: relative;
+    left: auto;
+    margin-left: 0px;
+    position: static;
     width: auto;
   }
   .carousel-indicators li {
