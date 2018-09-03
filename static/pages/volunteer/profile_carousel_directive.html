@@ -21,17 +21,17 @@
 <md-card layout-fill layout="column" ng-if="displayMobileCarousel">
   <uib-carousel uib-carousel active="activeSlideIndex" interval="slideIntervalInMillisecs" no-wrap="noWrapSlides" class="volunteer-page-mobile-profile-carousel">
     <uib-slide uib-slide ng-repeat="slide in slides track by $index" index="$index">
-        <img ng-src="{{slide.profilePictureImageFilename}}" alt="Volunteer profile image" style="width: 100%">
-        <div layout="column" layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
-          <md-card-content layout="column" class="oppia-foundation-quote-box oppia-foundation-gray-background">
-            <span class="oppia-foundation-left-align-text">&ldquo;{{slide.professionalQuote}}&rdquo;</span>
-            <cite class="oppia-foundation-cite-text-box">
-              <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
-              <p class="oppia-foundation-no-margin"></p>
-              <span class="oppia-foundation-italic-text">{{slide.position}}</span>
-            </cite>
-          </md-card-content>
-        </div>
+      <img ng-src="{{slide.profilePictureImageFilename}}" alt="Volunteer profile image" style="width: 100%">
+      <div layout="column" layout-align="center center" show-xs show-sm hide-gt-sm class="oppia-foundation-quote-box-overlay volunteer-page-conditional-horizontal-padding">
+        <md-card-content layout="column" class="oppia-foundation-quote-box oppia-foundation-gray-background">
+          <span class="oppia-foundation-left-align-text">&ldquo;{{slide.professionalQuote}}&rdquo;</span>
+          <cite class="oppia-foundation-cite-text-box">
+            <span class="oppia-foundation-bold-text">- {{slide.fullName}}</span>
+            <p class="oppia-foundation-no-margin"></p>
+            <span class="oppia-foundation-italic-text">{{slide.position}}</span>
+          </cite>
+        </md-card-content>
+      </div>
     </uib-slide>
   </uib-carousel>
 </md-card>
