@@ -51,7 +51,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Full-Stack Developer and QA Lead'
   }, {
     fullName: 'Apurv Bajaj',
-    profilePictureImageFilename: 'apurv.png',
+    profilePictureImageFilename: 'apurv.jpg',
     professionalQuote: 'Oppia gives me an opportunity to help the world move ' +
     'towards a better tomorrow -- a tomorrow where everyone receives quality ' +
     'education, regardless of where they are or what traditional resources ' +
