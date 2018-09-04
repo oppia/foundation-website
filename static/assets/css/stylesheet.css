@@ -360,11 +360,19 @@ Full-Width Styles
   padding-right: 40px;
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 599px) {
   .oppia-foundation-conditional-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
   }
+  .oppia-foundation-tablet-and-desktop-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.oppia-foundation-top-padding {
+  padding-top: 40px;
 }
 
 .oppia-foundation-vertical-padding {
@@ -372,10 +380,31 @@ Full-Width Styles
   padding-bottom: 40px;
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 599px) {
   .oppia-foundation-conditional-vertical-padding {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .oppia-foundation-tablet-and-desktop-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .oppia-foundation-mobile-and-tablet-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oppia-foundation-mobile-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-left-padding {
+    padding-left: 40px;
   }
 }
 
