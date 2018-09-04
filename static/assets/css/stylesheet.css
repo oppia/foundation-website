@@ -432,6 +432,7 @@ Full-Width Styles
   min-width: 200px;
   max-width: 250px;
   max-height: 50px;
+  opacity: 1;
 }
 
 .md-button.oppia-foundation-gold-border-button:hover,
