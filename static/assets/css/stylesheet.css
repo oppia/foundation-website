@@ -205,6 +205,10 @@ a {
   cursor: pointer;
 }
 
+a.email-us-link {
+  color: rgb(63, 63, 224);
+} 
+
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -353,6 +357,10 @@ Full-Width Styles
 .oppia-foundation-button-horizontal-padding {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.oppia-foundation-right-padding {
+  padding-right: 40px;
 }
 
 .oppia-foundation-horizontal-padding {

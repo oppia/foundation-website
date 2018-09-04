@@ -6,7 +6,7 @@
            class="oppia-foundation-horizontal-padding
                   oppia-foundation-green-background
                   oppia-foundation-vertical-padding"
-           style="padding-right: 0px">
+                  style="padding-right: 0px">
     <div flex
          layout-gt-md="row"
          layout-xs="column"
@@ -14,13 +14,13 @@
          layout-fill>
       <div flex-gt-md="80"
            flex="100"
-           style="padding-right:40px;">
+           class="oppia-foundation-right-padding">
         <md-card-content layout="column"
                          class="oppia-foundation-white-text
                                 oppia-foundation-no-padding">
           <md-content class="oppia-foundation-white-text
-                             oppia-foundation-green-background"
-                      style="margin: auto;">
+                             oppia-foundation-green-background
+                             partnerships-page-description-text-box">
             <md-card-title>
               <md-card-title-text>
                 <h1 class="md-display-2"
@@ -51,15 +51,12 @@
           </md-content>
         </md-card-content>
       </div>
-      <div
+      <div class="partnerships-page-welcome-image-container"
            layout="column"
-           layout-align="center"
-           style="width: 100%; padding-left: 40px;">
-        <div class="partnerships-page-welcome-image-container">
-          <img class="partnerships-page-donate-hand-image"
-               src="/assets/images/partnerships/partnerships_right_donating_hands.svg"
-               alt="Right donating hands">
-        </div>
+           layout-align="center">
+        <img class="partnerships-page-donate-hand-image"
+             src="/assets/images/partnerships/partnerships_right_donating_hands.svg"
+             alt="Right donating hands">
       </div>
     </div>
   </md-card>
@@ -72,49 +69,44 @@
          layout-align="space-between none"
          layout-fill
          flex>
-      <div flex-gt-md="50" flex="100">
-        <md-card-content layout="column"
-                         class="oppia-foundation-no-padding">
-          <md-content layout="column"
-                      layout-align="center none"
-                      class="oppia-foundation-gray-background
-                             oppia-foundation-black-text
-                             partnerships-page-description-text-box">
-            <h3 class="md-display-1 partnerships-description-headline-padding">
-              Empowering students in every community
-            </h3>
-            <p>
-              Overcrowded classrooms, scarce materials, outdated teaching 
-              methods and excessive punishments prevent students in underserved 
-              communities from acquiring the knowledge they need to be 
-              successful later in life.
-            </p>
-            <p>
-              It’s a problem that isn’t limited to developing countries. 
-              In the United States, low income and rural students consistently 
-              show major achievement gaps compared to their more affluent peers.
-            </p>
-            <p>
-              The Oppia Foundation believes a digital classroom that provides 
-              access to interactive, engaging lessons is the key to closing 
-              these gaps in educational outcomes.
-            </p>
-          </md-content>
-        </md-card-content>
-      </div>
-      <span hide-xs flex="5"></span>
+      <md-card-content flex-gt-md="50"
+                       layout="column"
+                       class="oppia-foundation-no-padding">
+        <md-content layout="column"
+                    layout-align="center none"
+                    class="oppia-foundation-gray-background
+                           oppia-foundation-black-text
+                           partnerships-page-description-text-box">
+          <h3 class="md-display-1 partnerships-description-headline-padding">
+            Empowering students in every community
+          </h3>
+          <p>
+            Overcrowded classrooms, scarce materials, outdated teaching 
+            methods and excessive punishments prevent students in underserved 
+            communities from acquiring the knowledge they need to be 
+            successful later in life.
+          </p>
+          <p>
+            It’s a problem that isn’t limited to developing countries. 
+            In the United States, low income and rural students consistently 
+            show major achievement gaps compared to their more affluent peers.
+          </p>
+          <p>
+            The Oppia Foundation believes a digital classroom that provides 
+            access to interactive, engaging lessons is the key to closing 
+            these gaps in educational outcomes.
+          </p>
+        </md-content>
+      </md-card-content>
       <div hide-xs
            hide-sm
            hide-md
-           flex-gt-md="50"
-           flex="100"
            layout="column"
-           layout-align="center end"
-           layout-wrap>
+           layout-align="center"
+           layout-wrap
+           flex-gt-md="50">
         <img src="/assets/images/partnerships/partnerships_empower.jpeg"
              class="partnerships-page-empower-image"
-             layout="column"
-             layout-align="end"
              alt="Empower image">
       </div>
     </div>
@@ -129,8 +121,8 @@
       <img src="/assets/images/partnerships/partnerships_our_approach.jpg"
            class="partnerships-page-approach-image"
            alt="Our approach image">
-      <span hide-xs flex="5"></span>
-      <md-content layout="column"
+      <md-content flex-gt-md="50"
+                  layout="column"
                   layout-align="center none"
                   class="oppia-foundation-white-background
                          oppia-foundation-black-text
@@ -195,13 +187,16 @@
           lessons enjoyable and impactful.
         </p>
       </md-content>
-      <span hide-xs hide-sm hide-md flex="5"></span>
-      <img hide-xs
+      <div hide-xs
            hide-sm
            hide-md
+           flex-gt-md="50"
+           class="oppia-foundation-vertical-padding">
+        <img 
            src="/assets/images/partnerships/partnerships_evidence.png"
            class="partnerships-page-evidence-image"
            alt="Evidence graph">
+      </div>
     </md-card-content>
   </md-card>
   <md-card layout="column"
@@ -341,8 +336,7 @@
                      class="oppia-foundation-no-padding">
       <md-content class="oppia-foundation-gray-background
                          oppia-foundation-black-text
-                         partnerships-page-description-text-box"
-                  style="width: 100%">
+                         partnerships-page-description-text-box">
         <h3 class="md-display-1
                    partnerships-description-headline-padding">
           Get in touch
@@ -355,7 +349,7 @@
         <p>
           There’s a lot more that we have to share about the promise of our 
           platform.
-          <a style="color: rgb(63, 63, 224);" 
+          <a class="email-us-link" 
              href="mailto:{{ADMIN_EMAIL}}?subject={{PARTNERSHIPS_EMAIL_SUBJECT}}">
              Email us
           </a> or fill out this form for more information, 
@@ -471,6 +465,7 @@
     border: 0;
     display: block;
     margin: 0;
+    padding-left: 40px;
     width: 100%;
   }
   .partnerships-page-title-box {
