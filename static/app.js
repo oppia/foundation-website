@@ -43,6 +43,12 @@ oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
+oppiaFoundationWebsite.config(['$mdThemingProvider',
+  function($mdThemingProvider) {
+    $mdThemingProvider.theme('default').primaryPalette('teal');
+  }
+]);
+
 oppiaFoundationWebsite.run([
   '$location', '$rootScope', function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
@@ -55,3 +61,10 @@ oppiaFoundationWebsite.run([
     };
   }
 ]);
+
+oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
+
+// Message to be displayed when user submits the 'Contact us' form.
+oppiaFoundationWebsite.constant(
+  'THANKYOU_MESSAGE', 'Your message has been forwarded to the Oppia admins ' +
+  'and we will get back to you shortly.');

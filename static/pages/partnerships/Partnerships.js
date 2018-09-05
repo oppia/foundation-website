@@ -13,22 +13,32 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller(
-  'PartnershipsPage', ['$scope', '$http', function($scope, $http) {
-    $scope.submitContactUsForm = function(
-        fullName, email, organization, comment) {
-      var _MAILHANDLER_URL = '/ajax/mailhandler';
-      var PARTNERSHIPS_EMAIL_TYPE = 'PARTNERSHIPS';
-
-      $http.post(_MAILHANDLER_URL, {
-        email_type: PARTNERSHIPS_EMAIL_TYPE,
-        name: fullName,
-        organization: organization,
-        email: email,
-        comment: comment,
-      }).then(function() {
-        $scope.statusMessage = 'Thank you for email!';
-      }, function(errorResponse) {
-        $scope.statusMessage = 'Server error: ' + errorResponse.data.error;
-      });
-    };
-  }]);
+  'PartnershipsPage', [
+    '$scope', '$http', '$mdDialog', '$log',
+    'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
+    function(
+        $scope, $http, $mdDialog, $log,
+        MAILHANDLER_URL, THANKYOU_MESSAGE) {
+      $scope.submitContactUsForm = function(
+          fullName, email, organization, comment, evt) {
+        $http.post(MAILHANDLER_URL, {
+          email_type: 'PARTNERSHIPS',
+          name: fullName,
+          organization: organization,
+          email: email,
+          comment: comment,
+        }).then(function() {
+          $mdDialog.show(
+            $mdDialog.alert()
+              .clickOutsideToClose(true)
+              .title('Thank you!')
+              .textContent(THANKYOU_MESSAGE)
+              .ariaLabel('Thank you dialog')
+              .ok('Got it!')
+              .targetEvent(evt)
+          );
+        }, function(errorResponse) {
+          $log.error('Server error: ' + errorResponse.data.error);
+        });
+      };
+    }]);

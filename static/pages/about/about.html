@@ -72,18 +72,38 @@
             As seen in
           </h1>
         </md-card-title>
-        <md-card-actions layout-gt-sm="row" layout="column" layout-align="center center" layout-fill>
-          <md-button md-no-ink aria-label="TechCrunch Press">
-            <img src="/assets/images/about/techcrunch.png" class="about-page-reference-logo" alt="TechCrunch logo">
+        <md-card-actions layout-gt-sm="row" layout="column" layout-align="space-between center" layout-fill>
+          <md-button aria-label="TechCrunch Press"
+                     class="md-no-ink about-page-press-logo-button"
+                     href="https://techcrunch.com/2014/02/26/meet-oppia-googles-new-open-source-project-that-lets-anyone-create-an-interactive-learning-experience/"
+                     md-ink-ripple="false">
+            <img alt="TechCrunch logo"
+                 class="about-page-reference-logo techcrunch-logo"
+                 src="/assets/images/about/techcrunch.png">
           </md-button>
-          <md-button md-no-ink aria-label="Tnw Press">
-            <img src="/assets/images/about/tnw.png" class="about-page-reference-logo" alt="Tnw Press logo">
+          <md-button aria-label="Tnw Press"
+                     class="md-no-ink about-page-press-logo-button"
+                     href="https://thenextweb.com/google/2014/02/27/google-debuts-online-education-tool-oppia-help-anyone-create-interactive-activities-teaching-others/#.tnw_yZSjpOD5"
+                     md-ink-ripple="false">
+            <img alt="Tnw Press logo"
+                 class="about-page-reference-logo tnw-logo"
+                 src="/assets/images/about/tnw.png">
           </md-button>
-           <md-button md-no-ink aria-label="Google Press">
-            <img src="/assets/images/about/google.png" class="about-page-reference-logo" alt="Google Press logo">
+           <md-button aria-label="Google Press"
+                      class="md-no-ink about-page-press-logo-button"
+                      href="https://opensource.googleblog.com/2014/02/oppia-tool-for-interactive-learning.html"
+                      md-ink-ripple="false">
+            <img alt="Google Press logo"
+                 class="about-page-reference-logo google-open-source-logo"
+                 src="/assets/images/about/google.png">
           </md-button>
-           <md-button md-no-ink aria-label="Edx Press">
-            <img src="/assets/images/about/edx.png" class="about-page-reference-logo" alt="Edx Press logo">
+           <md-button aria-label="Edx Press"
+                      class="md-no-ink about-page-press-logo-button"
+                      href="https://open.edx.org/blog/new-oppia-xblock-allows-embedding-interactive-activities-open-edx-courses"
+                      md-ink-ripple="false">
+            <img alt="Edx Press logo"
+                 class="about-page-reference-logo edx-logo"
+                 src="/assets/images/about/edx.png">
           </md-button>
         </md-card-actions>
       </md-content>
@@ -95,28 +115,62 @@
     max-width: 650px;
   }
   .about-page-body-description-text-box {
-    max-width: 1000px;
+    max-width: 850px;
   }
   .about-page-body-card-title {
     padding-left: 0;
     padding-right: 0;
   }
+  .md-button.about-page-press-logo-button:hover,
+  .md-button.about-page-press-logo-button:focus {
+    background-color: rgba(255,255,255,1);
+  }
   .about-page-oppia-logo {
     width: 16em;
   }
   .about-page-reference-logo {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 3em;
-    width: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.75;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .about-page-reference-logo:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
   }
   .about-page-press-box {
-    width: 100%;
+    width: 850px;
   }
-  @media only screen and (min-width : 1000px) {
-    .about-page-press-box {
-      width: 1000px;
+  @media only screen and (max-width : 959px) {
+    .about-page-reference-logo {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      opacity: 1;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 3em;
+      width: auto;
+    }
+  }
+  @media only screen and (min-width : 959px) {
+    .techcrunch-logo {
+      height: 32px;
+      margin-top: 6px;
+    }
+    .tnw-logo {
+      height: 26px;
+      margin-top: 4px;
+    }
+    .google-open-source-logo {
+      height: 34px;
+      margin-top: 1px;
+    }
+    .edx-logo {
+      height: 30px;
     }
   }
 </style>

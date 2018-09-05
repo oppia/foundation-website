@@ -12,8 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', '$document',
-  '$window', function($scope, $document, $window) {
+oppiaFoundationWebsite.controller('VolunteerPage', [
+  '$scope', '$document', '$http', '$mdDialog', '$log', '$window',
+  'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
+  function(
+      $scope, $document, $http, $mdDialog, $log, $window,
+      MAILHANDLER_URL, THANKYOU_MESSAGE) {
     $scope.tabs = [{
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
@@ -49,7 +53,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', '$document',
       // for more info on angular-scroll APIs.
       // Vertical offset distance from element after scrolling.
       var offset = 0;
-      var durationInMilliseconds = 2000;
+      var durationInMilliseconds = 1000;
       var destinationElement = angular.element(
         document.getElementById(elementId));
       if (destinationElement.length) {
@@ -58,5 +62,26 @@ oppiaFoundationWebsite.controller('VolunteerPage', ['$scope', '$document',
       } else {
         throw Error('No such element');
       }
+    };
+    $scope.submitContactUsForm = function(
+        fullName, email, comment, evt) {
+      $http.post(MAILHANDLER_URL, {
+        email_type: 'VOLUNTEER',
+        name: fullName,
+        email: email,
+        comment: comment,
+      }).then(function() {
+        $mdDialog.show(
+          $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Thank you!')
+            .textContent(THANKYOU_MESSAGE)
+            .ariaLabel('Thank you dialog')
+            .ok('Got it!')
+            .targetEvent(evt)
+        );
+      }, function(errorResponse) {
+        $log.error('Server error: ' + errorResponse.data.error);
+      });
     };
   }]);
