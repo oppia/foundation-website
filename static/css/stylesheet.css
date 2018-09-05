@@ -186,6 +186,7 @@ center {
 
 footer p {
   color: #f2f2f2;
+  font-size: 12px;
 }
 
 a {
@@ -211,7 +212,7 @@ a:focus {
 }
 
 footer a {
-  color: #F2F2F2; 
+  color: #F2F2F2;
 }
 
 footer a:active, a:hover {
