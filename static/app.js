@@ -62,6 +62,8 @@ oppiaFoundationWebsite.run([
   }
 ]);
 
+oppiaFoundationWebsite.constant('ADMIN_EMAIL_ADDRESS', 'admin@example.com');
+
 oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
 
 // Message to be displayed when user submits the 'Contact us' form.

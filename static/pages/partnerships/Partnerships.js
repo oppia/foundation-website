@@ -15,10 +15,12 @@
 oppiaFoundationWebsite.controller(
   'PartnershipsPage', [
     '$scope', '$http', '$mdDialog', '$log',
-    'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
+    'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
     function(
         $scope, $http, $mdDialog, $log,
-        MAILHANDLER_URL, THANKYOU_MESSAGE) {
+        ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
+      $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+      $scope.PARTNERSHIPS_EMAIL_SUBJECT = 'Partnering%20with%20Oppia'
       $scope.submitContactUsForm = function(
           fullName, email, organization, comment, evt) {
         $http.post(MAILHANDLER_URL, {
