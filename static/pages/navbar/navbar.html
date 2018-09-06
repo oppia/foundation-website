@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<md-nav-bar id="navigationBar" md-no-ink-bar="true" nav-bar-aria-label="navigation links" tabindex="0"> 
+  <md-nav-item md-nav-href="#!" aria-label="Oppia Foundation Logo" layout="column" layout-align="center" class="oppia-foundation-no-padding">
+    <span style="display: none;">The Oppia Foundation</span>
+    <img src="/assets/images/navbar/oppia_foundation_logo.png" class="nav-bar-icon" layout="row" aria-label="Oppia Foundation Logo" alt="Oppia Foundation logo">
+  </md-nav-item>
+  <span flex></span>
+  <md-nav-item md-nav-href="#!about" hide-xs hide-sm>About</md-nav-item>
+  <md-nav-item md-nav-href="#!partnerships" hide-xs hide-sm>Partnerships</md-nav-item>
+  <md-nav-item md-nav-href="#!volunteer" hide-xs hide-sm>Volunteer</md-nav-item>
+  <md-menu md-position-mode="target-left target" hide-gt-sm>
+    <md-button aria-label="Open links menu" ng-click="$mdMenu.open()">
+      <md-icon md-svg-src="/assets/icons/baseline-explore-24px.svg" aria-label="Links Menu" style="color:white;"></md-icon>
+      </md-button>
+    <md-menu-content width="2">
+    <md-menu-item>
+      <md-button ng-href="#!about">
+        <md-icon md-svg-src="/assets/icons/round-info-24px.svg" style="color:white;"></md-icon>
+        <span class="oppia-foundation-uppercase-text">About</span>
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!partnerships">
+        <md-icon md-svg-src="/assets/icons/round-business_center-24px.svg" style="color:white;"></md-icon>
+        <span class="oppia-foundation-uppercase-text">Partnerships</span>
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!volunteer">
+        <md-icon md-svg-src="/assets/icons/round-people_outline-24px.svg" style="color:white;"></md-icon>
+        <span class="oppia-foundation-uppercase-text">Volunteer</span>
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button ng-href="#!donate">
+        <md-icon md-svg-src="/assets/icons/cards-heart.svg" style="color:white;"></md-icon>
+        <span class="oppia-foundation-uppercase-text">Donate</span>
+      </md-button>
+    </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+  <md-nav-item hide-xs hide-sm md-nav-href="#!donate">Donate</md-nav-item>
+</md-nav-bar>
+
+<style>
+  .md-button:not([disabled]).md-focused, .md-button:not([disabled]).md-focused {
+    background-color: rgba(5, 190, 178, 1);;
+  }
+  md-nav-bar .md-nav-bar {
+    background: #05a69a;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 20;
+  }
+  md-nav-bar ._md-nav-button-text {
+    color: white;
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+  }
+  md-nav-bar .md-nav-item:hover {
+    background-color: rgba(5, 190, 178, 1);
+    color: rgba(255,255,255,1);
+  }
+  md-nav-bar .md-nav-item:first-of-type{
+    margin-left: 0;
+  }
+  md-nav-bar .md-nav-item:first-of-type:hover {
+    background-color: rgb(5, 95, 89);
+  }
+  md-nav-bar .md-nav-item:last-of-type {
+    background-color: rgb(5, 95, 89);
+    margin-right: 30px;
+  }
+  md-nav-bar .md-nav-item:last-of-type:hover {
+    background-color: rgba(5, 190, 178, 1);
+    color: white;
+  }
+  md-nav-bar .md-nav-item:hover, .md-nav-item:focused {
+    background-color: rgba(5, 190, 178, 1);
+  }
+  md-nav-bar .md-button.md-accent {
+    color: rgba(0,0,0,0.2);
+  }
+  md-menu-content {
+    background: #04b3a7da;
+  }
+  md-menu-item .md-button {
+    background: #04b3a7da;
+    font-weight: bold;
+  }
+  md-menu-item .md-button:hover, .md-button:focus {
+    color: rgba(255,255,255,1);
+  }
+  .nav-bar-icon {
+    border: 0;
+    display: block;
+    margin: auto;
+    min-height: 15px;
+  }
+  .md-nav-bar, .md-nav-bar > nav, ._md-nav-bar-list, .md-button._md-nav-button {
+    min-height: 50px;
+  }
+</style>

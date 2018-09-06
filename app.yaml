@@ -1,0 +1,26 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /ajax/.*
+  script: main.app
+  secure: always
+
+- url: /(.+)
+  static_files: static/\1
+  upload: static/.*
+  secure: always
+  expiration: 10m
+  http_headers:
+    Cache-Control: 'public, max-age=600'
+    Vary: Accept-Encoding
+
+- url: /.*
+  static_files: static/index.html
+  upload: static/index.html
+  secure: always
+  expiration: 10m
+  http_headers:
+    Cache-Control: 'public, max-age=600'
+    Vary: Accept-Encoding

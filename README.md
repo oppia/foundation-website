@@ -1,7 +1,8 @@
 # Oppia Foundation website
 
-Main page of the (newly-redesigned) Oppia Foundation website. This is written
-as a standalone Angular application.
+Main page of the (newly-redesigned) Oppia Foundation website.
+
+The site is written using AngularJS, and is built on top of Google App Engine
 
 ## Contributing
 

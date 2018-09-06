@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<section id="volunteer" ng-controller="VolunteerPage">
+  <md-card flex layout-gt-sm="row" layout="column" layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
+    <md-card-content layout="column" flex="50">
+      <md-content layout="column" class ="oppia-foundation-white-text oppia-foundation-green-background">
+        <md-card-title>
+          <md-card-title-text>
+            <h1 class="md-display-3" hide-xs>
+              Join our global team of volunteers
+            </h1>
+            <h3 class="md-display-1" show-xs hide-gt-xs>
+              Join our global team of volunteers
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <h4 class="md-headline volunteer-page-title-box" hide-xs>
+          Contributing to Oppia is an opportunity to impact the lives of millions of students.
+        </h4>
+        <h4 class="md-headline volunteer-page-title-box" hide-xs>
+          It doesn&rsquo;t matter where you come from, what language you speak, or how young or old you are - this is a community project, and all are welcome!
+        </h4>
+        <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+          Contributing to Oppia is an opportunity to impact the lives of millions of students.
+        </h6>
+        <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+          It doesn&rsquo;t matter where you come from, what language you speak, or how young or old you are - this is a community project, and all are welcome!
+        </h6>
+      </md-content>
+    </md-card-content>
+    <div flex="50" layout="row" layout-align-gt-sm="center center" layout-align="center center">
+      <img src="/assets/images/volunteer/volunteer_page_global_graphics.png" class="volunteer-page-global-graphics" alt="Global graphics">
+    </div>
+    <md-card-content hide-gt-sm layout="column" layout-align="center">
+      <md-card-actions layout="row" layout-align="start">
+        <md-button ng-href="" data-ng-click="goToElement('mobileDesignCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
+        <md-button ng-href="" ng-click="goToElement('mobileDevelopmentCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
+      </md-card-actions>
+      <md-card-actions layout="row" layout-align="start">
+        <md-button ng-href="" ng-click="goToElement('mobileResearchCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
+        <md-button ng-href="" ng-click="goToElement('mobileMarketingCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
+      </md-card-actions>
+    </md-card-content>
+  </md-card>
+  <md-card hide-xs hide-sm show-gt-sm layout-fill flex layout-gt-sm="row" layout="column" class="oppia-foundation-gray-background volunteer-page-conditional-horizontal-padding oppia-foundation-vertical-padding">
+    <md-card-content layout-gt-md="row" layout="column" layout-fill>
+      <md-content layout-fill>
+        <md-tabs md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
+          <md-tab ng-repeat="tab in tabs"
+                  md-on-select="onTabSelected($index % 4)"
+                  label="{{tab.title}}">
+            <md-tab-body>
+              <ng-include src="tabs[activeTabId].templateUrl"></ng-include>
+            </md-tab-body>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card id="mobileDesignCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1">
+              Design
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-bold-text">What we do:</p>
+        <ul>
+          <li>Improve the user experience for students and lesson creators</li>
+          <li>Create graphics for lessons</li>
+          <li>Integrate user feedback and new features</li>
+        </ul>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+      </md-content>
+    </md-card-content>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="design"></profile-carousel>
+  </md-card>
+  <md-card id="mobileDevelopmentCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1">
+              Development
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-bold-text">What we do:</p>
+        <ul>
+          <li>Build features that enable students to learn effectively.</li>
+          <li>Provide infrastructure that can deliver lessons at scale.</li>
+          <li>Apply ML techniques to provide better responses to students' answers.</li>
+        </ul>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+      </md-content>
+    </md-card-content>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="development"></profile-carousel>
+  </md-card>
+  <md-card id="mobileResearchCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1">
+              Research
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-bold-text">What we do:</p>
+        <ul>
+          <li>Conduct user studies to gain insights on the impact of Oppia&rsquo;s lessons.</li>
+          <li>Identify and find ways to address key issues that students face.</li>
+          <li>Write reports that summarize research findings and suggest next steps.</li>
+        </ul>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+      </md-content>
+    </md-card-content>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="research"></profile-carousel>
+  </md-card>
+  <md-card id="mobileMarketingCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
+    <md-card-content class="oppia-foundation-white-background">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1">
+              Marketing
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-bold-text">What we do:</p>
+        <ul>
+          <li>Plan campaigns to raise awareness of Oppia's free lessons among students, teachers and parents.</li>
+          <li>Find ways to share Oppia's story, so that people know that they can make a difference.</li>
+          <li>Ensure that the stories we tell remain true to the organization's mission.</li>
+        </ul>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+      </md-content>
+    </md-card-content>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing"></profile-carousel>
+  </md-card>
+  <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
+    <md-card-content layout="column" layout-gt-sm="row">
+      <md-content class="oppia-foundation-white-background oppia-foundation-black-text" flex-gt-sm="45">
+        <h3 class="md-display-1 volunteer-page-description-headline-padding">
+          Get in touch
+        </h3>
+        <p>
+          Questions? Want to learn more? Curious if your skills can help Oppia grow? We&rsquo;d love to hear from you.
+        </p>
+        <p>
+          Whatever your skills, there are ways to help the Oppia Foundation. We invite you to reach out and see how your help can make a difference.
+        </p>
+        <p>
+          Fill out this form or send us an email at <a>partnerships@oppiafoundation.org</a> and we&rsquo;ll get back to you right away!
+        </p>
+      </md-content>
+      <div flex-gt-sm="10"></div>
+      <md-card class="oppia-foundation-white-background oppia-foundation-black-text md-no-momentum oppia-foundation-vertical-padding volunteer-page-form oppia-foundation-no-margin" flex-gt-sm="45">
+        <form name="userContactsForm"
+              class="oppia-foundation-white-background">
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Name
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg"
+                     aria-label="Email form person icon">
+            </md-icon>
+            <input autocomplete="name"
+                   placeholder=""
+                   required
+                   md-no-asterisk
+                   name="fullName"
+                   ng-model="fullName">
+            <div ng-messages="userContactsForm.name.$error">
+              <div ng-message="required">
+                Please enter your full name.
+              </div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Email
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg"
+                     aria-label="Email form email icon">
+            </md-icon>
+            <input autocomplete="email"
+                   placeholder=""
+                   required
+                   md-no-asterisk
+                   name="email"
+                   ng-model="email"
+                   ng-pattern="/^.+@.+\..+$/"
+                   minlength="10">
+            <div ng-messages="userContactsForm.email.$error" multiple>
+              <div ng-message="required">
+                Email address is required.
+              </div>
+              <div ng-message="pattern">
+                Please enter a valid email address
+              </div>
+              <div ng-message="minlength">
+                Email must be longer than 10 characters
+              </div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Message
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg"
+                     aria-label="Email form comment icon">
+            </md-icon>
+            <textarea ng-model="comment"
+                      placeholder=""
+                      name="comment"
+                      required
+                      rows="5"
+                      md-select-on-focus>
+            </textarea>
+          </md-input-container>
+          <md-button class="oppia-foundation-button-horizontal-padding
+                            oppia-foundation-gold-border-button"
+                     ng-click="submitContactUsForm(
+                       fullName, email, comment, $event)"
+                     ng-disabled="userContactsForm.$invalid">
+            Submit
+          </md-button>
+        </form>
+      </md-card>
+    </md-card-content>
+  </md-card>
+   <md-button id="scrollToTopButton" hide-gt-sm ng-href="" data-ng-click="goToElement('navigationBar')" class="md-primary md-fab md-fab-bottom-right oppia-foundation-scroll-to-top-button" aria-label="Scroll to top" style="margin: auto;" md-colors="{background: 'teal-900'}">
+    <md-icon ng-href="" md-svg-src="assets/icons/baseline-keyboard_arrow_up-24px.svg" style="color: white;"></md-icon>
+  </md-button>
+</section>
+<style>
+  md-card-content md-card-title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media screen and (min-width: 799px) {
+    .volunteer-page-conditional-horizontal-padding {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  .volunteer-page-title-box {
+    line-height: 30pt;
+  }
+  .volunteer-page-global-graphics {
+    border: 0;
+    display: block;
+    margin: 0;
+    width: auto;
+  }
+  .volunteer-page-design-profile-image {
+    border: 0;
+    display: block;
+    margin: 20px auto 0px;
+  }
+  @media screen and (min-width: 599px) {
+    .volunteer-page-design-profile-image {
+      width: 55vw;
+    }
+  }
+  md-tabs .md-tab {
+    background-color: #F4F4F4;
+    border-style: solid;
+    border-color: #18AA9D;
+    border-width: 2px 1px;
+    color: black;
+    font-size: large;
+    text-transform: none;
+  }
+  md-tabs .md-tab:first-of-type {
+    border-width: 2px 1px 2px 2px;
+  }
+  md-tabs .md-tab:last-of-type {
+    border-width: 2px 2px 2px 1px;
+  }
+  md-tabs .md-tab.md-active {
+    background-color: #18AA9D;
+    color: white;
+  }
+  md-tabs md-ink-bar {
+    color: #18AA9D;
+  }
+  .volunteer-page-no-margin {
+    margin: 0;
+  }
+  .volunteer-page-description-headline-padding {
+    padding-bottom: 20px;
+  }
+  .volunteer-page-form {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  .volunteer-page-desktop-profile-card {
+    width: 28vw;
+  }
+  @media screen and (max-width: 499px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 550px;
+    }
+    .carousel-inner {
+      height: 550px;
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 599px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 650px;
+    }
+    .carousel-inner {
+      height: 650px;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 750px;
+    }
+    .carousel-inner {
+      min-height: 750px;
+    }
+  }
+  @media screen and (min-width: 801px) and (max-width: 960px) {
+    .volunteer-page-mobile-profile-carousel {
+      min-height: 850px;
+    }
+    .carousel-inner {
+      min-height: 850px;
+    }
+  }
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+  }
+   a.left.carousel-control, a.right.carousel-control {
+    top: 20%;
+    height: 39px;
+    z-index: 2;
+  }
+  .volunteer-page-desktop-profile-carousel {
+    min-height: 650px;
+  }
+  @media screen and (min-width: 961px) {
+    .carousel-inner {
+      height: 650px;
+    }
+  }
+  .carousel-indicators {
+    left: auto;
+    margin-left: 0px;
+    position: static;
+    width: auto;
+  }
+  .carousel-indicators li {
+    background-color: grey;
+  }
+  .carousel-indicators .active {
+    background-color: black;
+  }
+  .carousel-indicators li,
+  .carousel-indicators li.active {
+    margin: 5px;
+    padding: 5px;
+    width: 10px;
+  }
+</style>

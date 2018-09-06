@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<md-card layout-fill class="footer-background-color oppia-foundation-conditional-vertical-padding">
+  <md-card-content layout="column" layout-align-sm="center" layout-gt-md="row" layout-align-gt-sm="center">
+    <md-content layout="column" layout-align="center center" layout-align-gt-md="start" class="footer-background-color oppia-foundation-horizontal-padding">
+      <h4 class="oppia-foundation-uppercase-text oppia-foundation-white-text footer-title">The Oppia Foundation</h4>
+      <p class="footer"><a>About</a></p>
+      <p class="footer"><a>Partner With Us</a></p>
+      <p class="footer"><a>Get Involved</a></p>
+      <p class="footer"><a>Donate</a></p>
+    </md-content>
+    <md-content layout="column" layout-align="center center" layout-align-gt-md="start" class="footer-background-color oppia-foundation-horizontal-padding">
+      <h4 class="oppia-foundation-uppercase-text oppia-foundation-white-text footer-title">Oppia</h4>
+      <p class="footer"><a>About</a></p>
+      <p class="footer"><a>Get Started</a></p>
+      <p class="footer"><a>Browse Topics</a></p>
+      <p class="footer"><a>Contribute to Our Lessons</a></p>
+    </md-content>
+    <md-content layout="column" layout-align="center center" layout-align-gt-md="start" class="footer-background-color oppia-foundation-horizontal-padding">
+      <h4 class="oppia-foundation-uppercase-text oppia-foundation-white-text footer-title">Contact us</h4>
+      <p class="footer"><a>info@oppiafoundation.org</a></p>
+    </md-content>
+    <md-content layout="column" layout-align="center center" layout-align-gt-md="start center" class="footer-background-color oppia-foundation-horizontal-padding">
+      <h4 class="oppia-foundation-uppercase-text oppia-foundation-white-text footer-title">Follow us</h4>
+      <md-content layout="row" layout-align="center center" layout-gt-md="row" class="footer-background-color">
+        <md-button class="social-media-button google-plus-button" md-no-ink>
+          <md-icon md-svg-src="/assets/icons/google-plus-g-brands.svg"
+                   aria-label="G+ icon"
+                   class="social-media-icon"
+                   ng-href="">
+          </md-icon>
+        </md-button>
+        <md-button class="social-media-button" md-no-ink>
+          <md-icon md-svg-src="/assets/icons/youtube-brands.svg"
+                   aria-label="Youtube icon"
+                   class="social-media-icon"
+                   ng-href="">
+        </md-icon>
+        </md-button>
+        <md-button class="social-media-button" md-no-ink>
+          <md-icon md-svg-src="/assets/icons/flogo-HexRBG-Wht-72.svg"
+                   aria-label="Facebook icon"
+                   class="facebook-icon"
+                   ng-href="">
+          </md-icon>
+        </md-button>
+        <md-button class="social-media-button" md-no-ink>
+          <md-icon md-svg-src="/assets/icons/twitter-square-brands.svg"
+                   aria-label="Twitter Icon"
+                   class="twitter-icon"
+                   ng-href="">
+          </md-icon>
+        </md-button>
+      </md-content>
+    </md-content>
+  </md-card-content>
+    <md-card-content layout="column" layout-gt-sm="row" layout-align="center center">
+    <md-content class="footer-background-color oppia-foundation-horizontal-padding oppia-foundation-white-text">
+      <p>&copy; {{currentYear}} The Oppia Foundation</p>
+    </md-content>
+    <md-content class="footer-background-color oppia-foundation-horizontal-padding oppia-foundation-white-text">
+      <p><a>Terms of Service</a></p>
+    </md-content>
+    <md-content class="footer-background-color oppia-foundation-horizontal-padding oppia-foundation-white-text">
+      <p><a>Privacy Policy</a></p>
+    </md-content>
+  </md-card-content>
+</md-card>
+<style>
+  .footer-background-color {
+    background-color: #094142
+  }
+  .footer-title {
+    padding: 20px 0 10px 0;
+    font-size: 14px;
+  }
+  p.footer {
+    max-width: 240px;
+    margin: 5px;
+  }
+  md-icon.social-media-icon {
+    min-width: 40px;
+    min-height: 40px;
+    color:white;
+  }
+  md-icon.facebook-icon {
+    min-width: 30px;
+    min-height: 40px;
+  }
+  md-icon.twitter-icon {
+    min-width: 30px;
+    min-height: 40px;
+    color:white;
+  }
+  .md-button.social-media-button {
+    min-width: 0;
+  }
+</style>
