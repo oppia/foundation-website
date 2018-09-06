@@ -90,8 +90,14 @@ video {
   vertical-align: baseline;
 }
 video {
-  width: 100%;
-  height: auto;
+  display: none;
+}
+@media screen and (min-width: 250px) {
+  video {
+    height: auto;
+    display: block;
+    width: 100%;
+  }
 }
 
 
