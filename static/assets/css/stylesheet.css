@@ -464,6 +464,10 @@ Full-Width Styles
   text-align: left;
 }
 
+.md-headline.oppia-foundation-headline {
+  line-height: 30pt;
+}
+
 .md-button.oppia-foundation-gold-border-button {
   border: 3px outset goldenrod;
   min-width: 200px;
