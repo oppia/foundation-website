@@ -89,6 +89,10 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+video {
+  width: 100%;
+  height: auto;
+}
 
 
 /* HTML5 display-role reset for older browsers */

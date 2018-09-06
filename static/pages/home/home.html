@@ -87,7 +87,13 @@
          style="width: 100%">
       <div class="macbook">
         <div class="screen">
-          <div class="viewport"></div>
+          <div class="viewport">
+            <video controls>
+              <source src="/assets/videos/Interactions_video.mp4"
+                      type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <div class="base"></div>
         <div class="notch"></div>
@@ -128,7 +134,13 @@
     <div hide-xs hide-sm hide-md style="width: 100%">
       <div class="macbook">
         <div class="screen">
-          <div class="viewport"></div>
+          <div class="viewport" controls>
+            <video controls>
+              <source src="/assets/videos/Interactions_video.mp4"
+                      type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <div class="base"></div>
         <div class="notch"></div>
@@ -243,8 +255,7 @@
         </md-card-actions>
       </md-content>
     </md-card-content>
-    <div class=""
-         flex-gt-md="50"
+    <div flex-gt-md="50"
          layout="column"
          layout-align="center center">
       <img hide-xs
@@ -448,11 +459,11 @@
     right: 0;
     top: 0;
     margin: 4.3% 3.2%;
-    background-color: white;
+    /* background-color: white;
     background-image: url('/assets/images/home/home_partner.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
   }
   .base {
     /* for aspect ratio */
