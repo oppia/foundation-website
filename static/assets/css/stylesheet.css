@@ -345,6 +345,10 @@ Full-Width Styles
   margin: 0;
 }
 
+.oppia-foundation-no-margin-top {
+  margin-top :0;
+}
+
 .oppia-foundation-no-padding {
   padding :0;
 }
@@ -394,6 +398,15 @@ Full-Width Styles
     padding-bottom: 40px;
   }
   .oppia-foundation-tablet-and-desktop-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-tablet-and-desktop-right-padding {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .oppia-foundation-mobile-and-small-tablet-vertical-padding {
     padding-top: 40px;
     padding-bottom: 40px;
   }

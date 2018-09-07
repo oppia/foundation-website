@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <section id="volunteer" ng-controller="VolunteerPage">
-  <md-card flex layout-gt-sm="row" layout="column" layout-fill class="oppia-foundation-green-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
-    <md-card-content layout="column" flex="50">
-      <md-content layout="column" class ="oppia-foundation-white-text oppia-foundation-green-background">
+  <md-card class="oppia-foundation-green-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-gt-sm="row"
+           layout="column"
+           layout-fill>
+    <md-card-content class="oppia-foundation-no-padding"
+                     layout="column"
+                     layout-gt-sm="row">
+      <md-content class="oppia-foundation-white-text
+                         oppia-foundation-green-background
+                         oppia-foundation-tablet-and-desktop-right-padding"
+                  layout="column"
+                  flex-gt-sm="50">
         <md-card-title>
           <md-card-title-text>
-            <h1 class="md-display-3" hide-xs>
+            <h1 class="md-display-2" hide-xs>
               Join our global team of volunteers
             </h1>
             <h3 class="md-display-1" show-xs hide-gt-xs>
@@ -14,37 +25,74 @@
           </md-card-title-text>
         </md-card-title>
         <h4 class="md-headline volunteer-page-title-box" hide-xs>
-          Contributing to Oppia is an opportunity to impact the lives of millions of students.
+          Contributing to Oppia is an opportunity to impact the lives of 
+          millions of students.
         </h4>
         <h4 class="md-headline volunteer-page-title-box" hide-xs>
-          It doesn&rsquo;t matter where you come from, what language you speak, or how young or old you are - this is a community project, and all are welcome!
+          It doesn&rsquo;t matter where you come from, what language you speak, 
+          or how young or old you are - this is a community project, and all 
+          are welcome!
         </h4>
-        <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
-          Contributing to Oppia is an opportunity to impact the lives of millions of students.
+        <h6 class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+          Contributing to Oppia is an opportunity to impact the lives of 
+          millions of students.
         </h6>
-        <h6 strong class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
-          It doesn&rsquo;t matter where you come from, what language you speak, or how young or old you are - this is a community project, and all are welcome!
+        <h6 class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+          It doesn&rsquo;t matter where you come from, what language you speak, 
+          or how young or old you are - this is a community project, and all 
+          are welcome!
         </h6>
       </md-content>
-    </md-card-content>
-    <div flex="50" layout="row" layout-align-gt-sm="center center" layout-align="center center">
-      <img src="/assets/images/volunteer/volunteer_page_global_graphics.png" class="volunteer-page-global-graphics" alt="Global graphics">
-    </div>
-    <md-card-content hide-gt-sm layout="column" layout-align="center">
-      <md-card-actions layout="row" layout-align="start">
-        <md-button ng-href="" data-ng-click="goToElement('mobileDesignCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Design</md-button>
-        <md-button ng-href="" ng-click="goToElement('mobileDevelopmentCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Development</md-button>
+      <div class="oppia-foundation-mobile-and-small-tablet-vertical-padding"
+           flex-gt-sm="50"
+           layout="row"
+           layout-align="center center">
+        <img src="/assets/images/volunteer/volunteer_page_global_graphics.png"
+             class="volunteer-page-global-graphics"
+             alt="Global graphics">
+      </div>
+      <md-card-actions hide-gt-sm layout="row" layout-align="start">
+        <md-button ng-click="goToElement('mobileDesignCard')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Design
+        </md-button>
+        <md-button ng-click="goToElement('mobileDevelopmentCard')"
+                   class="oppia-foundation-no-margin
+                   oppia-foundation-white-button">
+          Development
+        </md-button>
       </md-card-actions>
-      <md-card-actions layout="row" layout-align="start">
-        <md-button ng-href="" ng-click="goToElement('mobileResearchCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Research</md-button>
-        <md-button ng-href="" ng-click="goToElement('mobileMarketingCard')" class="volunteer-page-no-margin oppia-foundation-white-button">Marketing</md-button>
+      <md-card-actions hide-gt-sm layout="row" layout-align="start">
+        <md-button ng-click="goToElement('mobileResearchCard')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Research
+        </md-button>
+        <md-button ng-click="goToElement('mobileMarketingCard')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Marketing
+        </md-button>
       </md-card-actions>
     </md-card-content>
   </md-card>
-  <md-card hide-xs hide-sm show-gt-sm layout-fill flex layout-gt-sm="row" layout="column" class="oppia-foundation-gray-background volunteer-page-conditional-horizontal-padding oppia-foundation-vertical-padding">
+  <md-card hide-xs
+           hide-sm
+           show-gt-sm
+           layout-fill
+           layout-gt-sm="row"
+           layout="column"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding">
     <md-card-content layout-gt-md="row" layout="column" layout-fill>
       <md-content layout-fill>
-        <md-tabs md-dynamic-height md-border-bottom md-no-ink-bar md-stretch-tabs="always" md-no-pagination>
+        <md-tabs md-dynamic-height
+                 md-border-bottom
+                 md-no-ink-bar
+                 md-stretch-tabs="always"
+                 md-no-pagination>
           <md-tab ng-repeat="tab in tabs"
                   md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
@@ -72,7 +120,7 @@
           <li>Create graphics for lessons</li>
           <li>Integrate user feedback and new features</li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile" corresponding-tab-name="design"></profile-carousel>
@@ -93,7 +141,7 @@
           <li>Provide infrastructure that can deliver lessons at scale.</li>
           <li>Apply ML techniques to provide better responses to students' answers.</li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile" corresponding-tab-name="development"></profile-carousel>
@@ -114,7 +162,7 @@
           <li>Identify and find ways to address key issues that students face.</li>
           <li>Write reports that summarize research findings and suggest next steps.</li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile" corresponding-tab-name="research"></profile-carousel>
@@ -135,7 +183,7 @@
           <li>Find ways to share Oppia's story, so that people know that they can make a difference.</li>
           <li>Ensure that the stories we tell remain true to the organization's mission.</li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button volunteer-page-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing"></profile-carousel>
@@ -288,17 +336,11 @@
   md-tabs md-ink-bar {
     color: #18AA9D;
   }
-  .volunteer-page-no-margin {
-    margin: 0;
-  }
   .volunteer-page-description-headline-padding {
     padding-bottom: 20px;
   }
   .volunteer-page-form {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  }
-  .volunteer-page-desktop-profile-card {
-    width: 28vw;
   }
   @media screen and (max-width: 499px) {
     .volunteer-page-mobile-profile-carousel {
@@ -340,12 +382,9 @@
     height: 39px;
     z-index: 2;
   }
-  .volunteer-page-desktop-profile-carousel {
-    min-height: 650px;
-  }
   @media screen and (min-width: 961px) {
     .carousel-inner {
-      height: 650px;
+      height: 500px;
     }
   }
   .carousel-indicators {
@@ -365,5 +404,11 @@
     margin: 5px;
     padding: 5px;
     width: 10px;
+  }
+  .volunteer-page-carousel-profile-picture {
+    height: 250px;
+  }
+  uib-carousel uib-slide {
+    width: 350px;
   }
 </style>
