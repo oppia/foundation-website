@@ -532,30 +532,7 @@ Full-Width Styles
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 16px 20px;
-}
-@media screen and (min-width: 100px) and (max-width: 499px) {
-  .oppia-foundation-quote-box {
-    max-width: 90vw;
-  }
-}
-@media screen and (min-width: 550px) {
-  .oppia-foundation-quote-box {
-    width: 50vw;
-  }
-}
-
-.oppia-foundation-quote-box-overlay {
-  bottom: 50px;
-  position: relative;
-  z-index: 11;
-}
-@media screen and (min-width: 100px) and (max-width: 999px) {
-  .oppia-foundation-quote-box-overlay {
-    bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
+  max-width: 300px;
 }
 
 .oppia-foundation-cite-text-box {

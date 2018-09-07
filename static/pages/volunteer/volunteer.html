@@ -16,12 +16,9 @@
                   flex-gt-sm="50">
         <md-card-title>
           <md-card-title-text>
-            <h1 class="md-display-2" hide-xs>
+            <h1>
               Join our global team of volunteers
             </h1>
-            <h3 class="md-display-1" show-xs hide-gt-xs>
-              Join our global team of volunteers
-            </h3>
           </md-card-title-text>
         </md-card-title>
         <h4 class="md-headline volunteer-page-title-box" hide-xs>
@@ -51,7 +48,7 @@
              class="volunteer-page-global-graphics"
              alt="Global graphics">
       </div>
-      <md-card-actions hide-gt-sm layout="row" layout-align="start">
+      <md-card-actions hide-gt-sm layout="row" layout-align="center">
         <md-button ng-click="goToElement('mobileDesignCard')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
@@ -63,7 +60,7 @@
           Development
         </md-button>
       </md-card-actions>
-      <md-card-actions hide-gt-sm layout="row" layout-align="start">
+      <md-card-actions hide-gt-sm layout="row" layout-align="center">
         <md-button ng-click="goToElement('mobileResearchCard')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
@@ -104,9 +101,20 @@
       </md-content>
     </md-card-content>
   </md-card>
-  <md-card id="mobileDesignCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
-    <md-card-content class="oppia-foundation-white-background">
-      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+  <md-card id="mobileDesignCard"
+           class="oppia-foundation-gray-background"
+           show-xs
+           show-sm
+           hide-gt-sm
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-gray-background
+                            oppia-foundation-horizontal-padding"
+                     layout="column">
+      <md-content class="oppia-foundation-gray-background
+                         oppia-foundation-black-text
+                         volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -120,14 +128,30 @@
           <li>Create graphics for lessons</li>
           <li>Integrate user feedback and new features</li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-gold-border-button
+                          md-raised">
+          Apply now
+        </md-button>
       </md-content>
     </md-card-content>
-    <profile-carousel carousel-type="mobile" corresponding-tab-name="design"></profile-carousel>
+    <profile-carousel carousel-type="mobile"
+                      corresponding-tab-name="design">
+    </profile-carousel>
   </md-card>
-  <md-card id="mobileDevelopmentCard" show-xs show-sm hide-gt-sm layout-fill layout="column">
-    <md-card-content class="oppia-foundation-white-background">
-      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+  <md-card id="mobileDevelopmentCard"
+           class="oppia-foundation-gray-background"
+           show-xs
+           show-sm
+           hide-gt-sm
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-gray-background
+                            oppia-foundation-horizontal-padding"
+                     layout="column">
+      <md-content class="oppia-foundation-gray-background
+                         oppia-foundation-black-text
+                         volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -139,16 +163,35 @@
         <ul>
           <li>Build features that enable students to learn effectively.</li>
           <li>Provide infrastructure that can deliver lessons at scale.</li>
-          <li>Apply ML techniques to provide better responses to students' answers.</li>
+          <li>
+            Apply ML techniques to provide better responses to students' 
+            answers.
+          </li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-gold-border-button
+                          md-raised">
+          Apply now
+        </md-button>
       </md-content>
     </md-card-content>
-    <profile-carousel carousel-type="mobile" corresponding-tab-name="development"></profile-carousel>
+    <profile-carousel carousel-type="mobile"
+                      corresponding-tab-name="development">
+    </profile-carousel>
   </md-card>
-  <md-card id="mobileResearchCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
-    <md-card-content class="oppia-foundation-white-background">
-      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+  <md-card id="mobileResearchCard"
+           class="oppia-foundation-gray-background"
+           show-xs
+           show-sm
+           hide-gt-sm
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-gray-background
+                            oppia-foundation-horizontal-padding"
+                     layout="column">
+      <md-content class="oppia-foundation-gray-background
+                         oppia-foundation-black-text
+                         volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -158,18 +201,42 @@
         </md-card-title>
         <p class="oppia-foundation-bold-text">What we do:</p>
         <ul>
-          <li>Conduct user studies to gain insights on the impact of Oppia&rsquo;s lessons.</li>
-          <li>Identify and find ways to address key issues that students face.</li>
-          <li>Write reports that summarize research findings and suggest next steps.</li>
+          <li>
+            Conduct user studies to gain insights on the impact of 
+            Oppia&rsquo;s lessons.
+          </li>
+          <li>
+            Identify and find ways to address key issues that students face.
+          </li>
+          <li>
+            Write reports that summarize research findings and suggest next 
+            steps.
+          </li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-gold-border-button
+                          md-raised">
+          Apply now
+        </md-button>
       </md-content>
     </md-card-content>
-    <profile-carousel carousel-type="mobile" corresponding-tab-name="research"></profile-carousel>
+    <profile-carousel carousel-type="mobile"
+                      corresponding-tab-name="research">
+    </profile-carousel>
   </md-card>
-  <md-card id="mobileMarketingCard" md-card show-xs show-sm hide-gt-sm layout-fill layout="column">
-    <md-card-content class="oppia-foundation-white-background">
-      <md-content class="oppia-foundation-white-background oppia-foundation-black-text">
+  <md-card id="mobileMarketingCard"
+           class="oppia-foundation-gray-background"
+           show-xs
+           show-sm
+           hide-gt-sm
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-gray-background
+                            oppia-foundation-horizontal-padding"
+                     layout="column">
+      <md-content class="oppia-foundation-gray-background
+                         oppia-foundation-black-text
+                         volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1">
@@ -179,35 +246,67 @@
         </md-card-title>
         <p class="oppia-foundation-bold-text">What we do:</p>
         <ul>
-          <li>Plan campaigns to raise awareness of Oppia's free lessons among students, teachers and parents.</li>
-          <li>Find ways to share Oppia's story, so that people know that they can make a difference.</li>
-          <li>Ensure that the stories we tell remain true to the organization's mission.</li>
+          <li>
+            Plan campaigns to raise awareness of Oppia's free lessons among 
+            students, teachers and parents.
+          </li>
+          <li>
+            Find ways to share Oppia's story, so that people know that they can
+            make a difference.
+          </li>
+          <li>
+            Ensure that the stories we tell remain true to the organization's
+            mission.
+          </li>
         </ul>
-        <md-button class="oppia-foundation-button-horizontal-padding oppia-foundation-gold-border-button oppia-foundation-no-margin">Apply now</md-button>
+        <md-button class="oppia-foundation-gold-border-button
+                          md-raised">
+          Apply now
+        </md-button>
       </md-content>
     </md-card-content>
-    <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing"></profile-carousel>
+    <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing">
+    </profile-carousel>
   </md-card>
-  <md-card layout-fill class="oppia-foundation-white-background oppia-foundation-vertical-padding volunteer-page-conditional-horizontal-padding">
+  <md-card class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-fill>
     <md-card-content layout="column" layout-gt-sm="row">
-      <md-content class="oppia-foundation-white-background oppia-foundation-black-text" flex-gt-sm="45">
-        <h3 class="md-display-1 volunteer-page-description-headline-padding">
+      <md-content class="oppia-foundation-white-background
+                         oppia-foundation-black-text"
+                  flex-gt-sm="45">
+        <h3 class="md-display-1
+                   volunteer-page-description-headline-padding">
           Get in touch
         </h3>
         <p>
-          Questions? Want to learn more? Curious if your skills can help Oppia grow? We&rsquo;d love to hear from you.
+          Questions? Want to learn more? Curious if your skills can help Oppia 
+          grow? We&rsquo;d love to hear from you.
         </p>
         <p>
-          Whatever your skills, there are ways to help the Oppia Foundation. We invite you to reach out and see how your help can make a difference.
+          Whatever your skills, there are ways to help the Oppia Foundation. We 
+          invite you to reach out and see how your help can make a difference.
         </p>
         <p>
-          Fill out this form or send us an email at <a>partnerships@oppiafoundation.org</a> and we&rsquo;ll get back to you right away!
+          Fill out this form or
+          <a class="email-us-link"
+             href="mailto:{{ADMIN_EMAIL}}?subject={{VOLUNTEER_EMAIL_SUBJECT}}">
+            send us
+          </a> an email and we&rsquo;ll get back to you right away!
         </p>
       </md-content>
-      <div flex-gt-sm="10"></div>
-      <md-card class="oppia-foundation-white-background oppia-foundation-black-text md-no-momentum oppia-foundation-vertical-padding volunteer-page-form oppia-foundation-no-margin" flex-gt-sm="45">
+      <div flex="10"></div>
+      <!-- <md-card class="oppia-foundation-white-background
+                      oppia-foundation-black-text
+                      md-no-momentum
+                      oppia-foundation-no-margin"
+               layout-fill
+               layout="column"
+               layout-align="center center"> -->
         <form name="userContactsForm"
-              class="oppia-foundation-white-background">
+              class="oppia-foundation-white-background
+                     volunteer-page-form">
           <md-input-container class="md-block">
             <label class="oppia-foundation-uppercase-text">
               Name
@@ -277,7 +376,7 @@
             Submit
           </md-button>
         </form>
-      </md-card>
+      <!-- </md-card> -->
     </md-card-content>
   </md-card>
    <md-button id="scrollToTopButton" hide-gt-sm ng-href="" data-ng-click="goToElement('navigationBar')" class="md-primary md-fab md-fab-bottom-right oppia-foundation-scroll-to-top-button" aria-label="Scroll to top" style="margin: auto;" md-colors="{background: 'teal-900'}">
@@ -342,37 +441,22 @@
   .volunteer-page-form {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
-  @media screen and (max-width: 499px) {
-    .volunteer-page-mobile-profile-carousel {
-      min-height: 550px;
-    }
-    .carousel-inner {
-      height: 550px;
+  @media screen and (min-width: 600px) {
+    .volunteer-page-form {
+      width: 500px;
+      margin: auto;
     }
   }
-  @media screen and (min-width: 500px) and (max-width: 599px) {
-    .volunteer-page-mobile-profile-carousel {
-      min-height: 650px;
+  /* @media screen and (max-width: 600px) {
+    .volunteer-page-form {
+      margin-top: 20px;
     }
-    .carousel-inner {
-      height: 650px;
-    }
+  } */
+  .volunteer-page-mobile-profile-carousel {
+    min-height: 500px;
   }
-  @media screen and (min-width: 600px) and (max-width: 800px) {
-    .volunteer-page-mobile-profile-carousel {
-      min-height: 750px;
-    }
-    .carousel-inner {
-      min-height: 750px;
-    }
-  }
-  @media screen and (min-width: 801px) and (max-width: 960px) {
-    .volunteer-page-mobile-profile-carousel {
-      min-height: 850px;
-    }
-    .carousel-inner {
-      min-height: 850px;
-    }
+  .carousel-inner {
+    height: 500px;
   }
   .carousel-control.left, .carousel-control.right {
     background-image: none;
@@ -380,12 +464,6 @@
    a.left.carousel-control, a.right.carousel-control {
     top: 20%;
     height: 39px;
-    z-index: 2;
-  }
-  @media screen and (min-width: 961px) {
-    .carousel-inner {
-      height: 500px;
-    }
   }
   .carousel-indicators {
     left: auto;
@@ -407,8 +485,32 @@
   }
   .volunteer-page-carousel-profile-picture {
     height: 250px;
+    max-width: 350px;
+  }
+  .volunteer-page-profile-text-box {
+    font-size: 11pt;
+    max-width: 580px;
   }
   uib-carousel uib-slide {
     width: 350px;
+  }
+  .volunteer-page-quote-overlay {
+    z-index: 11;
+    position: relative;
+    bottom: 50px;
+  }
+  @media screen and (min-width: 100px) {
+    .volunteer-page-quote-overlay {
+      position: relative;
+      bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .volunteer-page-mobile-carousel-quote-box {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 16px 20px;
+    max-width: 300px;
   }
 </style>

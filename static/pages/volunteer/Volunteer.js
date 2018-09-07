@@ -14,10 +14,12 @@
 
 oppiaFoundationWebsite.controller('VolunteerPage', [
   '$scope', '$document', '$http', '$mdDialog', '$log', '$window',
-  'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
+  'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
   function(
       $scope, $document, $http, $mdDialog, $log, $window,
-      MAILHANDLER_URL, THANKYOU_MESSAGE) {
+      ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
+    $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+    $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
     $scope.tabs = [{
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
