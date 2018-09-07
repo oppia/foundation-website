@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Tests for Constants object and cosntants.json file."""
+"""Tests for CONSTANTS object and cosntants.json file."""
 
 import os
 
