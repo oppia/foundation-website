@@ -23,7 +23,14 @@ import os
 CONSTANTS_JS_FILEPATH = os.path.join('static', 'assets', 'constants.js')
 
 def parse_json_from_js(js_file):
-    """Extracts JSON object from JS file."""
+    """Extracts JSON object from JS file.
+    Args:
+        js_file: str. The filestream object of constants.js.
+
+    Returns:
+        dict(str, str). The dictionary containing variable name as key and
+            variable value as value.
+    """
     text = js_file.read()
     first_bracket_index = text.find('= {')
     last_bracket_index = text.rfind('}')
@@ -32,9 +39,9 @@ def parse_json_from_js(js_file):
 
 
 class Constants(dict):
-    """Transforms dict to object, attributes can be accesed by dot notation."""
+    """Transforms dict to object, attributes can be accessed by dot notation."""
     __getattr__ = dict.__getitem__
 
 
 with open(CONSTANTS_JS_FILEPATH, 'r') as f:
-    constants = Constants(parse_json_from_js(f)) #pylint: disable=invalid-name
+    CONSTANTS = Constants(parse_json_from_js(f))

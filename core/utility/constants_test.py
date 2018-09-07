@@ -43,7 +43,7 @@ class ConstantsTest(app_engine_test_base.AppEngineTestBase):
         """
         # Ignore non-ASCII character in ADMIN_EMAIL_ADDRESS.
         encoded_admin_email_address = (
-            constants.constants.ADMIN_EMAIL_ADDRESS.encode(
+            constants.CONSTANTS.ADMIN_EMAIL_ADDRESS.encode(
                 'ascii', 'ignore'))
         self.assertEqual(
             config.ADMIN_EMAIL_ADDRESS, encoded_admin_email_address)
