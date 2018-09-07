@@ -309,7 +309,7 @@ Full-Width Styles
 }
 
 .main-content {
-  boxing-size: border-box;
+  box-sizing: border-box;
   clear: both;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -377,9 +377,17 @@ Full-Width Styles
     padding-left: 40px;
     padding-right: 40px;
   }
+  .oppia-foundation-conditional-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .oppia-foundation-tablet-and-desktop-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .oppia-foundation-tablet-and-desktop-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -392,13 +400,16 @@ Full-Width Styles
   padding-bottom: 40px;
 }
 
-@media screen and (min-width: 599px) {
-  .oppia-foundation-conditional-vertical-padding {
+@media screen and (max-width: 1279px) {
+  .oppia-foundation-mobile-and-tablet-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .oppia-foundation-mobile-and-tablet-vertical-padding {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .oppia-foundation-tablet-and-desktop-vertical-padding {
-    padding-top: 40px;
+  .oppia-foundation-mobile-and-tablet-bottom-padding {
     padding-bottom: 40px;
   }
   .oppia-foundation-tablet-and-desktop-right-padding {
@@ -412,10 +423,9 @@ Full-Width Styles
   }
 }
 
-@media screen and (max-width: 1279px) {
-  .oppia-foundation-mobile-and-tablet-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+@media screen and (min-width: 1279px) {
+  .oppia-foundation-desktop-right-padding {
+    padding-right: 40px;
   }
 }
 
@@ -426,6 +436,13 @@ Full-Width Styles
   }
   .oppia-foundation-mobile-left-padding {
     padding-left: 40px;
+  }
+  .oppia-foundation-mobile-bottom-padding {
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -445,7 +462,7 @@ Full-Width Styles
   background-color: white;
 }
 
-.oppia-foundation-black-text{
+.oppia-foundation-black-text {
   color: black;
 }
 
@@ -475,6 +492,10 @@ Full-Width Styles
 
 .oppia-foundation-left-align-text {
   text-align: left;
+}
+
+.md-headline.oppia-foundation-headline {
+  line-height: 30pt;
 }
 
 .md-button.oppia-foundation-gold-border-button {
