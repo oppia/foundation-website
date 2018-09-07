@@ -88,7 +88,7 @@
       <div class="macbook">
         <div class="screen">
           <div class="viewport">
-            <video controls>
+            <video controls class="home-page-interactions-video">
               <source src="/assets/videos/Interactions_video.mp4"
                       type="video/mp4">
               Your browser does not support the video tag.
@@ -503,5 +503,15 @@
     display: block;
     /* for aspect ratio ~1:10 */
     padding-top: 10%;
+  }
+  .home-page-interactions-video {
+    display: none;
+  }
+  @media screen and (min-width: 300px) {
+    .home-page-interactions-video {
+      height: auto;
+      display: block;
+      width: 100%;
+    }
   }
 </style>

@@ -89,16 +89,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-video {
-  display: none;
-}
-@media screen and (min-width: 250px) {
-  video {
-    height: auto;
-    display: block;
-    width: 100%;
-  }
-}
 
 
 /* HTML5 display-role reset for older browsers */
