@@ -297,13 +297,6 @@
         </p>
       </md-content>
       <div flex="10"></div>
-      <!-- <md-card class="oppia-foundation-white-background
-                      oppia-foundation-black-text
-                      md-no-momentum
-                      oppia-foundation-no-margin"
-               layout-fill
-               layout="column"
-               layout-align="center center"> -->
         <form name="userContactsForm"
               class="oppia-foundation-white-background
                      volunteer-page-form">
@@ -375,24 +368,28 @@
                      ng-disabled="userContactsForm.$invalid">
             Submit
           </md-button>
-        </form>
-      <!-- </md-card> -->
+      </form>
     </md-card-content>
   </md-card>
-   <md-button id="scrollToTopButton" hide-gt-sm ng-href="" data-ng-click="goToElement('navigationBar')" class="md-primary md-fab md-fab-bottom-right oppia-foundation-scroll-to-top-button" aria-label="Scroll to top" style="margin: auto;" md-colors="{background: 'teal-900'}">
-    <md-icon ng-href="" md-svg-src="assets/icons/baseline-keyboard_arrow_up-24px.svg" style="color: white;"></md-icon>
+   <md-button id="scrollToTopButton" 
+              hide-gt-sm
+              ng-click="goToElement('navigationBar')"
+              class="md-primary
+                     md-fab
+                     md-fab-bottom-right
+                     oppia-foundation-scroll-to-top-button"
+              aria-label="Scroll to top"
+              style="margin: auto;"
+              md-colors="{background: 'teal-900'}">
+    <md-icon md-svg-src="assets/icons/baseline-keyboard_arrow_up-24px.svg"
+             style="color: white;">
+    </md-icon>
   </md-button>
 </section>
 <style>
   md-card-content md-card-title {
     padding-left: 0;
     padding-right: 0;
-  }
-  @media screen and (min-width: 799px) {
-    .volunteer-page-conditional-horizontal-padding {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
   }
   .volunteer-page-title-box {
     line-height: 30pt;
@@ -402,16 +399,6 @@
     display: block;
     margin: 0;
     width: auto;
-  }
-  .volunteer-page-design-profile-image {
-    border: 0;
-    display: block;
-    margin: 20px auto 0px;
-  }
-  @media screen and (min-width: 599px) {
-    .volunteer-page-design-profile-image {
-      width: 55vw;
-    }
   }
   md-tabs .md-tab {
     background-color: #F4F4F4;
@@ -443,15 +430,10 @@
   }
   @media screen and (min-width: 600px) {
     .volunteer-page-form {
-      width: 500px;
       margin: auto;
+      width: 500px;
     }
   }
-  /* @media screen and (max-width: 600px) {
-    .volunteer-page-form {
-      margin-top: 20px;
-    }
-  } */
   .volunteer-page-mobile-profile-carousel {
     min-height: 500px;
   }
