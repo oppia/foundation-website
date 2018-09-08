@@ -421,6 +421,9 @@ Full-Width Styles
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  .oppia-foundation-mobile-and-small-tablet-bottom-padding {
+    padding-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 1279px) {

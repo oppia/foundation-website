@@ -3,17 +3,21 @@
   <md-card class="oppia-foundation-green-background
                   oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding"
+           flex
            layout-gt-sm="row"
            layout="column"
            layout-fill>
-    <md-card-content class="oppia-foundation-no-padding"
+    <md-card-content class="oppia-foundation-no-padding
+                            volunteer-page-display-size"
                      layout="column"
-                     layout-gt-sm="row">
+                     layout-gt-sm="row"
+                     layout-align-gt-sm="start center"
+                     layout-align="center center">
       <md-content class="oppia-foundation-white-text
-                         oppia-foundation-green-background
-                         oppia-foundation-tablet-and-desktop-right-padding"
+                         oppia-foundation-green-background"
                   layout="column"
-                  flex-gt-sm="50">
+                  layout-align="center"
+                  flex-gt-sm="60">
         <md-card-title>
           <md-card-title-text>
             <h1>
@@ -41,14 +45,13 @@
         </h6>
       </md-content>
       <div class="oppia-foundation-mobile-and-small-tablet-vertical-padding"
-           flex-gt-sm="50"
            layout="row"
            layout-align="center center">
         <img src="/assets/images/volunteer/volunteer_page_global_graphics.png"
              class="volunteer-page-global-graphics"
              alt="Global graphics">
       </div>
-      <md-card-actions hide-gt-sm layout="row" layout-align="center">
+      <md-card-actions hide-gt-sm layout="row" layout-align="center center">
         <md-button ng-click="goToElement('mobileDesignCard')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
@@ -60,7 +63,7 @@
           Development
         </md-button>
       </md-card-actions>
-      <md-card-actions hide-gt-sm layout="row" layout-align="center">
+      <md-card-actions hide-gt-sm layout="row" layout-align="center center">
         <md-button ng-click="goToElement('mobileResearchCard')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
@@ -83,13 +86,18 @@
            class="oppia-foundation-gray-background
                   oppia-foundation-horizontal-padding
                   oppia-foundation-vertical-padding">
-    <md-card-content layout-gt-md="row" layout="column" layout-fill>
+    <md-card-content class="volunteer-page-display-size
+                            oppia-foundation-no-padding"
+                     layout-gt-md="row"
+                     layout="column"
+                     layout-fill>
       <md-content layout-fill>
         <md-tabs md-dynamic-height
                  md-border-bottom
                  md-no-ink-bar
                  md-stretch-tabs="always"
-                 md-no-pagination>
+                 md-no-pagination
+                >
           <md-tab ng-repeat="tab in tabs"
                   md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
@@ -102,17 +110,18 @@
     </md-card-content>
   </md-card>
   <md-card id="mobileDesignCard"
-           class="oppia-foundation-gray-background"
+           class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding"
            show-xs
            show-sm
            hide-gt-sm
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
+    <md-card-content class="oppia-foundation-white-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
+      <md-content class="oppia-foundation-white-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -139,7 +148,8 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileDevelopmentCard"
-           class="oppia-foundation-gray-background"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding"
            show-xs
            show-sm
            hide-gt-sm
@@ -179,17 +189,18 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileResearchCard"
-           class="oppia-foundation-gray-background"
+           class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding"
            show-xs
            show-sm
            hide-gt-sm
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
+    <md-card-content class="oppia-foundation-white-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
+      <md-content class="oppia-foundation-white-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -224,7 +235,8 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileMarketingCard"
-           class="oppia-foundation-gray-background"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding"
            show-xs
            show-sm
            hide-gt-sm
@@ -272,9 +284,12 @@
                   oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding"
            layout-fill>
-    <md-card-content layout="column" layout-gt-sm="row">
+    <md-card-content layout="column"
+                     layout-gt-sm="row"
+                     class="volunteer-page-display-size">
       <md-content class="oppia-foundation-white-background
-                         oppia-foundation-black-text"
+                         oppia-foundation-black-text
+                         oppia-foundation-mobile-and-small-tablet-bottom-padding"
                   flex-gt-sm="45">
         <h3 class="md-display-1
                    volunteer-page-description-headline-padding">
@@ -397,6 +412,7 @@
   .volunteer-page-global-graphics {
     border: 0;
     display: block;
+    float: right;
     margin: 0;
     width: auto;
   }
@@ -462,16 +478,23 @@
   .carousel-indicators li,
   .carousel-indicators li.active {
     margin: 5px;
-    padding: 5px;
+    padding: 6px;
     width: 10px;
   }
   .volunteer-page-carousel-profile-picture {
     height: 250px;
-    max-width: 350px;
+    width: 350px;
   }
   .volunteer-page-profile-text-box {
+    max-width: 850px;
+  }
+  .volunteer-page-carousel-profile-text-size {
     font-size: 11pt;
-    max-width: 580px;
+  }
+  @media screen and (max-width: 960px) {
+    .volunteer-page-profile-text-box {
+      max-width: 550px;
+    }
   }
   uib-carousel uib-slide {
     width: 350px;
@@ -494,5 +517,9 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 16px 20px;
     max-width: 300px;
+  }
+  .volunteer-page-display-size {
+    max-width: 1500px;
+    margin: auto;
   }
 </style>
