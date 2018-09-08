@@ -16,6 +16,10 @@ var oppiaFoundationWebsite = angular.module(
   'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages', 'ngRoute', 'duScroll',
     'ui.bootstrap']);
 
+for (var constantName in constants) {
+  oppiaFoundationWebsite.constant(constantName, constants[constantName]);
+}
+
 oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -61,8 +65,6 @@ oppiaFoundationWebsite.run([
     };
   }
 ]);
-
-oppiaFoundationWebsite.constant('ADMIN_EMAIL_ADDRESS', 'admin@example.com');
 
 oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
 
