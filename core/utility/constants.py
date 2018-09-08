@@ -24,12 +24,12 @@ CONSTANTS_JS_FILEPATH = os.path.join('static', 'assets', 'constants.js')
 
 def parse_json_from_js(js_file):
     """Extracts JSON object from JS file.
+
     Args:
-        js_file: file. A stream handling object of constants.js.
+        js_file: file. A stream representing the constants.js file.
 
     Returns:
-        dict(str, str). The dictionary containing variable name as key and
-            unicode string of variable value as value.
+        dict(str, str). A dict mapping constant names to their values.
     """
     text = js_file.read()
     first_bracket_index = text.find('= {')
