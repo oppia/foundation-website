@@ -30,8 +30,10 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'UX Designer'
   }, {
     fullName: 'Rachel Chen',
-    profilePictureImageFilename: 'sample_profile_image.jpeg',
-    professionalQuote: '[This is something that still needs to be filled in.]',
+    profilePictureImageFilename: 'Rach.jpg',
+    professionalQuote: 'Oppia provides more students with access to ' +
+    'individualized learning experiences. Volunteering for Oppia allows me ' +
+    'to contribute to this meaningful cause.',
     position: 'UI Designer'
   }],
 

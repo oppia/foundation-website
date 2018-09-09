@@ -373,14 +373,6 @@ Full-Width Styles
 }
 
 @media screen and (min-width: 599px) {
-  .oppia-foundation-conditional-horizontal-padding {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .oppia-foundation-conditional-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
   .oppia-foundation-tablet-and-desktop-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
