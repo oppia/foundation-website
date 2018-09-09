@@ -31,7 +31,7 @@ install:
 - source scripts/setup_gae.sh || exit 1
 
 script:
-- if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then bash scripts/run_backend_tests.sh --generate_coverage_report --exclude_load_tests; fi
+- if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then bash scripts/run_backend_tests.sh --generate_coverage_report; fi
 
 after_success:
 - if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then codecov; fi
