@@ -474,6 +474,10 @@ Full-Width Styles
   color: #18AA9D;
 }
 
+.oppia-foundation-dark-green-text {
+  color: rgb(5, 95, 89);
+}
+
 .oppia-foundation-white-text {
   color: white;
 }
