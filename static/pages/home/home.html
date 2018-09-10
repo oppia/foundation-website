@@ -177,8 +177,8 @@
                          oppia-foundation-black-text
                          home-page-description-text-box
                          oppia-foundation-mobile-and-tablet-horizontal-padding
-                         
-                         oppia-foundation-mobile-and-tablet-bottom-padding"
+                         oppia-foundation-mobile-and-tablet-bottom-padding
+                         oppia-foundation-desktop-vertical-padding"
                   flex-gt-md="50"
                   layout="column"
                   layout-align="center none">
@@ -235,7 +235,7 @@
                      layout="column">
       <img class="home-page-get-involved-image"
            hide-gt-md
-           src="/assets/images/home/home_get_involved.png"
+           src="/assets/images/volunteer/map.png"
            aria-label="Get involved image"
            alt="Get involved image">
       <md-content class="oppia-foundation-black-text
@@ -252,14 +252,8 @@
           vision a reality.
         </p>
         <p>
-          We are looking for organizations that want to join us on our journey to 
-          transform how students learn online.
-        </p>
-        <p>
-          With your help, we aim to improve our platform by conducting randomly 
-          controlled trials, fund a dedicated team of lesson creators, and manage 
-          the costs of scaling the Oppia project to serve learners across the 
-          world.
+          We are always looking for new volunteers to help us make effective 
+          education available for everyone.
         </p>
         <md-card-actions layout="column"
                          layout-align-gt-md="start"
@@ -277,7 +271,7 @@
            layout-align="center center">
         <img class="home-page-get-involved-image"
              hide-xs hide-sm hide-md
-             src="/assets/images/home/home_get_involved.png" 
+             src="/assets/images/volunteer/map.png" 
              aria-label="Get involved image"
              alt="Get involved image">
       </div>
@@ -398,9 +392,7 @@
   }
   .home-page-welcome-image-overlay {
     bottom: 0;
-    -webkit-box-shadow: 2px 0 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 0 1px 1px rgba(0, 0, 0, 0.5);
-    opacity: 0.9;
+    opacity: 0.95;
     position: absolute;
     top: 0;
     width: 50%;
@@ -422,9 +414,14 @@
     max-width: 600px;
     padding-bottom: 20px;
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (max-width: 1280px) {
     .home-page-impact-image {
-      padding: 40px 20px 40px;
+      padding: 80px 20px 20px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .home-page-impact-image {
+      padding-left: 40px;
     }
   }
   @media screen and (max-width: 1280px) {
@@ -434,7 +431,7 @@
     }
   }
   .home-page-get-involved-image {
-    max-width: 500px;
+    max-width: 650px;
   }
   .home-page-partner-image {
     max-width: 450px;

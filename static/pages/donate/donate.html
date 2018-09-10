@@ -147,23 +147,19 @@
     <md-card-content layout="column"
                      layout-align="center center"
                      class="oppia-foundation-vertical-padding
-                            oppia-foundation-gray-background">
-      <md-content class="oppia-foundation-gray-background">
-        <md-card-title class="oppia-foundation-no-horizontal-padding">
-          <h1 hide-xs
-              hide-sm
-              show-gt-sm
-              strong
-              class="oppia-foundation-no-horizontal-padding">
-            Your donation helps to fund:
-          </h1>
-          <h3 hide-gt-sm
-              strong
-              class="oppia-foundation-no-horizontal-padding">
-            Your donation helps to fund:
-          </h3>
-        </md-card-title>
-      </md-content>
+                            oppia-foundation-horizontal-padding
+                            donate-page-donate-works-card">
+      <md-card-title class="oppia-foundation-no-horizontal-padding">
+        <h1 hide-xs hide-sm show-gt-sm 
+            class="oppia-foundation-no-horizontal-padding
+                   md-display-1">
+          Your donation helps to fund:
+        </h1>
+        <h3 hide-gt-sm
+            class="oppia-foundation-no-horizontal-padding">
+          Your donation helps to fund:
+        </h3>
+      </md-card-title>
       <div class="donate-page-donate-works-image-container">
         <img src="/assets/images/donate/donate_works_old.svg"
              alt="Donate works image">
@@ -190,9 +186,7 @@
   }
   .donate-page-welcome-image-overlay {
     bottom: 0;
-    -webkit-box-shadow: 2px 0 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 0 1px 1px rgba(0, 0, 0, 0.5);
-    opacity: 0.9;
+    opacity: 0.95;
     position: absolute;
     top: 0;
     width: 50%;
@@ -252,5 +246,8 @@
     .donate-page-display-size {
       width: 1500px;
     }
+  }
+  .donate-page-donate-works-card {
+    background-color: rgb(192,192,192)
   }
 </style>

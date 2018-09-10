@@ -109,7 +109,7 @@
     </md-card-content>
   </md-card>
   <md-card id="mobileDesignCard"
-           class="oppia-foundation-white-background
+           class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -117,10 +117,10 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-white-background
+    <md-card-content class="oppia-foundation-gray-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-white-background
+      <md-content class="oppia-foundation-gray-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -147,7 +147,7 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileDevelopmentCard"
-           class="oppia-foundation-gray-background
+           class="oppia-foundation-white-background
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -155,10 +155,10 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
+    <md-card-content class="oppia-foundation-white-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
+      <md-content class="oppia-foundation-white-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -188,7 +188,7 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileResearchCard"
-           class="oppia-foundation-white-background
+           class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -196,10 +196,10 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-white-background
+    <md-card-content class="oppia-foundation-gray-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-white-background
+      <md-content class="oppia-foundation-gray-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -234,7 +234,7 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobileMarketingCard"
-           class="oppia-foundation-gray-background
+           class="oppia-foundation-white-background
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -242,10 +242,10 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
+    <md-card-content class="oppia-foundation-white-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
+      <md-content class="oppia-foundation-white-background
                          oppia-foundation-black-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
@@ -279,17 +279,18 @@
     <profile-carousel carousel-type="mobile" corresponding-tab-name="marketing">
     </profile-carousel>
   </md-card>
-  <md-card class="oppia-foundation-white-background
+  <md-card class="volunteer-page-contact-us-form-card
                   oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding"
            layout-fill>
     <md-card-content layout="column"
                      layout-gt-sm="row"
-                     class="volunteer-page-display-size">
-      <md-content class="oppia-foundation-white-background
+                     class="volunteer-page-display-size
+                            oppia-foundation-no-padding">
+      <md-content class="volunteer-page-contact-us-form-card
                          oppia-foundation-black-text
-                         oppia-foundation-mobile-and-small-tablet-bottom-padding"
-                  flex-gt-sm="45">
+                         oppia-foundation-mobile-and-small-tablet-bottom-padding
+                         volunteer-page-description-text-box">
         <h3 class="md-display-1
                    volunteer-page-description-headline-padding">
           Get in touch
@@ -449,6 +450,14 @@
       width: 500px;
     }
   }
+  .volunteer-page-contact-us-form-card {
+    background-color: #F4F4F4;
+  }
+  @media screen and (min-width: 960px) {
+    .volunteer-page-contact-us-form-card {
+      background-color: white;
+    }
+  }
   .volunteer-page-mobile-profile-carousel {
     min-height: 500px;
   }
@@ -484,7 +493,8 @@
     height: 250px;
     width: 350px;
   }
-  .volunteer-page-profile-text-box {
+  .volunteer-page-profile-text-box,
+  .volunteer-page-description-text-box {
     max-width: 850px;
   }
   .volunteer-page-carousel-profile-text-size {
@@ -520,5 +530,10 @@
   .volunteer-page-display-size {
     max-width: 1500px;
     margin: auto;
+  }
+  @media screen and (min-width:1500px) {
+    .volunteer-page-display-size {
+      width: 1500px;
+    }
   }
 </style>

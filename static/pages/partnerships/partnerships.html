@@ -184,7 +184,7 @@
            layout-gt-xs="row"
            layout-fill
            class="oppia-foundation-white-background">
-    <div class="partnerships-page-student-image-padding"
+    <div class="oppia-foundation-tablet-and-desktop-top-padding"
          layout-fill
          layout="column">
       <div 
@@ -252,7 +252,8 @@
           tackle in the near future:
         </p>
       </md-content>
-      <div class="oppia-foundation-vertical-padding"
+      <div class="oppia-foundation-bottom-padding
+                  partnerships-page-grow-card-icon-row"
            layout-gt-xs="row"
            layout="column"
            layout-align="center center">
@@ -517,15 +518,12 @@
     border: 0;
     display: block;
     margin: auto; 
-  }
-  @media screen and (max-width: 1280px) {
-    .partnerships-page-evidence-image {
-      padding-bottom: 20px;
-    }
+    max-width: 250px;
+    padding-bottom: 20px;
   }
   @media screen and (min-width: 1280px) {
     .partnerships-page-approach-image {
-      max-width: 450px;
+      max-width: 350px;
       padding: 0 20px;
     }
   }
@@ -557,16 +555,14 @@
     z-index: 8;
     position: relative;
   }
-  @media screen and (min-width: 660px) {
-    .partnerships-page-student-image-padding {
-      padding-top: 40px;
-    }
-  }
   .partnerships-page-grow-card-icon {
     border: 0;
     display: block;
     margin: 0;
     max-width: 90px;
+  }
+  .partnerships-page-grow-card-icon-row {
+    padding-top: 40px;
   }
   .partnerships-page-icon-description-text-box {
     font-size: 11pt;

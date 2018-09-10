@@ -17,8 +17,10 @@ oppiaFoundationWebsite.directive('bottomNavigation', [function() {
     restrict: 'E',
     scope: {},
     templateUrl: '/pages/footer/footer.html',
-    controller: ['$scope', function($scope) {
-      $scope.currentYear = (new Date()).getUTCFullYear();
-    }]
+    controller: ['$scope', 'ADMIN_EMAIL_ADDRESS',
+      function($scope, ADMIN_EMAIL_ADDRESS) {
+        $scope.currentYear = (new Date()).getUTCFullYear();
+        $scope.ADMIN_EMAIL_ADDRESS = ADMIN_EMAIL_ADDRESS;
+      }]
   };
 }]);
