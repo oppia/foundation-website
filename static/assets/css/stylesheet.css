@@ -378,18 +378,21 @@ Full-Width Styles
     padding-right: 40px;
   }
   .oppia-foundation-tablet-and-desktop-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .oppia-foundation-tablet-and-desktop-top-padding {
+    padding-top: 80px;
   }
 }
 
 .oppia-foundation-top-padding {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 .oppia-foundation-vertical-padding {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -398,11 +401,11 @@ Full-Width Styles
     padding-right: 40px;
   }
   .oppia-foundation-mobile-and-tablet-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-mobile-and-tablet-bottom-padding {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-tablet-and-desktop-right-padding {
     padding-right: 40px;
@@ -410,8 +413,8 @@ Full-Width Styles
 }
 @media screen and (min-width: 960px) {
   .oppia-foundation-small-tablet-and-desktop-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-small-tablet-and-desktop-right-padding {
     padding-right: 40px;
@@ -419,11 +422,11 @@ Full-Width Styles
 }
 @media screen and (max-width: 960px) {
   .oppia-foundation-mobile-and-small-tablet-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-mobile-and-small-tablet-bottom-padding {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 }
 
@@ -431,18 +434,22 @@ Full-Width Styles
   .oppia-foundation-desktop-right-padding {
     padding-right: 40px;
   }
+  .oppia-foundation-desktop-vertical-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (max-width: 599px) {
   .oppia-foundation-mobile-vertical-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-mobile-left-padding {
     padding-left: 40px;
   }
   .oppia-foundation-mobile-bottom-padding {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   .oppia-foundation-mobile-horizontal-padding {
     padding-left: 40px;
@@ -451,7 +458,7 @@ Full-Width Styles
 }
 
 .oppia-foundation-bottom-padding {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .oppia-foundation-gray-background {
@@ -459,7 +466,7 @@ Full-Width Styles
 }
 
 .oppia-foundation-green-background {
-  background-color: #18AA9D;
+  background-color: #009688;
 }
 
 .oppia-foundation-white-background {
