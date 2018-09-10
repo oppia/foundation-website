@@ -208,6 +208,10 @@ a {
   cursor: pointer;
 }
 
+a.email-us-link {
+  color: rgb(63, 63, 224);
+} 
+
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -308,7 +312,7 @@ Full-Width Styles
 }
 
 .main-content {
-  boxing-size: border-box;
+  box-sizing: border-box;
   clear: both;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -344,6 +348,10 @@ Full-Width Styles
   margin: 0;
 }
 
+.oppia-foundation-no-margin-top {
+  margin-top :0;
+}
+
 .oppia-foundation-no-padding {
   padding :0;
 }
@@ -358,16 +366,28 @@ Full-Width Styles
   padding-right: 20px;
 }
 
+.oppia-foundation-right-padding {
+  padding-right: 40px;
+}
+
 .oppia-foundation-horizontal-padding {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-@media screen and (min-width: 799px) {
-  .oppia-foundation-conditional-horizontal-padding {
+@media screen and (min-width: 599px) {
+  .oppia-foundation-tablet-and-desktop-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
   }
+  .oppia-foundation-tablet-and-desktop-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.oppia-foundation-top-padding {
+  padding-top: 40px;
 }
 
 .oppia-foundation-vertical-padding {
@@ -375,10 +395,61 @@ Full-Width Styles
   padding-bottom: 40px;
 }
 
-@media screen and (min-width: 799px) {
-  .oppia-foundation-conditional-vertical-padding {
+@media screen and (max-width: 1279px) {
+  .oppia-foundation-mobile-and-tablet-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .oppia-foundation-mobile-and-tablet-vertical-padding {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-and-tablet-bottom-padding {
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-tablet-and-desktop-right-padding {
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .oppia-foundation-small-tablet-and-desktop-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-small-tablet-and-desktop-right-padding {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .oppia-foundation-mobile-and-small-tablet-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-and-small-tablet-bottom-padding {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .oppia-foundation-desktop-right-padding {
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oppia-foundation-mobile-vertical-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-left-padding {
+    padding-left: 40px;
+  }
+  .oppia-foundation-mobile-bottom-padding {
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -398,12 +469,16 @@ Full-Width Styles
   background-color: white;
 }
 
-.oppia-foundation-black-text{
+.oppia-foundation-black-text {
   color: black;
 }
 
 .oppia-foundation-green-text {
   color: #18AA9D;
+}
+
+.oppia-foundation-dark-green-text {
+  color: rgb(5, 95, 89);
 }
 
 .oppia-foundation-white-text {
@@ -428,6 +503,10 @@ Full-Width Styles
 
 .oppia-foundation-left-align-text {
   text-align: left;
+}
+
+.md-headline.oppia-foundation-headline {
+  line-height: 30pt;
 }
 
 .md-button.oppia-foundation-gold-border-button {
@@ -485,30 +564,7 @@ Full-Width Styles
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 16px 20px;
-}
-@media screen and (min-width: 100px) and (max-width: 499px) {
-  .oppia-foundation-quote-box {
-    max-width: 90vw;
-  }
-}
-@media screen and (min-width: 550px) {
-  .oppia-foundation-quote-box {
-    width: 50vw;
-  }
-}
-
-.oppia-foundation-quote-box-overlay {
-  bottom: 50px;
-  position: relative;
-  z-index: 11;
-}
-@media screen and (min-width: 100px) and (max-width: 999px) {
-  .oppia-foundation-quote-box-overlay {
-    bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
+  max-width: 300px;
 }
 
 .oppia-foundation-cite-text-box {

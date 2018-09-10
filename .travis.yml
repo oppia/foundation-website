@@ -1,0 +1,45 @@
+dist: trusty
+language: python
+python:
+- 2.7
+
+branches:
+  only:
+  - master
+
+env:
+  matrix:
+    - RUN_BACKEND_TESTS=true REPORT_BACKEND_COVERAGE=true
+
+matrix:
+  allow_failures: []
+  fast_finish: true
+
+before_install:
+- source /opt/jdk_switcher/jdk_switcher.sh
+- jdk_switcher use oraclejdk8
+- pip install codecov
+- export CHROME_BIN=/usr/bin/google-chrome-stable
+- export DISPLAY=:99.0
+- bash -e /etc/init.d/xvfb start
+
+install:
+- pushd $TRAVIS_BUILD_DIR
+- source scripts/setup.sh || exit 1
+- source scripts/setup_gae.sh || exit 1
+
+script:
+- if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then bash scripts/run_backend_tests.sh --generate_coverage_report; fi
+
+after_success:
+- if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then codecov; fi
+
+cache:
+  # Cache dependencies.
+  directories:
+    - ../oppia_tools/
+    - third_party/
+    - $HOME/.cache/pip
+
+before_cache:
+    - find third_party -name "*.pyc" -print -delete
