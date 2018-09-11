@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<md-toolbar layout="row" style="padding-top: 10px;">
+    <img src="/assets/images/navbar/oppia_foundation_logo.png"
+         class="side-nav-oppia-foundation-icon"
+         layout="row"
+         aria-label="Oppia Foundation Logo"
+         alt="Oppia Foundation logo">
+    <md-button md-no-ink
+               ng-click="close()"
+               class="toggle-side-nav-button">
+      <md-icon md-svg-src="/assets/icons/baseline-close-24px.svg"
+               aria-label="Close sidebar icon">
+      </md-icon>
+    </md-button>
+</md-toolbar>
+<md-list layout="column">
+  <md-divider></md-divider>
+  <md-list-item ng-href="#!about" ng-click="close()">
+    <div class="md-list-item-text" layout="row" layout-align="start" flex>
+      <md-icon class="side-bar-icon"
+               md-svg-src="/assets/icons/round-info-24px.svg"
+               aria-label="About icon">
+      </md-icon>
+      <h6 class="oppia-foundation-uppercase-text
+                 oppia-foundation-white-text">
+        About
+      </h6>
+    </div>
+    <md-divider></md-divider>
+  </md-list-item>
+  <md-list-item ng-href="#!partnerships" ng-click="close()">
+    <div class="md-list-item-text" layout="row" layout-align="start" flex>
+      <md-icon class="side-bar-icon"
+               md-svg-src="/assets/icons/round-business_center-24px.svg"
+               aria-label="Partnerships icon">
+      </md-icon>
+      <h6 class="oppia-foundation-uppercase-text
+                       oppia-foundation-white-text">
+        Partnerships
+      </h6>
+    </div>
+    <md-divider></md-divider>
+  </md-list-item>
+  <md-list-item ng-href="#!volunteer" ng-click="close()">
+    <div class="md-list-item-text" layout="row" layout-align="start" flex>
+      <md-icon class="side-bar-icon"
+               md-svg-src="/assets/icons/round-people_outline-24px.svg"
+               aria-label="Volunteer icon">
+      </md-icon>
+      <h6 class="oppia-foundation-uppercase-text
+                       oppia-foundation-white-text">
+        Volunteer
+      </h6>
+    </div>
+    <md-divider></md-divider>
+  </md-list-item>
+  <md-list-item ng-href="#!donate" ng-click="close()">
+    <div class="md-list-item-text" layout="row" layout-align="start" flex>
+      <md-icon class="side-bar-icon"
+               md-svg-src="/assets/icons/cards-heart.svg"></md-icon>
+      <h6 class="oppia-foundation-uppercase-text
+                       oppia-foundation-white-text">
+        Donate
+      </h6>
+    </div>
+    <md-divider></md-divider>
+  </md-list-item>
+</md-list>
+<style>
+  .side-bar-icon {
+    color:white;
+    margin: 0 10px 0 0;
+    height: 56px;
+  }
+  md-list-item.md-no-proxy {
+    padding: 16px;
+  }
+  .side-nav-oppia-foundation-icon {
+    border: 0;
+    display: block;
+    height: auto;
+    margin: 20px 0px 20px 20px;
+    width: 220px;
+  }
+  .md-button.toggle-side-nav-button {
+    height: 30px;
+    min-width: 24px;
+    margin: 12px 10px;
+  }
+</style>

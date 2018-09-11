@@ -16,42 +16,15 @@
   <md-nav-item md-nav-href="#!about" hide-xs hide-sm>About</md-nav-item>
   <md-nav-item md-nav-href="#!partnerships" hide-xs hide-sm>Partnerships</md-nav-item>
   <md-nav-item md-nav-href="#!volunteer" hide-xs hide-sm>Volunteer</md-nav-item>
-  <md-menu md-position-mode="target-left target" hide-gt-sm>
-    <md-button aria-label="Open links menu"
-               class="side-bar-menu-button"
-               ng-click="$mdMenu.open()">
-      <md-icon class="navbar-oppia-foundation-icon"
-               md-svg-src="/assets/icons/sharp-view_headline-24px.svg"
-               aria-label="Links Menu">
-      </md-icon>
-    </md-button>
-    <md-menu-content width="2">
-      <md-menu-item>
-        <md-button ng-href="#!about">
-          <md-icon md-svg-src="/assets/icons/round-info-24px.svg" style="color:white;"></md-icon>
-          <span class="oppia-foundation-uppercase-text oppia-foundation-white-text">About</span>
-        </md-button>
-      </md-menu-item>
-      <md-menu-item>
-        <md-button ng-href="#!partnerships">
-          <md-icon md-svg-src="/assets/icons/round-business_center-24px.svg" style="color:white;"></md-icon>
-          <span class="oppia-foundation-uppercase-text oppia-foundation-white-text">Partnerships</span>
-        </md-button>
-      </md-menu-item>
-      <md-menu-item>
-        <md-button ng-href="#!volunteer">
-          <md-icon md-svg-src="/assets/icons/round-people_outline-24px.svg" style="color:white;"></md-icon>
-          <span class="oppia-foundation-uppercase-text oppia-foundation-white-text">Volunteer</span>
-        </md-button>
-      </md-menu-item>
-      <md-menu-item>
-        <md-button ng-href="#!donate">
-          <md-icon md-svg-src="/assets/icons/cards-heart.svg" style="color:white;"></md-icon>
-          <span class="oppia-foundation-uppercase-text oppia-foundation-white-text">Donate</span>
-        </md-button>
-      </md-menu-item>
-    </md-menu-content>
-  </md-menu>
+  <md-button aria-label="Open links menu"
+             class="side-bar-menu-button"
+             hide-gt-sm
+             ng-click="open()">
+    <md-icon class="navbar-oppia-foundation-icon"
+             md-svg-src="/assets/icons/sharp-view_headline-24px.svg"
+             aria-label="Sidebar button">
+    </md-icon>
+  </md-button>
   <md-nav-item hide-xs hide-sm md-nav-href="#!donate">Donate</md-nav-item>
 </md-nav-bar>
 
