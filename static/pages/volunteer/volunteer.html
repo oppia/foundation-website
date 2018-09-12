@@ -87,17 +87,16 @@
                   oppia-foundation-horizontal-padding
                   oppia-foundation-vertical-padding">
     <md-card-content class="volunteer-page-display-size
-                            oppia-foundation-no-padding"
-                     layout-gt-md="row"
+                            oppia-foundation-no-padding
+                            volunteer-page-desktop-tabs"
                      layout="column"
                      layout-fill>
       <md-content layout-fill>
         <md-tabs md-dynamic-height
                  md-border-bottom
-                 md-no-ink-bar
-                 md-stretch-tabs="always"
-                 md-no-pagination>
-          <md-tab ng-repeat="tab in tabs"
+                 md-stretch-tabs="always">
+          <md-tab class="md-accent"
+                  ng-repeat="tab in tabs"
                   md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
             <md-tab-body>
@@ -416,11 +415,12 @@
     margin: 0;
     width: auto;
   }
+  .volunteer-page-desktop-tabs {
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
   md-tabs .md-tab {
-    background-color: #F4F4F4;
-    border-style: solid;
-    border-color: #18AA9D;
-    border-width: 2px 1px;
+    background-color: white;
     color: black;
     font-size: large;
     text-transform: none;
@@ -431,12 +431,18 @@
   md-tabs .md-tab:last-of-type {
     border-width: 2px 2px 2px 1px;
   }
-  md-tabs .md-tab.md-active {
-    background-color: #18AA9D;
-    color: white;
-  }
   md-tabs md-ink-bar {
-    color: #18AA9D;
+    color: #009688;
+    background: #009688;
+  }
+  md-tabs-canvas {
+    background: white;
+  }
+  .volunteer-page-development-tab-content,
+  .volunteer-page-marketing-tab-content,
+  .volunteer-page-research-tab-content,
+  .volunteer-page-design-tab-content {
+   padding-top: 40px;
   }
   .volunteer-page-description-headline-padding {
     padding-bottom: 20px;
@@ -505,8 +511,10 @@
       max-width: 550px;
     }
   }
-  uib-carousel uib-slide {
-    width: 350px;
+  @media screen and (min-width: 350px) {
+    uib-carousel uib-slide {
+      width: 350px;
+    }
   }
   .volunteer-page-quote-overlay {
     z-index: 11;
