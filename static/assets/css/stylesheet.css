@@ -567,6 +567,7 @@ Full-Width Styles
 md-sidenav {
   min-width: 0;
   max-width: 300px;
+  width: auto;
 }
 
 .oppia-foundation-quote-box {
