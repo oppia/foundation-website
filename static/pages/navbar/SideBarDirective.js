@@ -18,7 +18,7 @@ oppiaFoundationWebsite.directive('sideBar', [function() {
     scope: {},
     templateUrl: '/pages/navbar/sidebar.html',
     controller: ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
-      $scope.close = function() {
+      $scope.closeSideBar = function() {
         $mdSidenav('right').close();
       };
     }]
