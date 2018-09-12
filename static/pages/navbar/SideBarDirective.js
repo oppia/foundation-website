@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.directive('navigationBar', [function() {
+oppiaFoundationWebsite.directive('sideBar', [function() {
   return {
     restrict: 'E',
     scope: {},
-    templateUrl: '/pages/navbar/navbar.html',
+    templateUrl: '/pages/navbar/sidebar.html',
     controller: ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
-      $scope.openSideBar = function() {
-        $mdSidenav('right').open();
+      $scope.closeSideBar = function() {
+        $mdSidenav('right').close();
       };
     }]
   };

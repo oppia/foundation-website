@@ -31,6 +31,7 @@
     <script src="/assets/constants.js"></script>
     <script src="app.js"></script>
     <script src="pages/navbar/NavigationBarDirective.js"></script>
+    <script src="pages/navbar/SideBarDirective.js"></script>
     <script src="pages/volunteer/VolunteerInfoDefinitions.js"></script>
     <script src="pages/volunteer/Volunteer.js"></script>
     <script src="pages/volunteer/VolunteerProfilesService.js"></script>
@@ -42,6 +43,12 @@
 
   <body layout="row" aria-label="Oppia Foundation Page">
     <div class="outer">
+      <md-sidenav class="md-sidenav-right
+                         md-whiteframe-4dp
+                         oppia-foundation-green-background"
+                  md-component-id="right">
+        <side-bar></side-bar>
+      </md-sidenav>
       <header role="banner">
         <navigation-bar></navigation-bar>
       </header>
@@ -51,10 +58,10 @@
             <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
           </div>
         </section>
+        <footer>
+          <bottom-navigation></bottom-navigation>
+        </footer>
       </main>
-      <footer>
-        <bottom-navigation></bottom-navigation>
-      </footer>
     </div>
   </body>
 </html>
