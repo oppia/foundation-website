@@ -94,7 +94,8 @@
       <md-content layout-fill>
         <md-tabs md-dynamic-height
                  md-border-bottom
-                 md-stretch-tabs="always">
+                 md-stretch-tabs="always"
+                 md-no-pagination>
           <md-tab class="md-accent"
                   ng-repeat="tab in tabs"
                   md-on-select="onTabSelected($index % 4)"
@@ -124,7 +125,7 @@
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3 class="md-display-1">
+            <h3 class="md-display-1 volunteer-page-content-title">
               Design
             </h3>
           </md-card-title-text>
@@ -162,7 +163,7 @@
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3 class="md-display-1">
+            <h3 class="md-display-1 volunteer-page-content-title">
               Development
             </h3>
           </md-card-title-text>
@@ -203,7 +204,7 @@
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3 class="md-display-1">
+            <h3 class="md-display-1 volunteer-page-content-title">
               Research
             </h3>
           </md-card-title-text>
@@ -249,7 +250,7 @@
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3 class="md-display-1">
+            <h3 class="md-display-1 volunteer-page-content-title">
               Marketing
             </h3>
           </md-card-title-text>
@@ -291,7 +292,8 @@
                          oppia-foundation-mobile-and-small-tablet-bottom-padding
                          volunteer-page-description-text-box">
         <h3 class="md-display-1
-                   volunteer-page-description-headline-padding">
+                   volunteer-page-description-headline-padding
+                   volunteer-page-content-title">
           Get in touch
         </h3>
         <p>
@@ -543,5 +545,11 @@
     .volunteer-page-display-size {
       width: 1500px;
     }
+  }
+  .volunteer-page-content-title {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
 </style>
