@@ -41,6 +41,7 @@ class AppEngineTestBase(unit_test_base.TestBase):
     """Base class for tests requiring App Engine services."""
 
     def setUp(self):
+        """Mock various GAE services."""
         empty_environ()
 
         self.testbed = testbed.Testbed()
@@ -53,10 +54,12 @@ class AppEngineTestBase(unit_test_base.TestBase):
         self.mail_stub = self.testbed.get_stub(testbed.MAIL_SERVICE_NAME)
 
         # Set up the app to be tested.
-        self.testapp = webtest.TestApp(main.app)
+        self.testapp = webtest.TestApp(main.APP)
 
     def tearDown(self):
+        """Shut down GAE mock services."""
         self.testbed.deactivate()
+
 
 if config.PLATFORM == 'gae':
     GenericTestBase = AppEngineTestBase

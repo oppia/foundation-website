@@ -10,6 +10,7 @@ branches:
 env:
   matrix:
     - RUN_BACKEND_TESTS=true REPORT_BACKEND_COVERAGE=true
+    - RUN_LINT=true
 
 matrix:
   allow_failures: []
@@ -29,6 +30,7 @@ install:
 - source scripts/setup_gae.sh || exit 1
 
 script:
+- if [ "$RUN_LINT" == 'true' ]; then bash scripts/run_linter.sh; fi
 - if [ "$RUN_BACKEND_TESTS" == 'true' ] && [ "$REPORT_BACKEND_COVERAGE" == 'true' ]; then bash scripts/run_backend_tests.sh --generate_coverage_report; fi
 
 after_success:

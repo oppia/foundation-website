@@ -21,13 +21,16 @@ class TestBase(unittest.TestCase):
     """Base class for all tests."""
 
     def setUp(self):
-        """Initializes the fixture for the test suite. Subclasses of TestBase
-        should override this method.
+        """Initialize the fixture for the test suite.
+
+        Subclasses of TestBase should override this method.
         """
         raise NotImplementedError
 
+
     def tearDown(self):
-        """Cleans up the fixture after the test runs. Subclasses of
-        TestBase should override this method.
+        """Clean up the fixture after the test runs.
+
+        Subclasses of TestBase should override this method.
         """
         raise NotImplementedError
