@@ -34,6 +34,7 @@ if [ ! -d "$TOOLS_DIR/pylint-runner-0.5.4" ]; then
   echo Installing Pylint_runner
 
   pip install pylint_runner==0.5.4 --target="$TOOLS_DIR/pylint-runner-0.5.4"
+  touch $TOOLS_DIR/pylint-runner-0.5.4/__init__.py
 fi
 
 echo Checking if pydocstyle is installed in $TOOLS_DIR
@@ -56,5 +57,3 @@ $TOOLS_DIR/pylint-runner-0.5.4/bin/pylint_runner -v || exit 1
 $TOOLS_DIR/pydocstyle-2.1.1/bin/pydocstyle -v || exit 1
 
 $TOOLS_DIR/pycodestyle-2.4.0/bin/pycodestyle -v || exit 1
-
-
