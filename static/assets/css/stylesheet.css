@@ -387,6 +387,9 @@ Full-Width Styles
   .oppia-foundation-tablet-and-desktop-top-padding {
     padding-top: 80px;
   }
+  .oppia-foundation-tablet-and-destop-bottom-padding-40 {
+    padding-bottom: 40px;
+  }
 }
 
 .oppia-foundation-top-padding {
@@ -481,7 +484,7 @@ Full-Width Styles
 }
 
 .oppia-foundation-green-text {
-  color: #18AA9D;
+  color: #009688;
 }
 
 .oppia-foundation-dark-green-text {
@@ -518,6 +521,7 @@ Full-Width Styles
 
 .md-button.oppia-foundation-gold-border-button {
   border: 3px outset goldenrod;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   min-width: 200px;
   max-width: 250px;
   max-height: 50px;
@@ -539,6 +543,7 @@ Full-Width Styles
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: #18AA9D;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   padding: 0px 15px;
   max-width: 250px;
   max-height: 50px;

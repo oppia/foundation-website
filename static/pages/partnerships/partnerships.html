@@ -58,7 +58,7 @@
                   class="oppia-foundation-gray-background
                          oppia-foundation-black-text
                          partnerships-page-description-text-box">
-        <h3 class="md-display-1">
+        <h3 class="md-display-1 partnerships-page-content-title">
           Empowering students in every community
         </h3>
         <p>
@@ -100,13 +100,12 @@
       <img src="/assets/images/partnerships/partnerships_our_approach.jpg"
            class="partnerships-page-approach-image"
            alt="Our approach image">
-      <md-content flex-gt-md="70"
-                  layout="column"
+      <md-content layout="column"
                   layout-align="center none"
                   class="oppia-foundation-white-background
                          oppia-foundation-black-text     
                          partnerships-page-description-text-box">
-        <h3 class="md-display-1">
+        <h3 class="md-display-1 partnerships-page-content-title">
           Our Approach
         </h3>
         <p>
@@ -153,7 +152,7 @@
                   class="oppia-foundation-green-background
                          oppia-foundation-white-text
                          partnerships-page-description-text-box">
-        <h3 class="md-display-1">
+        <h3 class="md-display-1 partnerships-page-content-title">
           Evidence of our success
         </h3>
         <p>
@@ -181,21 +180,27 @@
     </md-card-content>
   </md-card>
   <md-card layout="column"
-           layout-gt-xs="row"
+           layout-align="center center"
            layout-fill
            class="oppia-foundation-white-background">
-    <div class="oppia-foundation-tablet-and-desktop-top-padding"
-         layout-fill
-         layout="column">
-      <div 
-           layout="column"
-           layout-align="center">
-        <img src="/assets/images/partnerships/partnerships_student_image.jpg"
+    <md-card-content class="oppia-foundation-no-padding
+                            oppia-foundation-tablet-and-desktop-top-padding
+                            oppia-foundation-tablet-and-destop-bottom-padding-40
+                            partnerships-page-description-text-box"
+                     layout-fill
+                     layout-gt-sm="row"
+                     layout="column"
+                     layout-align="center center">
+      <div layout="column"
+           layout-align="center"
+           flex="50">
+        <img layout-fill
+             src="/assets/images/partnerships/partnerships_student_image.jpg"
              class="partnerships-page-student-quote-image"
              alt="Student image">
       </div>
-      <div class="partnerships-page-quote-overlay
-                  oppia-foundation-horizontal-padding">
+      <div class="oppia-foundation-horizontal-padding"
+           flex="50">
         <md-card-content layout="column"
                          layout-align="center none"
                          class="partnerships-page-student-quote-box
@@ -214,96 +219,106 @@
               &rdquo;
             </span>
           </md-content>
-          <cite class="oppia-foundation-cite-text-box">
+          <cite class="oppia-foundation-cite-text-box" style="font-size: 10pt;">
             <span class="oppia-foundation-bold-text">
               - Student from India, age 9
             </span>
           </cite>
         </md-card-content>
       </div>
-    </div>
-  </md-card>
-  <md-card layout="column"
-           layout-fill
-           class="oppia-foundation-white-background
-                  oppia-foundation-horizontal-padding">
-    <md-card-content
-      class="oppia-foundation-no-padding"
-      layout="column"
-      layout-align="center center">
+    </md-card-content>
+    <md-card-content class="oppia-foundation-no-padding
+                            oppia-foundation-horizontal-padding"
+                     layout="column"
+                     layout-align="center center">
       <md-content layout="column"
-                  layout-align="center center"
+                  layout-align="center start"
                   class="oppia-foundation-white-background
                          oppia-foundation-black-text
                          partnerships-page-description-text-box">
-        <h3 class="md-display-1">
+        <h3 class="md-display-1 partnerships-page-content-title">
           We're ready to grow!
         </h3>
-        <p class="oppia-foundation-center-align-text">
+        <p class="oppia-foundation-left-align-text">
           Building a dynamic, global community to transform online learning is 
           a bold vision that requires generous support.
         </p>
-        <p class="md-display-1">
+        <p class="oppia-foundation-bold-text oppia-foundation-left-align-text">
           That's why your help is so important.
         </p>
-        <p class="oppia-foundation-center-align-text">
+        <p class="oppia-foundation-left-align-text">
           Here are some of the challenges that your involvement can help us 
           tackle in the near future:
         </p>
+        <md-list class="partnerships-page-grow-card-icon-row"
+                 flex
+                 layout-gt-xs="row"
+                 layout="column"
+                 layout-align="center start"
+                 layout-align-gt-xs="space-between center"
+                 layout-fill>
+          <md-list-item class="partnerships-page-icon-list-item"
+                        layout-gt-xs="column"
+                        layout="row"
+                        layout-align="start">
+            <div class="md-list-item-text"
+                 layout-xs="row"
+                 layout="column"
+                 layout-align="start center"
+                 flex>
+              <img src="/assets/icons/magnifier_icons.svg"
+                   class="partnerships-page-grow-card-icon"
+                   alt="Magnifier icon">
+              <p class="oppia-foundation-center-align-text
+                        oppia-foundation-green-text
+                        oppia-foundation-mobile-left-padding
+                        partnerships-page-icon-description-text-box">
+                Conducting Randomized Controlled Trial
+              </p>
+            </div>
+          </md-list-item>
+          <md-list-item class="partnerships-page-icon-list-item"
+                        layout-gt-xs="column"
+                        layout="row"
+                        layout-align="start">
+            <div class="md-list-item-text"
+                 layout-xs="row"
+                 layout="column"
+                 layout-align="start center"
+                 flex>
+              <img src="/assets/icons/podium_icon.svg"
+                   class="partnerships-page-grow-card-icon"
+                   alt="Podium icon">
+              <p class="oppia-foundation-center-align-text
+                        oppia-foundation-green-text
+                        oppia-foundation-mobile-left-padding
+                        partnerships-page-icon-description-text-box">
+                Funding Our Best Content Creators
+              </p>
+            </div>
+          </md-list-item>
+          <md-list-item class="partnerships-page-icon-list-item"
+                        layout-gt-xs="column"
+                        layout="row"
+                        layout-align="start">
+            <div class="md-list-item-text"
+                 layout-xs="row"
+                 layout="column"
+                 layout-align="start center"
+                 flex>
+              <img src="/assets/icons/scaling_icons.svg"
+                   class="partnerships-page-grow-card-icon"
+                   alt="Scaling icon">
+              <p class="oppia-foundation-center-align-text
+                        oppia-foundation-green-text
+                        oppia-foundation-mobile-left-padding
+                        partnerships-page-icon-description-text-box">
+                Scaling Our Platforms And Outreach
+              </p>
+            </div>
+          </md-list-item>
+        </md-list>
       </md-content>
-      <div class="oppia-foundation-bottom-padding
-                  partnerships-page-grow-card-icon-row"
-           layout-gt-xs="row"
-           layout="column"
-           layout-align="center center">
-        <div layout-gt-xs="column"
-             layout="row"
-             layout-align="center center">
-          <img src="/assets/icons/magnifier_icons.svg"
-               class="partnerships-page-grow-card-icon"
-               alt="Magnifier icon">
-          <md-content class="oppia-foundation-white-background
-                             oppia-foundation-black-text
-                             oppia-foundation-mobile-left-padding
-                             partnerships-page-icon-description-text-box">
-            <p class="oppia-foundation-center-align-text">
-              Conducting Randomized Controlled Trial
-            </p>
-          </md-content>
-        </div>
-        <div layout-gt-xs="column"
-             layout="row"
-             layout-align="center center"
-             class="oppia-foundation-tablet-and-desktop-horizontal-padding
-                    oppia-foundation-mobile-vertical-padding">
-          <img src="/assets/icons/podium_icon.svg"
-               class="partnerships-page-grow-card-icon"
-               alt="Podium icon">
-          <md-content class="oppia-foundation-white-background
-                             oppia-foundation-black-text
-                             oppia-foundation-mobile-left-padding
-                             partnerships-page-icon-description-text-box">
-            <p class="oppia-foundation-center-align-text">
-              Funding Our Best Content Creators
-            </p>
-          </md-content>
-        </div>
-        <div layout-gt-xs="column"
-             layout="row"
-             layout-align="center center">
-          <img src="/assets/icons/scaling_icons.svg"
-               class="partnerships-page-grow-card-icon"
-               alt="Scaling icon">
-          <md-content class="oppia-foundation-white-background
-                             oppia-foundation-black-text
-                             oppia-foundation-mobile-left-padding
-                             partnerships-page-icon-description-text-box">
-            <p class="oppia-foundation-center-align-text">
-              Scaling Our Platforms And Outreach
-            </p>
-          </md-content>
-        </div>
-      </div>
     </md-card-content>
   </md-card>
   <md-card layout="column"
@@ -320,7 +335,7 @@
                          oppia-foundation-black-text
                          partnerships-page-description-text-box"
                   flex-gt-sm="45">
-        <h3 class="md-display-1">
+        <h3 class="md-display-1 partnerships-page-content-title">
           Get in touch
         </h3>
         <p>
@@ -453,10 +468,18 @@
     max-width: 850px;
   }
   .partnerships-page-student-quote-box {
-    max-width: 350px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    max-width: 350px;
     padding: 16px 20px;
   }
+  @media screen and (max-width: 960px) {
+    .partnerships-page-student-quote-box {
+      bottom: 30px;
+      position: relative;
+      z-index: 8;
+    }
+  } 
   .partnerships-page-student-image-blockquote {
     color: black;
     padding: 0;
@@ -522,7 +545,7 @@
   }
   @media screen and (min-width: 1280px) {
     .partnerships-page-approach-image {
-      max-width: 350px;
+      max-width: 100%;
       padding: 0 20px;
     }
   }
@@ -536,6 +559,7 @@
     display: block;
     margin: auto;
     max-width: 350px;
+    padding: 0 20px 20px;
   }
   @media screen and (max-width: 500px) {
     .partnerships-page-evidence-image {
@@ -551,6 +575,7 @@
     border: 0;
     display: block;
     margin: auto;
+    max-width: 580px;
     z-index: 8;
     position: relative;
   }
@@ -558,15 +583,44 @@
     border: 0;
     display: block;
     margin: 0;
-    max-width: 90px;
+    width: 70px;
+  }
+  @media screen and (min-width: 600px) {
+    .partnerships-page-grow-card-icon {
+      width: auto;
+      max-width: 80px;
+    }
+  }
+  md-list-item.partnerships-page-icon-list-item::before{
+    min-height: 0;
+  }
+  md-list-item.md-no-proxy.partnerships-page-icon-list-item {
+    padding: 16px 0px;
+  }
+  @media screen and (min-width: 600px) {
+    md-list-item.md-no-proxy.partnerships-page-icon-list-item {
+      padding: 16px;
+    }
   }
   .partnerships-page-grow-card-icon-row {
-    padding-top: 40px;
+    padding-bottom: 80px;
   }
   .partnerships-page-icon-description-text-box {
-    font-size: 11pt;
-    min-height: 70px;
-    width: 190px;
+    font-size: 10pt;
+  }
+  @media screen and (max-width: 600px) {
+    .partnerships-page-icon-description-text-box {
+      font-size: inherit;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .partnerships-page-icon-description-text-box {
+      font-size: inherit;
+      min-height: 70px;
+    }
+  }
+  .partnerships-page-content-title {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
   .partnerships-page-display-size {
     max-width: 1500px;
@@ -579,6 +633,7 @@
   }
   .partnerships-page-form {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);     
   }
   @media screen and (min-width: 600px) {
     .partnerships-page-form {
