@@ -45,7 +45,7 @@ class NoninteractivePagesTest(app_engine_test_base.GenericTestBase):
         self.assertEqual(response.content_type, 'text/html')
 
     def test_home_page(self):
-        """Test the Donate page."""
+        """Test the home page."""
         response = self.testapp.get('/')
         self.assertEqual(response.status_int, 200)
         self.assertEqual(response.content_type, 'text/html')
