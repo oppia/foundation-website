@@ -56,6 +56,8 @@ fi
 
 # Set up a local dev instance.
 echo Starting GAE development server
+# To turn emailing on, add the option '--enable_sendmail' and change the relevant
+# settings in config.py.
 
 ($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . $*)&
 

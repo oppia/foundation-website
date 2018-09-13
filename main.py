@@ -14,14 +14,24 @@
 
 """URL routing definitions."""
 
-import config
-from core.controllers import outgoing_emails
 import webapp2
 
+import config
+from core.controllers import outgoing_emails
+from core.controllers import pages
 
+ABOUT_URL = '/about'
+PARTNERSHIPS_URL = '/partnerships'
+VOLUNTEER_URL = '/volunteer'
+DONATE_URL = '/donate'
 MAIL_HANDLER_URL = '/ajax/mailhandler'
 URLS = [
     (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
+    (ABOUT_URL, pages.BasePageHandler),
+    (PARTNERSHIPS_URL, pages.BasePageHandler),
+    (DONATE_URL, pages.BasePageHandler),
+    (VOLUNTEER_URL, pages.BasePageHandler),
+    ('/', pages.BasePageHandler),
 ]
 
-app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
+APP = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
