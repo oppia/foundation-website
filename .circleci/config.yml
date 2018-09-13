@@ -28,6 +28,11 @@ jobs:
           name: run tests
           command: |
             bash scripts/run_backend_tests.sh --generate_coverage_report
+      
+       - run:
+          name: run linter
+          command: |
+            bash scripts/run_linter.sh
 
       - save_cache:
           key: oppia-tools-cache
