@@ -48,7 +48,7 @@ _PARSER.add_argument(
 
 
 def create_test_suites(test_target=None):
-    """Creates test suites. If test_dir is None, runs all tests."""
+    """Create test suites. If test_dir is None, runs all tests."""
     if test_target and '/' in test_target:
         raise Exception('The delimiter in test_target should be a dot (.)')
 
@@ -60,8 +60,7 @@ def create_test_suites(test_target=None):
 
 
 def main():
-    """Runs backend tests."""
-
+    """Run backend tests."""
     def _iterate(test_suite_or_case):
         """Iterate through all the test cases in `test_suite_or_case`."""
         try:

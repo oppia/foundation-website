@@ -19,7 +19,7 @@ from google.appengine.api import mail
 
 def send_mail(
         sender_email, reply_to_email, recipient_email, subject, plaintext_body):
-    """Sends an email using App Engine's Mail API.
+    """Send an email using App Engine's Mail API.
 
     Arguments:
         sender_email: str. The email address of the sender. This should be in
@@ -33,6 +33,7 @@ def send_mail(
     Raises:
         ValueError: If 'sender_email', 'reply_to_email' or 'recipient_email' is
             invalid, according to App Engine.
+
     """
     if not mail.is_email_valid(sender_email):
         raise ValueError('Malformed sender email address: %s' % sender_email)

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"Controllers for processing contact form submissions."
+"""Controllers for processing contact form submissions."""
 
 import json
 
@@ -24,8 +24,7 @@ import config
 
 
 class ForwardToAdminEmailHandler(base.BaseHandler):
-    """Handler for forwarding email to admin email address after
-        user submits Contact us form."""
+    """Handler for forwarding email to admin after email form is submitted."""
 
     @classmethod
     def write_email_subject(cls, email_type):
@@ -39,6 +38,7 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
 
         Raises:
             InvalidStringException: The provided string is invalid.
+
         """
         string_validator.check_string_valid(email_type)
         email_type = email_type.upper()
@@ -61,6 +61,7 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
 
         Raises:
             InvalidStringException: The provided string is invalid.
+
         """
         email_contents = ''
         if user_organization is not None:
@@ -72,7 +73,7 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
         return email_contents
 
     def post(self):
-        """Handles POST requests."""
+        """Handle POST requests."""
         payload = json.loads(self.request.body)
 
         if 'email_type' not in payload:
