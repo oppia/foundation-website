@@ -25,4 +25,6 @@ URLS = [
     (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
 ]
 
-app = webapp2.WSGIApplication(URLS, debug=config.DEBUG) #pylint: disable=invalid-name
+#pylint: disable=invalid-name
+app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
+#pylint: enable=invalid-name
