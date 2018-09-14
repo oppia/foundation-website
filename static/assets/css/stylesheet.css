@@ -143,7 +143,6 @@ h5,
 h6 {
   margin: 10px 0;
   font-weight: 700;
-  font-family: "Capriola", "Roboto", Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -437,6 +436,9 @@ Full-Width Styles
 }
 
 @media screen and (min-width: 1279px) {
+  .oppia-foundation-desktop-left-padding {
+    padding-left: 40px;
+  }
   .oppia-foundation-desktop-right-padding {
     padding-right: 40px;
   }
