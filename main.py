@@ -14,9 +14,10 @@
 
 """URL routing definitions."""
 
+import webapp2
+
 import config
 from core.controllers import outgoing_emails
-import webapp2
 
 
 MAIL_HANDLER_URL = '/ajax/mailhandler'
@@ -24,4 +25,6 @@ URLS = [
     (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
 ]
 
+#pylint: disable=invalid-name
 app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
+#pylint: enable=invalid-name

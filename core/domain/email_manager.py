@@ -29,7 +29,6 @@ def send_mail_to_admin(email_subject, email_body, reply_to_email):
         reply_to_email: str. The email address that the admin will be replying
             to.
     """
-
     gae_email_services.send_mail(
         config.SYSTEM_EMAIL_ADDRESS, reply_to_email, config.ADMIN_EMAIL_ADDRESS,
         email_subject, email_body)

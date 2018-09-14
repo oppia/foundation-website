@@ -20,12 +20,10 @@ from core.utility import string_validator
 
 
 class StringValidationTests(app_engine_test_base.AppEngineTestBase):
-    """Test for various string validation utility methods"""
+    """Test for various string validation utility methods."""
 
     def test_invalid_string_reason(self):
-        """Test invalid_string_reason returns the corresponding reason why
-        the specified string is invalid.
-        """
+        """Test invalid_string_reason returns the corresponding reason why."""
         bad_string = None
         self.assertEqual(
             'None string type for None.',
@@ -45,8 +43,7 @@ class StringValidationTests(app_engine_test_base.AppEngineTestBase):
         self.assertIs(None, string_validator.invalid_string_reason(good_string))
 
     def test_is_string_valid(self):
-        """Test is_string_valid returns True if string is valid, else False.
-        """
+        """Test is_string_valid returns True if string is valid, else False."""
         bad_string = ' '
         self.assertFalse(string_validator.is_string_valid(bad_string))
 
@@ -54,9 +51,7 @@ class StringValidationTests(app_engine_test_base.AppEngineTestBase):
         self.assertTrue(string_validator.is_string_valid(good_string))
 
     def test_check_string_valid(self):
-        """Test check_string_valid raises exception with specific reason why
-        provided string is invalid.
-        """
+        """Test check_string_valid raises exception with specific reason."""
         bad_string = 42
         with self.assertRaisesRegexp(
             string_validator.InvalidStringException,

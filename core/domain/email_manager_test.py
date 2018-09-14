@@ -19,6 +19,7 @@ from core.domain import email_manager
 
 import config
 
+
 class SendEmailToAdminTest(app_engine_test_base.GenericTestBase):
     """Test for email to be sent to admin email address."""
 
