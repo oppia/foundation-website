@@ -19,26 +19,26 @@
                   layout-align="center"
                   flex-gt-sm="60">
         <md-card-title>
-          <md-card-title-text>
+          <md-card-title-text class="volunteer-page-title-box">
             <h1>
               Join our global team of volunteers
             </h1>
           </md-card-title-text>
         </md-card-title>
-        <h4 class="md-headline volunteer-page-title-box" hide-xs>
+        <h4 class="md-title" hide-xs>
           Contributing to Oppia is an opportunity to impact the lives of 
           millions of students.
         </h4>
-        <h4 class="md-headline volunteer-page-title-box" hide-xs>
+        <h4 class="md-title" hide-xs>
           It doesn&rsquo;t matter where you come from, what language you speak, 
           or how young or old you are - this is a community project, and all 
           are welcome!
         </h4>
-        <h6 class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+        <h6 class="md-title" show-xs hide-gt-xs>
           Contributing to Oppia is an opportunity to impact the lives of 
           millions of students.
         </h6>
-        <h6 class="md-headline volunteer-page-title-box" show-xs hide-gt-xs>
+        <h6 class="md-title" show-xs hide-gt-xs>
           It doesn&rsquo;t matter where you come from, what language you speak, 
           or how young or old you are - this is a community project, and all 
           are welcome!
@@ -381,7 +381,7 @@
                           oppia-foundation-gold-border-button"
                    ng-click="submitContactUsForm(
                      fullName, email, comment, $event)"
-                   ng-disabled="userContactsForm.$invalid">
+                   ng-disabled="userContactsForm.$invalid || formSubmitted">
           Submit
         </md-button>
       </form>
@@ -408,7 +408,7 @@
     padding-right: 0;
   }
   .volunteer-page-title-box {
-    line-height: 30pt;
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
   .volunteer-page-global-graphics {
     border: 0;
