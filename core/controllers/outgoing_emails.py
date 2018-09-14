@@ -38,7 +38,6 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
 
         Raises:
             InvalidStringException: The provided string is invalid.
-
         """
         string_validator.check_string_valid(email_type)
         email_type = email_type.upper()
@@ -61,7 +60,6 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
 
         Raises:
             InvalidStringException: The provided string is invalid.
-
         """
         email_contents = ''
         if user_organization is not None:

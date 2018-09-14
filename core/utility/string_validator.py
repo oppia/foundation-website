@@ -33,7 +33,6 @@ def invalid_string_reason(string):
     Returns:
         str|None. A string that indicates the reason why the input string is
             invalid; otherwise returns `None`.
-
     """
     if string is None:
         return 'None string type for %s.' % string
@@ -55,7 +54,6 @@ def is_string_valid(string):
     Returns:
         bool. `True` if the specified string is valid; otherwise returns
             `False`.
-
     """
     return invalid_string_reason(string) is None
 
@@ -68,7 +66,6 @@ def check_string_valid(string):
 
     Raises:
         InvalidStringException: Specified string is invalid.
-
     """
     reason = invalid_string_reason(string)
 

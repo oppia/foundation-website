@@ -33,7 +33,6 @@ def send_mail(
     Raises:
         ValueError: If 'sender_email', 'reply_to_email' or 'recipient_email' is
             invalid, according to App Engine.
-
     """
     if not mail.is_email_valid(sender_email):
         raise ValueError('Malformed sender email address: %s' % sender_email)

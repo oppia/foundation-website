@@ -31,7 +31,6 @@ def parse_json_from_js(js_file):
 
     Returns:
         dict(str, str). A dict mapping constant names to their values.
-
     """
     text = js_file.read()
     first_bracket_index = text.find('= {')
