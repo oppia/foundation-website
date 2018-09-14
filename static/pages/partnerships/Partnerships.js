@@ -21,8 +21,10 @@ oppiaFoundationWebsite.controller(
         ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
       $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
       $scope.PARTNERSHIPS_EMAIL_SUBJECT = 'Partnering%20with%20Oppia';
+      $scope.formSubmitted = false;
       $scope.submitContactUsForm = function(
           fullName, email, organization, comment, evt) {
+        $scope.formSubmitted = true;
         $http.post(MAILHANDLER_URL, {
           email_type: 'PARTNERSHIPS',
           name: fullName,
