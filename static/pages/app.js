@@ -20,32 +20,36 @@ for (var constantName in constants) {
   oppiaFoundationWebsite.constant(constantName, constants[constantName]);
 }
 
-oppiaFoundationWebsite.config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'pages/home/home.html',
-      projectTag: 'Home'
-    })
-    .when('/about', {
-      templateUrl: 'pages/about/about.html',
-      projectTag: 'About'
-    })
-    .when('/partnerships', {
-      templateUrl: 'pages/partnerships/partnerships.html',
-      projectTag: 'Partnerships'
-    })
-    .when('/volunteer', {
-      templateUrl: 'pages/volunteer/volunteer.html',
-      projectTag: 'Volunteer'
-    })
-    .when('/donate', {
-      templateUrl: 'pages/donate/donate.html',
-      projectTag: 'Donate'
-    })
-    .otherwise({
-      redirectTo: '/'
+oppiaFoundationWebsite.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'pages/home/home.html',
+        projectTag: 'Home'
+      })
+      .when('/about', {
+        templateUrl: 'pages/about/about.html',
+        projectTag: 'About'
+      })
+      .when('/partnerships', {
+        templateUrl: 'pages/partnerships/partnerships.html',
+        projectTag: 'Partnerships'
+      })
+      .when('/volunteer', {
+        templateUrl: 'pages/volunteer/volunteer.html',
+        projectTag: 'Volunteer'
+      })
+      .when('/donate', {
+        templateUrl: 'pages/donate/donate.html',
+        projectTag: 'Donate'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+    $locationProvider.html5Mode({
+      enabled: true
     });
-}]);
+  }]);
 
 oppiaFoundationWebsite.config(['$mdThemingProvider',
   function($mdThemingProvider) {

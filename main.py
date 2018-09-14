@@ -19,7 +19,6 @@ import webapp2
 import config
 from core.controllers import outgoing_emails
 
-
 MAIL_HANDLER_URL = '/ajax/mailhandler'
 URLS = [
     (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),

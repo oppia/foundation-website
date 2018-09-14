@@ -45,3 +45,5 @@ EMAIL_SUBJECTS = {
     EMAIL_TYPE_VOLUNTEER: 'Volunteering with Oppia',
     EMAIL_TYPE_DEFAULT: 'General question about Oppia Foundation',
 }
+
+INDEX_FILEPATH = 'static/pages/index.html'
