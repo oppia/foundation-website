@@ -23,8 +23,7 @@ import config
 
 
 class ConstantsTest(app_engine_test_base.AppEngineTestBase):
-    """Tests for reading constants.js and converting its content to JSON format.
-    """
+    """Tests for reading constants.js and parsing it to JSON format."""
 
     def test_constants_js_file_exists(self):
         """Ensure that constants.js exists at the specified path."""
@@ -38,9 +37,7 @@ class ConstantsTest(app_engine_test_base.AppEngineTestBase):
             self.assertEqual(json['TESTING_CONSTANT'], 'test')
 
     def test_constants_and_config_are_consistent(self):
-        """Ensure that constants with the same name in both config.py and
-        constants.js are the same.
-        """
+        """Ensure that shared constants between 2 files are consistent."""
         # Ignore non-ASCII character in ADMIN_EMAIL_ADDRESS.
         encoded_admin_email_address = (
             constants.CONSTANTS.ADMIN_EMAIL_ADDRESS.encode(

@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Stores various configuration options and constants for Oppia Foundation page.
-"""
+"""Stores configuration options and constants for Oppia Foundation page."""
 
 SYSTEM_EMAIL_ADDRESS = 'system_email@domain.com'
 
@@ -46,3 +45,5 @@ EMAIL_SUBJECTS = {
     EMAIL_TYPE_VOLUNTEER: 'Volunteering with Oppia',
     EMAIL_TYPE_DEFAULT: 'General question about Oppia Foundation',
 }
+
+INDEX_FILEPATH = 'static/pages/index.html'

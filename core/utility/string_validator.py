@@ -18,12 +18,14 @@
 
 class InvalidStringException(Exception):
     """The specified string is invalid."""
+
     pass
 
 
 def invalid_string_reason(string):
-    """Determines the reason why a string is invalid. Accepts US-ASCII string or
-        a Unicode string.
+    """Determine the reason why a string is invalid.
+
+    Accepts US-ASCII string or a Unicode string.
 
     Args:
         string: str. The string to check.
@@ -44,7 +46,7 @@ def invalid_string_reason(string):
 
 
 def is_string_valid(string):
-    """Determines whether the specified a string is valid.
+    """Determine whether the specified a string is valid.
 
     Arguments:
         string: str. The string to be validated.
@@ -57,7 +59,7 @@ def is_string_valid(string):
 
 
 def check_string_valid(string):
-    """Verifies whether a string is valid.
+    """Verify whether a string is valid.
 
     Arguments:
         string: str. The string to check.

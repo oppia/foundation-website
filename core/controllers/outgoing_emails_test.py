@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Tests for processing contact form submissions. """
+"""Tests for processing contact form submissions."""
 
 from core.tests import app_engine_test_base
 from core.controllers import outgoing_emails
@@ -23,6 +23,7 @@ import main
 
 
 ForwardEmailHandler = outgoing_emails.ForwardToAdminEmailHandler
+
 
 class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
     """Test for utility functions to write an email."""
@@ -62,20 +63,21 @@ class WritingEmaillUtilitiesTests(app_engine_test_base.GenericTestBase):
         self.assertIn(user_organization, email_content)
         self.assertIn(user_comment, email_content)
 
+
 class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
     """Backend integration tests for forwarding email to admin email address."""
 
     def test_get_500_errors_from_missing_fields(self):
         """Expect missing required fields to return 500s."""
         bad_form_contents = {
-            'comment' : 'Hi!',
+            'comment': 'Hi!',
         }
         response = self.testapp.post(
             main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
         self.assertIn(response.status_int, [500], msg=main.MAIL_HANDLER_URL)
 
         bad_form_contents = {
-            'email' : 'user1@domain.com',
+            'email': 'user1@domain.com',
         }
         response = self.testapp.post(
             main.MAIL_HANDLER_URL, bad_form_contents, expect_errors=True)
@@ -109,7 +111,7 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
         self.assertEqual(1, len(messages))
 
         form_contents = {
-            'email_type' : config.EMAIL_TYPE_VOLUNTEER,
+            'email_type': config.EMAIL_TYPE_VOLUNTEER,
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
         }
@@ -121,7 +123,7 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
         self.assertEqual(2, len(messages))
 
         form_contents = {
-            'email_type' : config.EMAIL_TYPE_PARTNERSHIPS,
+            'email_type': config.EMAIL_TYPE_PARTNERSHIPS,
             'organization': 'Non-profit organization 1',
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
