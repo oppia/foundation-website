@@ -3,7 +3,7 @@
 #   pylint core --rcfile=.pylintrc -i y
 
 [GENERAL]
-init-hook='import sys; sys.path.append("../oppia_tools/google_appengine_1.9.67/google_appengine")'
+init-hook='import sys; sys.path.append("../oppia_tools/google_appengine_1.9.73/google_appengine");'
 
 [MASTER]
 
@@ -38,7 +38,7 @@ dummy-variables-rgx=_|unused_*
 function-rgx=^[_a-z][a-z0-9_]*$
 
 # Good variable names which should always be accepted, separated by a comma
-good-names=e,_,d,f,i,l,p,w,fn,fs,id,pc,sc,zf,setUp,tearDown,longMessage,maxDiff
+good-names=setUp,tearDown
 
 # Regular expression which should only match correct method names
 method-rgx=^([_a-z][a-z0-9_]*|__[a-z0-9]+__)$
