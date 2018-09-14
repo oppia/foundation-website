@@ -18,7 +18,7 @@ import webapp2
 
 import config
 from core.controllers import outgoing_emails
-from core.controllers import pages
+
 
 ABOUT_URL = '/about'
 PARTNERSHIPS_URL = '/partnerships'

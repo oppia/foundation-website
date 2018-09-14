@@ -27,7 +27,7 @@ class BaseHandler(webapp2.RequestHandler):
     """Base class for all handlers."""
 
     def render_json(self, values):
-        """Prepares JSON response to be sent to the client.
+        """Prepare JSON response to be sent to the client.
 
         Args:
             values: dict. The key-value pairs to encode in the JSON response.

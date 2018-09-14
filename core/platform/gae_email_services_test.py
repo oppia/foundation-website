@@ -23,10 +23,8 @@ import config
 class EmailTests(app_engine_test_base.GenericTestBase):
     """Tests for sending emails."""
 
-    def test_send_mail(self):
-        """Test send_mail raises exceptions with invalid email addresses and
-        sends email to admin email address.
-        """
+    def test_unable_to_send_mail(self):
+        """Test send_mail raises exceptions with invalid email addresses."""
         user_email = 'user1@domain.com'
 
         bad_sender_email = 42
@@ -53,6 +51,9 @@ class EmailTests(app_engine_test_base.GenericTestBase):
                 config.SYSTEM_EMAIL_ADDRESS, user_email, bad_recipient_email,
                 'subject', 'body')
 
+    def test_send_mail(self):
+        """Test send_mail to send email out successfully."""
+        user_email = 'user1@domain.com'
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
         self.assertEqual(0, len(messages))

@@ -17,6 +17,27 @@
 set -e
 source $(dirname $0)/setup.sh || exit 1
 
+# Checking if pip is installed. If you are having
+# trouble, please ensure that you have pip installed (see "Installing Oppia"
+# on the Oppia developers' wiki page).
+echo Checking if pip is installed on the local machine
+if ! type pip > /dev/null 2>&1 ; then
+    echo ""
+    echo "  Pip is required to install Oppia dependencies, but pip wasn't found"
+    echo "  on your local machine."
+    echo ""
+    echo "  Please see \"Installing Oppia\" on the Oppia developers' wiki page:"
+
+    if [ "${OS}" == "Darwin" ] ; then
+      echo "    https://github.com/oppia/oppia/wiki/Installing-Oppia-%28Mac-OS%29"
+    else
+      echo "    https://github.com/oppia/oppia/wiki/Installing-Oppia-%28Linux%29"
+    fi
+
+    # If pip is not installed, quit.
+    exit 1
+fi
+
 echo Checking if webtest is installed in third_party
 if [ ! -d "$TOOLS_DIR/webtest-1.4.2" ]; then
   echo Installing webtest framework

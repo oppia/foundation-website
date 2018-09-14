@@ -22,8 +22,9 @@ import os
 
 CONSTANTS_JS_FILEPATH = os.path.join('static', 'assets', 'constants.js')
 
+
 def parse_json_from_js(js_file):
-    """Extracts JSON object from JS file.
+    """Extract JSON object from JS file.
 
     Args:
         js_file: file. A stream representing the constants.js file.
@@ -39,7 +40,8 @@ def parse_json_from_js(js_file):
 
 
 class Constants(dict):
-    """Transforms dict to object, attributes can be accessed by dot notation."""
+    """Transform dict to object, attributes can be accessed by dot notation."""
+
     __getattr__ = dict.__getitem__
 
 

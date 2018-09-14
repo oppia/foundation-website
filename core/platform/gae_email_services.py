@@ -19,7 +19,7 @@ from google.appengine.api import mail
 
 def send_mail(
         sender_email, reply_to_email, recipient_email, subject, plaintext_body):
-    """Sends an email using App Engine's Mail API.
+    """Send an email using App Engine's Mail API.
 
     Arguments:
         sender_email: str. The email address of the sender. This should be in
