@@ -15,8 +15,6 @@
 """Controllers for simple, mostly-static pages (like About, Volunteer, etc.).
 """
 
-from google.appengine.ext.webapp import template
-
 import config
 from core.controllers import base
 
@@ -25,4 +23,4 @@ class BasePageHandler(base.BaseHandler):
 
     def get(self):
         """Handles GET requests."""
-        self.response.out.write(template.render(config.INDEX_FILEPATH, {}))
+        self.render_templates(config.INDEX_FILEPATH)

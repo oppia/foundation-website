@@ -53,7 +53,7 @@ class AppEngineTestBase(unit_test_base.TestBase):
         self.mail_stub = self.testbed.get_stub(testbed.MAIL_SERVICE_NAME)
 
         # Set up the app to be tested.
-        self.testapp = webtest.TestApp(main.APP)
+        self.testapp = webtest.TestApp(main.app)
 
     def tearDown(self):
         self.testbed.deactivate()

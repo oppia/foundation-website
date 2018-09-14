@@ -25,4 +25,4 @@ handlers:
     Vary: Accept-Encoding
   
 - url: /.*
-  script: main.APP
+  script: main.app

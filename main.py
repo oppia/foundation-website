@@ -34,4 +34,6 @@ URLS = [
     ('/', pages.BasePageHandler),
 ]
 
-APP = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
+#pylint: disable=invalid-name
+app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
+#pylint: enable=invalid-name

@@ -17,6 +17,8 @@
 import json
 import webapp2
 
+from google.appengine.ext.webapp import template
+
 import config
 from core.controllers import custom_json_encoder
 
@@ -41,3 +43,20 @@ class BaseHandler(webapp2.RequestHandler):
         json_output = json.dumps(
             values, cls=custom_json_encoder.JSONEncoderForHTML)
         self.response.write('%s%s' % (config.XSSI_PREFIX, json_output))
+
+    def render_templates(self, filepath):
+        """Prepare an HTML response to be sent to the client.
+
+        Args:
+            filepath: str. The template filepath.
+        """
+
+        self.response.cache_control.no_cache = True
+        self.response.cache_control.must_revalidate = True
+        self.response.headers['Strict-Transport-Security'] = (
+            'max-age=31536000; includeSubDomains')
+        self.response.headers['X-Content-Type-Options'] = 'nosniff'
+        self.response.headers['X-Xss-Protection'] = '1; mode=block'
+        self.response.expires = 'Mon, 01 Jan 1990 00:00:00 GMT'
+        self.response.pragma = 'no-cache'
+        self.response.out.write(template.render(filepath, {}))
