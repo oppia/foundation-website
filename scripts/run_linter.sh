@@ -17,6 +17,9 @@
 #     bash scripts/run_linter.sh
 
 source $(dirname $0)/setup.sh
+if [ "$TRAVIS" == 'true' ]; then
+  pip install -r ci-linter-requirements.txt
+fi
 set -e
 
 echo Checking if pylint is installed in $TOOLS_DIR
@@ -40,20 +43,30 @@ fi
 echo Checking if pydocstyle is installed in $TOOLS_DIR
 if [ ! -d "$TOOLS_DIR/pydocstyle-2.1.1" ]; then
   echo Installing Pydocstyle
-
-  pip install pydocstyle==2.1.1 --target="$TOOLS_DIR/pydocstyle-2.1.1"
+  curl -o pydocstyle-2.1.1.tar.gz -L https://files.pythonhosted.org/packages/ca/af/dbd99adec5704de451ae56d08024d7416dead997dedbd6be72cbc86efb08/pydocstyle-2.1.1.tar.gz
+  tar xzf pydocstyle-2.1.1.tar.gz -C $TOOLS_DIR
+  rm pydocstyle-2.1.1.tar.gz
 fi
 
 # Install pycodestyle.
 echo Checking if pycodestyle is installed in third_party
-if [ ! -d "$TOOLS_DIR/pycodestyle-2.4.0" ]; then
+if [ ! -d "$TOOLS_DIR/pycodestyle-2.3.1" ]; then
   echo Installing Pycodestyle
     
-  pip install pycodestyle==2.4.0 --target="$TOOLS_DIR/pycodestyle-2.4.0"
+  curl -o pycodestyle-2.3.1.tar.gz -L https://pypi.python.org/packages/e1/88/0e2cbf412bd849ea6f1af1f97882add46a374f4ba1d2aea39353609150ad/pycodestyle-2.3.1.tar.gz
+  tar xzf pycodestyle-2.3.1.tar.gz -C $TOOLS_DIR
+  rm pycodestyle-2.3.1.tar.gz
 fi
 
-$TOOLS_DIR/pylint-runner-0.5.4/bin/pylint_runner -v || exit 1
+if [ "$TRAVIS" == 'true' ]; then
+  pycodestyle -v
+  pylint_runner -v
+fi
 
-$TOOLS_DIR/pydocstyle-2.1.1/bin/pydocstyle -v || exit 1
+if [ "$TRAVIS" == 'false' ]; then
+  # These commands might not work cross-platform.
+  $PYTHON_CMD $TOOLS_DIR/pylint-runner-0.5.4/pylint_runner/main.py -v || exit 1
+  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py -v || exit 1
+fi
 
-$TOOLS_DIR/pycodestyle-2.4.0/bin/pycodestyle -v || exit 1
+$PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v || exit 1
