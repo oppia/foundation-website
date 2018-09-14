@@ -4,7 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /ajax/.*
-  script: main.APP
+  script: main.app
   secure: always
 
 - url: /(.+)
