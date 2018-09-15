@@ -575,6 +575,10 @@ Full-Width Styles
   color: white;
 }
 
+.md-button.oppia-foundation-green-button:disabled {
+  background-color: rgb(128,128,128);
+}
+
 .md-button.oppia-foundation-scroll-to-top-button {
   cursor: pointer;
   position: fixed !important;
