@@ -20,6 +20,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
+    $scope.formSubmitted = false;
     $scope.tabs = [{
       title: 'Design',
       templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
@@ -65,8 +66,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         throw Error('No such element');
       }
     };
-    $scope.submitContactUsForm = function(
-        fullName, email, comment, evt) {
+    $scope.submitContactUsForm = function(fullName, email, comment, evt) {
+      $scope.formSubmitted = true;
       $http.post(MAILHANDLER_URL, {
         email_type: 'VOLUNTEER',
         name: fullName,

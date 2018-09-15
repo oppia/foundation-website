@@ -143,7 +143,6 @@ h5,
 h6 {
   margin: 10px 0;
   font-weight: 700;
-  font-family: "Capriola", "Roboto", Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -387,6 +386,9 @@ Full-Width Styles
   .oppia-foundation-tablet-and-desktop-top-padding {
     padding-top: 80px;
   }
+  .oppia-foundation-tablet-and-destop-bottom-padding-40 {
+    padding-bottom: 40px;
+  }
 }
 
 .oppia-foundation-top-padding {
@@ -413,6 +415,14 @@ Full-Width Styles
   .oppia-foundation-tablet-and-desktop-right-padding {
     padding-right: 40px;
   }
+  .oppia-foundation-mobile-and-tablet-vertical-padding-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .oppia-foundation-mobile-and-tablet-vertical-padding-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 @media screen and (min-width: 960px) {
   .oppia-foundation-small-tablet-and-desktop-vertical-padding {
@@ -428,12 +438,25 @@ Full-Width Styles
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  .oppia-foundation-mobile-and-small-tablet-vertical-padding-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-and-small-tablet-top-padding-40 {
+    padding-top: 40px;
+  }
+  .oppia-foundation-mobile-and-small-tablet-bottom-padding-40 {
+    padding-bottom: 40px;
+  }
   .oppia-foundation-mobile-and-small-tablet-bottom-padding {
     padding-bottom: 80px;
   }
 }
 
 @media screen and (min-width: 1279px) {
+  .oppia-foundation-desktop-left-padding {
+    padding-left: 40px;
+  }
   .oppia-foundation-desktop-right-padding {
     padding-right: 40px;
   }
@@ -481,7 +504,7 @@ Full-Width Styles
 }
 
 .oppia-foundation-green-text {
-  color: #18AA9D;
+  color: #009688;
 }
 
 .oppia-foundation-dark-green-text {
@@ -518,6 +541,7 @@ Full-Width Styles
 
 .md-button.oppia-foundation-gold-border-button {
   border: 3px outset goldenrod;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   min-width: 200px;
   max-width: 250px;
   max-height: 50px;
@@ -539,6 +563,7 @@ Full-Width Styles
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: #18AA9D;
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
   padding: 0px 15px;
   max-width: 250px;
   max-height: 50px;

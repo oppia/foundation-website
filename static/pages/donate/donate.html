@@ -14,13 +14,14 @@
                                 oppia-foundation-white-background
                                 oppia-foundation-dark-green-text">
           <div class="donate-page-welcome-text-box">
-            <md-card-title class="oppia-foundation-no-padding">
+            <md-card-title class="oppia-foundation-no-padding
+                                  donate-page-title-box">
               <h1>
                 Donate to The Oppia Foundation
               </h1>
             </md-card-title>
             <p></p>
-            <h4 class="md-headline oppia-foundation-headline">
+            <h4 class="md-title">
               With your support, the Oppia Foundation can continue its mission 
               to build personal, responsive lessons by uniting a global 
               community of educators.
@@ -53,18 +54,21 @@
                      layout-fill
                      layout-align="center"
                      class="oppia-foundation-horizontal-padding
-                            oppia-foundation-vertical-padding
+                            oppia-foundation-small-tablet-and-desktop-vertical-padding
+                            oppia-foundation-mobile-and-tablet-vertical-padding-20
+                            oppia-foundation-bottom-padding
                             oppia-foundation-white-background
                             oppia-foundation-dark-green-text
                             donate-page-welcome-text-box">
-      <md-card-title class="oppia-foundation-no-padding">
+      <md-card-title class="oppia-foundation-no-padding
+                            donate-page-title-box">
         <h1>
           Donate to The Oppia Foundation
         </h1>
       </md-card-title>
       <md-content class="oppia-foundation-white-background
                          oppia-foundation-dark-green-text">
-        <h4 class="md-headline oppia-foundation-headline">
+        <h4 class="md-title">
           With your support, the Oppia Foundation can continue its mission to
           build personal, responsive lessons by uniting a global community of
           educators.
@@ -103,7 +107,7 @@
                          oppia-foundation-white-background"
                   flex-gt-sm="50">
         <md-card-title class="oppia-foundation-no-padding">
-          <h3 class="md-display-1">
+          <h3 class="md-display-1 donate-page-content-title">
             Contribute through Amazon Smile
           </h3>
         </md-card-title>
@@ -156,7 +160,8 @@
           Your donation helps to fund:
         </h1>
         <h3 hide-gt-sm
-            class="oppia-foundation-no-horizontal-padding">
+            class="oppia-foundation-no-horizontal-padding
+                   donate-page-content-title">
           Your donation helps to fund:
         </h3>
       </md-card-title>
@@ -177,6 +182,10 @@
     .donate-page-donate-button-row {
       min-height: 120px;
     }
+  }
+  .donate-page-title-box {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
+    max-width: 850px;
   }
   .donate-page-desktop-hero-slide {
     background-image: url('/assets/images/donate/donate_hero_card_new.jpg');
@@ -249,5 +258,8 @@
   }
   .donate-page-donate-works-card {
     background-color: rgb(192,192,192)
+  }
+  .donate-page-content-title {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
 </style>
