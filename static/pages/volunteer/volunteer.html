@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <section id="volunteer" ng-controller="VolunteerPage">
   <md-card class="oppia-foundation-white-background
-                  oppia-foundation-vertical-padding
+                  oppia-foundation-small-tablet-and-desktop-vertical-padding
+                  oppia-foundation-mobile-and-tablet-vertical-padding-20
                   oppia-foundation-horizontal-padding"
            flex
            layout-gt-sm="row"
@@ -44,7 +45,7 @@
           are welcome!
         </h6>
       </md-content>
-      <div class="oppia-foundation-mobile-and-small-tablet-vertical-padding"
+      <div class="oppia-foundation-mobile-and-small-tablet-top-padding-40"
            layout="row"
            layout-align="center center">
         <img src="/assets/images/volunteer/map.png"
@@ -63,7 +64,9 @@
           Development
         </md-button>
       </md-card-actions>
-      <md-card-actions hide-gt-sm layout="row" layout-align="center center">
+      <md-card-actions class="oppia-foundation-mobile-and-small-tablet-bottom-padding-40"
+                       hide-gt-sm layout="row"
+                       layout-align="center center">
         <md-button ng-click="goToElement('mobileResearchCard')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
@@ -289,7 +292,7 @@
                             oppia-foundation-no-padding">
       <md-content class="volunteer-page-contact-us-form-card
                          oppia-foundation-black-text
-                         oppia-foundation-mobile-and-small-tablet-bottom-padding
+                         oppia-foundation-mobile-and-small-tablet-bottom-padding-40
                          volunteer-page-description-text-box">
         <h3 class="md-display-1
                    volunteer-page-description-headline-padding
@@ -308,11 +311,10 @@
           Fill out this form or
           <a class="email-us-link"
              href="mailto:{{ADMIN_EMAIL}}?subject={{VOLUNTEER_EMAIL_SUBJECT}}">
-            send us
-          </a> an email and we&rsquo;ll get back to you right away!
+            send us</a> an email and we&rsquo;ll get back to you right away!
         </p>
       </md-content>
-      <div flex="10"></div>
+      <div flex-gt-sm="10"></div>
       <form name="userContactsForm"
             class="oppia-foundation-white-background
                    volunteer-page-form">
