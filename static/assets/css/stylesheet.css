@@ -575,11 +575,6 @@ Full-Width Styles
   color: white;
 }
 
-.md-raised.oppia-foundation-green-button:hover, {
-  background-color: #18AA9D;
-  color: white;
-}
-
 .md-button.oppia-foundation-scroll-to-top-button {
   cursor: pointer;
   position: fixed !important;
