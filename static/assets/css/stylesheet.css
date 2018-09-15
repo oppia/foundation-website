@@ -539,25 +539,6 @@ Full-Width Styles
   line-height: 30pt;
 }
 
-.md-button.oppia-foundation-gold-border-button {
-  border: 3px outset goldenrod;
-  font-family: "Capriola", "Roboto", Arial, sans-serif;
-  min-width: 200px;
-  max-width: 250px;
-  max-height: 50px;
-  opacity: 1;
-}
-
-.md-button.oppia-foundation-gold-border-button:hover,
-.md-button.oppia-foundation-gold-border-button:focus {
-  background-color: rgba(255,255,255,1);
-  color: #05a69a;
-}
-
-.md-button:not([disabled]).md-focused.oppia-foundation-gold-border-button {
-  background-color: rgba(255,255,255,1);
-}
-
 .md-button.oppia-foundation-white-button {
   background-color: rgba(255,255,255,1);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -575,6 +556,30 @@ Full-Width Styles
   color: rgba(255,255,255,1);
 }
 
+.md-button.oppia-foundation-green-button {
+  border: 3px outset rgba(255,255,255,.5);
+  background-color: #015c53;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: rgba(255,255,255,1);
+  font-family: "Capriola", "Roboto", Arial, sans-serif;
+  min-width: 200px;
+  max-width: 250px;
+  max-height: 50px;
+  opacity: 1;
+}
+
+.md-button.oppia-foundation-green-button:hover,
+.md-button.oppia-foundation-green-button:focus {
+  background-color: #18AA9D;
+  color: white;
+}
+
+.md-raised.oppia-foundation-green-button:hover, {
+  background-color: #18AA9D;
+  color: white;
+}
+
 .md-button.oppia-foundation-scroll-to-top-button {
   cursor: pointer;
   position: fixed !important;
@@ -584,6 +589,8 @@ Full-Width Styles
   -ms-transform: scale(0);
   -webkit-transform: scale(0);
   transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
 }
 
 .md-button.oppia-foundation-scroll-to-top-button.scrolling {
