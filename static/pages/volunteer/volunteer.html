@@ -293,7 +293,8 @@
       <md-content class="volunteer-page-contact-us-form-card
                          oppia-foundation-black-text
                          oppia-foundation-mobile-and-small-tablet-bottom-padding-40
-                         volunteer-page-description-text-box">
+                         volunteer-page-description-text-box"
+                  flex-gt-sm="55">
         <h3 class="md-display-1
                    volunteer-page-description-headline-padding
                    volunteer-page-content-title">
@@ -314,79 +315,84 @@
             send us</a> an email and we&rsquo;ll get back to you right away!
         </p>
       </md-content>
-      <div flex-gt-sm="10"></div>
-      <form name="userContactsForm"
-            class="oppia-foundation-white-background
-                   volunteer-page-form">
-        <md-input-container class="md-block">
-          <label class="oppia-foundation-uppercase-text">
-            Name
-          </label>
-          <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg"
-                   aria-label="Email form person icon">
-          </md-icon>
-          <input autocomplete="name"
-                 placeholder=""
-                 required
-                 md-no-asterisk
-                 name="fullName"
-                 ng-model="fullName">
-          <div ng-messages="userContactsForm.name.$error">
-            <div ng-message="required">
-              Please enter your full name.
+      <div flex-gt-sm="5"></div>
+      <div flex-gt-sm="45"
+           layout="row"
+           layout-align-gt-sm="end"
+           layout-align="center">
+        <form name="userContactsForm"
+              class="oppia-foundation-white-background
+                     volunteer-page-form">
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Name
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg"
+                     aria-label="Email form person icon">
+            </md-icon>
+            <input autocomplete="name"
+                   placeholder=""
+                   required
+                   md-no-asterisk
+                   name="fullName"
+                   ng-model="fullName">
+            <div ng-messages="userContactsForm.name.$error">
+              <div ng-message="required">
+                Please enter your full name.
+              </div>
             </div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label class="oppia-foundation-uppercase-text">
-            Email
-          </label>
-          <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg"
-                   aria-label="Email form email icon">
-          </md-icon>
-          <input autocomplete="email"
-                 placeholder=""
-                 required
-                 md-no-asterisk
-                 name="email"
-                 ng-model="email"
-                 ng-pattern="/^.+@.+\..+$/"
-                 minlength="10">
-          <div ng-messages="userContactsForm.email.$error" multiple>
-            <div ng-message="required">
-              Email address is required.
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Email
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg"
+                     aria-label="Email form email icon">
+            </md-icon>
+            <input autocomplete="email"
+                   placeholder=""
+                   required
+                   md-no-asterisk
+                   name="email"
+                   ng-model="email"
+                   ng-pattern="/^.+@.+\..+$/"
+                   minlength="10">
+            <div ng-messages="userContactsForm.email.$error" multiple>
+              <div ng-message="required">
+                Email address is required.
+              </div>
+              <div ng-message="pattern">
+                Please enter a valid email address
+              </div>
+              <div ng-message="minlength">
+                Email must be longer than 10 characters
+              </div>
             </div>
-            <div ng-message="pattern">
-              Please enter a valid email address
-            </div>
-            <div ng-message="minlength">
-              Email must be longer than 10 characters
-            </div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label class="oppia-foundation-uppercase-text">
-            Message
-          </label>
-          <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg"
-                   aria-label="Email form comment icon">
-          </md-icon>
-          <textarea ng-model="comment"
-                    placeholder=""
-                    name="comment"
-                    required
-                    rows="5"
-                    md-select-on-focus>
-          </textarea>
-        </md-input-container>
-        <md-button class="oppia-foundation-button-horizontal-padding
-                          oppia-foundation-gold-border-button"
-                   ng-click="submitContactUsForm(
-                     fullName, email, comment, $event)"
-                   ng-disabled="userContactsForm.$invalid || formSubmitted">
-          Submit
-        </md-button>
-      </form>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label class="oppia-foundation-uppercase-text">
+              Message
+            </label>
+            <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg"
+                     aria-label="Email form comment icon">
+            </md-icon>
+            <textarea ng-model="comment"
+                      placeholder=""
+                      name="comment"
+                      required
+                      rows="5"
+                      md-select-on-focus>
+            </textarea>
+          </md-input-container>
+          <md-button class="oppia-foundation-button-horizontal-padding
+                            oppia-foundation-gold-border-button"
+                     ng-click="submitContactUsForm(
+                       fullName, email, comment, $event)"
+                     ng-disabled="userContactsForm.$invalid || formSubmitted">
+            Submit
+          </md-button>
+        </form>
+      </div>
     </md-card-content>
   </md-card>
    <md-button id="scrollToTopButton" 
@@ -456,7 +462,6 @@
   }
   @media screen and (min-width: 600px) {
     .volunteer-page-form {
-      margin: auto;
       width: 500px;
     }
   }
