@@ -2,7 +2,8 @@
 <section id="partnerships"
          ng-controller="PartnershipsPage">
   <md-card class="oppia-foundation-white-background
-                  oppia-foundation-vertical-padding"
+                  oppia-foundation-small-tablet-and-desktop-vertical-padding
+                  oppia-foundation-mobile-and-tablet-vertical-padding-20"
            layout="column"
            layout-gt-md="row"
            layout-fill>
@@ -202,14 +203,14 @@
                      layout-align="center center">
       <div layout="column"
            layout-align="center"
-           flex="50">
-        <img layout-fill
+           flex-gt-sm="50">
+        <img
              src="/assets/images/partnerships/partnerships_student_image.jpg"
              class="partnerships-page-student-quote-image"
              alt="Student image">
       </div>
       <div class="oppia-foundation-horizontal-padding"
-           flex="50">
+           flex-gt-sm="50">
         <md-card-content layout="column"
                          layout-align="center none"
                          class="partnerships-page-student-quote-box
@@ -221,11 +222,9 @@
                              partnerships-page-student-image-blockquote
                              oppia-foundation-black-text">
             <span class="oppia-foundation-left-align-text">
-              &ldquo;
-              I liked learning [with Oppia] on mobile because we get very good 
+              &ldquo;I liked learning [with Oppia] on mobile because we get very good 
               questions and, if we get something wrong, we are told how to 
-              correct it.
-              &rdquo;
+              correct it.&rdquo;
             </span>
           </md-content>
           <cite class="oppia-foundation-cite-text-box" style="font-size: 10pt;">
@@ -342,6 +341,7 @@
                      layout-gt-sm="row">
       <md-content class="oppia-foundation-gray-background
                          oppia-foundation-black-text
+                         oppia-foundation-mobile-and-small-tablet-bottom-padding-40
                          partnerships-page-description-text-box"
                   flex-gt-sm="45">
         <h3 class="md-display-1 partnerships-page-content-title">
@@ -357,15 +357,14 @@
           platform.
           <a class="email-us-link" 
              href="mailto:{{ADMIN_EMAIL}}?subject={{PARTNERSHIPS_EMAIL_SUBJECT}}">
-             Email us
-          </a> or fill out this form for more information, 
+             Email us</a> or fill out this form for more information, 
           questions, or to learn about investment opportunities.
         </p>
         <p>
           We’ll get back to you right away!
         </p>
       </md-content>
-      <div flex="10"></div>
+      <div flex-gt-sm="10"></div>
       <form name="partnershipsEmailForm"
             class="oppia-foundation-white-background
                    partnerships-page-form">
@@ -580,6 +579,11 @@
     z-index: 8;
     position: relative;
   }
+  @media screen and (min-width: 960px) {
+    .partnerships-page-student-quote-image {
+      max-width: 100%;
+    }
+  }
   .partnerships-page-grow-card-icon {
     border: 0;
     display: block;
@@ -608,6 +612,7 @@
     padding-bottom: 80px;
   }
   .partnerships-page-icon-description-text-box {
+    font-weight: bold;
     font-size: 10pt;
   }
   @media screen and (max-width: 600px) {
