@@ -51,6 +51,7 @@ export NODE_MODULE_DIR=$COMMON_DIR/node_modules
 
 export MACHINE_TYPE=`uname -m`
 export OS=`uname`
+export ME=$(whoami)
 
 mkdir -p $TOOLS_DIR
 mkdir -p $THIRD_PARTY_DIR/js
