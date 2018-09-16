@@ -41,38 +41,22 @@ if [[ ${PWD##*/} != $EXPECTED_PWD ]]; then
   return 1
 fi
 
+source scripts/setup_util.sh || exit 1
+
 export FOUNDATION_DIR=`pwd`
 export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
 export TOOLS_DIR=$COMMON_DIR/oppia_tools
 export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
+export NODE_MODULE_DIR=$COMMON_DIR/node_modules
+
 export MACHINE_TYPE=`uname -m`
 export OS=`uname`
+export ME=$(whoami)
 
 mkdir -p $TOOLS_DIR
 mkdir -p $THIRD_PARTY_DIR/js
 mkdir -p $THIRD_PARTY_DIR/css
-
-# This function takes a command for python as its only input.
-# It checks this input for a specific version of python and returns false
-# if it does not match the expected prefix.
-function test_python_version() {
-  EXPECTED_PYTHON_VERSION_PREFIX="2.7"
-  PYTHON_VERSION=$($1 --version 2>&1)
-  if [[ $PYTHON_VERSION =~ Python[[:space:]](.+) ]]; then
-    PYTHON_VERSION=${BASH_REMATCH[1]}
-  else
-    echo "Unrecognizable Python command output: ${PYTHON_VERSION}"
-    # Return a false condition if output of tested command is unrecognizable.
-    return 1
-  fi
-  if [[ "${PYTHON_VERSION}" = ${EXPECTED_PYTHON_VERSION_PREFIX}* ]]; then
-    # Return 0 to indicate a successful match.
-    # Return 1 to indicate a failed match.
-    return 0
-  else
-    return 1
-  fi
-}
+mkdir -p $NODE_MODULE_DIR
 
 # First, check the default Python command (which should be found within the user's $PATH).
 PYTHON_CMD="python"

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "eslint:recommended",
+    "eslint:recommended"
   ],
   "plugins": [
     "angular",
@@ -9,7 +9,7 @@
   "rules": {
     "angular/di": [
       "error",
-      "array",
+      "array"
       ],
     "angular/di-order": "error",
     "angular/di-unused": "error",
@@ -94,9 +94,10 @@
       }
     ],
     "max-len": [
-      "error",
-      "code": 80,
-      "ignoreUrls": true
+      "error", {
+        "code": 80,
+        "ignoreUrls": true
+      }
     ],
     "no-compare-neg": "off",
     "no-console": [
@@ -172,8 +173,12 @@
       {
         "anonymous": "never",
         "asyncArrow": "never",
-        "named": "never",
+        "named": "never"
       }
+    ],
+    "space-before-blocks": [
+      "error",
+      "always"
     ],
     "spaced-comment": [
       "error",
@@ -186,7 +191,7 @@
       "error",
       {
         "words": true,
-        "nonwords": false,
+        "nonwords": false
       }
     ],
     "wrap-iife": [

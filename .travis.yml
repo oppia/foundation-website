@@ -40,6 +40,7 @@ cache:
   # Cache dependencies.
   directories:
     - ../oppia_tools/
+    - ../node_modules/
     - third_party/
     - $HOME/.cache/pip
 
