@@ -16,11 +16,15 @@
 #
 #     bash scripts/run_linter.sh
 
-source $(dirname $0)/setup.sh
+source $(dirname $0)/setup.sh || exit 1
+source $(dirname $0)/setup_util.sh || exit 1
 if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
 set -e
+
+export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
+maybeInstallDependencies "$@"
 
 echo Checking if pylint is installed in $TOOLS_DIR
 if [ ! -d "$TOOLS_DIR/pylint-1.9.3" ]; then
@@ -59,8 +63,8 @@ if [ ! -d "$TOOLS_DIR/pycodestyle-2.3.1" ]; then
 fi
 
 if [ "$TRAVIS" == 'true' ]; then
-  pycodestyle -v
-  pylint_runner -v
+  pycodestyle -v || exit 1
+  pylint_runner -v || exit 1
 fi
 
 if [ "$TRAVIS" == 'false' ]; then
@@ -70,3 +74,21 @@ if [ "$TRAVIS" == 'false' ]; then
 fi
 
 $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v || exit 1
+
+# Install third-party node modules for linting after checking for existing
+# installation.
+source $(dirname $0)/setup_node_modules_util.sh
+
+install_node_module stylelint 9.2.1
+install_node_module stylelint-config-standard 18.2.0
+
+if [ ! -f $FOUNDATION_DIR/static/assets/css/stylesheet.css ]; then
+  echo "stylesheet.css does not exist!"
+  exit 1
+fi
+
+echo Running stylelint on all CSS files
+$NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/assets/css/stylesheet.css" --config=$FOUNDATION_DIR/.stylelintrc || exit 1
+
+echo Running stylelint on all HTML files
+$NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/pages/**/*.html" --config=$FOUNDATION_DIR/.stylelintrc || exit 1

@@ -29,12 +29,16 @@
 </md-nav-bar>
 
 <style>
-  .md-button:not([disabled]).md-focused, .md-button:not([disabled]).md-focused {
-    background-color: rgba(5, 190, 178, 1);;
+  .md-button:not([disabled]).md-focused {
+    background-color: rgba(5, 190, 178, 1);
   }
   .md-button.side-bar-menu-button {
     min-height: 0;
     min-width: 20px;
+  }
+  .md-nav-bar, .md-nav-bar > nav, ._md-nav-bar-list, .md-button._md-nav-button {
+    margin: 0;
+    min-height: 50px;
   }
   md-nav-bar .md-nav-bar {
     background: #009688;
@@ -56,22 +60,23 @@
   md-nav-bar .md-nav-item:hover {
     background-color: rgba(5, 190, 178, 1);
   }
-  md-nav-bar .md-nav-item:first-of-type{
+  md-nav-bar .md-nav-item:first-of-type {
     margin-left: 0;
-  }
-  md-nav-bar .md-nav-item:first-of-type:hover {
-    background-color: rgb(5, 95, 89);
   }
   md-nav-bar .md-nav-item:last-of-type {
     background-color: rgb(5, 95, 89);
     margin-right: 30px;
   }
+  md-nav-bar .md-nav-item:hover,
+  md-navbar .md-nav-item:focus {
+    background-color: rgba(5, 190, 178, 1);
+  }
+  md-nav-bar .md-nav-item:first-of-type:hover {
+    background-color: rgb(5, 95, 89);
+  }
   md-nav-bar .md-nav-item:last-of-type:hover {
     background-color: rgba(5, 190, 178, 1);
     color: white;
-  }
-  md-nav-bar .md-nav-item:hover, .md-nav-item:focused {
-    background-color: rgba(5, 190, 178, 1);
   }
   .navbar-oppia-foundation-icon {
     color:white;
@@ -87,7 +92,8 @@
     background: #009688;
     font-weight: bold;
   }
-  md-menu-item .md-button:hover, .md-button:focus {
+  md-menu-item .md-button:hover,
+  md-menu-item .md-button:focus {
     color: rgba(255,255,255,1);
   }
   .nav-bar-icon {
@@ -95,9 +101,5 @@
     display: block;
     height: auto;
     width: 229px;
-  }
-  .md-nav-bar, .md-nav-bar > nav, ._md-nav-bar-list, .md-button._md-nav-button {
-    margin: 0;
-    min-height: 50px;
   }
 </style>

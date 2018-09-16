@@ -41,8 +41,8 @@ set -e
 source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_gae.sh || exit 1
 
-# Install third party dependencies.
-bash scripts/install_third_party.sh
+export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
+maybeInstallDependencies "$@"
 
 # Check that there isn't a server already running.
 if ( nc -vz localhost 8080 >/dev/null 2>&1 ); then
@@ -59,7 +59,7 @@ echo Starting GAE development server
 # To turn emailing on, add the option '--enable_sendmail' and change the relevant
 # settings in config.py.
 
-($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . $*)&
+($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . )&
 
 # Wait for the servers to come up.
 while ! nc -vz localhost 8080 >/dev/null 2>&1; do sleep 1; done
