@@ -38,3 +38,4 @@ jobs:
           key: oppia-tools-cache
           paths:
             - ../oppia_tools/
+            - ../node_modules/
