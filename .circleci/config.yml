@@ -36,10 +36,6 @@ jobs:
           key: node-modules-cache-v1.01
           paths:
             - ../node_modules/
-      - run:
-          name: run linter
-          command: |
-            bash scripts/run_linter.sh
 
   run-linter:
     docker:
@@ -66,3 +62,10 @@ jobs:
           key: node-modules-cache-v1.01
           paths:
             - ../node_modules/
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - run-backend-tests
+      - run-linter
