@@ -25,7 +25,7 @@
              aria-label="Sidebar button">
     </md-icon>
   </md-button>
-  <md-nav-item hide-xs hide-sm md-nav-href="/donate">Donate</md-nav-item>
+  <md-nav-item md-nav-href="/donate" hide-xs hide-sm>Donate</md-nav-item>
 </md-nav-bar>
 
 <style>
@@ -67,7 +67,6 @@
     margin-left: 0;
   }
   md-nav-bar .md-nav-item:last-of-type {
-    background-color: rgb(5, 95, 89);
     margin-right: 30px;
   }
   md-nav-bar .md-nav-item:hover,
@@ -76,10 +75,6 @@
   }
   md-nav-bar .md-nav-item:first-of-type:hover {
     background-color: rgb(5, 95, 89);
-  }
-  md-nav-bar .md-nav-item:last-of-type:hover {
-    background-color: rgba(5, 190, 178, 1);
-    color: white;
   }
   .navbar-oppia-foundation-icon {
     color:white;

@@ -178,11 +178,6 @@ p {
   margin: 10px 0 15px 0;
 }
 
-center {
-  font-family: "Capriola", "Roboto", Arial, sans-serif;
-  line-height: 1.5;
-}
-
 footer p {
   color: #f2f2f2;
   font-size: 12px;
@@ -604,7 +599,7 @@ md-sidenav {
 }
 
 .oppia-foundation-cite-text-box {
-  text-align: right; 
+  text-align: right;
   margin-top: 20px;
 }
 
@@ -622,7 +617,7 @@ html {
     font-size: 16px;
   }
 }
- 
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/

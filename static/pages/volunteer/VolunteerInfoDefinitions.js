@@ -34,7 +34,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     professionalQuote: 'Oppia provides more students with access to ' +
     'individualized learning experiences. Volunteering for Oppia allows me ' +
     'to contribute to this meaningful cause.',
-    position: 'UI Designer'
+    position: 'UX Designer'
   }],
 
   development: [{
