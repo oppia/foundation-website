@@ -76,11 +76,12 @@
       <paypal-donate-form button-text="Donate via Paypal">
       </paypal-donate-form>
     </md-card-actions>
-    <div class="donate-hero-image-container">
+    <md-card-content class="donate-hero-image-container"
+                     layout-fill layout="column" layout-align="end">
       <img hide-gt-md
            src="/assets/images/donate/donate_hero_card_new.jpg"
            class="donate-page-welcome-image" alt="Donate hero image">
-    </div>
+    </md-card-content>
   </md-card>
   <md-card layout-fill layout="column" layout-gt-xs="row" class="oppia-foundation-vertical-padding">
     <md-card-content layout-gt-sm="row"
@@ -192,7 +193,7 @@
     height: 500px;
   }
   .donate-hero-image-container {
-    padding-top: 60px;
+    padding: 60px 0 0;
   }
   .donate-page-welcome-image-overlay {
     bottom: 0;
@@ -209,12 +210,11 @@
   .donate-page-donate-works-image-container {
     border: 0;
     height: auto;
+    min-width: 300px;
     max-width: 550px;
-    min-width: 50%;
   }
   @media screen and (min-width: 699px) {
     .donate-page-donate-works-image-container {
-      min-width: 300px;
       width: 35%;
     }
   }
