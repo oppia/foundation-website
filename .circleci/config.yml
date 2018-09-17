@@ -16,7 +16,8 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: oppia-tools-cache
+          key: oppia-tools-cache-v1.01
+          key: node-modules-cache-v1.01
 
       - run:
           name: install dependencies
@@ -35,7 +36,9 @@ jobs:
             bash scripts/run_linter.sh
 
       - save_cache:
-          key: oppia-tools-cache
+          key: oppia-tools-cache-v1.01
           paths:
-            - ../oppia_tools/
+            - ../node_modules/
+          key: node-modules-cache-v1.01
+          paths:
             - ../node_modules/
