@@ -30,7 +30,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'UX Designer'
   }, {
     fullName: 'Rachel Chen',
-    profilePictureImageFilename: 'Rach.jpg',
+    profilePictureImageFilename: 'rachel.jpg',
     professionalQuote: 'Oppia provides more students with access to ' +
     'individualized learning experiences. Volunteering for Oppia allows me ' +
     'to contribute to this meaningful cause.',
@@ -79,14 +79,14 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     profilePictureImageFilename: 'kefeh.jpg',
     professionalQuote: 'Oppia is giving a better perspective of how ' +
     'knowledge sharing should be done. I wanted to be part of that.',
-    position: 'User Research Lead, Cameroon'
+    position: 'User Research Lead (Cameroon)'
   }, {
     fullName: 'Yulin Liu',
     profilePictureImageFilename: 'yulin.jpg',
     professionalQuote: 'I like that Oppia approaches designing better ' +
     'lessons through testing with young learners and listening very ' +
     'carefully to what they have to say!',
-    position: 'User Researcher, Boston'
+    position: 'User Researcher (Boston)'
   }, {
     fullName: 'Kevin Lee',
     profilePictureImageFilename: 'kevin.jpg',
@@ -106,13 +106,10 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Coordinator, Lesson Creation'
   }, {
     fullName: 'Diana Chen',
-    profilePictureImageFilename: 'sample_profile_image.jpeg',
-    professionalQuote: '[This is something that still needs to be filled in.]',
+    profilePictureImageFilename: 'diana.jpg',
+    professionalQuote: 'I contribute to Oppia because seeing the community ' +
+    'and the impact it creates makes me hopeful for the future of education, ' +
+    'and I want to be a part of that change.',
     position: 'Product Manager'
-  }, {
-    fullName: 'Terrence Wilson',
-    profilePictureImageFilename: 'sample_profile_image.jpeg',
-    professionalQuote: '[This is something that still needs to be filled in.]',
-    position: 'Grant Writer'
   }]
 });
