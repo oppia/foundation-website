@@ -40,7 +40,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       $scope.activeTabId = activeTabId;
     };
     var scrollToTopButton = angular.element(document.querySelector(
-      '#scrollToTopButton'));
+      '#scroll-to-top-button'));
     $document.bind('scroll', function() {
       // Only display scrollToTop button on scroll event.
       if ($window.scrollY > 0 && !scrollToTopButton.hasClass('scrolling')) {
