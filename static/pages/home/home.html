@@ -343,8 +343,10 @@
           </p>
         </md-content>
     </md-card-content>
-    <md-card-actions layout="row" layout-xs="column" class="donate-page-donate-button-row"
-      layout-align="center center">
+    <md-card-actions layout="row"
+                     layout-xs="column"
+                     layout-align="center center"
+                     class="home-page-donate-button-row">
       <paypal-donate-form button-text="Donate via Credit Card">
       </paypal-donate-form>
       <div flex="5"></div>
@@ -354,14 +356,6 @@
   </md-card>
 </section>
 <style>
-  .donate-page-donate-button-row {
-    margin: 0;
-  }
-  @media screen and (max-width: 600px) {
-    .donate-page-donate-button-row {
-      min-height: 95px;
-    }
-  }
   .home-page-hero-card {
     position: relative;
   }
@@ -541,5 +535,13 @@
   }
   .home-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  .home-page-donate-button-row {
+    margin: 0;
+  }
+  @media screen and (max-width: 600px) {
+    .home-page-donate-button-row {
+      min-height: 95px;
+    }
   }
 </style>
