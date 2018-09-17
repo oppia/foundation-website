@@ -24,7 +24,7 @@
          src="/assets/images/home/home_cheering_child_cropped.jpg"
          alt="Donate hero image">
   </md-card>
-  <md-card layout-fill style="position: relative;">
+  <md-card class="home-page-hero-card" layout-fill>
     <div hide-xs hide-sm hide-md class="home-page-desktop-hero-slide">
       <div class="oppia-foundation-clearfix"
            layout="column"
@@ -79,7 +79,7 @@
     <div show-xs
          show-sm
          hide-gt-md
-         style="width: 100%">
+         layout-fill>
       <div class="macbook">
         <div class="screen">
           <div class="viewport">
@@ -125,7 +125,7 @@
           </md-button>
         </md-card-actions>
       </md-content>
-      <div hide-xs hide-sm hide-md style="width: 100%">
+      <div hide-xs hide-sm hide-md layout-fill>
         <div class="macbook">
           <div class="screen">
             <div class="viewport" controls>
@@ -363,6 +363,9 @@
   </md-card>
 </section>
 <style>
+  .home-page-hero-card {
+    position: relative;
+  }
   .home-page-title-box {
     font-family: "Roboto", Arial, sans-serif;
     max-width: 850px;

@@ -53,12 +53,12 @@
              alt="Global graphics">
       </div>
       <md-card-actions hide-gt-sm layout="row" layout-align="center center">
-        <md-button ng-click="goToElement('mobileDesignCard')"
+        <md-button ng-click="goToElement('mobile-design-card')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
           Design
         </md-button>
-        <md-button ng-click="goToElement('mobileDevelopmentCard')"
+        <md-button ng-click="goToElement('mobile-development-card')"
                    class="oppia-foundation-no-margin
                    oppia-foundation-white-button">
           Development
@@ -67,12 +67,12 @@
       <md-card-actions class="oppia-foundation-mobile-and-small-tablet-bottom-padding-40"
                        hide-gt-sm layout="row"
                        layout-align="center center">
-        <md-button ng-click="goToElement('mobileResearchCard')"
+        <md-button ng-click="goToElement('mobile-research-card')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
           Research
         </md-button>
-        <md-button ng-click="goToElement('mobileMarketingCard')"
+        <md-button ng-click="goToElement('mobile-marketing-card')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
           Marketing
@@ -111,7 +111,7 @@
       </md-content>
     </md-card-content>
   </md-card>
-  <md-card id="mobileDesignCard"
+  <md-card id="mobile-design-card"
            class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
@@ -148,7 +148,7 @@
                       corresponding-tab-name="design">
     </profile-carousel>
   </md-card>
-  <md-card id="mobileDevelopmentCard"
+  <md-card id="mobile-development-card"
            class="oppia-foundation-white-background
                   oppia-foundation-vertical-padding"
            show-xs
@@ -188,7 +188,7 @@
                       corresponding-tab-name="development">
     </profile-carousel>
   </md-card>
-  <md-card id="mobileResearchCard"
+  <md-card id="mobile-research-card"
            class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
@@ -233,7 +233,7 @@
                       corresponding-tab-name="research">
     </profile-carousel>
   </md-card>
-  <md-card id="mobileMarketingCard"
+  <md-card id="mobile-marketing-card"
            class="oppia-foundation-white-background
                   oppia-foundation-vertical-padding"
            show-xs
@@ -301,8 +301,9 @@
           grow? We&rsquo;d love to hear from you.
         </p>
         <p>
-          Whatever your skills, there are ways to participate in the Oppia mission. We
-          invite you to reach out and see how your help can make a difference.
+          Whatever your skills, there are ways to participate in Oppia&rsquo;s
+          mission. We invite you to reach out and see how your help can make a
+          difference.
         </p>
         <p>
           Fill out this form or
@@ -321,13 +322,14 @@
                      volunteer-page-form"
               layout-fill>
           <md-input-container class="md-block">
-            <label class="oppia-foundation-uppercase-text">
+            <label class="oppia-foundation-uppercase-text" for="full-name">
               Name
             </label>
             <md-icon md-svg-src="/assets/icons/baseline-person-24px.svg"
                      aria-label="Email form person icon">
             </md-icon>
             <input autocomplete="name"
+                   id="full-name"
                    placeholder=""
                    required
                    md-no-asterisk
@@ -340,13 +342,14 @@
             </div>
           </md-input-container>
           <md-input-container class="md-block">
-            <label class="oppia-foundation-uppercase-text">
+            <label class="oppia-foundation-uppercase-text" for="email">
               Email
             </label>
             <md-icon md-svg-src="/assets/icons/baseline-email-24px.svg"
                      aria-label="Email form email icon">
             </md-icon>
             <input autocomplete="email"
+                   id="email"
                    placeholder=""
                    required
                    md-no-asterisk
@@ -367,13 +370,14 @@
             </div>
           </md-input-container>
           <md-input-container class="md-block">
-            <label class="oppia-foundation-uppercase-text">
+            <label class="oppia-foundation-uppercase-text" for="comment">
               Message
             </label>
             <md-icon md-svg-src="/assets/icons/baseline-comment-24px.svg"
                      aria-label="Email form comment icon">
             </md-icon>
-            <textarea ng-model="comment"
+            <textarea id="comment"
+                      ng-model="comment"
                       placeholder=""
                       name="comment"
                       required
@@ -392,18 +396,16 @@
       </div>
     </md-card-content>
   </md-card>
-   <md-button id="scrollToTopButton"
+   <md-button id="scroll-to-top-button"
               hide-gt-sm
-              ng-click="goToElement('navigationBar')"
+              ng-click="goToElement('navigation-bar')"
               class="md-primary
                      md-fab
                      md-fab-bottom-right
                      oppia-foundation-scroll-to-top-button"
               aria-label="Scroll to top"
-              style="margin: auto;"
               md-colors="{background: 'teal-900'}">
-    <md-icon md-svg-src="assets/icons/baseline-keyboard_arrow_up-24px.svg"
-             style="color: white;">
+    <md-icon md-svg-src="assets/icons/baseline-keyboard_arrow_up-24px.svg">
     </md-icon>
   </md-button>
 </section>
@@ -556,5 +558,11 @@
   }
   md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  .volunteer-page-desktop-carousel-container {
+    padding-top: 40px;
+  }
+  .volunteer-page-mobile-carousel-container {
+    padding-top: 20px;
   }
 </style>

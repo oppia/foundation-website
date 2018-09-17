@@ -8,7 +8,6 @@
     <meta name="description" content="Oppia Foundation">
 
     <link rel="shortcut icon" type="image/png" href="assets/images/logo_light.png">
-
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.9/angular-material.min.css">
     <!-- UI Bootstrap requires Bootstrap CSS(tested with v3.3.7) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
@@ -38,16 +37,13 @@
     <script src="pages/partnerships/Partnerships.js"></script>
     <script src="pages/volunteer/ProfileCarouselDirective.js"></script>
     <script src="pages/footer/FooterDirective.js"></script>
-    <title ng-bind="$root.title"></title>
+    <title ng-bind="$root.title">Oppia Foundation</title>
     <base href="/">
   </head>
 
   <body layout="row" aria-label="Oppia Foundation Page">
     <div class="outer">
-      <md-sidenav class="md-sidenav-right
-                         md-whiteframe-4dp
-                         oppia-foundation-green-background"
-                  md-component-id="right">
+      <md-sidenav class="md-sidenav-right md-whiteframe-4dp oppia-foundation-green-background" md-component-id="right">
         <side-bar></side-bar>
       </md-sidenav>
       <header role="banner">
@@ -65,4 +61,5 @@
       </main>
     </div>
   </body>
+
 </html>
