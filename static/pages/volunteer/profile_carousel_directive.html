@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <div layout="row"
      layout-align="center center"
-     class="oppia-foundation-horizontal-padding"
-     ng-if="displayDesktopCarousel"
-     style="padding-top: 40px;">
+     class="oppia-foundation-horizontal-padding
+            volunteer-page-desktop-carousel-container"
+     ng-if="displayDesktopCarousel">
   <uib-carousel uib-carousel
                 active="activeSlideIndex"
                 interval="slideIntervalInMillisecs"
@@ -39,7 +39,7 @@
   </uib-carousel>
 </div>
 
-<div style="padding-top: 20px;"
+<div class="volunteer-page-mobile-carousel-container"
      layout="column"
      ng-if="displayMobileCarousel">
   <uib-carousel uib-carousel

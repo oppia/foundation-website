@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<md-nav-bar id="navigationBar" md-no-ink-bar="true" nav-bar-aria-label="navigation links" tabindex="0">
+<md-nav-bar id="navigation-bar" md-no-ink-bar="true" nav-bar-aria-label="navigation links" tabindex="0">
   <md-nav-item md-nav-href="/"
                aria-label="Oppia Foundation Logo"
                layout="column"
                layout-align="center"
                class="oppia-foundation-no-padding oppia-foundation-icon">
-    <span style="display: none;">The Oppia Foundation</span>
+    <span class="oppia-foundation-logo-text">The Oppia Foundation</span>
     <img src="/assets/images/navbar/oppia_foundation_logo.png"
          class="nav-bar-icon"
          layout="row"
@@ -29,6 +29,9 @@
 </md-nav-bar>
 
 <style>
+  .oppia-foundation-logo-text {
+    display: none;
+  }
   .md-button:not([disabled]).md-focused {
     background-color: rgba(5, 190, 178, 1);
   }
@@ -36,7 +39,7 @@
     min-height: 0;
     min-width: 20px;
   }
-  .md-nav-bar, .md-nav-bar > nav, ._md-nav-bar-list, .md-button._md-nav-button {
+  .md-nav-bar, ._md-nav-bar-list, .md-button._md-nav-button {
     margin: 0;
     min-height: 50px;
   }

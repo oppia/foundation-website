@@ -95,3 +95,9 @@ $NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/assets/css/stylesheet.css" -
 
 echo Running stylelint on all HTML files
 $NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/pages/**/*.html" --config=$FOUNDATION_DIR/.stylelintrc || exit 1
+
+install_node_module htmllint 0.7.2
+install_node_module htmllint-cli 0.0.7
+
+echo Running htmllint on all HTML files
+$NODE_MODULE_DIR/htmllint-cli/bin/cli.js --rc=$FOUNDATION_DIR/.htmllintrc || exit 1
