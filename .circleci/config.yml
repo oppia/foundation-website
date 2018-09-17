@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  run-backend-tests:
+  build:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
@@ -16,7 +16,7 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: oppia-tools-cache-v1.01
+          key: oppia-tools-cache
 
       - run:
           name: install dependencies
@@ -28,44 +28,14 @@ jobs:
           name: run tests
           command: |
             bash scripts/run_backend_tests.sh --generate_coverage_report
-    
-      - save_cache:
-          key: oppia-tools-cache-v1.01
-          paths:
-            - ../node_modules/
-          key: node-modules-cache-v1.01
-          paths:
-            - ../node_modules/
-
-  run-linter:
-    docker:
-      - image: circleci/python:2.7.15-browsers
-
-    working_directory: ~/foundation-website
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          key: oppia-tools-cache-v1.01
-          key: node-modules-cache-v1.01
       
       - run:
           name: run linter
           command: |
             bash scripts/run_linter.sh
-    
-      - save_cache:
-          key: oppia-tools-cache-v1.01
-          paths:
-            - ../node_modules/
-          key: node-modules-cache-v1.01
-          paths:
-            - ../node_modules/
 
-workflows:
-  version: 2
-  build:
-    jobs:
-      - run-backend-tests
-      - run-linter
+      - save_cache:
+          key: oppia-tools-cache
+          paths:
+            - ../oppia_tools/
+            - ../node_modules/
