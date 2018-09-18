@@ -36,6 +36,8 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
         }
         volunteerProfiles.splice(randomIndex, 1);
       }
+
+      return slides;
     };
     var volunteersByCategory = {};
     Object.keys(VOLUNTEER_INFO).forEach(function(volunteerCategory) {
