@@ -21,23 +21,17 @@
               </h1>
             </md-card-title>
             <p></p>
-            <h4 class="md-title">
+            <h4 class="md-title donate-page-title-description">
               With your support, the Oppia Foundation can continue its mission
               to provide high-quality personalized lessons to students from all around the world.
             </h4>
             <md-card-actions class="donate-page-donate-button-row"
                              layout="row">
-              <md-button class="md-no-ink
-                                oppia-foundation-green-button"
-                         href="https://www.paypal.com/cgi-bin/webscr">
-                Donate via Credit Card
-              </md-button>
+              <paypal-donate-form button-text="Donate via Credit Card">
+              </paypal-donate-form>
               <div flex="10"></div>
-              <md-button class="md-no-ink
-                                oppia-foundation-green-button"
-                         href="https://www.paypal.com/cgi-bin/webscr">
-                Donate via Paypal
-              </md-button>
+              <paypal-donate-form button-text="Donate via Paypal">
+              </paypal-donate-form>
             </md-card-actions>
           </div>
         </md-card-content>
@@ -51,8 +45,7 @@
                      layout-fill
                      layout-align="center"
                      class="oppia-foundation-horizontal-padding
-                            oppia-foundation-mobile-and-small-tablet-top-padding-60
-                            oppia-foundation-mobile-and-small-tablet-bottom-padding-60
+                            oppia-foundation-mobile-and-small-tablet-top-padding
                             oppia-foundation-small-tablet-and-desktop-vertical-padding
                             oppia-foundation-white-background
                             oppia-foundation-dark-green-text
@@ -71,25 +64,25 @@
           to students from all around the world.
         </h4>
       </md-content>
-      <md-card-actions layout="row"
-                       layout-xs="column"
-                       class="donate-page-donate-button-row">
-        <md-button class="md-no-ink
-                          oppia-foundation-green-button"
-                   href="https://www.paypal.com/cgi-bin/webscr">
-          Donate via Credit Card
-        </md-button>
-        <div flex="10"></div>
-        <md-button class="md-no-ink
-                          oppia-foundation-green-button"
-                   href="https://www.paypal.com/cgi-bin/webscr">
-          Donate via Paypal
-        </md-button>
-      </md-card-actions>
     </md-card-content>
-    <img hide-gt-md
-         src="/assets/images/donate/donate_hero_card_new.jpg"
-         class="donate-page-welcome-image" alt="Donate hero image">
+    <md-card-actions hide-gt-md
+                     layout="row" layout-xs="column" layout-align="start"
+                     layout-align-xs="center center"
+                     class="donate-page-donate-button-row
+                            oppia-foundation-horizontal-padding">
+      <paypal-donate-form button-text="Donate via Credit Card">
+      </paypal-donate-form>
+      <div flex="5"></div>
+      <paypal-donate-form button-text="Donate via Paypal">
+      </paypal-donate-form>
+    </md-card-actions>
+    <md-card-content class="donate-hero-image-container"
+                    hide-gt-md
+                    layout-fill layout="column" layout-align="end">
+      <img hide-gt-md
+           src="/assets/images/donate/donate_hero_card_new.jpg"
+           class="donate-page-welcome-image" alt="Donate hero image">
+    </md-card-content>
   </md-card>
   <md-card layout-fill layout="column" layout-gt-xs="row" class="oppia-foundation-vertical-padding">
     <md-card-content layout-gt-sm="row"
@@ -174,24 +167,34 @@
     position: relative;
   }
   .donate-page-donate-button-row {
-    margin: 0;
-    padding-top: 20px;
-    min-width: 450px;
+    margin: auto;
+    width: 850px;
   }
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 600px) {
     .donate-page-donate-button-row {
-      min-height: 120px;
+      min-height: 95px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .donate-page-donate-button-row {
+      width: auto;
     }
   }
   .donate-page-title-box {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
     max-width: 850px;
   }
+  .donate-page-title-description {
+    padding-bottom: 20px;
+  }
   .donate-page-desktop-hero-slide {
     background-image: url('/assets/images/donate/donate_hero_card_new.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
+  }
+  .donate-hero-image-container {
+    padding: 60px 0 0;
   }
   .donate-page-welcome-image-overlay {
     bottom: 0;
@@ -208,11 +211,13 @@
   .donate-page-donate-works-image-container {
     border: 0;
     height: auto;
-    min-width: 300px;
-    max-width: 550px;
+    max-width: 350px;
+    min-width: 50%;
   }
   @media screen and (min-width: 699px) {
     .donate-page-donate-works-image-container {
+      max-width: 450px;
+      min-width: 0;
       width: 35%;
     }
   }
