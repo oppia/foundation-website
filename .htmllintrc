@@ -32,7 +32,7 @@
     "tag-self-close": false,
     "doctype-first": false,
     "doctype-html5": false,
-    "attr-name-style": "dash",
+    "attr-name-style": false,
     "attr-name-ignore-regex": false,
     "attr-no-dup": true,
     "attr-no-unsafe-char": false,
