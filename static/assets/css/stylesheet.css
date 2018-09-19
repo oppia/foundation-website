@@ -370,8 +370,23 @@ Full-Width Styles
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  .oppia-foundation-mobile-and-tablet-top-padding {
+    padding-top: 80px;
+  }
+  .oppia-foundation-mobile-and-tablet-top-padding-60 {
+    padding-top: 60px;
+  }
+  .oppia-foundation-mobile-and-tablet-top-padding-40 {
+    padding-top: 40px;
+  }
   .oppia-foundation-mobile-and-tablet-bottom-padding {
     padding-bottom: 80px;
+  }
+  .oppia-foundation-mobile-and-tablet-bottom-padding-60 {
+    padding-bottom: 60px;
+  }
+  .oppia-foundation-mobile-and-tablet-bottom-padding-40 {
+    padding-bottom: 40px;
   }
   .oppia-foundation-tablet-and-desktop-right-padding {
     padding-right: 40px;
@@ -406,8 +421,14 @@ Full-Width Styles
   .oppia-foundation-mobile-and-small-tablet-top-padding-40 {
     padding-top: 40px;
   }
+  .oppia-foundation-mobile-and-small-tablet-top-padding-60 {
+    padding-top: 60px;
+  }
   .oppia-foundation-mobile-and-small-tablet-bottom-padding-40 {
     padding-bottom: 40px;
+  }
+  .oppia-foundation-mobile-and-small-tablet-bottom-padding-60 {
+    padding-bottom: 60px;
   }
   .oppia-foundation-mobile-and-small-tablet-bottom-padding {
     padding-bottom: 80px;
@@ -577,6 +598,127 @@ md-sidenav {
 .oppia-foundation-cite-text-box {
   text-align: right;
   margin-top: 20px;
+}
+
+.oppia-foundation-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+  -webkit-transition: transform 200ms linear;
+  -moz-transition: transform 200ms linear;
+  -ms-transition: transform 200ms linear;
+  -o-transition: transform 200ms linear;
+}
+
+.animated {
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  will-change: transform,opacity
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%)
+  }
+
+  100% {
+    -webkit-transform: translateY(0)
+  }
+}
+
+@-moz-keyframes slideDown {
+  0% {
+    -moz-transform: translateY(-100%)
+  }
+
+  100% {
+    -moz-transform: translateY(0)
+  }
+}
+
+@-o-keyframes slideDown {
+  0% {
+    -o-transform: translateY(-100%)
+  }
+
+  100% {
+    -o-transform: translateY(0)
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.animated.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0)
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%)
+  }
+}
+
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(0)
+  }
+
+  100% {
+    -moz-transform: translateY(-100%)
+  }
+}
+
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(0)
+  }
+
+  100% {
+    -o-transform: translateY(-100%)
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(-100%)
+  }
+}
+
+.animated.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp
 }
 
 /* Responsive font size on large view width. */
