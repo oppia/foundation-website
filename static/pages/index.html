@@ -26,6 +26,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <!-- Smooth scroll library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+    <!-- Headroom JS dependency -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/angular.headroom.min.js"></script>
 
     <script src="/assets/constants.js"></script>
     <script src="pages/app.js"></script>
@@ -46,7 +49,12 @@
       <md-sidenav class="md-sidenav-right md-whiteframe-4dp oppia-foundation-green-background" md-component-id="right">
         <side-bar></side-bar>
       </md-sidenav>
-      <header role="banner">
+      <header class="oppia-foundation-header"
+              role="banner"
+              headroom tolerance="3" offset="80"
+              classes="{'initial':'animated',
+                        'pinned':'slideDown',
+                        'unpinned':'slideUp'}">
         <navigation-bar></navigation-bar>
       </header>
       <main>
