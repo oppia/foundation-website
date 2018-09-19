@@ -253,7 +253,6 @@ td {
 }
 
 form {
-  background: #f2f2f2;
   padding: 20px;
 }
 
@@ -389,6 +388,9 @@ Full-Width Styles
   .oppia-foundation-small-tablet-and-desktop-vertical-padding {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  .oppia-foundation-small-tablet-and-desktop-top-padding {
+    padding-top: 80px;
   }
   .oppia-foundation-small-tablet-and-desktop-right-padding {
     padding-right: 40px;

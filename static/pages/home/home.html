@@ -317,49 +317,40 @@
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-vertical-padding
-                  oppia-foundation-horizontal-padding
                   oppia-foundation-white-background"
            layout-fill>
     <md-card-content class="home-page-display-size
-                            oppia-foundation-no-padding"
+                            oppia-foundation-no-padding
+                            oppia-foundation-horizontal-padding"
                     layout="column"
-                    layout-align="center center">
+                    layout-align="center none">
       <md-content class="oppia-foundation-black-text
                          oppia-foundation-white-background
                          home-page-description-text-box"
                   layout="column"
                   layout-align="center center">
-          <h3 class="oppia-foundation-center-align-text
-                    md-display-1
+          <h3 class="md-display-1
                     home-page-content-title">
             Make a donation
           </h3>
-          <p class="oppia-foundation-center-align-text">
+          <p>
             By making a donation to The Oppia Foundation, you are helping to
             change millions of students&rsquo; lives. Together, we can
             revolutionize the way students around the world use the internet to
             learn.
           </p>
-        <md-list layout="column"
-                 layout-gt-xs="row"
-                 layout-align="space-between center">
-          <md-list-item>
-            <md-button class="oppia-foundation-black-text
-                              oppia-foundation-green-button"
-                       href="https://www.paypal.com/cgi-bin/webscr">
-              Donate via Credit Card
-            </md-button>
-          </md-list-item>
-          <md-list-item>
-            <md-button class="oppia-foundation-black-text
-                              oppia-foundation-green-button"
-                       href="https://www.paypal.com/cgi-bin/webscr">
-              Donate via Paypal
-            </md-button>
-          </md-list-item>
-        </md-list>
-      </md-content>
+        </md-content>
     </md-card-content>
+    <md-card-actions layout="row"
+                     layout-xs="column"
+                     layout-align="center center"
+                     class="home-page-donate-button-row">
+      <paypal-donate-form button-text="Donate via Credit Card">
+      </paypal-donate-form>
+      <div flex="5"></div>
+      <paypal-donate-form button-text="Donate via Paypal">
+      </paypal-donate-form>
+    </md-card-actions>
   </md-card>
 </section>
 <style>
@@ -542,5 +533,13 @@
   }
   .home-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  .home-page-donate-button-row {
+    margin: 0;
+  }
+  @media screen and (max-width: 600px) {
+    .home-page-donate-button-row {
+      min-height: 95px;
+    }
   }
 </style>
