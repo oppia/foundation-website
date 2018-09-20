@@ -34,10 +34,14 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
     }];
-    $scope.activeTabId = 0;
+    $scope.activeTabId = $window.sessionStorage.getItem('activeTabId');
+    if ($scope.activeTabId === null) {
+      $scope.activeTabId = 0;
+    }
     $scope.templateUrl = $scope.tabs[0].templateUrl;
     $scope.onTabSelected = function(activeTabId) {
       $scope.activeTabId = activeTabId;
+      $window.sessionStorage.setItem('activeTabId', activeTabId.toString());
     };
     var scrollToTopButton = angular.element(document.querySelector(
       '#scroll-to-top-button'));
