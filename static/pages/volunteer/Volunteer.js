@@ -34,14 +34,15 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
     }];
-    $scope.activeTabId = $window.sessionStorage.getItem('activeTabId');
-    if ($scope.activeTabId === null) {
-      $scope.activeTabId = 0;
+    $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
+    if ($scope.activeTabIndex === null) {
+      $scope.activeTabIndex = 0;
     }
     $scope.templateUrl = $scope.tabs[0].templateUrl;
-    $scope.onTabSelected = function(activeTabId) {
-      $scope.activeTabId = activeTabId;
-      $window.sessionStorage.setItem('activeTabId', activeTabId.toString());
+    $scope.onTabSelected = function(activeTabIndex) {
+      $scope.activeTabIndex = activeTabIndex;
+      $window.sessionStorage.setItem(
+        'activeTabIndex', activeTabIndex.toString());
     };
     var scrollToTopButton = angular.element(document.querySelector(
       '#scroll-to-top-button'));
