@@ -97,6 +97,7 @@
       <md-content layout-fill>
         <md-tabs md-dynamic-height
                  md-border-bottom
+                 md-selected="activeTabIndex"
                  md-stretch-tabs="always"
                  md-no-pagination>
           <md-tab class="md-accent"
@@ -104,7 +105,7 @@
                   md-on-select="onTabSelected($index % 4)"
                   label="{{tab.title}}">
             <md-tab-body>
-              <ng-include src="tabs[activeTabId].templateUrl"></ng-include>
+              <ng-include src="tabs[activeTabIndex].templateUrl"></ng-include>
             </md-tab-body>
           </md-tab>
         </md-tabs>
