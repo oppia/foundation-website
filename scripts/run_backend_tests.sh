@@ -61,7 +61,7 @@ fi
 
 if (( $# > 2 )); then
     echo "Please provide no more than 2 arguments:"
-    echo "--generate_coverate_report or --test_target"
+    echo "--generate_coverage_report or --test_target"
     exit 1
 fi
 
@@ -99,11 +99,11 @@ filtered_args=${args[@]}
 
 if $RUN_TESTS_WITH_COVERAGE ;then
   echo 'Running backend tests with coverage report'
-  $PYTHON_CMD $COVERAGE_HOME/coverage run -p core/tests/gae_suite.py $filtered_args
+  $PYTHON_CMD $COVERAGE_HOME/coverage run -p static/core/tests/gae_suite.py $filtered_args
   $PYTHON_CMD $COVERAGE_HOME/coverage combine
   $PYTHON_CMD $COVERAGE_HOME/coverage report --omit="$TOOLS_DIR/*","$THIRD_PARTY_DIR/*","/usr/share/*" --show-missing
 else
-  $PYTHON_CMD core/tests/gae_suite.py $@
+  $PYTHON_CMD static/core/tests/gae_suite.py $@
 fi
 
 echo ''
