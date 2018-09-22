@@ -28,7 +28,7 @@ jobs:
           name: run tests
           command: |
             bash scripts/run_backend_tests.sh --generate_coverage_report
-      
+
       - run:
           name: run linter
           command: |
@@ -38,4 +38,4 @@ jobs:
           key: oppia-tools-cache
           paths:
             - ../oppia_tools/
-            - ../node_modules/
+            - ./node_modules/

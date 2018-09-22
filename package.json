@@ -1,0 +1,22 @@
+{
+  "name": "foundation-website",
+  "version": "1.0.0",
+  "description": "Redesigned Oppia Foundation website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oppia/foundation-website.git"
+  },
+  "author": "The Oppia Authors",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/oppia/foundation-website/issues"
+  },
+  "homepage": "https://github.com/oppia/foundation-website#readme",
+  "private": true,
+  "devDependencies": {
+    "htmllint": "^0.7.2",
+    "htmllint-cli": "^0.0.7",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}
