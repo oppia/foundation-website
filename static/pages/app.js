@@ -93,7 +93,6 @@ oppiaFoundationWebsite.run([
       if ($rootScope.actualLocation === newLocation) {
         // If hash is specified explicitly, it trumps previously stored scroll
         // position.
-        // alert('Why did you use history back?');
         if ($location.hash()) {
           $anchorScroll();
           // Else get previous scroll position; if none, scroll to the top of
