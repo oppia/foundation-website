@@ -18,7 +18,7 @@
 
 # INSTRUCTIONS:
 #
-# This script starts up a development server running Oppia's Foundation Website. 
+# This script starts up a development server running Oppia's Foundation Website.
 # It starts up a local Python SimplyHTTPServer.
 #
 # Run the script from the foundation-website root folder:
@@ -59,7 +59,7 @@ echo Starting GAE development server
 # To turn emailing on, add the option '--enable_sendmail' and change the relevant
 # settings in config.py.
 
-($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes . )&
+($GOOGLE_APP_ENGINE_HOME/dev_appserver.py --host 0.0.0.0 --admin_host 127.0.0.1 --skip_sdk_update_check yes static/. )&
 
 # Wait for the servers to come up.
 while ! nc -vz localhost 8080 >/dev/null 2>&1; do sleep 1; done
