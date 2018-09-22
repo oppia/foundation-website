@@ -32,7 +32,6 @@
 
     <script src="/assets/constants.js"></script>
     <script src="pages/app.js"></script>
-    <script src="pages/services/SaveScrollPosition.js"></script>
     <script src="pages/navbar/NavigationBarDirective.js"></script>
     <script src="pages/navbar/SideBarDirective.js"></script>
     <script src="pages/donate/PaypalDonateFormDirective.js"></script>
@@ -62,7 +61,7 @@
       <main>
         <section>
           <div layout="column" flex>
-            <div ng-view save-scroll-position layout-fill flex="noshrink"></div>
+            <div ng-view layout-fill autoscroll="true" flex="noshrink"></div>
           </div>
         </section>
         <footer>

@@ -58,7 +58,8 @@ oppiaFoundationWebsite.config(['$mdThemingProvider',
 ]);
 
 oppiaFoundationWebsite.run([
-  '$location', '$rootScope', function($location, $rootScope) {
+  '$location', '$rootScope', '$route', '$timeout', '$window',
+  function($location, $rootScope, $route, $timeout, $window) {
     $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
       $rootScope.projectTag = current.$$route.projectTag;
       $rootScope.title = 'Oppia Foundation: ' + current.$$route.projectTag;
@@ -67,6 +68,45 @@ oppiaFoundationWebsite.run([
     $rootScope.isActive = function(route) {
       return route === $location.path();
     };
+
+    var scrollPosCache = {};
+    $rootScope.$on('$locationChangeSuccess', function() {
+      $rootScope.actualLocation = $location.path();
+      // Store scroll position for the current view.
+      if ($route.current) {
+        scrollPosCache[$route.current.loadedTemplateUrl] =
+          [$window.pageXOffset, $window.pageYOffset];
+      }
+    });
+
+    $rootScope.$on('$routeChangeStart', function() {
+      // Store scroll position on route change.
+      if ($route.current) {
+        scrollPosCache[$route.current.loadedTemplateUrl] =
+          [$window.pageXOffset, $window.pageYOffset];
+      }
+    });
+
+    $rootScope.$watch(function() {
+      return $location.path();
+    }, function(newLocation) {
+      if ($rootScope.actualLocation === newLocation) {
+        // If hash is specified explicitly, it trumps previously stored scroll
+        // position.
+        // alert('Why did you use history back?');
+        if ($location.hash()) {
+          $anchorScroll();
+          // Else get previous scroll position; if none, scroll to the top of
+          // the page.
+        } else {
+          var prevScrollPos =
+            scrollPosCache[$route.current.loadedTemplateUrl] || [0, 0];
+          $timeout(function() {
+            $window.scrollTo(prevScrollPos[0], prevScrollPos[1]);
+          }, 0);
+        }
+      }
+    });
   }
 ]);
 
