@@ -8,15 +8,15 @@ handlers:
   secure: always
 
 - url: /assets
-  static_dir: assets
+  static_dir: static/assets
   secure: always
 
 - url: /pages
-  static_dir: pages
+  static_dir: static/pages
   secure: always
 
 - url: /.*
-  static_files: pages/index.html
+  static_files: static/pages/index.html
   upload: static/pages/index.html
   secure: always
   expiration: 10m

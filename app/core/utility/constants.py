@@ -20,7 +20,7 @@ import json
 import os
 
 
-CONSTANTS_JS_FILEPATH = os.path.join('static', 'assets', 'constants.js')
+CONSTANTS_JS_FILEPATH = os.path.join('app', 'static', 'assets', 'constants.js')
 
 
 def parse_json_from_js(js_file):
