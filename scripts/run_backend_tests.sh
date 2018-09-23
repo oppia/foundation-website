@@ -99,11 +99,11 @@ filtered_args=${args[@]}
 
 if $RUN_TESTS_WITH_COVERAGE ;then
   echo 'Running backend tests with coverage report'
-  $PYTHON_CMD $COVERAGE_HOME/coverage run -p app/core/tests/gae_suite.py $filtered_args
+  $PYTHON_CMD $COVERAGE_HOME/coverage run -p $APP_DIR/core/tests/gae_suite.py $filtered_args
   $PYTHON_CMD $COVERAGE_HOME/coverage combine
   $PYTHON_CMD $COVERAGE_HOME/coverage report --omit="$TOOLS_DIR/*","$THIRD_PARTY_DIR/*","/usr/share/*" --show-missing
 else
-  $PYTHON_CMD app/core/tests/gae_suite.py $@
+  $PYTHON_CMD $APP_DIR/core/tests/gae_suite.py $@
 fi
 
 echo ''

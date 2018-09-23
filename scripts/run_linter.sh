@@ -79,17 +79,18 @@ $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v || exit 1
 # installation.
 source $(dirname $0)/setup_node_modules_util.sh
 
-if [ ! -f $FOUNDATION_DIR/static/assets/css/stylesheet.css ]; then
+export CSS_STYLESHEET=$APP_DIR/static/assets/css/stylesheet.css
+if [ ! -f $CSS_STYLESHEET ]; then
   echo "stylesheet.css does not exist!"
   exit 1
 fi
 
 echo Running stylelint on all CSS files
-$NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/assets/css/stylesheet.css" --config=$FOUNDATION_DIR/.stylelintrc --formatter verbose || exit 1
+$NODE_MODULE_DIR/stylelint/bin/stylelint.js $CSS_STYLESHEET --config=$FOUNDATION_DIR/.stylelintrc --formatter verbose || exit 1
 
 echo Running stylelint on all HTML files
-$NODE_MODULE_DIR/stylelint/bin/stylelint.js "static/pages/**/*.html" --config=$FOUNDATION_DIR/.stylelintrc --formatter verbose || exit 1
+$NODE_MODULE_DIR/stylelint/bin/stylelint.js "app/static/pages/**/*.html" --config=$FOUNDATION_DIR/.stylelintrc --formatter verbose || exit 1
 
 echo Running htmllint on HTML files
-find ./static -name '*.html'
-$NODE_MODULE_DIR/htmllint-cli/bin/cli.js --rc=$FOUNDATION_DIR/.htmllintrc $(find ./static -name '*.html') || exit 1
+find $APP_DIR -name '*.html'
+$NODE_MODULE_DIR/htmllint-cli/bin/cli.js --rc=$FOUNDATION_DIR/.htmllintrc $(find $APP_DIR -name '*.html') || exit 1

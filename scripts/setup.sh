@@ -44,6 +44,7 @@ fi
 source scripts/setup_util.sh || exit 1
 
 export FOUNDATION_DIR=`pwd`
+export APP_DIR=$FOUNDATION_DIR/app
 export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
 export TOOLS_DIR=$COMMON_DIR/oppia_tools
 export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
