@@ -44,10 +44,11 @@ fi
 source scripts/setup_util.sh || exit 1
 
 export FOUNDATION_DIR=`pwd`
+export APP_DIR=$FOUNDATION_DIR/app
 export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
 export TOOLS_DIR=$COMMON_DIR/oppia_tools
 export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
-export NODE_MODULE_DIR=$COMMON_DIR/node_modules
+export NODE_MODULE_DIR=$FOUNDATION_DIR/node_modules
 
 export MACHINE_TYPE=`uname -m`
 export OS=`uname`
@@ -56,7 +57,6 @@ export ME=$(whoami)
 mkdir -p $TOOLS_DIR
 mkdir -p $THIRD_PARTY_DIR/js
 mkdir -p $THIRD_PARTY_DIR/css
-mkdir -p $NODE_MODULE_DIR
 
 # First, check the default Python command (which should be found within the user's $PATH).
 PYTHON_CMD="python"

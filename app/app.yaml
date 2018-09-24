@@ -23,6 +23,6 @@ handlers:
   http_headers:
     Cache-Control: 'public, max-age=600'
     Vary: Accept-Encoding
-  
+
 - url: /.*
   script: main.app
