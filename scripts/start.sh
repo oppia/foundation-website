@@ -19,7 +19,8 @@
 # INSTRUCTIONS:
 #
 # This script starts up a development server running Oppia's Foundation Website.
-# It starts up a local Python SimplyHTTPServer.
+# It installs any missing third-party dependencies and starts up a local GAE
+# development server.
 #
 # Run the script from the foundation-website root folder:
 #
