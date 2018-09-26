@@ -34,7 +34,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
     }];
-    $scope.volunteerWorkDescription = {
+    $scope.volunteerWorkDescriptionUrls = {
       design: '/pages/volunteer/work_description_templates/' +
         'design_description.html',
       development: '/pages/volunteer/work_description_templates/' +
@@ -66,7 +66,6 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         scrollToTopButton.removeClass('scrolling');
       }
     });
-    $scope.buttonDisabled = false;
     $scope.goToElement = function(elementId) {
       // Please visit https://github.com/oblador/angular-scroll
       // for more info on angular-scroll APIs.
