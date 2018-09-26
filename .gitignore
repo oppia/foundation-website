@@ -3,3 +3,4 @@ third_party/*
 .vscode
 *.pyc
 .coverage
+node_modules/*
