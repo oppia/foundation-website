@@ -34,6 +34,16 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
     }];
+    $scope.volunteerWorkDescription = {
+      design: '/pages/volunteer/work_description_templates/' +
+        'design_description.html',
+      development: '/pages/volunteer/work_description_templates/' +
+        'development_description.html',
+      research: '/pages/volunteer/work_description_templates/' +
+        'research_description.html',
+      marketing: '/pages/volunteer/work_description_templates/' +
+        'marketing_description.html',
+    };
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
