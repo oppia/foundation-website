@@ -595,6 +595,14 @@ Full-Width Styles
   -o-transform: scale(1);
 }
 
+.md-button.oppia-foundation-scroll-to-top-button.invisible {
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+}
+
 md-sidenav {
   min-width: 0;
   max-width: 300px;

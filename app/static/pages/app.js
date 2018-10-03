@@ -20,8 +20,8 @@ for (var constantName in constants) {
   oppiaFoundationWebsite.constant(constantName, constants[constantName]);
 }
 
-oppiaFoundationWebsite.config(['$routeProvider', '$locationProvider',
-  function($routeProvider, $locationProvider) {
+oppiaFoundationWebsite.config(['$locationProvider', '$routeProvider',
+  function($locationProvider, $routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'pages/home/home.html',

@@ -13,10 +13,10 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('VolunteerPage', [
-  '$scope', '$document', '$http', '$mdDialog', '$log', '$window',
+  '$scope', '$document', '$http', '$mdDialog', '$log', '$window', '$timeout',
   'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
   function(
-      $scope, $document, $http, $mdDialog, $log, $window,
+      $scope, $document, $http, $mdDialog, $log, $window, $timeout,
       ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
@@ -34,6 +34,16 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Marketing',
       templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
     }];
+    $scope.volunteerWorkDescriptionUrls = {
+      design: '/pages/volunteer/work_description_templates/' +
+        'design_description.html',
+      development: '/pages/volunteer/work_description_templates/' +
+        'development_description.html',
+      research: '/pages/volunteer/work_description_templates/' +
+        'research_description.html',
+      marketing: '/pages/volunteer/work_description_templates/' +
+        'marketing_description.html',
+    };
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
@@ -60,6 +70,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       // Please visit https://github.com/oblador/angular-scroll
       // for more info on angular-scroll APIs.
       // Vertical offset distance from element after scrolling.
+      scrollToTopButton.addClass('invisible');
       var offset = 0;
       var durationInMilliseconds = 1000;
       var destinationElement = angular.element(
@@ -67,6 +78,9 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       if (destinationElement.length) {
         $document.scrollToElement(
           destinationElement, offset, durationInMilliseconds);
+        $timeout(function() {
+          scrollToTopButton.removeClass('invisible');
+        }, durationInMilliseconds);
       } else {
         throw Error('No such element');
       }
