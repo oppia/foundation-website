@@ -1,3 +1,4 @@
+# coding: utf-8
 # Copyright 2018 The Oppia Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +17,7 @@
 
 
 import json
+from testfixtures import LogCapture
 
 from core.tests import app_engine_test_base
 import main
@@ -27,8 +29,8 @@ class FrontendErrorHandlerTest(app_engine_test_base.AppEngineTestBase):
     def test_frontend_errors_are_logged(self):
         """Test logging is done once a POST request is processed."""
 
-        with self.assertLogs(None, level='INFO') as cm:
+        with LogCapture() as log:
             self.testapp.post(main.FRONTEND_ERROR_URL, params={
                 'payload': json.dumps({'error': 'scope errors'})
             })
-        self.assertEqual(cm.output, ['ERROR:root:Frontend error: scope errors'])
+            log.check(('root', 'ERROR', 'Frontend error: scope errors'),)

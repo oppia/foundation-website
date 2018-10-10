@@ -72,6 +72,13 @@ source $(dirname $0)/setup_gae.sh || exit 1
 # Install third party dependencies
 bash scripts/install_third_party.sh
 
+# Install testfixture package.
+echo Checking if testfixture is installed in $TOOLS_DIR
+if [ ! -d "$TOOLS_DIR/testfixtures-6.3.0" ]; then
+  echo Installing testfixtures
+  pip install testfixtures==6.3.0 --target="$TOOLS_DIR/testfixtures-6.3.0"
+fi
+
 # Install coverage package.
 for arg in "$@"; do
   if [ "$arg" == "--generate_coverage_report" ]; then
