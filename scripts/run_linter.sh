@@ -65,7 +65,9 @@ fi
 if [ "$TRAVIS" == 'true' ]; then
   pycodestyle -v || exit 1
   pylint_runner -v || exit 1
-else
+fi
+
+if [ "$TRAVIS" == 'false' ]; then
   # These commands might not work cross-platform.
   # $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py -v || exit 1
   $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v --exclude=./node_modules,.git || exit 1
