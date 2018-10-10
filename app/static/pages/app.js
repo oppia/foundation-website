@@ -115,3 +115,37 @@ oppiaFoundationWebsite.constant('MAILHANDLER_URL', '/ajax/mailhandler');
 oppiaFoundationWebsite.constant(
   'THANKYOU_MESSAGE', 'Your message has been forwarded to the Oppia admins ' +
   'and we will get back to you shortly.');
+
+// Overwrite the built-in exceptionHandler service to log errors to the backend
+// (so that they can be fixed).
+oppiaFoundationWebsite.factory('$exceptionHandler', ['$log', function($log) {
+  return function(exception, cause) {
+    var messageAndSourceAndStackTrace = [
+      '',
+      'Cause: ' + cause,
+      exception.message,
+      String(exception.stack),
+      '    at URL: ' + window.location.href
+    ].join('\n');
+    // Catch all errors, to guard against infinite recursive loops.
+    try {
+      // We use jQuery here instead of Angular's $http, since the latter
+      // creates a circular dependency.
+      $.ajax({
+        type: 'POST',
+        url: '/frontend_errors',
+        data: $.param({
+          payload: JSON.stringify({
+            error: messageAndSourceAndStackTrace
+          }),
+          source: document.URL
+        }, true),
+        dataType: 'text',
+        async: true
+      });
+    } catch (loggingError) {
+      $log.warn('Error logging failed.');
+    }
+    $log.error.apply($log, arguments);
+  };
+}]);
