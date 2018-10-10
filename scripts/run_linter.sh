@@ -18,7 +18,7 @@
 
 source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_util.sh || exit 1
-if [ "$TRAVIS" == 'true' ]; then
+if [ "$TRAVIS" == 'true' ] || [ "$CI" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
 set -e
