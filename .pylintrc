@@ -3,7 +3,7 @@
 #   pylint core --rcfile=.pylintrc -i y
 
 [GENERAL]
-init-hook='import sys; sys.path.append("../oppia_tools/google_appengine_1.9.73/google_appengine");'
+init-hook='import sys; sys.path.append("../oppia_tools/google_appengine_1.9.73/google_appengine"); sys.path.append("../oppia_tools/testfixtures-6.3.0");'
 
 [MASTER]
 
