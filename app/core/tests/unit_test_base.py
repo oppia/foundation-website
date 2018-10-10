@@ -18,6 +18,7 @@ import unittest
 
 from core.tests.logger_test import _AssertLogsContext
 
+
 class TestBase(unittest.TestCase):
     """Base class for all tests."""
 
