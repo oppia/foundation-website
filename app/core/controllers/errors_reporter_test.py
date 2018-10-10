@@ -14,8 +14,10 @@
 
 """Tests for processing error reports."""
 
-from core.tests import app_engine_test_base
 
+import json
+
+from core.tests import app_engine_test_base
 import main
 
 
@@ -25,11 +27,8 @@ class FrontendErrorHandlerTest(app_engine_test_base.AppEngineTestBase):
     def test_frontend_errors_are_logged(self):
         """Test logging is done once a POST request is processed."""
 
-        errors_log = {
-            'error': 'scope errors'
-        }
-
-        self.testapp.post_json(main.FRONTEND_ERROR_URL, errors_log)
         with self.assertLogs(None, level='INFO') as cm:
-            self.testapp.post_json(main.FRONTEND_ERROR_URL, errors_log)
+            self.testapp.post(main.FRONTEND_ERROR_URL, params={
+                'payload': json.dumps({'error': 'scope errors'})
+            })
         self.assertEqual(cm.output, ['ERROR:root:Frontend error: scope errors'])
