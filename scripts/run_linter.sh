@@ -22,9 +22,9 @@ if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
 
-if [ "$CI" == 'true' ]; then
-  pip install -r ci-linter-requirements.txt --user
-fi
+# if [ "$CI" == 'true' ]; then
+#   pip install -r ci-linter-requirements.txt --user
+# fi
 
 set -e
 
