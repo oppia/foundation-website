@@ -38,7 +38,7 @@ dummy-variables-rgx=_|unused_*
 function-rgx=^[_a-z][a-z0-9_]*$
 
 # Good variable names which should always be accepted, separated by a comma
-good-names=setUp,tearDown
+good-names=setUp,tearDown,assertLogs
 
 # Regular expression which should only match correct method names
 method-rgx=^([_a-z][a-z0-9_]*|__[a-z0-9]+__)$
