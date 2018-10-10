@@ -28,7 +28,6 @@ class FrontendErrorHandlerTest(app_engine_test_base.AppEngineTestBase):
 
     def test_frontend_errors_are_logged(self):
         """Test logging is done once a POST request is processed."""
-
         with LogCapture() as log:
             self.testapp.post(main.FRONTEND_ERROR_URL, params={
                 'payload': json.dumps({'error': 'scope errors'})

@@ -22,8 +22,9 @@ from core.controllers import base
 
 class FrontendErrorHandler(base.BaseHandler):
     """Handler for logging frontend errors."""
+
     def post(self):
-        """Records errors reported by the frontend."""
+        """Record errors reported by the frontend."""
         payload = json.loads(self.request.get('payload'))
         logging.error('Frontend error: %s', payload['error'])
         self.render_json({})
