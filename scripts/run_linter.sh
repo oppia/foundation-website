@@ -18,9 +18,14 @@
 
 source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_util.sh || exit 1
-if [ "$TRAVIS" == 'true' ] || [ "$CI" == 'true' ]; then
+if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
+
+if [ "$CI" == 'true' ]; then
+  pip install -r ci-linter-requirements.txt --user
+fi
+
 set -e
 
 export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
@@ -65,16 +70,12 @@ fi
 if [ "$TRAVIS" == 'true' ]; then
   pycodestyle -v || exit 1
   pylint_runner -v || exit 1
-fi
-
-if [ "$TRAVIS" == 'false' ]; then
+else
   # These commands might not work cross-platform.
   # $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py -v || exit 1
   $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v --exclude=./node_modules,.git || exit 1
-  $PYTHON_CMD $TOOLS_DIR/pylint-runner-0.5.4/pylint_runner/main.py -v || exit 1
+  $TOOLS_DIR/pylint-runner-0.5.4/bin/pylint_runner2.7 -v || exit 1
 fi
-
-
 
 # Install third-party node modules for linting after checking for existing
 # installation.
