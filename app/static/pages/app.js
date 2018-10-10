@@ -133,7 +133,7 @@ oppiaFoundationWebsite.factory('$exceptionHandler', ['$log', function($log) {
       // creates a circular dependency.
       $.ajax({
         type: 'POST',
-        url: '/frontend_errors',
+        url: '/ajax/frontend_errors',
         data: $.param({
           payload: JSON.stringify({
             error: messageAndSourceAndStackTrace
