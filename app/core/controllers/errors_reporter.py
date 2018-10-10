@@ -12,21 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""URL routing definitions."""
+"""Controller for processing frontend errors."""
 
-import webapp2
+import json
+import logging
 
-import config
-from core.controllers import errors_reporter
-from core.controllers import outgoing_emails
+from core.controllers import base
 
-FRONTEND_ERROR_URL = '/ajax/frontend_errors'
-MAIL_HANDLER_URL = '/ajax/mailhandler'
-URLS = [
-    (FRONTEND_ERROR_URL, errors_reporter.FrontendErrorHandler),
-    (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
-]
 
-#pylint: disable=invalid-name
-app = webapp2.WSGIApplication(URLS, debug=config.DEBUG)
-#pylint: enable=invalid-name
+class FrontendErrorHandler(base.BaseHandler):
+    """Handler for logging frontend errors."""
+    def post(self):
+        """Records errors reported by the frontend."""
+        payload = json.loads(self.request.body)
+        logging.error('Frontend error: %s', payload['error'])
+        self.render_json({})
