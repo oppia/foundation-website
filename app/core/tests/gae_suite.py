@@ -39,7 +39,7 @@ DIRS_TO_ADD_TO_SYS_PATH = [
     os.path.join(
         OPPIA_TOOLS_DIR, 'google_appengine_1.9.73', 'google_appengine'),
     os.path.join(
-        OPPIA_TOOLS_DIR, 'testfixtures-6.3.0', 'testfixtures'),
+        OPPIA_TOOLS_DIR, 'testfixtures-6.3.0'),
     os.path.join(OPPIA_TOOLS_DIR, 'webtest-1.4.2'),
 ]
 
