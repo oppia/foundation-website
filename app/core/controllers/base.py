@@ -29,7 +29,7 @@ class BaseHandler(webapp2.RequestHandler):
     """Base class for all handlers."""
 
     def handle_exception(self, exception, unused_debug_mode):
-        """Overwrites the default exception handler.
+        """Overwrite the default exception handler.
 
         Args:
             exception: Exception. The exception that was thrown.

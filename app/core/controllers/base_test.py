@@ -32,3 +32,6 @@ class BaseHandlerTest(app_engine_test_base.GenericTestBase):
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
         self.assertEqual(1, len(messages))
+        self.assertIn(
+            'ValueError: No JSON object could be decoded',
+            messages[0].body.decode())
