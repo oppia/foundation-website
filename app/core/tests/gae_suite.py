@@ -35,7 +35,7 @@ CORE_DIR = os.path.join(CURR_DIR, 'app', '')
 OPPIA_TOOLS_DIR = os.path.join(CURR_DIR, '..', 'oppia_tools')
 
 DIRS_TO_ADD_TO_SYS_PATH = [
-    CORE_DIR,
+    CURR_DIR,
     os.path.join(
         OPPIA_TOOLS_DIR, 'google_appengine_1.9.73', 'google_appengine'),
     os.path.join(
