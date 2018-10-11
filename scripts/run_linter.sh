@@ -68,7 +68,7 @@ if [ ! -d "$TOOLS_DIR/pycodestyle-2.3.1" ]; then
 fi
 
 if [ "$TRAVIS" == 'true' ]; then
-  pycodestyle -v || exit 1
+  pycodestyle -v  -v --exclude=./node_modules,.git,./.vscode,./.circleci || exit 1
   pydocstyle -v || exit 1
   pylint_runner -v || exit 1
 else
