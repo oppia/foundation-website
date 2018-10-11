@@ -15,7 +15,6 @@
 
 """Tests for processing error reports."""
 
-
 import json
 from testfixtures import LogCapture
 
