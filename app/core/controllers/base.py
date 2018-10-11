@@ -42,7 +42,7 @@ class BaseHandler(webapp2.RequestHandler):
         logging.info(stacktrace_contents)
         logging.error('Exception raised: %s', exception)
         email_manager.send_mail_to_admin(
-            email_subject, stacktrace_contents, 'noreply@oppia.org')
+            email_subject, stacktrace_contents, config.NO_REPLY_EMAIL_ADDRESS)
         self.error(500)
 
     def render_json(self, values):

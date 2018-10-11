@@ -18,6 +18,8 @@ SYSTEM_EMAIL_ADDRESS = 'system_email@domain.com'
 
 ADMIN_EMAIL_ADDRESS = 'admin_email@domain.com'
 
+NO_REPLY_EMAIL_ADDRESS = 'noreply@oppia.org'
+
 # Whether to unconditionally log info messages.
 DEBUG = False
 
