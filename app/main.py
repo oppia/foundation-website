@@ -17,13 +17,13 @@
 import webapp2
 
 import config
-from core.controllers import errors_reporter
+from core.controllers import frontend_errors
 from core.controllers import outgoing_emails
 
 FRONTEND_ERROR_URL = '/ajax/frontend_errors'
 MAIL_HANDLER_URL = '/ajax/mailhandler'
 URLS = [
-    (FRONTEND_ERROR_URL, errors_reporter.FrontendErrorHandler),
+    (FRONTEND_ERROR_URL, frontend_errors.FrontendErrorHandler),
     (MAIL_HANDLER_URL, outgoing_emails.ForwardToAdminEmailHandler),
 ]
 
