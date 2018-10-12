@@ -15,15 +15,35 @@
 """Base handlers."""
 
 import json
+import logging
+import sys
+import traceback
 import webapp2
-
 
 import config
 from core.controllers import custom_json_encoder
+from core.domain import email_manager
 
 
 class BaseHandler(webapp2.RequestHandler):
     """Base class for all handlers."""
+
+    def handle_exception(self, exception, unused_debug_mode):
+        """Overwrite the default exception handler.
+
+        Args:
+            exception: Exception. The exception that was thrown.
+            unused_debug_mode: bool. True if the web application is running
+                in debug mode.
+        """
+        email_subject = 'Oppia Foundation website exception stacktrace'
+        stacktrace_contents = ''.join(
+            traceback.format_exception(*sys.exc_info()))
+        logging.info(stacktrace_contents)
+        logging.error('Exception raised: %s', exception)
+        email_manager.send_mail_to_admin(
+            email_subject, stacktrace_contents, config.NO_REPLY_EMAIL_ADDRESS)
+        self.error(500)
 
     def render_json(self, values):
         """Prepare JSON response to be sent to the client.
