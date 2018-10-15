@@ -13,7 +13,7 @@
 // limitations under the License.
 
 var oppiaFoundationWebsite = angular.module(
-  'oppiaFoundationWebsite', ['angular-matchmedia', 'ngMaterial', 'ngMessages',
+  'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages',
     'ngRoute', 'duScroll', 'ui.bootstrap', 'headroom']);
 
 for (var constantName in constants) {
@@ -56,11 +56,6 @@ oppiaFoundationWebsite.config(['$mdThemingProvider',
     $mdThemingProvider.theme('default').primaryPalette('teal');
   }
 ]);
-
-oppiaFoundationWebsite.config(
-  ['matchMediaProvider', function(matchMediaProvider) {
-    matchMediaProvider.rules.desktop = '(min-width: 1279px)';
-  }]);
 
 oppiaFoundationWebsite.run([
   '$location', '$rootScope', '$route', '$timeout', '$window',

@@ -13,11 +13,11 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('HomePage', [
-  '$scope', 'matchMedia', '$window', function($scope, matchMedia, $window) {
-    $scope.isDesktop = matchMedia.isDesktop();
-    angular.element($window).bind('resize', function() {
-      $scope.$apply(function() {
-        $scope.isDesktop = matchMedia.isDesktop();
-      });
+  'WindowDimensionsService', '$scope', function(
+      WindowDimensionsService, $scope) {
+    $scope.isDesktop = WindowDimensionsService.isDesktopViewwidth();
+    WindowDimensionsService.registerOnResizeHook(function() {
+      $scope.isDesktop = WindowDimensionsService.isDesktopViewwidth();
+      $scope.$apply();
     });
   }]);
