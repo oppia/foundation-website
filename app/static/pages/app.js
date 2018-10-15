@@ -13,8 +13,8 @@
 // limitations under the License.
 
 var oppiaFoundationWebsite = angular.module(
-  'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages',
-    'ngRoute', 'duScroll', 'ui.bootstrap', 'headroom']);
+  'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages', 'ngRoute', 'duScroll',
+    'ui.bootstrap', 'headroom']);
 
 for (var constantName in constants) {
   oppiaFoundationWebsite.constant(constantName, constants[constantName]);
