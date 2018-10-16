@@ -33,7 +33,7 @@ oppiaFoundationWebsite.factory(
       registerOnResizeHook: function(hookFn) {
         onResizeHooks.push(hookFn);
       },
-      isDesktopViewwidth: function() {
+      isDesktopViewWidth: function() {
         var DESKTOP_VIEWWIDTH_PX = 1279;
         return this.getWidth() >= DESKTOP_VIEWWIDTH_PX;
       }
