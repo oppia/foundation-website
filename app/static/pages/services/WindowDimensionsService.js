@@ -34,8 +34,8 @@ oppiaFoundationWebsite.factory(
         onResizeHooks.push(hookFn);
       },
       isDesktopViewWidth: function() {
-        var DESKTOP_VIEWWIDTH_PX = 1279;
-        return this.getWidth() >= DESKTOP_VIEWWIDTH_PX;
+        var DESKTOP_WIDTH_THRESHOLD_PX = 1279;
+        return this.getWidth() >= DESKTOP_WIDTH_THRESHOLD_PX;
       }
     };
   }]);
