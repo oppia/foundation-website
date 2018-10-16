@@ -86,7 +86,7 @@
           <div class="viewport">
             <video controls controlsList="nodownload"
                    class="home-page-interactions-video">
-            <source ng-if="!isDesktop"
+            <source ng-if="!desktopView"
                     src="/assets/videos/Interactions_video.mp4"
                     type="video/mp4">
               Your browser does not support the video tag.
@@ -134,7 +134,7 @@
             <div class="viewport" controls>
               <video controls controlsList="nodownload"
                      class="home-page-interactions-video">
-                <source ng-if="isDesktop"
+                <source ng-if="desktopView"
                         src="/assets/videos/Interactions_video.mp4"
                         type="video/mp4">
                 Your browser does not support the video tag.

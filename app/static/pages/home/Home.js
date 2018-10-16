@@ -15,9 +15,9 @@
 oppiaFoundationWebsite.controller('HomePage', [
   'WindowDimensionsService', '$scope', function(
       WindowDimensionsService, $scope) {
-    $scope.isDesktop = WindowDimensionsService.isDesktopViewwidth();
+    $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
     WindowDimensionsService.registerOnResizeHook(function() {
-      $scope.isDesktop = WindowDimensionsService.isDesktopViewwidth();
+      $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
       $scope.$apply();
     });
   }]);
