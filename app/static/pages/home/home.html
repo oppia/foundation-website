@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<section id="main-content">
+<section id="home" ng-controller="HomePage">
   <md-card class="oppia-foundation-white-background"
            show-xs
            hide-gt-md
@@ -86,8 +86,9 @@
           <div class="viewport">
             <video controls controlsList="nodownload"
                    class="home-page-interactions-video">
-              <source src="/assets/videos/Interactions_video.mp4"
-                      type="video/mp4">
+            <source ng-if="!desktopView"
+                    src="/assets/videos/Interactions_video.mp4"
+                    type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -133,7 +134,8 @@
             <div class="viewport" controls>
               <video controls controlsList="nodownload"
                      class="home-page-interactions-video">
-                <source src="/assets/videos/Interactions_video.mp4"
+                <source ng-if="desktopView"
+                        src="/assets/videos/Interactions_video.mp4"
                         type="video/mp4">
                 Your browser does not support the video tag.
               </video>
