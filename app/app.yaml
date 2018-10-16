@@ -21,13 +21,6 @@ handlers:
   http_headers:
     Cache-Control: 'public, max-age=600'
 
-- url: /services
-  static_dir: static/services
-  secure: always
-  expiration: 10m
-  http_headers:
-    Cache-Control: 'public, max-age=600'
-
 - url: /.*
   static_files: static/pages/index.html
   upload: static/pages/index.html
