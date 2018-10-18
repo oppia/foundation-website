@@ -40,7 +40,7 @@ jobs:
             bash scripts/run_linter.sh
 
       - save_cache:
-          key: v1.00-oppia-tools-cache
+          key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
           paths:
             - ./oppia_tools/
       - save_cache:
