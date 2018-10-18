@@ -4,7 +4,31 @@
 #
 version: 2
 jobs:
-  build:
+  backend_tests:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:2.7.15-browsers
+
+    working_directory: ~/foundation-website
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
+
+      - run:
+          name: Run tests
+          command: |
+            bash scripts/run_backend_tests.sh --generate_coverage_report
+
+      - save_cache:
+          key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
+          paths:
+            - ./oppia_tools/
+  linter:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
@@ -26,11 +50,6 @@ jobs:
             - v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
 
       - run:
-          name: Run tests
-          command: |
-            bash scripts/run_backend_tests.sh --generate_coverage_report
-
-      - run:
           name: Run linter
           command: |
             bash scripts/run_linter.sh
@@ -49,3 +68,9 @@ jobs:
             - "~/.cache/pip"
             - "/usr/local/lib/python2.7/site-packages"
             - "/usr/local/lib/site-python"
+workflows:
+  version: 2
+  circleci_tasks:
+    jobs:
+      - backend_tests
+      - linter
