@@ -4,3 +4,4 @@ third_party/*
 *.pyc
 .coverage
 node_modules/*
+oppia_tools/*
