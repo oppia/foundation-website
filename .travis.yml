@@ -46,3 +46,4 @@ cache:
 
 before_cache:
     - find third_party -name "*.pyc" -print -delete
+    - find oppia_tools -name "*.pyc" -print -delete
