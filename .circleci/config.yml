@@ -51,4 +51,6 @@ jobs:
       - save_cache:
           key: v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
           paths:
-            - ~/.local/share/virtualenvs/venv
+            - "~/.cache/pip"
+            - "/usr/local/lib/python2.7/site-packages"
+            - "/usr/local/lib/site-python"
