@@ -35,12 +35,6 @@ jobs:
           command: |
             bash scripts/run_linter.sh
 
-      - run:
-          name: Remove .pyc files
-          command: |
-            find oppia_tools -name "*.pyc" -print -delete
-            find third_party -name "*.pyc" -print -delete
-
       - save_cache:
           key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
           paths:
