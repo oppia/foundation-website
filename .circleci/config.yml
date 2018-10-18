@@ -16,7 +16,12 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: oppia-tools-cache
+          keys:
+            - v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
+            - v1.0-oppia-node-modules-cache-
+            - v1.00-oppia-tools-cache
+            - v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
+            - v1.0-oppia-pip-cache-
 
       - run:
           name: install dependencies
@@ -35,7 +40,12 @@ jobs:
             bash scripts/run_linter.sh
 
       - save_cache:
-          key: oppia-tools-cache
+          key: v1.00-oppia-tools-cache
           paths:
-            - ../oppia_tools/
-            - ./node_modules/
+            - ./oppia_tools/
+          key: v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
+          paths:
+            - ./node_modules
+          key: v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
+          paths:
+            - ~/.cache/pip
