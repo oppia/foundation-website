@@ -4,7 +4,7 @@
 
 [MASTER]
 
-init-hook='import sys; sys.path.append("../oppia_tools/google_appengine_1.9.73/google_appengine"); sys.path.append("../oppia_tools/testfixtures-6.3.0");'
+init-hook='import sys; sys.path.append("./oppia_tools/google_appengine_1.9.73/google_appengine"); sys.path.append("./oppia_tools/testfixtures-6.3.0");'
 
 # Checks for correct docstring style
 load-plugins=pylint.extensions.docstyle
