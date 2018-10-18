@@ -19,6 +19,7 @@ jobs:
           keys:
             - v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
             - v1.0-oppia-node-modules-cache-
+            - v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
             - v1.00-oppia-tools-cache
             - v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
             - v1.0-oppia-pip-cache-
@@ -50,4 +51,4 @@ jobs:
       - save_cache:
           key: v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
           paths:
-            - ~/.cache/pip
+            - ~/.local/share/virtualenvs/venv
