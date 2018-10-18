@@ -18,12 +18,8 @@ jobs:
       - restore_cache:
           keys:
             - v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
-            - v1.0-oppia-node-modules-cache-
             - v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
-            - v1.00-oppia-tools-cache
             - v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
-            - v1.0-oppia-pip-cache-
-
       - run:
           name: install dependencies
           command: |
@@ -39,6 +35,12 @@ jobs:
           name: run linter
           command: |
             bash scripts/run_linter.sh
+
+      - run:
+          name: remove .pyc files
+          command: |
+            find oppia_tools -name "*.pyc" -print -delete
+            find third_party -name "*.pyc" -print -delete
 
       - save_cache:
           key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
