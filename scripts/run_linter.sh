@@ -74,9 +74,9 @@ export PYDOCSTYLE_MATCH_DIR_ARG="^(?!oppia_tools|\.vscode).*"
 export PYCODESTYLE_EXCLUDE_ARG=./node_modules,.git,./.vscode,./.circleci,./oppia_tools,./third_party
 
 if [ "$TRAVIS" == 'true' ]; then
-  export PYDOCSTYLE ="pydocstyle"
-  export PYCODESTYLE ="pycodestyle"
-  export PYLINT_RUNNER ="pylint_runner"
+  export PYDOCSTYLE="pydocstyle"
+  export PYCODESTYLE="pycodestyle"
+  export PYLINT_RUNNER="pylint_runner"
 else
   # These commands might not work cross-platform.
   export PYDOCSTYLE="python ./oppia_tools/pydocstyle-2.1.1/src/pydocstyle/__main__.py"
