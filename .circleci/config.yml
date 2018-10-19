@@ -1,23 +1,35 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
+# Configuration file for https://circleci.com/gh/oppia/foundation-website
+
+# Note: YAML anchors allow an object to be re-used, reducing duplication.
+# The ampersand declares an alias for an object, then later the `<<: *name`
+# syntax dereferences it.
+# See http://blog.daemonl.com/2016/02/yaml.html
+# To validate changes, use an online parser, eg.
+# http://yaml-online-parser.appspot.com/
+
+# Variables
+
+var_1: &docker_image circleci/python:2.7.15-browsers
+var_2: &oppia_tools_cache_key oppia-tools-cache-{{ .Branch }}-{{ checksum "oppia-tools-dependency-list.txt" }}-0.1.0
+var_3: &oppia_node_modules_cache_key oppia-node-modules-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}-0.1.0
+
+# Default settings for each job
+anchor_1: &job_defaults
+  working_directory: ~/foundation-website
+  docker:
+    - image: *docker_image
+
 version: 2
 jobs:
   backend_tests:
-    docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:2.7.15-browsers
-
-    working_directory: ~/foundation-website
+    <<: *job_defaults
 
     steps:
       - checkout
 
       - restore_cache:
           keys:
-            - v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
+            - *oppia_tools_cache_key
 
       - run:
           name: Run tests
@@ -25,29 +37,19 @@ jobs:
             bash scripts/run_backend_tests.sh --generate_coverage_report
 
       - save_cache:
-          key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
+          key: *oppia_tools_cache_key
           paths:
             - ./oppia_tools/
   linter:
-    docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:2.7.15-browsers
-
-    working_directory: ~/foundation-website
+    <<: *job_defaults
 
     steps:
       - checkout
 
       - restore_cache:
           keys:
-            - v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
-      - restore_cache:
-          keys:
-            - v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
-      - restore_cache:
-          keys:
-            - v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
+            - *oppia_node_modules_cache_key
+            - *oppia_tools_cache_key
 
       - run:
           name: Run linter
@@ -55,19 +57,14 @@ jobs:
             bash scripts/run_linter.sh
 
       - save_cache:
-          key: v1.0-oppia-tools-cache-{{ checksum "oppia-tools-dependency-list.txt" }}
-          paths:
-            - ./oppia_tools/
-      - save_cache:
-          key: v1.0-oppia-node-modules-cache-{{ checksum "package-lock.json"}}
+          key: *oppia_node_modules_cache_key
           paths:
             - ./node_modules
       - save_cache:
-          key: v1.0-oppia-pip-cache-{{ checksum "ci-linter-requirements.txt" }}
+          key: *oppia_tools_cache_key
           paths:
-            - "~/.cache/pip"
-            - "/usr/local/lib/python2.7/site-packages"
-            - "/usr/local/lib/site-python"
+            - ./oppia_tools/
+
 workflows:
   version: 2
   circleci_tasks:
