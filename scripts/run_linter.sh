@@ -20,9 +20,6 @@ source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_util.sh || exit 1
 if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
-  export TRAVIS_PYDOCSTYLE = pydocstyle
-  export TRAVIS_PYCODESTYLE = pycodestyle
-  export TRAVIS_PYLINT_RUNNER = pylint_runner
 fi
 
 if [ "$CI" == 'true' ]; then
@@ -70,19 +67,26 @@ if [ ! -d "$TOOLS_DIR/pycodestyle-2.3.1" ]; then
   rm pycodestyle-2.3.1.tar.gz
 fi
 
+# Pydocstyle's --match-dir: Only searches for dirs that match the regular expression pattern.
+# In this case, the regex excludes all dirs that begin with oppia_tools or .vscode.
 export PYDOCSTYLE_MATCH_DIR_ARG="^(?!oppia_tools|\.vscode).*"
+
 export PYCODESTYLE_EXCLUDE_ARG=./node_modules,.git,./.vscode,./.circleci,./oppia_tools,./third_party
 
 if [ "$TRAVIS" == 'true' ]; then
-  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py --match-dir=$PYDOCSTYLE_MATCH_DIR_ARG -v || exit 1
-  $TRAVIS_PYCODESTYLE -v --exclude=$PYCODESTYLE_EXCLUDE_ARG || exit 1
-  $TRAVIS_PYLINT_RUNNER -v || exit 1
+  export PYDOCSTYLE ="pydocstyle"
+  export PYCODESTYLE ="pycodestyle"
+  export PYLINT_RUNNER ="pylint_runner"
 else
   # These commands might not work cross-platform.
-  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py --match-dir=$PYDOCSTYLE_MATCH_DIR_ARG -v || exit 1
-  $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v --exclude=$PYCODESTYLE_EXCLUDE_ARG || exit 1
-  $PYTHON_CMD $TOOLS_DIR/pylint-runner-0.5.4/pylint_runner/main.py -v || exit 1
+  export PYDOCSTYLE="python ./oppia_tools/pydocstyle-2.1.1/src/pydocstyle/__main__.py"
+  export PYCODESTYLE="python ./oppia_tools/pycodestyle-2.3.1/pycodestyle.py"
+  export PYLINT_RUNNER="python ./oppia_tools/pylint-runner-0.5.4/pylint_runner/main.py"
 fi
+
+$PYDOCSTYLE --match-dir=$PYDOCSTYLE_MATCH_DIR_ARG -v || exit 1
+$PYCODESTYLE -v --exclude=$PYCODESTYLE_EXCLUDE_ARG || exit 1
+$PYLINT_RUNNER -v || exit 1
 
 # Install third-party node modules for linting after checking for existing
 # installation.
