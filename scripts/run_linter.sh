@@ -22,10 +22,6 @@ if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
 
-if [ "$CI" == 'true' ]; then
-  pip install -r ci-linter-requirements.txt --user
-fi
-
 set -e
 
 export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
