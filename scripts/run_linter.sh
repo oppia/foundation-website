@@ -20,6 +20,9 @@ source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_util.sh || exit 1
 if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
+  export TRAVIS_PYDOCSTYLE = pydocstyle
+  export TRAVIS_PYCODESTYLE = pycodestyle
+  export TRAVIS_PYLINT_RUNNER = pylint_runner
 fi
 
 if [ "$CI" == 'true' ]; then
@@ -67,14 +70,17 @@ if [ ! -d "$TOOLS_DIR/pycodestyle-2.3.1" ]; then
   rm pycodestyle-2.3.1.tar.gz
 fi
 
+export PYDOCSTYLE_MATCH_DIR_ARG="^(?!oppia_tools|\.vscode).*"
+export PYCODESTYLE_EXCLUDE_ARG=./node_modules,.git,./.vscode,./.circleci,./oppia_tools,./third_party
+
 if [ "$TRAVIS" == 'true' ]; then
-  pydocstyle --match-dir="^(?!oppia_tools|\.vscode).*" -v || exit 1
-  pycodestyle -v --exclude=./node_modules,.git,./.vscode,./.circleci,./oppia_tools,./third_party || exit 1
-  pylint_runner -v || exit 1
+  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py --match-dir=$PYDOCSTYLE_MATCH_DIR_ARG -v || exit 1
+  $TRAVIS_PYCODESTYLE -v --exclude=$PYCODESTYLE_EXCLUDE_ARG || exit 1
+  $TRAVIS_PYLINT_RUNNER -v || exit 1
 else
   # These commands might not work cross-platform.
-  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py --match-dir="^(?!oppia_tools|\.vscode).*" -v || exit 1
-  $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v --exclude=./node_modules,.git,./.vscode,./.circleci,./oppia_tools,./third_party || exit 1
+  $PYTHON_CMD $TOOLS_DIR/pydocstyle-2.1.1/src/pydocstyle/__main__.py --match-dir=$PYDOCSTYLE_MATCH_DIR_ARG -v || exit 1
+  $PYTHON_CMD $TOOLS_DIR/pycodestyle-2.3.1/pycodestyle.py -v --exclude=$PYCODESTYLE_EXCLUDE_ARG || exit 1
   $PYTHON_CMD $TOOLS_DIR/pylint-runner-0.5.4/pylint_runner/main.py -v || exit 1
 fi
 
