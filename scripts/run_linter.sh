@@ -16,8 +16,20 @@
 #
 #     bash scripts/run_linter.sh
 
+if [ -z "$BASH_VERSION" ]
+then
+  echo ""
+  echo "  Please run me using bash: "
+  echo ""
+  echo "     bash $0"
+  echo ""
+  return 1
+fi
+
+set -e
 source $(dirname $0)/setup.sh || exit 1
 source $(dirname $0)/setup_util.sh || exit 1
+
 if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
@@ -25,8 +37,6 @@ fi
 if [ "$CI" == 'true' ]; then
   pip install -r ci-linter-requirements.txt --user
 fi
-
-set -e
 
 export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
 maybeInstallDependencies "$@"
