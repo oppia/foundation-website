@@ -34,8 +34,8 @@ if [ "$TRAVIS" == 'true' ]; then
   pip install -r ci-linter-requirements.txt
 fi
 
-if [ "$CI" == 'true' ]; then
-  pip install -r ci-linter-requirements.txt
+if [ "$CIRCLECI" == 'true' ]; then
+  pip install -r ci-linter-requirements.txt --user
 fi
 
 export DEFAULT_SKIP_INSTALLING_THIRD_PARTY_LIBS=false
