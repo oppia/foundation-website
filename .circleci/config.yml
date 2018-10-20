@@ -36,10 +36,6 @@ jobs:
           command: |
             bash scripts/run_backend_tests.sh --generate_coverage_report
 
-      - save_cache:
-          key: *oppia_tools_cache_key
-          paths:
-            - ./oppia_tools/
   linter:
     <<: *job_defaults
 
