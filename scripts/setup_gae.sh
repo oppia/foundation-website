@@ -21,6 +21,9 @@ if [ "$SETUP_GAE_DONE" ]; then
   return 0
 fi
 
+set -e
+source $(dirname $0)/setup.sh || exit 1
+
 export GOOGLE_APP_ENGINE_HOME=$TOOLS_DIR/google_appengine_1.9.73/google_appengine
 export COVERAGE_HOME=$TOOLS_DIR/coverage-4.5.1
 
@@ -46,3 +49,5 @@ if [ ! -d "$GOOGLE_APP_ENGINE_HOME" ]; then
   unzip -q gae-download.zip -d $TOOLS_DIR/google_appengine_1.9.73/
   rm gae-download.zip
 fi
+
+export SETUP_GAE_DONE=true
