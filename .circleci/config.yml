@@ -10,8 +10,6 @@
 # Variables
 
 var_1: &docker_image circleci/python:2.7.15-browsers
-var_2: &oppia_tools_cache_key oppia-tools-cache-{{ .Branch }}-{{ checksum "oppia-tools-dependency-list.txt" }}-0.1.0
-var_3: &oppia_node_modules_cache_key oppia-node-modules-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}-0.1.0
 
 # Default settings for each job
 anchor_1: &job_defaults
@@ -26,10 +24,6 @@ jobs:
 
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - *oppia_tools_cache_key
 
       - run:
           name: Install dependencies
@@ -52,11 +46,6 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - *oppia_node_modules_cache_key
-            - *oppia_tools_cache_key
-
       - run:
           name: Install dependencies
           command: |
@@ -67,15 +56,6 @@ jobs:
           name: Run linter
           command: |
             bash scripts/run_linter.sh
-
-      - save_cache:
-          key: *oppia_node_modules_cache_key
-          paths:
-            - ./node_modules
-      - save_cache:
-          key: *oppia_tools_cache_key
-          paths:
-            - ./oppia_tools/
 
 workflows:
   version: 2
