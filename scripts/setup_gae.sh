@@ -21,9 +21,6 @@ if [ "$SETUP_GAE_DONE" ]; then
   return 0
 fi
 
-set -e
-source $(dirname $0)/setup.sh || exit 1
-
 export GOOGLE_APP_ENGINE_HOME=$TOOLS_DIR/google_appengine_1.9.73/google_appengine
 export COVERAGE_HOME=$TOOLS_DIR/coverage-4.5.1
 
