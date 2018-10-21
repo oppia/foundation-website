@@ -1,41 +1,61 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
+# Configuration file for https://circleci.com/gh/oppia/foundation-website
+
+# Note: YAML anchors allow an object to be re-used, reducing duplication.
+# The ampersand declares an alias for an object, then later the `<<: *name`
+# syntax dereferences it.
+# See http://blog.daemonl.com/2016/02/yaml.html
+# To validate changes, use an online parser, eg.
+# http://yaml-online-parser.appspot.com/
+
+# Variables
+
+var_1: &docker_image circleci/python:2.7.15-browsers
+
+# Default settings for each job
+anchor_1: &job_defaults
+  working_directory: ~/foundation-website
+  docker:
+    - image: *docker_image
+
 version: 2
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:2.7.15-browsers
-
-    working_directory: ~/foundation-website
+  backend_tests:
+    <<: *job_defaults
 
     steps:
       - checkout
 
-      - restore_cache:
-          key: oppia-tools-cache
-
       - run:
-          name: install dependencies
+          name: Install dependencies
           command: |
-            bash scripts/setup.sh
-            bash scripts/setup_gae.sh
+            source scripts/setup.sh || exit 1
+            source scripts/setup_gae.sh || exit 1
 
       - run:
-          name: run tests
+          name: Run tests
           command: |
             bash scripts/run_backend_tests.sh --generate_coverage_report
 
+  linter:
+    <<: *job_defaults
+
+    steps:
+      - checkout
+
       - run:
-          name: run linter
+          name: Install dependencies
+          command: |
+              source scripts/setup.sh || exit 1
+              source scripts/setup_gae.sh || exit 1
+
+      - run:
+          name: Run linter
           command: |
             bash scripts/run_linter.sh
 
-      - save_cache:
-          key: oppia-tools-cache
-          paths:
-            - ../oppia_tools/
-            - ./node_modules/
+workflows:
+  version: 2
+  circleci_tasks:
+    jobs:
+      - backend_tests
+      - linter

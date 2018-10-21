@@ -36,7 +36,7 @@ EXPECTED_PWD='foundation-website'
 # The second option allows this script to also be run from deployment folders.
 if [[ ${PWD##*/} != $EXPECTED_PWD ]]; then
   echo ""
-  echo "  WARNING   This script should be run from the foundation-website/root folder."
+  echo "  WARNING  This script should be run from the foundation-website/root folder."
   echo ""
   return 1
 fi
@@ -45,8 +45,7 @@ source scripts/setup_util.sh || exit 1
 
 export FOUNDATION_DIR=`pwd`
 export APP_DIR=$FOUNDATION_DIR/app
-export COMMON_DIR=$(cd $FOUNDATION_DIR/..; pwd)
-export TOOLS_DIR=$COMMON_DIR/oppia_tools
+export TOOLS_DIR=$FOUNDATION_DIR/oppia_tools
 export THIRD_PARTY_DIR=$FOUNDATION_DIR/third_party
 export NODE_MODULE_DIR=$FOUNDATION_DIR/node_modules
 

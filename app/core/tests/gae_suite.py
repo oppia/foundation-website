@@ -32,7 +32,7 @@ import dev_appserver
 
 CURR_DIR = os.path.abspath(os.getcwd())
 CORE_DIR = os.path.join(CURR_DIR, 'app', '')
-OPPIA_TOOLS_DIR = os.path.join(CURR_DIR, '..', 'oppia_tools')
+OPPIA_TOOLS_DIR = os.path.join(CURR_DIR, 'oppia_tools')
 
 DIRS_TO_ADD_TO_SYS_PATH = [
     CORE_DIR,

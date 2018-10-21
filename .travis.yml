@@ -39,10 +39,11 @@ after_success:
 cache:
   # Cache dependencies.
   directories:
-    - ../oppia_tools/
+    - oppia_tools/
     - node_modules/
     - third_party/
     - $HOME/.cache/pip
 
 before_cache:
     - find third_party -name "*.pyc" -print -delete
+    - find oppia_tools -name "*.pyc" -print -delete
