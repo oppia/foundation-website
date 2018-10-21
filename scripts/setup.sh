@@ -36,7 +36,7 @@ EXPECTED_PWD='foundation-website'
 # The second option allows this script to also be run from deployment folders.
 if [[ ${PWD##*/} != $EXPECTED_PWD ]]; then
   echo ""
-  echo "  WARNING   This script should be run from the foundation-website/root folder."
+  echo "  WARNING  This script should be run from the foundation-website/root folder."
   echo ""
   return 1
 fi
