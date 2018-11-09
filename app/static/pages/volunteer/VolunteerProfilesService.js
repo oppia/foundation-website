@@ -55,8 +55,8 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       getResearchProfiles: function() {
         return volunteersByCategory.research;
       },
-      getMarketingProfiles: function() {
-        return volunteersByCategory.marketing;
+      getLessonCreationProfiles: function() {
+        return volunteersByCategory.lessonCreation;
       },
       getSlidesForTab: function(tabName) {
         return volunteersByCategory[tabName.toLowerCase()];

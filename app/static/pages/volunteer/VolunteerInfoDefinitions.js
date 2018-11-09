@@ -38,12 +38,6 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   }],
 
   development: [{
-    fullName: 'Anmol Shukla',
-    profilePictureImageFilename: 'anmol.jpg',
-    professionalQuote: 'I strongly identify with Oppia\'s objective of ' +
-    'providing free, enjoyable and accessible education to all.',
-    position: 'Developer, Machine Learning'
-  }, {
     fullName: 'Akshay Anand',
     profilePictureImageFilename: 'akshay.jpeg',
     professionalQuote: 'As I got involved with Oppia, I became more and more ' +
@@ -67,11 +61,12 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     'such lessons is what I enjoy.',
     position: 'Full-Stack Developer and QA Lead'
   }, {
-    fullName: 'Dawson Eliasen',
-    profilePictureImageFilename: 'dawson.jpg',
-    professionalQuote: 'I find it incredibly fulfilling to be a member of ' +
-    'such a rich community of learners.',
-    position: 'Developer and Lesson Creator'
+    fullName: 'Diana Chen',
+    profilePictureImageFilename: 'diana.jpg',
+    professionalQuote: 'I contribute to Oppia because seeing the community ' +
+    'and the impact it creates makes me hopeful for the future of education, ' +
+    'and I want to be a part of that change.',
+    position: 'Product Manager'
   }],
 
   research: [{
@@ -97,19 +92,24 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Researcher and Lesson Creator'
   }],
 
-  marketing: [{
+  lesson_creation: [{
+    fullName: 'Anmol Shukla',
+    profilePictureImageFilename: 'anmol.jpg',
+    professionalQuote: 'I strongly identify with Oppia\'s objective of ' +
+    'providing free, enjoyable and accessible education to all.',
+    position: 'Developer, Machine Learning'
+  }, {
+    fullName: 'Dawson Eliasen',
+    profilePictureImageFilename: 'dawson.jpg',
+    professionalQuote: 'I find it incredibly fulfilling to be a member of ' +
+    'such a rich community of learners.',
+    position: 'Developer and Lesson Creator'
+  }, {
     fullName: 'Joe Yannaphol',
     profilePictureImageFilename: 'joe.jpg',
     professionalQuote: 'I\'ve witnessed education disparity in Thailand and ' +
     'know that Oppia\'s engaging and equitable lessons can help solve this ' +
     'problem. Every volunteer matters at Oppia.',
     position: 'Coordinator, Lesson Creation'
-  }, {
-    fullName: 'Diana Chen',
-    profilePictureImageFilename: 'diana.jpg',
-    professionalQuote: 'I contribute to Oppia because seeing the community ' +
-    'and the impact it creates makes me hopeful for the future of education, ' +
-    'and I want to be a part of that change.',
-    position: 'Product Manager'
   }]
 });
