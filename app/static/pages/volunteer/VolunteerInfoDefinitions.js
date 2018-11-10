@@ -97,7 +97,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     profilePictureImageFilename: 'anmol.jpg',
     professionalQuote: 'I strongly identify with Oppia\'s objective of ' +
     'providing free, enjoyable and accessible education to all.',
-    position: 'Developer, Machine Learning'
+    position: 'Developer and Lesson Creator'
   }, {
     fullName: 'Dawson Eliasen',
     profilePictureImageFilename: 'dawson.jpg',
