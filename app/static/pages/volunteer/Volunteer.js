@@ -31,8 +31,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Research',
       templateUrl: '/pages/volunteer/tabs_template/research_tab.html'
     }, {
-      title: 'Marketing',
-      templateUrl: '/pages/volunteer/tabs_template/marketing_tab.html'
+      title: 'Lesson Creation',
+      templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
     }];
     $scope.volunteerWorkDescriptionUrls = {
       design: '/pages/volunteer/work_description_templates/' +
@@ -41,8 +41,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         'development_description.html',
       research: '/pages/volunteer/work_description_templates/' +
         'research_description.html',
-      marketing: '/pages/volunteer/work_description_templates/' +
-        'marketing_description.html',
+      lessonCreation: '/pages/volunteer/work_description_templates/' +
+        'lesson_creation_description.html',
     };
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
     if ($scope.activeTabIndex === null) {
