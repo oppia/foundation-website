@@ -186,6 +186,10 @@ p {
   margin: 10px 0 15px 0;
 }
 
+a {
+  color: #159588;
+}
+
 footer p {
   color: #f2f2f2;
   font-size: 12px;
