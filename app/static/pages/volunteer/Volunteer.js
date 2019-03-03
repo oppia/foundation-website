@@ -93,7 +93,9 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         email: email,
         comment: comment,
       }).then(function() {
-        $mdDialog.show(
+          ga('send', 'event', 'Submit Form', 'Submit Volunteer form', 'Volunteer');
+
+          $mdDialog.show(
           $mdDialog.alert()
             .clickOutsideToClose(true)
             .title('Thank you!')
