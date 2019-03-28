@@ -14,9 +14,10 @@
 
 """Tests for generic controller behavior."""
 
+import config
+
 from core.tests import app_engine_test_base
 
-import config
 import main
 
 
