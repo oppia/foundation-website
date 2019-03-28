@@ -15,12 +15,10 @@
 """Tests for CONSTANTS object and cosntants.json file."""
 
 import os
+import config
 
 from core.tests import app_engine_test_base
 from core.utility import constants
-
-import config
-
 
 class ConstantsTest(app_engine_test_base.AppEngineTestBase):
     """Tests for reading constants.js and parsing it to JSON format."""
