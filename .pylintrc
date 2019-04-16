@@ -77,6 +77,7 @@ ignore-imports=yes
 
 [MESSAGES CONTROL]
 
+disable=wrong-import-order
 
 [REPORTS]
 
