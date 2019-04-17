@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """Config functions for managing email notifications."""
-# Check.
+
 import config
 from core.platform import gae_email_services
 
