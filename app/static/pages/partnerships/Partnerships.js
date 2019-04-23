@@ -32,6 +32,8 @@ oppiaFoundationWebsite.controller(
           email: email,
           comment: comment,
         }).then(function() {
+          ga('send', 'event', 'Submit Form', 'Submit Partnership form', 'Partnerships');
+
           $mdDialog.show(
             $mdDialog.alert()
               .clickOutsideToClose(true)
