@@ -15,9 +15,9 @@
 """Base class for App Engine tests."""
 
 import os
-import config
 import webtest
 
+import config
 import main
 from core.tests import unit_test_base
 

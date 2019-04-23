@@ -14,10 +14,10 @@
 
 """Test for sending email to admin."""
 
-import config
-
 from core.tests import app_engine_test_base
 from core.domain import email_manager
+
+import config
 
 
 class SendEmailToAdminTest(app_engine_test_base.GenericTestBase):

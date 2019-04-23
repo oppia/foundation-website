@@ -14,10 +14,10 @@
 
 """Tests for the GAE mail API wrapper."""
 
-import config
-
 from core.tests import app_engine_test_base
 from core.platform import gae_email_services
+
+import config
 
 
 class EmailTests(app_engine_test_base.GenericTestBase):

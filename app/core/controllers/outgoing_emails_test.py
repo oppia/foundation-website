@@ -14,12 +14,11 @@
 
 """Tests for processing contact form submissions."""
 
-import config
-
 from core.tests import app_engine_test_base
 from core.controllers import outgoing_emails
 from core.utility import string_validator
 
+import config
 import main
 
 

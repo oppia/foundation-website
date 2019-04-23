@@ -13,10 +13,10 @@
 # limitations under the License.
 
 """URL routing definitions."""
-import config
 
 import webapp2
 
+import config
 from core.controllers import frontend_errors
 from core.controllers import outgoing_emails
 

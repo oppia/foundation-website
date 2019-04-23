@@ -18,9 +18,9 @@ import json
 import logging
 import sys
 import traceback
-import config
 import webapp2
 
+import config
 from core.controllers import custom_json_encoder
 from core.domain import email_manager
 

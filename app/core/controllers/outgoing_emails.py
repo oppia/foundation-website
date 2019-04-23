@@ -15,11 +15,12 @@
 """Controllers for processing contact form submissions."""
 
 import json
-import config
 
 from core.controllers import base
 from core.domain import email_manager
 from core.utility import string_validator
+
+import config
 
 
 class ForwardToAdminEmailHandler(base.BaseHandler):
