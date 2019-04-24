@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap files
-#Sitemap: ./sitemap.xml
+Sitemap: https://www.oppiafoundation.org/sitemap.xml
