@@ -14,6 +14,16 @@ handlers:
   http_headers:
     Cache-Control: 'public, max-age=600'
 
+- url: /robots.txt
+  static_files: static/assets/robots.txt
+  upload: static/assets/robots.txt
+  secure: always
+
+- url: /sitemap.xml
+  static_files: static/assets/sitemap.xml
+  upload: static/assets/sitemap.xml
+  secure: always
+
 - url: /pages
   static_dir: static/pages
   secure: always
