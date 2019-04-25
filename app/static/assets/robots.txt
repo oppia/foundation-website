@@ -1,0 +1,6 @@
+# All robots are allowed
+User-agent: *
+Disallow:
+
+# Sitemap files
+Sitemap: https://www.oppiafoundation.org/sitemap.xml
