@@ -67,6 +67,84 @@
       </div>
     </div>
   </md-card>
+  <md-card class="oppia-foundation-gray-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding"
+           layout-fill
+           layout-gt-md="row"
+           layout="column">
+    <md-card-content layout="row"
+                     layout-align="center"
+                     clas="oppia-foundation-no-padding
+                           home-page-description-text-box
+                           home-page-display-size">
+      <md-content layout="column"
+                  layout-align="center"
+                  class="oppia-foundation-gray-background
+                         oppia-foundation-left-align-text
+                         oppia-foundation-black-text">
+        <p class="home-page-large-text-header">
+          We work to ensure every student,
+          <span class="oppia-foundation-dark-green-text
+                       oppia-foundation-bold-text">
+          regardless of their situation</span>, gets the education they deserve.
+          As of today, more than
+          <span class="oppia-foundation-dark-green-text
+                       oppia-foundation-bold-text">
+          250 million children</span> worldwide have not yet achieved basic
+          literacy and numeracy. Some problems include...
+        </p>
+        <md-list flex
+                 layout-gt-sm="row"
+                 layout="column"
+                 layout-align="space-between center">
+          <md-list-item class="home-page-icon-list-item"
+                        layout="column"
+                        layout-align="start">
+            <md-content class="oppia-foundation-white-background
+                               home-page-student-problems-text">
+              <h4 class="oppia-foundation-bold-text">
+                1. Discrimination
+              </h4>
+              <p>
+                Up to 95% of children with disabilities are out of school. At
+                least 1 in 5 adolescent girls globally are denied an education
+              </p>
+            </md-content>
+          </md-list-item>
+          <md-list-item class="home-page-icon-list-item"
+                        layout="column"
+                        layout-align="start">
+            <md-content class="oppia-foundation-white-background
+                               home-page-student-problems-text">
+              <h4 class="oppia-foundation-bold-text">
+                2. Lack of resources
+              </h4>
+              <p>
+                In 1 out of 3 countries, less than 3/4 of teachers are trained
+                to national standards. Millions lack textbooks and related
+                resources.
+              </p>
+            </md-content>
+          </md-list-item>
+          <md-list-item class="home-page-icon-list-item"
+                        layout="column"
+                        layout-align="start">
+            <md-content class="oppia-foundation-white-background
+                               home-page-student-problems-text">
+              <h4 class="oppia-foundation-bold-text">
+                3. Conflict
+              </h4>
+              <p>
+                In 2017, 27 million of the 50 million children living in
+                countries affected by conflicts were out of school.
+              </p>
+            </md-content>
+          </md-list-item>
+        </md-list>
+      </md-content>
+    </md-card-content>
+  </md-card>
   <md-card layout-fill class="oppia-foundation-vertical-padding
                               oppia-foundation-horizontal-padding
                               oppia-foundation-green-background">
@@ -560,6 +638,26 @@
   @media screen and (max-width: 600px) {
     .home-page-donate-button-row {
       min-height: 95px;
+    }
+  }
+  md-list-item.home-page-icon-list-item::before,
+  md-list-item.home-page-icon-list-item::after {
+    min-height: 0;
+  }
+  md-list-item.md-no-proxy.home-page-icon-list-item {
+    padding: 16px 0px;
+  }
+  @media screen and (min-width: 600px) {
+    md-list-item.md-no-proxy.home-page-icon-list-item {
+      padding: 16px;
+    }
+  }
+  .home-page-student-problems-text {
+    padding: 16px;
+  }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .home-page-student-problems-text {
+      min-height: 230px;
     }
   }
 </style>
