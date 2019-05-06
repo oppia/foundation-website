@@ -75,9 +75,9 @@
            layout="column">
     <md-card-content layout="row"
                      layout-align="center"
-                     clas="oppia-foundation-no-padding
-                           home-page-description-text-box
-                           home-page-display-size">
+                     class="oppia-foundation-no-padding
+                            home-page-description-text-box
+                            home-page-display-size">
       <md-content layout="column"
                   layout-align="center"
                   class="oppia-foundation-gray-background
@@ -142,6 +142,83 @@
             </md-content>
           </md-list-item>
         </md-list>
+      </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-white-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding"
+           layout-fill
+           layout-gt-lg="row"
+           layout="column">
+    <md-card-content layout-gt-sm="row"
+                     layout="column"
+                     layout-align="space-between"
+                     class="oppia-foundation-no-padding
+                            home-page-description-text-box
+                            home-page-display-size">
+      <md-content flex-gt-sm="50"
+                  layout="column"
+                  layout-align="center"
+                  class="oppia-foundation-white-background
+                         oppia-foundation-left-align-text">
+        <p class="oppia-foundation-dark-green-text">
+          The Oppia Foundation is a 501(c)(3) nonprofit focused on providing
+          quality education to those who lack access to it.
+        </p>
+        <p class="oppia-foundation-black-text">
+          We work towards this through the creation of free, engaging, and
+          effective lessons all through our online learning platform, Oppia.
+        </p>
+      </md-content>
+      <md-content layout="column"
+                  layout-align="center"
+                  class="oppia-foundation-white-background
+                         oppia-foundation-left-align-text
+                         oppia-foundation-black-text">
+        <p class="oppia-foundation-no-margin">As seen in:</p>
+        <md-card-actions layout="column"
+                         layout-align="space-between center"
+                         layout-align-gt-sm="start">
+          <md-button aria-label="TechCrunch Press"
+                     class="md-no-ink
+                            home-page-press-logo-button"
+                     href="https://techcrunch.com/2014/02/26/meet-oppia-googles-new-open-source-project-that-lets-anyone-create-an-interactive-learning-experience/"
+                     md-ink-ripple="false">
+            <img alt="TechCrunch logo"
+                 class="home-page-reference-logo techcrunch-logo"
+                 src="/assets/images/home/techcrunch.png">
+          </md-button>
+          <md-button aria-label="Tnw Press"
+                     class="md-no-ink
+                            home-page-press-logo-button"
+                     href="https://thenextweb.com/google/2014/02/27/google-debuts-online-education-tool-oppia-help-anyone-create-interactive-activities-teaching-others/#.tnw_yZSjpOD5"
+                     md-ink-ripple="false">
+            <img alt="Tnw Press logo"
+                 class="home-page-reference-logo
+                        tnw-logo"
+                 src="/assets/images/home/tnw.png">
+          </md-button>
+          <md-button aria-label="Google Press"
+                     class="md-no-ink
+                            home-page-press-logo-button"
+                     href="https://opensource.googleblog.com/2014/02/oppia-tool-for-interactive-learning.html"
+                     md-ink-ripple="false">
+            <img alt="Google Press logo"
+                 class="home-page-reference-logo
+                        google-open-source-logo"
+                 src="/assets/images/home/google.png">
+          </md-button>
+          <md-button aria-label="Edx Press"
+                     class="md-no-ink
+                            home-page-press-logo-button"
+                     href="https://open.edx.org/blog/new-oppia-xblock-allows-embedding-interactive-activities-open-edx-courses"
+                     md-ink-ripple="false">
+            <img alt="Edx Press logo"
+                 class="home-page-reference-logo edx-logo"
+                 src="/assets/images/home/edx.png">
+          </md-button>
+        </md-card-actions>
       </md-content>
     </md-card-content>
   </md-card>
@@ -658,6 +735,44 @@
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .home-page-student-problems-text {
       min-height: 230px;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .home-page-student-problems-text {
+      max-width: 750px;
+    }
+  }
+  @media only screen and (min-width : 959px) {
+    .techcrunch-logo {
+      height: 28px;
+      margin-top: 4px;
+    }
+    .tnw-logo {
+      height: 28px;
+      margin-top: 2px;
+    }
+    .google-open-source-logo {
+      height: 28px;
+      margin-top: 1px;
+    }
+    .edx-logo {
+      height: 24px;
+    }
+  }
+  .md-button.home-page-press-logo-button:hover,
+  .md-button.home-page-press-logo-button:focus {
+    background-color: rgba(255,255,255,1);
+  }
+  .home-page-reference-logo {
+    margin-right: 100%
+  }
+  @media only screen and (max-width : 959px) {
+    .home-page-reference-logo {
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 3em;
+      width: auto;
     }
   }
 </style>
