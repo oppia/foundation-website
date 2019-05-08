@@ -221,105 +221,51 @@
         </md-card-actions>
       </md-content>
     </md-card-content>
-    <md-button class="oppia-foundation-green-button"
+    <md-button class="oppia-foundation-green-button
+                      home-page-about-us-button"
                href="/#!/about">
       About Us
     </md-button>
   </md-card>
-  <md-card layout-fill class="oppia-foundation-vertical-padding
-                              oppia-foundation-horizontal-padding
-                              oppia-foundation-green-background">
-    <md-card-content layout="row"
+  <md-card layout-fill
+           class="oppia-foundation-green-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding">
+    <md-card-content layout="column"
+                     layout-gt-md="row"
                      layout-align="center"
-                     class="oppia-foundation-no-padding
-                            home-page-description-text-box
-                            home-page-display-size">
+                     layout-fill>
       <md-content layout="column"
+                  layout-align="center center"
+                  layout-align-gt-md="start"
                   class="oppia-foundation-green-background
-                        oppia-foundation-center-align-text
-                        oppia-foundation-white-text">
+                         oppia-foundation-left-align-text
+                         oppia-foundation-white-text
+                         oppia-foundation-mobile-and-tablet-bottom-padding">
         <p class="home-page-large-text-header">
-          More than <strong>250 million</strong> children worldwide have not yet achieved basic literacy and numeracy.
+          Oppia is an engaging new approach to online learning that caters
+          specifically to the unique needs of the worlds most underserved youth.
         </p>
-        <p class="home-page-large-text-subheader">
-          The Oppia Foundation is working to change that.
-        </p>
+        <md-button class="oppia-foundation-white-button
+                          oppia-foundation-no-margin"
+                   href="/#!/partnerships">
+          The Oppia Difference
+        </md-button>
       </md-content>
-    </md-card-content>
-  </md-card>
-  <md-card class="oppia-foundation-gray-background
-                  oppia-foundation-horizontal-padding
-                  oppia-foundation-vertical-padding"
-           layout-fill
-           layout-gt-md="row"
-           layout="column">
-    <div show-xs
-         show-sm
-         hide-gt-md
-         layout-fill>
-      <div class="macbook">
+      <div class="macbook"
+           layout-fill>
         <div class="screen">
-          <div class="viewport">
+          <div class="viewport" controls>
             <video controls controlsList="nodownload"
                    class="home-page-interactions-video">
-            <source ng-if="!desktopView"
-                    src="/assets/videos/Interactions_video.mp4"
-                    type="video/mp4">
+              <source src="/assets/videos/Interactions_video.mp4"
+                      type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
         <div class="base"></div>
         <div class="notch"></div>
-      </div>
-    </div>
-    <md-card-content class="oppia-foundation-gray-background
-                            home-page-display-size
-                            oppia-foundation-no-padding"
-                     layout="column"
-                     layout-gt-md="row">
-      <md-content class="oppia-foundation-gray-background
-                         home-page-description-text-box"
-                  flex-gt-md="50"
-                  layout="column"
-                  layout-align="center none">
-        <h3 class="md-display-1 home-page-content-title">
-          A new approach to online learning
-        </h3>
-        <p>
-          Oppia is a free and open-source online learning platform for
-          collaboratively creating and sharing interactive lessons.
-        </p>
-        <p>
-          Our lesson builder allows educators to provide students
-          with targeted, personalized feedback that simulates conversation
-          with an intelligent, virtual tutor.
-        </p>
-        <md-card-actions layout="column"
-                         layout-align-gt-md="start"
-                         layout-align="center center">
-          <md-button class="oppia-foundation-green-button"
-                     href="https://www.oppia.org/">
-            Visit Oppia.org
-          </md-button>
-        </md-card-actions>
-      </md-content>
-      <div hide-xs hide-sm hide-md layout-fill>
-        <div class="macbook">
-          <div class="screen">
-            <div class="viewport" controls>
-              <video controls controlsList="nodownload"
-                     class="home-page-interactions-video">
-                <source ng-if="desktopView"
-                        src="/assets/videos/Interactions_video.mp4"
-                        type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          <div class="base"></div>
-          <div class="notch"></div>
-        </div>
       </div>
     </md-card-content>
   </md-card>
@@ -778,5 +724,8 @@
       height: 3em;
       width: auto;
     }
+  }
+  .home-page-about-us-button {
+    min-width: 250px;
   }
 </style>
