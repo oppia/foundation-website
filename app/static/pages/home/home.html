@@ -192,8 +192,7 @@
         </md-card-actions>
       </md-content>
     </md-card-content>
-    <md-button class="oppia-foundation-green-button
-                      home-page-about-us-button"
+    <md-button class="oppia-foundation-green-button"
                href="/#!/about">
       About Us
     </md-button>
@@ -259,13 +258,14 @@
         Our impact and testimonials
       </h3>
       <md-content class="oppia-foundation-black-text
-                         oppia-foundation-gray-background"
+                         oppia-foundation-gray-background
+                         oppia-foundation-margin-bottom-20"
                   layout="column"
                   layout-gt-md="row"
                   layout-align="space-between center"
                   layout-fill>
         <md-list class="oppia-foundation-white-background
-                        oppia-foundation-margin-bottom-40
+                        oppia-foundation-mobile-and-tablet-margin-bottom-20
                         oppia-foundation-small-tablet-and-desktop-right-margin">
           <md-list-item ng-repeat="item in impactTextContent">
             <md-content class="oppia-foundation-white-background">
@@ -320,6 +320,10 @@
           </md-list-item>
         </md-list>
       </md-content>
+      <md-button class="oppia-foundation-green-button"
+                 href="/#!/partnerships">
+        Learn More
+      </md-button>
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-white-background
@@ -780,9 +784,6 @@
       height: 3em;
       width: auto;
     }
-  }
-  .home-page-about-us-button {
-    min-width: 250px;
   }
   .home-page-learner-profile-picture {
     border-radius: 50%;
