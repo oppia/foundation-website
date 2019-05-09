@@ -98,46 +98,17 @@
                  layout-gt-sm="row"
                  layout="column"
                  layout-align="space-between center">
-          <md-list-item class="home-page-icon-list-item"
+          <md-list-item class="home-page-student-problems-list-item"
                         layout="column"
-                        layout-align="start">
+                        layout-align="start"
+                        ng-repeat="item in studentProblemsTextContent">
             <md-content class="oppia-foundation-white-background
                                home-page-student-problems-text">
               <h4 class="oppia-foundation-bold-text">
-                1. Discrimination
+                {{item.heading}}
               </h4>
               <p>
-                Up to 95% of children with disabilities are out of school. At
-                least 1 in 5 adolescent girls globally are denied an education
-              </p>
-            </md-content>
-          </md-list-item>
-          <md-list-item class="home-page-icon-list-item"
-                        layout="column"
-                        layout-align="start">
-            <md-content class="oppia-foundation-white-background
-                               home-page-student-problems-text">
-              <h4 class="oppia-foundation-bold-text">
-                2. Lack of resources
-              </h4>
-              <p>
-                In 1 out of 3 countries, less than 3/4 of teachers are trained
-                to national standards. Millions lack textbooks and related
-                resources.
-              </p>
-            </md-content>
-          </md-list-item>
-          <md-list-item class="home-page-icon-list-item"
-                        layout="column"
-                        layout-align="start">
-            <md-content class="oppia-foundation-white-background
-                               home-page-student-problems-text">
-              <h4 class="oppia-foundation-bold-text">
-                3. Conflict
-              </h4>
-              <p>
-                In 2017, 27 million of the 50 million children living in
-                countries affected by conflicts were out of school.
+                {{item.text}}
               </p>
             </md-content>
           </md-list-item>
@@ -238,10 +209,12 @@
       <md-content layout="column"
                   layout-align="center center"
                   layout-align-gt-md="start"
+                  flex-gt-md="30"
                   class="oppia-foundation-green-background
                          oppia-foundation-left-align-text
                          oppia-foundation-white-text
-                         oppia-foundation-mobile-and-tablet-bottom-padding">
+                         oppia-foundation-mobile-and-tablet-bottom-padding
+                         home-page-description-text-box">
         <p class="home-page-large-text-header">
           Oppia is an engaging new approach to online learning that caters
           specifically to the unique needs of the worlds most underserved youth.
@@ -267,6 +240,86 @@
         <div class="base"></div>
         <div class="notch"></div>
       </div>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content layout="column"
+                     layout-align="center center"
+                     class="home-page-display-size
+                            oppia-foundation-gray-background">
+      <h3 class="md-display-1
+                 home-page-content-title
+                 oppia-foundation-green-text
+                 oppia-foundation-margin-bottom-40">
+        Our impact and testimonials
+      </h3>
+      <md-content class="oppia-foundation-black-text
+                         oppia-foundation-gray-background"
+                  layout="column"
+                  layout-gt-md="row"
+                  layout-align="space-between center"
+                  layout-fill>
+        <md-list class="oppia-foundation-white-background
+                        oppia-foundation-margin-bottom-40
+                        oppia-foundation-small-tablet-and-desktop-right-margin">
+          <md-list-item ng-repeat="item in impactTextContent">
+            <md-content class="oppia-foundation-white-background">
+              <h4 class="oppia-foundation-bold-text">
+                {{item.number}}
+              </h4>
+              <p>
+                {{item.text}}
+              </p>
+            </md-content>
+            <md-divider ng-if="!$last"></md-divider>
+          </md-list-item>
+        </md-list>
+        <md-list class="oppia-foundation-white-background
+                        home-page-description-text-box"
+                 layout="column"
+                 layout-align="center center">
+          <md-list-item ng-repeat="learner in learnerProfiles"
+                        layout="row"
+                        layout-align="center center">
+            <div flex="noshrink"
+                 layout="column"
+                 layout-align="center center">
+              <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
+                   class="home-page-learner-profile-picture"
+                   alt="{{learner.fullName}}">
+            </div>
+            <md-content class="oppia-foundation-white-background
+                               oppia-foundation-button-horizontal-padding"
+                        flex="85">
+              <h4 hide-xs class="oppia-foundation-bold-text">
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">&ldquo;</span>
+                {{learner.testimonial}}
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">&rdquo;</span>
+              </h4>
+              <p show-xs
+                 hide-gt-xs
+                 class="oppia-foundation-bold-text">
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">&ldquo;</span>
+                {{learner.testimonial}}
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">&rdquo;</span>
+              </p>
+              <p>
+                {{learner.fullName}}, Age {{learner.age}}, {{learner.location}}
+              </p>
+              <md-divider ng-if="!$last"></md-divider>
+            </md-content>
+          </md-list-item>
+        </md-list>
+      </md-content>
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-white-background
@@ -403,7 +456,7 @@
                             oppia-foundation-no-padding"
                      layout-gt-md="row"
                      layout="column">
-      <div flex-gt-md="40"
+      <div flex="40"
            layout="column"
            layout-align="center">
         <img class="home-page-partner-image"
@@ -667,24 +720,29 @@
       min-height: 95px;
     }
   }
-  md-list-item.home-page-icon-list-item::before,
-  md-list-item.home-page-icon-list-item::after {
+  md-list-item.home-page-student-problems-list-item::before,
+  md-list-item.home-page-student-problems-list-item::after {
     min-height: 0;
   }
-  md-list-item.md-no-proxy.home-page-icon-list-item {
+  md-list-item.md-no-proxy.home-page-student-problems-list-item {
     padding: 16px 0px;
   }
   @media screen and (min-width: 600px) {
-    md-list-item.md-no-proxy.home-page-icon-list-item {
+    md-list-item.md-no-proxy.home-page-student-problems-list-item {
       padding: 16px;
     }
   }
   .home-page-student-problems-text {
     padding: 16px;
   }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 960px) {
     .home-page-student-problems-text {
-      min-height: 230px;
+      min-height: 250px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .home-page-student-problems-text {
+      min-height: 280px;
     }
   }
   @media screen and (max-width: 960px) {
@@ -718,14 +776,23 @@
   }
   @media only screen and (max-width : 959px) {
     .home-page-reference-logo {
-      padding-top: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 10px;
       height: 3em;
       width: auto;
     }
   }
   .home-page-about-us-button {
     min-width: 250px;
+  }
+  .home-page-learner-profile-picture {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+  @media only screen and (max-width : 960px) {
+    .home-page-learner-profile-picture {
+      height: 40px;
+      width: 40px;
+    }
   }
 </style>
