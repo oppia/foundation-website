@@ -327,6 +327,43 @@
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-white-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding"
+           hide-xs
+           hide-sm
+           show-gt-sm
+           layout-fill
+           layout="column">
+    <md-card-content layout="column"
+                     layout-align="center center"
+                     layout-fill
+                     class="home-page-display-size
+                            oppia-foundation-white-background">
+      <h3 class="md-display-1
+                 home-page-content-title
+                 oppia-foundation-green-text
+                 oppia-foundation-margin-bottom-40">
+        Be a part of the change
+      </h3>
+      <md-content class="home-page-desktop-tabs">
+        <md-tabs md-dynamic-height
+                 md-border-bottom
+                 md-selected="activeTabIndex"
+                 md-stretch-tabs="always"
+                 md-no-pagination>
+          <md-tab class="md-accent"
+                  ng-repeat="tab in tabs"
+                  md-on-select="onTabSelected($index % 4)"
+                  label="{{tab.title}}">
+            <md-tab-body>
+              <ng-include src="tabs[activeTabIndex].templateUrl"></ng-include>
+            </md-tab-body>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-white-background
                   oppia-foundation-small-tablet-and-desktop-right-padding"
            layout-fill
            layout-gt-md="row"
@@ -795,5 +832,41 @@
       height: 40px;
       width: 40px;
     }
+  }
+  md-tabs .md-tab {
+    background-color: white;
+    color: black;
+    font-size: large;
+    text-transform: none;
+  }
+  md-tabs .md-tab:first-of-type {
+    border-width: 2px 1px 2px 2px;
+  }
+  md-tabs .md-tab:last-of-type {
+    border-width: 2px 2px 2px 1px;
+  }
+  md-tabs md-ink-bar {
+    color: #009688;
+    background: #009688;
+  }
+  md-tabs-canvas {
+    background: white;
+  }
+  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  .home-page-desktop-tabs {
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    max-width: 750px;
+  }
+  .home-page-donate-tab-content,
+  .homee-page-partner-tab-content,
+  .home-page-volunteer-tab-content {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .home-page-action-result-text {
+    padding: 10px 20px 10px 0;
   }
 </style>

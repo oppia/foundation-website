@@ -13,22 +13,18 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('HomePage', [
-  'LearnerProfilesService', 'WindowDimensionsService', '$scope', function(
-      LearnerProfilesService, WindowDimensionsService, $scope) {
+  'LearnerProfilesService', 'WindowDimensionsService', '$scope', '$window',
+  function(LearnerProfilesService, WindowDimensionsService, $scope, $window) {
+    $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
+    if ($scope.activeTabIndex === null) {
+      $scope.activeTabIndex = 0;
+    }
+    $scope.onTabSelected = function(activeTabIndex) {
+      $scope.activeTabIndex = activeTabIndex;
+      $window.sessionStorage.setItem(
+        'activeTabIndex', activeTabIndex.toString());
+    };
     $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
-    $scope.studentProblemsTextContent = [{
-      heading: '1. Discrimination',
-      text: 'Up to 95% of children with disabilities are out of school. At ' +
-      'least 1 in 5 adolescent girls globally are denied an education.'
-    }, {
-      heading: '2. Lack of resources',
-      text: 'In 1 out of 3 countries, less than 3/4 of teachers are trained ' +
-      'to national standards. Millions lack textbooks and related resources.'
-    }, {
-      heading: '3. Conflict',
-      text: 'In 2017, 27 million of the 50 million children living in ' +
-      'countries affected by conflicts were out of school.'
-    }];
     $scope.impactTextContent = [{
       number: '1,000,000+',
       text: 'Learners served worldwide'
@@ -43,6 +39,35 @@ oppiaFoundationWebsite.controller('HomePage', [
       text: 'Volunteers from all over the glove'
     }];
     $scope.learnerProfiles = LearnerProfilesService.getLearnerProfiles();
+    $scope.situationDescriptionUrls = {
+      donate: '/pages/home/situation_description/donate_situation.html',
+      partner: '/pages/home/situation_description/partner_situation.html',
+      volunteer: '/pages/home/situation_description/volunteer_situation.html'
+    };
+    $scope.studentProblemsTextContent = [{
+      heading: '1. Discrimination',
+      text: 'Up to 95% of children with disabilities are out of school. At ' +
+      'least 1 in 5 adolescent girls globally are denied an education.'
+    }, {
+      heading: '2. Lack of resources',
+      text: 'In 1 out of 3 countries, less than 3/4 of teachers are trained ' +
+      'to national standards. Millions lack textbooks and related resources.'
+    }, {
+      heading: '3. Conflict',
+      text: 'In 2017, 27 million of the 50 million children living in ' +
+      'countries affected by conflicts were out of school.'
+    }];
+    $scope.tabs = [{
+      title: 'Donate',
+      templateUrl: '/pages/home/tabs_template/donate_tab.html'
+    }, {
+      title: 'Partner',
+      templateUrl: '/pages/home/tabs_template/partner_tab.html'
+    }, {
+      title: 'Volunteer',
+      templateUrl: '/pages/home/tabs_template/volunteer_tab.html'
+    }];
+    $scope.templateUrl = $scope.tabs[0].templateUrl;
     WindowDimensionsService.registerOnResizeHook(function() {
       $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
       $scope.$apply();
