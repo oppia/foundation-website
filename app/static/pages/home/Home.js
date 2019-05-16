@@ -36,7 +36,7 @@ oppiaFoundationWebsite.controller('HomePage', [
       text: 'Randomized trial completed. More to come!'
     }, {
       number: '100',
-      text: 'Volunteers from all over the glove'
+      text: 'Volunteers from all over the globe'
     }];
     $scope.learnerProfiles = LearnerProfilesService.getLearnerProfiles();
     $scope.situationDescriptionUrls = {
