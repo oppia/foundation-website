@@ -229,9 +229,10 @@ blockquote {
 }
 
 ul {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-position: disc;
   margin-bottom: 15px;
+  padding-left: 20px;
 }
 
 ol {
