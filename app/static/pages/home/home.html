@@ -13,7 +13,6 @@
                             oppia-foundation-mobile-and-tablet-top-padding-60
                             oppia-foundation-white-background
                             oppia-foundation-dark-green-text
-                            oppia-foundation-no-padding
                             home-page-display-size">
       <md-card-title class="oppia-foundation-no-horizontal-padding
                             home-page-title-box">
@@ -71,8 +70,7 @@
            layout="column">
     <md-card-content layout="row"
                      layout-align="center"
-                     class="oppia-foundation-no-padding
-                            home-page-description-text-box
+                     class="home-page-description-text-box
                             home-page-display-size">
       <md-content layout="column"
                   layout-align="center"
@@ -121,8 +119,7 @@
     <md-card-content layout-gt-sm="row"
                      layout="column"
                      layout-align="space-between"
-                     class="oppia-foundation-no-padding
-                            home-page-description-text-box
+                     class="home-page-description-text-box
                             home-page-display-size">
       <md-content flex-gt-sm="50"
                   layout="column"
@@ -199,13 +196,13 @@
                   oppia-foundation-horizontal-padding">
     <md-card-content class="home-page-display-size"
                      layout="column"
-                     layout-gt-md="row"
+                     layout-gt-sm="row"
                      layout-align="center"
                      layout-fill>
       <md-content layout="column"
                   layout-align="center center"
-                  layout-align-gt-md="start"
-                  flex-gt-md="40"
+                  layout-align-gt-sm="start"
+                  flex-gt-sm="40"
                   class="oppia-foundation-green-background
                          oppia-foundation-left-align-text
                          oppia-foundation-white-text
@@ -360,28 +357,36 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <h3 class="md-display-1
-               home-page-content-title
-               oppia-foundation-green-text
-               oppia-foundation-margin-bottom-40">
-      Be a part of the change
-    </h3>
-    <md-content class="oppia-foundation-white-background">
-      <md-card-title class="oppia-foundation-no-padding">
-        <md-card-title-text>
-          <h3 class="md-display-1
-                     home-page-content-title">
-            Donate
-          </h3>
-        </md-card-title-text>
-      </md-card-title>
-      <ng-include src="situationDescriptionUrls.donate"></ng-include>
+    <md-card-content layout-fill
+                     layout="column"
+                     layout-align="center center">
+      <h3 class="md-display-1
+                 home-page-content-title
+                 oppia-foundation-green-text
+                 oppia-foundation-margin-bottom-40">
+        Be a part of the change
+      </h3>
+      <md-content class="oppia-foundation-white-background">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1
+                       home-page-content-title">
+              Donate
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p>
+          When you donate to Oppia, you empower a movement towards
+          better learning for everyone. Every little bit counts!
+        </p>
+        <ng-include src="situationDescriptionUrls.donate"></ng-include>
+      </md-content>
       <md-button class="oppia-foundation-green-button
-                        oppia-foundation-margin-bottom-40"
-             href="/#!/donate">
+                          oppia-foundation-margin-bottom-40"
+                 href="/#!/donate">
         Donate Now
       </md-button>
-    </md-content>
+    </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding
@@ -392,22 +397,32 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-content class="oppia-foundation-gray-background">
-      <md-card-title class="oppia-foundation-no-padding">
-        <md-card-title-text>
-          <h3 class="md-display-1
-                     home-page-content-title">
-            Partner
-          </h3>
-        </md-card-title-text>
-      </md-card-title>
-      <ng-include src="situationDescriptionUrls.partner"></ng-include>
+    <md-card-content layout-fill
+                     layout="column"
+                     layout-align="center center">
+      <md-content class="oppia-foundation-gray-background">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1
+                       home-page-content-title">
+              Partner
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p>
+          Our partners are crucial to the advancement of our mission.
+          They are the ones working on the ground to ensure these
+          students can best leverage our lessons to their benefit.
+          Let's work together to advance the state of education!
+        </p>
+        <ng-include src="situationDescriptionUrls.partner"></ng-include>
+      </md-content>
       <md-button class="oppia-foundation-green-button
-                        oppia-foundation-margin-bottom-40"
-             href="/#!/partnerships">
+                          oppia-foundation-margin-bottom-40"
+                 href="/#!/partnerships">
         Learn More
       </md-button>
-    </md-content>
+    </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-white-background
                   oppia-foundation-vertical-padding
@@ -418,22 +433,33 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-content class="oppia-foundation-white-background">
-      <md-card-title class="oppia-foundation-no-padding">
-        <md-card-title-text>
-          <h3 class="md-display-1
-                     home-page-content-title">
-            Volunteer
-          </h3>
-        </md-card-title-text>
-      </md-card-title>
-      <ng-include src="situationDescriptionUrls.volunteer"></ng-include>
+    <md-card-content layout-fill
+                     layout="column"
+                     layout-align="center center">
+      <md-content class="oppia-foundation-white-background">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1
+                       home-page-content-title">
+              Volunteer
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p>
+          We have a broad community of volunteers who play critical
+          roles in everything from software development to graphic
+          design and even marketing and outreach. If you are
+          passionate about education and giving back, don't hesitate
+          to reach out. Become a part of the Oppian family today!
+        </p>
+        <ng-include src="situationDescriptionUrls.volunteer"></ng-include>
+      </md-content>
       <md-button class="oppia-foundation-green-button
-                        oppia-foundation-margin-bottom-40"
-             href="/#!/volunteer">
+                          oppia-foundation-margin-bottom-40"
+                 href="/#!/volunteer">
         Get Involved
       </md-button>
-    </md-content>
+    </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-green-background
                   oppia-foundation-vertical-padding
@@ -465,13 +491,16 @@
         </p>
         <md-button class="oppia-foundation-green-button"
                    href="https://tinyletter.com/oppia">
-                   Subscribe
+          Subscribe
         </md-button>
       </md-content>
     </md-card-content>
   </md-card>
 </section>
 <style>
+  md-card md-card-content {
+    padding: 0;
+  }
   .home-page-hero-card {
     position: relative;
   }
