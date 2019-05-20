@@ -22,6 +22,19 @@ oppiaFoundationWebsite.controller(
       $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
       $scope.PARTNERSHIPS_EMAIL_SUBJECT = 'Partnering%20with%20Oppia';
       $scope.formSubmitted = false;
+      $scope.oppiaChallenges = [{
+        fileName: 'Magnifier icon',
+        filePath: '/assets/icons/magnifier_icons.svg',
+        text: 'Conducting randomized controlled trials'
+      }, {
+        fileName: 'Podium icon',
+        filePath: '/assets/icons/podium_icon.svg',
+        text: 'Funding our best lesson creators'
+      }, {
+        fileName: 'Scaling icon',
+        filePath: '/assets/icons/scaling_icons.svg',
+        text: 'Scaling our impact and outreach'
+      }];
       $scope.submitContactUsForm = function(
           fullName, email, organization, comment, evt) {
         $scope.formSubmitted = true;
