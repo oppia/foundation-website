@@ -93,8 +93,9 @@
                  layout="column"
                  layout-align="space-between center">
           <md-list-item class="home-page-student-problems-list-item"
+                        flex="33"
                         layout="column"
-                        layout-align="start"
+                        layout-align="center"
                         ng-repeat="item in studentProblemsTextContent">
             <md-content class="oppia-foundation-white-background
                                home-page-student-problems-text">
@@ -194,7 +195,8 @@
            class="oppia-foundation-green-background
                   oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding">
-    <md-card-content class="home-page-display-size"
+    <md-card-content class="home-page-display-size
+                            home-page-description-text-box"
                      layout="column"
                      layout-gt-sm="row"
                      layout-align="center"
@@ -244,6 +246,7 @@
     <md-card-content layout="column"
                      layout-align="center center"
                      class="home-page-display-size
+                            home-page-description-text-box
                             oppia-foundation-gray-background">
       <h3 class="md-display-1
                  home-page-content-title
@@ -674,7 +677,7 @@
     }
   }
   .home-page-description-text-box {
-    max-width: 850px;
+    max-width: 1000px;
   }
   .home-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
@@ -704,12 +707,17 @@
   }
   @media screen and (min-width: 960px) {
     .home-page-student-problems-text {
-      min-height: 250px;
+      min-height: 260px;
     }
   }
   @media screen and (min-width: 1280px) {
     .home-page-student-problems-text {
-      min-height: 280px;
+      min-height: 230px;
+    }
+  }
+  @media screen and (min-width: 1580px) {
+    .home-page-student-problems-text {
+      min-height: 250px;
     }
   }
   @media screen and (max-width: 960px) {
@@ -784,7 +792,7 @@
   .home-page-desktop-tabs {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    max-width: 750px;
+    max-width: 792px;
   }
   .home-page-donate-tab-content,
   .homee-page-partner-tab-content,
