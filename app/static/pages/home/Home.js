@@ -13,11 +13,9 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('HomePage', [
-  'ADMIN_EMAIL_ADDRESS', 'LearnerProfilesService', 'WindowDimensionsService',
-  '$scope', '$window',
+  'ADMIN_EMAIL_ADDRESS', 'LearnerProfilesService', '$scope', '$window',
   function(
-      ADMIN_EMAIL_ADDRESS, LearnerProfilesService, WindowDimensionsService,
-      $scope, $window) {
+      ADMIN_EMAIL_ADDRESS, LearnerProfilesService, $scope, $window) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
     $scope.QUESTION_EMAIL_SUBJECT = 'Question%20about%20Oppia';
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
@@ -42,7 +40,6 @@ oppiaFoundationWebsite.controller('HomePage', [
       'and giving back, don\'t hesitate to reach out. Become a part of the ' +
       'Oppia family today!'
     };
-    $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
     $scope.impactTextContent = [{
       number: '1,000,000+',
       text: 'Learners served worldwide'
@@ -86,8 +83,4 @@ oppiaFoundationWebsite.controller('HomePage', [
       templateUrl: '/pages/home/tabs_template/volunteer_tab.html'
     }];
     $scope.templateUrl = $scope.tabs[0].templateUrl;
-    WindowDimensionsService.registerOnResizeHook(function() {
-      $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
-      $scope.$apply();
-    });
   }]);
