@@ -13,8 +13,13 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('HomePage', [
-  'LearnerProfilesService', 'WindowDimensionsService', '$scope', '$window',
-  function(LearnerProfilesService, WindowDimensionsService, $scope, $window) {
+  'ADMIN_EMAIL_ADDRESS', 'LearnerProfilesService', 'WindowDimensionsService',
+  '$scope', '$window',
+  function(
+      ADMIN_EMAIL_ADDRESS, LearnerProfilesService, WindowDimensionsService,
+      $scope, $window) {
+    $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+    $scope.QUESTION_EMAIL_SUBJECT = 'Question%20about%20Oppia';
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
