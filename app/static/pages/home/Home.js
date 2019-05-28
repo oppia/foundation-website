@@ -24,6 +24,19 @@ oppiaFoundationWebsite.controller('HomePage', [
       $window.sessionStorage.setItem(
         'activeTabIndex', activeTabIndex.toString());
     };
+    $scope.engagementDescriptionText = {
+      donate: 'When you donate to Oppia, you empower a movement towards ' +
+      'better learning for everyone. Every little bit counts!',
+      partner: 'Our partners are crucial to the advancement of our mission. ' +
+      'They are the ones working on the ground to ensure these students can ' +
+      'best leverage our lessons to their benefit. Let\'s work together to ' +
+      'advance the state of education!',
+      volunteer: 'We have a broad community of volunteers who play critical ' +
+      'roles in everything from software development to graphic design and ' +
+      'even marketing and outreach. If you are passionate about education ' +
+      'and giving back, don\'t hesitate to reach out. Become a part of the ' +
+      'Oppia family today!'
+    };
     $scope.desktopView = WindowDimensionsService.isDesktopViewWidth();
     $scope.impactTextContent = [{
       number: '1,000,000+',
@@ -35,7 +48,7 @@ oppiaFoundationWebsite.controller('HomePage', [
       number: '1',
       text: 'Randomized trial completed. More to come!'
     }, {
-      number: '100',
+      number: '100+',
       text: 'Volunteers from all over the globe'
     }];
     $scope.learnerProfiles = LearnerProfilesService.getLearnerProfiles();
