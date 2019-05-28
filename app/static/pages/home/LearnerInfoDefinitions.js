@@ -20,13 +20,13 @@ oppiaFoundationWebsite.constant('LEARNER_INFO', [
     location: 'India',
     profilePictureImageFilename: 'testimonial_profile1.jpg',
     testimonial: 'I have never seen any lesson towards Maths and now I have ' +
-    'been doing it, I think Math is easy and fun too. '
+      'been doing it, I think Math is easy and fun too. '
   }, {
     age: 8,
     fullName: 'Learner',
     location: 'India',
     profilePictureImageFilename: 'testimonial_profile2.jpg',
     testimonial: 'I have never seen any lesson towards Maths and now I have ' +
-    'been doing it, I think Math is easy and fun too.'
+      'been doing it, I think Math is easy and fun too.'
   }
 ]);

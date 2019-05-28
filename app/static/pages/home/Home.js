@@ -29,16 +29,16 @@ oppiaFoundationWebsite.controller('HomePage', [
     };
     $scope.engagementDescriptionText = {
       donate: 'When you donate to Oppia, you empower a movement towards ' +
-      'better learning for everyone. Every little bit counts!',
+        'better learning for everyone. Every little bit counts!',
       partner: 'Our partners are crucial to the advancement of our mission. ' +
-      'They are the ones working on the ground to ensure these students can ' +
-      'best leverage our lessons to their benefit. Let\'s work together to ' +
-      'advance the state of education!',
+        'They are the ones working on the ground to ensure these students ' +
+        'can best leverage our lessons to their benefit. Let\'s work ' +
+        'together to advance the state of education!',
       volunteer: 'We have a broad community of volunteers who play critical ' +
-      'roles in everything from software development to graphic design and ' +
-      'even marketing and outreach. If you are passionate about education ' +
-      'and giving back, don\'t hesitate to reach out. Become a part of the ' +
-      'Oppia family today!'
+        'roles in everything from software development to graphic design and ' +
+        'even marketing and outreach. If you are passionate about education ' +
+        'and giving back, don\'t hesitate to reach out. Become a part of the ' +
+        'Oppia family today!'
     };
     $scope.impactTextContent = [{
       number: '1,000,000+',
@@ -62,15 +62,15 @@ oppiaFoundationWebsite.controller('HomePage', [
     $scope.studentProblemsTextContent = [{
       heading: '1. Discrimination',
       text: 'Up to 95% of children with disabilities are out of school. At ' +
-      'least 1 in 5 adolescent girls globally are denied an education.'
+        'least 1 in 5 adolescent girls globally are denied an education.'
     }, {
       heading: '2. Lack of resources',
       text: 'In 1 out of 3 countries, less than 3/4 of teachers are trained ' +
-      'to national standards. Millions lack textbooks and related resources.'
+        'to national standards. Millions lack textbooks and related resources.'
     }, {
       heading: '3. Conflict',
       text: 'In 2017, 27 million of the 50 million children living in ' +
-      'countries affected by conflicts were out of school.'
+        'countries affected by conflicts were out of school.'
     }];
     $scope.tabs = [{
       title: 'Donate',
