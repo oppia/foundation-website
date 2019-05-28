@@ -22,13 +22,13 @@ oppiaFoundationWebsite.factory('LearnerProfilesService', [
       '/assets/images/home/learner_profile_images/';
     var appendProfilePicturePaths = function(learnerProfiles) {
       // Clone learnerProfiles to prevent modifying the original profiles.
-      learnerProfiles = angular.copy(learnerProfiles);
-      for (var i = learnerProfiles.length - 1; i >= 0; i--) {
-        learnerProfiles[i].profilePictureImageFilename =
+      var completeLearnerProfiles = angular.copy(learnerProfiles);
+      for (var i = completeLearnerProfiles.length - 1; i >= 0; i--) {
+        completeLearnerProfiles[i].profilePictureImageFilename =
           PROFILE_IMAGE_ABSOLUTE_PATH +
-          learnerProfiles[i].profilePictureImageFilename;
+          completeLearnerProfiles[i].profilePictureImageFilename;
       }
-      return learnerProfiles;
+      return completeLearnerProfiles;
     };
 
     var completeLearnerProfiles = appendProfilePicturePaths(LEARNER_INFO);
