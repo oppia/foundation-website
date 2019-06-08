@@ -15,18 +15,20 @@
 oppiaFoundationWebsite.constant('LEARNER_INFO', [
 
   {
-    age: 8,
-    fullName: 'Learner',
-    location: 'India',
-    profilePictureImageFilename: 'testimonial_profile1.jpg',
-    testimonial: 'I have never seen any lesson towards Maths and now I have ' +
-      'been doing it, I think Math is easy and fun too. '
+    age: 12,
+    fullName: 'Student A',
+    location: 'Khanpur, Delhi',
+    profilePictureImageFilename: 'student_A_and_student_B.jpg',
+    testimonial: 'I liked learning the lessons on mobile because... we get ' +
+      'very good questions and if we get something wrong we are told how to ' +
+      'correct it and we are not scared when we are doing this... I really ' +
+      'liked this app.'
   }, {
-    age: 8,
-    fullName: 'Learner',
-    location: 'India',
-    profilePictureImageFilename: 'testimonial_profile2.jpg',
-    testimonial: 'I have never seen any lesson towards Maths and now I have ' +
-      'been doing it, I think Math is easy and fun too.'
+    age: 9,
+    fullName: 'Student D',
+    location: 'Kumbo, Bamenda',
+    profilePictureImageFilename: 'student_D.jpg',
+    testimonial: 'The lessons were very interesting and fun, and became more ' +
+      'challenging as I continued further.'
   }
 ]);
