@@ -18,14 +18,15 @@ oppiaFoundationWebsite.controller('HomePage', [
       ADMIN_EMAIL_ADDRESS, LearnerProfilesService, $scope, $window) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
     $scope.QUESTION_EMAIL_SUBJECT = 'Question%20about%20Oppia';
-    $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
-    if ($scope.activeTabIndex === null) {
-      $scope.activeTabIndex = 0;
+    $scope.activeHomePageTabIndex = $window.sessionStorage.getItem(
+      'activeHomePageTabIndex');
+    if ($scope.activeHomePageTabIndex === null) {
+      $scope.activeHomePageTabIndex = 0;
     }
-    $scope.onTabSelected = function(activeTabIndex) {
-      $scope.activeTabIndex = activeTabIndex;
+    $scope.onTabSelected = function(activeHomePageTabIndex) {
+      $scope.activeHomePageTabIndex = activeHomePageTabIndex;
       $window.sessionStorage.setItem(
-        'activeTabIndex', activeTabIndex.toString());
+        'activeHomePageTabIndex', activeHomePageTabIndex.toString());
     };
     $scope.engagementDescriptionText = {
       donate: 'When you donate to Oppia, you empower a movement towards ' +
