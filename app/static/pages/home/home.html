@@ -208,9 +208,11 @@
                   class="oppia-foundation-green-background
                          oppia-foundation-left-align-text
                          oppia-foundation-white-text
-                         oppia-foundation-mobile-and-tablet-bottom-padding
+                         oppia-foundation-mobile-and-tablet-bottom-padding-40
                          home-page-description-text-box">
-        <p class="home-page-large-text-header">
+        <p class="oppia-foundation-no-margin
+                  home-page-large-text-header
+                  home-page-oppia-difference-text">
           Oppia is an engaging new approach to online learning that caters
           specifically to the unique needs of the world's most underserved youth.
         </p>
@@ -220,21 +222,23 @@
           See The Oppia Difference
         </md-button>
       </md-content>
-      <div class="macbook"
-           layout-fill>
-        <div class="screen">
-          <div class="viewport" controls>
-            <video controls controlsList="nodownload"
-                   class="home-page-interactions-video">
-              <source src="/assets/videos/Interactions_video.mp4"
-                      type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+      <md-content class="oppia-foundation-green-background"
+                  flex-gt-sm="60">
+        <div class="macbook">
+          <div class="screen">
+            <div class="viewport" controls>
+              <video controls controlsList="nodownload"
+                     class="home-page-interactions-video">
+                <source src="/assets/videos/Interactions_video.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
+          <div class="base"></div>
+          <div class="notch"></div>
         </div>
-        <div class="base"></div>
-        <div class="notch"></div>
-      </div>
+      </md-content>
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-gray-background
@@ -529,6 +533,9 @@
   md-card .md-actions, md-card md-card-actions {
     margin-top: 20px;
     margin-left: 0px;
+  }
+  .home-page-oppia-difference-text {
+    padding-bottom : 25px;
   }
   .macbook {
     padding: 0 0 20px;
