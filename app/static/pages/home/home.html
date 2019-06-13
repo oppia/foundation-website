@@ -259,15 +259,14 @@
         Our impact and testimonials
       </h3>
       <md-content class="oppia-foundation-black-text
-                         oppia-foundation-gray-background
-                         oppia-foundation-margin-bottom-20"
+                         oppia-foundation-gray-background"
                   layout="column"
                   layout-gt-md="row"
-                  layout-align="center center"
-                  layout-fill>
+                  layout-align="center center">
         <md-list class="oppia-foundation-white-background
-                        oppia-foundation-mobile-and-tablet-margin-bottom-20
-                        oppia-foundation-small-tablet-and-desktop-right-margin">
+                        oppia-foundation-mobile-and-tablet-margin-bottom-40
+                        oppia-foundation-small-tablet-and-desktop-right-margin"
+                 flex-gt-md="25">
           <md-list-item ng-repeat="item in impactTextContent">
             <md-content class="oppia-foundation-white-background">
               <h4 class="oppia-foundation-bold-text">
@@ -281,14 +280,15 @@
           </md-list-item>
         </md-list>
         <md-list class="oppia-foundation-white-background
+                        oppia-foundation-mobile-and-tablet-margin-bottom-20
                         home-page-description-text-box"
                  layout="column"
-                 layout-align="center center">
+                 layout-align="center start">
           <md-list-item ng-repeat="learner in learnerProfiles"
                         layout="row"
-                        layout-fill
-                        layout-align="center center">
-            <div flex="noshrink"
+                        layout-align="center">
+            <div class="oppia-foundation-button-horizontal-padding"
+                 flex="noshrink"
                  layout="column"
                  layout-align="center center">
               <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
@@ -296,8 +296,7 @@
                    alt="{{learner.fullName}}">
             </div>
             <md-content class="oppia-foundation-white-background
-                               oppia-foundation-button-horizontal-padding"
-                        flex="85">
+                               oppia-foundation-button-horizontal-padding">
               <p>
                 <span class="oppia-foundation-green-text
                              home-page-content-title">&ldquo;</span>
@@ -313,7 +312,8 @@
           </md-list-item>
         </md-list>
       </md-content>
-      <md-button class="oppia-foundation-green-button"
+      <md-button class="oppia-foundation-green-button
+                        oppia-foundation-padding-top-40"
                  href="/#!/about">
         Learn More
       </md-button>
@@ -388,7 +388,7 @@
         <ng-include src="situationDescriptionUrls.donate"></ng-include>
       </md-content>
       <md-button class="oppia-foundation-green-button
-                          oppia-foundation-margin-bottom-40"
+                        oppia-foundation-margin-bottom-40"
                  href="/#!/donate">
         Donate Now
       </md-button>
@@ -419,7 +419,7 @@
         <ng-include src="situationDescriptionUrls.partner"></ng-include>
       </md-content>
       <md-button class="oppia-foundation-green-button
-                          oppia-foundation-margin-bottom-40"
+                        oppia-foundation-margin-bottom-40"
                  href="/#!/partnerships">
         Learn More
       </md-button>
@@ -450,7 +450,7 @@
         <ng-include src="situationDescriptionUrls.volunteer"></ng-include>
       </md-content>
       <md-button class="oppia-foundation-green-button
-                          oppia-foundation-margin-bottom-40"
+                        oppia-foundation-margin-bottom-40"
                  href="/#!/volunteer">
         Get Involved
       </md-button>

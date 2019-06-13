@@ -418,6 +418,9 @@ Full-Width Styles
   .oppia-foundation-mobile-and-tablet-margin-bottom-20 {
     margin-bottom: 20px;
   }
+  .oppia-foundation-mobile-and-tablet-margin-bottom-40 {
+    margin-bottom: 40px;
+  }
 }
 @media screen and (min-width: 960px) {
   .oppia-foundation-small-tablet-and-desktop-vertical-padding {
