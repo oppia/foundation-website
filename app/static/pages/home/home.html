@@ -290,6 +290,7 @@
                         layout-align="center">
             <div class="oppia-foundation-button-horizontal-padding"
                  flex="noshrink"
+                 hide-xs
                  layout="column"
                  layout-align="center center">
               <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
@@ -297,17 +298,32 @@
                    alt="{{learner.fullName}}">
             </div>
             <md-content class="oppia-foundation-white-background
-                               oppia-foundation-button-horizontal-padding">
+                               oppia-foundation-tablet-and-destop-horizontal-padding-20
+                               home-page-student-testimonials">
               <p>
                 <span class="oppia-foundation-green-text
-                             home-page-content-title">&ldquo;</span>
-                {{learner.testimonial}}
+                             home-page-content-title">
+                  &ldquo;
+                </span>
+                  {{learner.testimonial}}
                 <span class="oppia-foundation-green-text
-                             home-page-content-title">&rdquo;</span>
+                             home-page-content-title">
+                  &rdquo;
+                </span>
               </p>
-              <p>
-                - Student, {{learner.age}} years old, from {{learner.location}}
-              </p>
+              <div layout-xs="row">
+                <div class="home-page-mobile-learner-profile-picture-container"
+                     hide-gt-xs
+                     layout="column"
+                     layout-align="start">
+                  <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
+                       class="home-page-learner-profile-picture"
+                       alt="{{learner.fullName}}">
+                </div>
+                <p class="home-page-student-info">
+                  - Student, {{learner.age}} years old, from {{learner.location}}
+                </p>
+              </div>
               <md-divider ng-if="!$last"></md-divider>
             </md-content>
           </md-list-item>
@@ -717,6 +733,12 @@
       width: auto;
     }
   }
+  .home-page-student-testimonials {
+    padding-bottom: 15px;
+  }
+  .home-page-mobile-learner-profile-picture-container {
+    padding-right: 20px
+  }
   .home-page-learner-profile-picture {
     border-radius: 50%;
     height: 80px;
@@ -727,6 +749,10 @@
       height: 60px;
       width: 60px;
     }
+  }
+  .home-page-student-info {
+    margin-bottom: auto;
+    margin-top: auto;
   }
   md-tabs .md-tab {
     background-color: white;

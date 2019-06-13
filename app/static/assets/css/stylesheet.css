@@ -358,6 +358,10 @@ Full-Width Styles
   .oppia-foundation-tablet-and-destop-bottom-padding-40 {
     padding-bottom: 40px;
   }
+  .oppia-foundation-tablet-and-destop-horizontal-padding-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .oppia-foundation-top-padding {
