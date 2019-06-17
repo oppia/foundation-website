@@ -12,12 +12,30 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+oppiaFoundationWebsite.constant('GREEN_BUTTON', 'green');
+oppiaFoundationWebsite.constant('WHITE_BUTTON', 'white');
+
 oppiaFoundationWebsite.directive('paypalDonateForm', [function() {
   return {
     restrict: 'E',
     scope: {
-      buttonText: '@',
+      buttonColor: '@',
+      buttonText: '@'
     },
     templateUrl: '/pages/donate/paypal_donate_form.html',
+    controller: [
+      '$scope', 'GREEN_BUTTON', 'WHITE_BUTTON',
+      function($scope, GREEN_BUTTON, WHITE_BUTTON) {
+        if ($scope.buttonColor === GREEN_BUTTON) {
+          $scope.oppiaGreenButton = true;
+          $scope.oppiaWhiteButton = false;
+        } else if ($scope.buttonColor === WHITE_BUTTON) {
+          $scope.oppiaGreenButton = false;
+          $scope.oppiaWhiteButton = true;
+        } else {
+          throw Error('Incorrect button color used in markup file.');
+        }
+      }
+    ]
   };
 }]);

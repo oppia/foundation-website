@@ -1,52 +1,12 @@
 <!DOCTYPE html>
 <section id="donate">
-  <md-card layout-fill
-           class="oppia-foundation-white-background
-                  donate-page-hero-section">
-    <div hide-xs hide-sm hide-md class="donate-page-desktop-hero-slide">
-      <div class="oppia-foundation-clearfix"
-           layout="column"
+  <md-card class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding"
            layout-fill>
-        <md-card-content layout="column"
-                         layout-align="center"
-                         class="donate-page-welcome-image-overlay
-                                oppia-foundation-horizontal-padding
-                                oppia-foundation-white-background
-                                oppia-foundation-dark-green-text">
-          <div class="donate-page-welcome-text-box">
-            <md-card-title class="oppia-foundation-no-padding
-                                  donate-page-title-box">
-              <h1>
-                Donate to The Oppia Foundation
-              </h1>
-            </md-card-title>
-            <p></p>
-            <h4 class="md-title donate-page-title-description">
-              With your support, the Oppia Foundation can continue its mission
-              to provide high-quality personalized lessons to students from all around the world.
-            </h4>
-            <md-card-actions class="donate-page-donate-button-row"
-                             layout="row">
-              <paypal-donate-form button-text="Donate via Credit Card">
-              </paypal-donate-form>
-              <div flex="10"></div>
-              <paypal-donate-form button-text="Donate via Paypal">
-              </paypal-donate-form>
-            </md-card-actions>
-          </div>
-        </md-card-content>
-      </div>
-    </div>
-  </md-card>
-  <md-card layout-fill
-          class="oppia-foundation-white-background">
-    <md-card-content hide-gt-md
-                     layout="column"
+    <md-card-content layout="column"
                      layout-fill
                      layout-align="center"
                      class="oppia-foundation-horizontal-padding
-                            oppia-foundation-mobile-and-small-tablet-top-padding
-                            oppia-foundation-small-tablet-and-desktop-vertical-padding
                             oppia-foundation-white-background
                             oppia-foundation-dark-green-text
                             donate-page-welcome-text-box">
@@ -59,32 +19,28 @@
       <md-content class="oppia-foundation-white-background
                          oppia-foundation-dark-green-text">
         <h4 class="md-title">
-          With your support, the Oppia Foundation can continue its mission
-          to provide high-quality personalized lessons
-          to students from all around the world.
+          With your support, we can continue to provide high-quality education
+          to underserved students around the world. Your donations go toward
+          server costs, student outreach, and marketing.
         </h4>
       </md-content>
     </md-card-content>
-    <md-card-actions hide-gt-md
-                     layout="row" layout-xs="column" layout-align="start"
-                     layout-align-xs="center center"
+    <md-card-actions layout="column"
+                     layout-align="space-between start"
                      class="donate-page-donate-button-row
                             oppia-foundation-horizontal-padding">
-      <paypal-donate-form button-text="Donate via Credit Card">
+      <paypal-donate-form button-color="green"
+                          button-text="Donate via Credit Card">
       </paypal-donate-form>
-      <div flex="5"></div>
-      <paypal-donate-form button-text="Donate via Paypal">
+      <paypal-donate-form button-color="white"
+                          button-text="Donate via Paypal">
       </paypal-donate-form>
     </md-card-actions>
-    <md-card-content class="donate-hero-image-container"
-                    hide-gt-md
-                    layout-fill layout="column" layout-align="end">
-      <img hide-gt-md
-           src="/assets/images/donate/donate_hero_card_new.jpg"
-           class="donate-page-welcome-image" alt="Donate hero image">
-    </md-card-content>
   </md-card>
-  <md-card layout-fill layout="column" layout-gt-xs="row" class="oppia-foundation-vertical-padding">
+  <md-card layout-fill
+           layout="column"
+           layout-gt-xs="row"
+           class="oppia-foundation-vertical-padding">
     <md-card-content layout-gt-sm="row"
                      layout="column"
                      layout-align="start center"
@@ -163,22 +119,10 @@
   </md-card>
 </section>
 <style>
-  .donate-page-hero-section {
-    position: relative;
-  }
   .donate-page-donate-button-row {
+    min-height: 105px;
     margin: auto;
     width: 850px;
-  }
-  @media screen and (max-width: 600px) {
-    .donate-page-donate-button-row {
-      min-height: 95px;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    .donate-page-donate-button-row {
-      width: auto;
-    }
   }
   .donate-page-title-box {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
@@ -242,7 +186,7 @@
     }
   }
   md-card md-card-actions:not(.layout-column) .md-button:not(.md-icon-button)
-  md-card .md-actions:not(.layout-column) .md-button:not(.md-icon-button), {
+  md-card .md-actions:not(.layout-column) .md-button:not(.md-icon-button) {
     margin: 0;
   }
   .donate-page-display-size {
