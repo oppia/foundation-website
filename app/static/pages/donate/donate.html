@@ -71,53 +71,51 @@
   <md-card layout-fill
            layout="column"
            layout-gt-xs="row"
-           class="oppia-foundation-vertical-padding">
-    <md-card-content layout-gt-sm="row"
-                     layout="column"
-                     layout-align="start center"
-                     class="oppia-foundation-no-padding
+           layout-align="center"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding">
+    <md-card-content layout="column"
+                     layout-align="center"
+                     class="oppia-foundation-gray-background
+                            oppia-foundation-no-padding
                             oppia-foundation-horizontal-padding
-                            donate-page-display-size">
+                            donate-page-amazon-smile-card">
       <md-content class="oppia-foundation-black-text
-                         oppia-foundation-white-background"
-                  flex-gt-sm="50">
-        <md-card-title class="oppia-foundation-no-padding">
-          <h3 class="md-display-1 donate-page-content-title">
-            Contribute through Amazon Smile
+                         oppia-foundation-gray-background
+                         donate-page-amazon-smile-header-box"
+                  layout-gt-sm="row"
+                  layout="column"
+                  layout-align="center">
+        <md-card-title class="oppia-foundation-no-padding
+                              donate-page-content-title">
+          <h3 class="md-display-1
+                     oppia-foundation-green-text
+                     donate-page-content-title">
+            Pay it forward when you shop with Amazon Smile
           </h3>
         </md-card-title>
-        <p>
-          Amazon Smile donates a small portion of any purchase you make on
-          Amazon.com to select non-profit organizations, at no cost to you.
-        </p>
-        <p>
-          Consider selecting The Oppia Foundation as your designated charity on
-          your Amazon Smile account.
-        </p>
-      </md-content>
-      <div hide-xs hide-sm
-           layout="column"
-           layout-align="center center"
-           class="donate-page-amazon-smile-image-container">
-        <md-button aria-label="Amazon Smile donate button"
-                   class="donate-page-press-amazon-smile-button"
-                   href="https://smile.amazon.com/ch/81-1740068">
+        <div layout="row"
+             layout-align="center center">
           <img class="donate-page-amazon-smile-logo"
-               src="/assets/images/donate/donate_amazon_smile.jpg"
+               src="/assets/images/donate/donate_amazon_smile.png"
                alt="Amazon smile image">
-        </md-button>
-      </div>
-      <div hide-gt-sm
-           layout="row"
-           layout-align="center center"
-           class="oppia-foundation-button-horizontal-padding
-                  oppia-foundation-top-padding">
-        <md-button aria-label="Amazon Smile donate button"
-                   class="donate-page-press-amazon-smile-button"
+        </div>
+      </md-content>
+      <md-content class="oppia-foundation-gray-background"
+                  layout="row"
+                  layout-align="start">
+        <ol class="donate-page-amazon-smile-instruction-list">
+          <li>Have an Amazon account</li>
+          <li>Set the Oppia Foundation as your charity of choice</li>
+          <li>Shop on smile.amazon.com</li>
+        </ol>
+      </md-content>
+      <div layout="row" layout-align="center center">
+        <md-button class="oppia-foundation-button-horizontal-padding
+                          oppia-foundation-green-button
+                          paypal-donate-button"
                    href="https://smile.amazon.com/ch/81-1740068">
-          <img src="/assets/images/donate/donate_amazon_smile.jpg"
-               class="donate-page-amazon-smile-logo"
-               alt="Amazon smile image">
+          Shop on Amazon Smile
         </md-button>
       </div>
     </md-card-content>
@@ -157,39 +155,36 @@
   .donate-page-welcome-text-box {
     padding-bottom: 16px;
   }
-  .md-button.donate-page-press-amazon-smile-button:hover,
-  .md-button.donate-page-press-amazon-smile-button:focus {
-    background-color: rgba(255,255,255,1);
-  }
-  .donate-page-amazon-smile-image-container {
-    width: 50%;
-    padding: 25px;
-  }
   .donate-page-amazon-smile-logo {
-    width: 100%;
+    padding: 10px 0;
+    max-width: 268px;
+    max-height: 92px;
   }
-  @media screen and (max-width: 600px) {
-    .donate-page-amazon-smile-logo {
-      max-width: 250px;
-    }
-  }
-  md-card md-card-actions:not(.layout-column) .md-button:not(.md-icon-button)
-  md-card .md-actions:not(.layout-column) .md-button:not(.md-icon-button) {
-    margin: 0;
-  }
-  .donate-page-display-size {
-    max-width: 1500px;
-    margin: auto;
-  }
-  @media screen and (min-width:1500px) {
-    .donate-page-display-size {
-      width: 1500px;
-    }
+  .donate-page-amazon-smile-card {
+    max-width: 800px;
   }
   .donate-page-content-title {
+    line-height: 60px;
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  @media screen and (max-width: 600px) {
+    .donate-page-content-title {
+      line-height: 45px;
+    }
+  }
+  @media screen and (min-width: 960px) {
+    .donate-page-content-title {
+      max-width: 450px;
+    }
   }
   .donate-page-donate-button-gap {
     padding: 7.5px 0;
+  }
+  .donate-page-amazon-smile-header-box {
+    padding-bottom: 16px;
+  }
+  .donate-page-amazon-smile-instruction-list {
+    line-height: 40px;
+    padding-left: 0;
   }
 </style>
