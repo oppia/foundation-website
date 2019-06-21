@@ -301,7 +301,7 @@
                    md-no-asterisk
                    name="fullName"
                    ng-model="fullName">
-            <div ng-messages="userContactsForm.name.$error">
+            <div ng-messages="userContactsForm.fullName.$error">
               <div ng-message="required">
                 Please enter your full name.
               </div>
@@ -350,6 +350,11 @@
                       rows="5"
                       md-select-on-focus>
             </textarea>
+            <div ng-messages="userContactsForm.comment.$error" multiple>
+              <div ng-message="required">
+                Please enter a message.
+              </div>
+            </div>
           </md-input-container>
           <md-button class="oppia-foundation-button-horizontal-padding
                             oppia-foundation-green-button"
