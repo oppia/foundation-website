@@ -277,62 +277,24 @@
                  layout-align-gt-xs="space-between center"
                  layout-fill>
           <md-list-item class="partnerships-page-icon-list-item"
+                        flex="33"
                         layout-gt-xs="column"
                         layout="row"
-                        layout-align="start">
+                        layout-align="start"
+                        ng-repeat="challenge in oppiaChallenges">
             <div class="md-list-item-text"
                  layout-xs="row"
                  layout="column"
                  layout-align="start center"
                  flex>
-              <img src="/assets/icons/magnifier_icons.svg"
+              <img ng-src="{{challenge.filePath}}?{{$index}}"
                    class="partnerships-page-grow-card-icon"
-                   alt="Magnifier icon">
+                   alt="{{challenge.fileName}}">
               <p class="oppia-foundation-center-align-text
                         oppia-foundation-green-text
                         oppia-foundation-mobile-left-padding
                         partnerships-page-icon-description-text-box">
-                Conducting randomized controlled trials
-              </p>
-            </div>
-          </md-list-item>
-          <md-list-item class="partnerships-page-icon-list-item"
-                        layout-gt-xs="column"
-                        layout="row"
-                        layout-align="start">
-            <div class="md-list-item-text"
-                 layout-xs="row"
-                 layout="column"
-                 layout-align="start center"
-                 flex>
-              <img src="/assets/icons/podium_icon.svg"
-                   class="partnerships-page-grow-card-icon"
-                   alt="Podium icon">
-              <p class="oppia-foundation-center-align-text
-                        oppia-foundation-green-text
-                        oppia-foundation-mobile-left-padding
-                        partnerships-page-icon-description-text-box">
-                Funding our best lesson creators
-              </p>
-            </div>
-          </md-list-item>
-          <md-list-item class="partnerships-page-icon-list-item"
-                        layout-gt-xs="column"
-                        layout="row"
-                        layout-align="start">
-            <div class="md-list-item-text"
-                 layout-xs="row"
-                 layout="column"
-                 layout-align="start center"
-                 flex>
-              <img src="/assets/icons/scaling_icons.svg"
-                   class="partnerships-page-grow-card-icon"
-                   alt="Scaling icon">
-              <p class="oppia-foundation-center-align-text
-                        oppia-foundation-green-text
-                        oppia-foundation-mobile-left-padding
-                        partnerships-page-icon-description-text-box">
-                Scaling our impact and outreach
+                {{challenge.text}}
               </p>
             </div>
           </md-list-item>
@@ -461,7 +423,7 @@
           </textarea>
           <div ng-messages="partnershipsEmailForm.comment.$error" multiple>
             <div ng-message="required">
-              Message cannot be empty.
+              Please enter a message.
             </div>
           </div>
         </md-input-container>
@@ -503,7 +465,6 @@
     .partnerships-page-student-quote-box {
       bottom: 30px;
       position: relative;
-      z-index: 8;
     }
   }
   .partnerships-page-student-image-blockquote {
