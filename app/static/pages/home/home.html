@@ -774,6 +774,11 @@
   md-tabs-canvas {
     background: white;
   }
+  md-tab-item {
+    /* This is a workaround for md-tab sizing issue
+    https://github.com/angular/material/issues/4237 */
+    max-width: none !important;
+  }
   md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
