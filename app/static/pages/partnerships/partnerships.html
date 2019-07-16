@@ -7,55 +7,58 @@
                      layout="column"
                      layout-align="center center"
                      layout-align-gt-md="space-between"
-                     layout-gt-md="row"
-                     layout-fill>
-      <md-content class="oppia-foundation-mobile-and-tablet-top-padding-60
+                     layout-gt-md="row">
+      <md-content class="oppia-foundation-mobile-bottom-padding-40
+                         oppia-foundation-mobile-and-tablet-top-padding-60
                          oppia-foundation-mobile-and-tablet-horizontal-padding
                          oppia-foundation-tablet-and-desktop-horizontal-padding
+                         oppia-foundation-tablet-and-desktop-vertical-padding-40
                          oppia-foundation-white-background
                          partnerships-page-welcome-text-box"
                   layout="column"
-                  layout-align="center">
-        <md-card-title class="partnerships-page-hero-card-title-box">
-          <md-card-title-text class="oppia-foundation-dark-green-text
-                                     partnerships-page-title-box">
-            <h1>
-              Partnerships with the Oppia Foundation
-            </h1>
-          </md-card-title-text>
-        </md-card-title>
-        <md-content class="oppia-foundation-white-background
-                           partnerships-page-hero-card-sub-title-box">
-          <p>
-            Does your organization share our vision for global educational
-            equality? With the help of our partners, we have...
-          </p>
-          <ul>
-            <li class="partnerships-page-welcome-text-bullet-list">
-              Served over
-              <span class="oppia-foundation-bold-text
-                           oppia-foundation-green-text">1,000,000</span>
-              learners worldwide
-            </li>
-            <li class="partnerships-page-welcome-text-bullet-list">
-              Completed
-              <span class="oppia-foundation-bold-text
-                           oppia-foundation-green-text">1</span>
-              randomized control trial (RCT)
-            </li>
-            <li class="partnerships-page-welcome-text-bullet-list">
-              Created over
-              <span class="oppia-foundation-bold-text
-                           oppia-foundation-green-text">200,000</span>
-              personalized lessons
-            </li>
-          </ul>
-        </md-content>
+                  layout-align="center center"
+                  flex-gt-md="55">
+        <div class="partnerships-page-hero-card-sub-title-box">
+          <md-card-title>
+            <md-card-title-text class="oppia-foundation-dark-green-text
+                                       partnerships-page-title-box">
+              <h1>
+                Partnerships with the Oppia Foundation
+              </h1>
+            </md-card-title-text>
+          </md-card-title>
+          <md-content class="oppia-foundation-white-background">
+            <p>
+              Does your organization share our vision for global educational
+              equality? With the help of our partners, we have...
+            </p>
+            <ul>
+              <li class="partnerships-page-welcome-text-bullet-list">
+                Served over
+                <span class="oppia-foundation-bold-text
+                             oppia-foundation-green-text">1,000,000</span>
+                learners worldwide
+              </li>
+              <li class="partnerships-page-welcome-text-bullet-list">
+                Completed
+                <span class="oppia-foundation-bold-text
+                             oppia-foundation-green-text">1</span>
+                randomized control trial (RCT)
+              </li>
+              <li class="partnerships-page-welcome-text-bullet-list">
+                Created over
+                <span class="oppia-foundation-bold-text
+                             oppia-foundation-green-text">200,000</span>
+                personalized lessons
+              </li>
+            </ul>
+          </md-content>
+        </div>
       </md-content>
       <img  hide-xs
             hide-sm
             hide-md
-            flex="50"
+            flex="45"
             layout="column"
            src="/assets/images/partnerships/partnerships_hero_image_desktop.jpeg"
            alt="Partnerships page hero image - Desktop view">
@@ -157,13 +160,12 @@
       <md-list class="partnerships-page-partnerships-steps-list"
                layout-gt-xs="row"
                layout="column"
-               layout-align="center start"
-               layout-align-gt-xs="space-between center">
+               layout-align="center start">
         <md-list-item class="partnerships-page-icon-list-item"
                       flex="33"
                       layout-gt-xs="column"
                       layout="row"
-                      layout-align="center"
+                      layout-align="center center"
                       ng-repeat="action in partnershipsActions">
           <div layout-xs="row"
                layout="column"
@@ -171,7 +173,7 @@
             <img ng-src="{{action.iconFilePath}}?{{$index}}"
                  class="partnerships-page-partnerships-steps-icon"
                  alt="{{action.iconFileName}}">
-            <p class="oppia-foundation-left-align-text
+            <p class="oppia-foundation-center-align-text
                       oppia-foundation-black-text
                       oppia-foundation-mobile-left-padding
                       partnerships-page-icon-description-text-box">
@@ -209,7 +211,6 @@
   @media screen and (min-width: 1279px) {
     .partnerships-page-hero-card-title-box {
       max-height: 180px;
-      max-width: 500px;
     }
   }
   @media screen and (min-width: 1279px) {
@@ -224,7 +225,7 @@
   }
   ol li {
     list-style: none; /* Disable the normal item numbering */
-    margin: 0 0 6px 2em;
+    margin: 0 0 6px 1em;
     /* Give each list item a left margin to make room for the numbers */
     position:relative; /* Create a positioning context */
   }
@@ -242,7 +243,7 @@
     position: absolute;
     text-align: center;
     top: -2px;
-    width: 0.5em;
+    width: 2.5em;
   }
   li ol,
   li ul {
@@ -269,7 +270,7 @@
   }
   @media screen and (min-width: 600px) {
     .partnerships-page-partnerships-steps-list {
-      min-width: 80vw;
+      min-width: 75vw;
     }
   }
   .partnerships-page-partnerships-steps-icon {
@@ -288,12 +289,9 @@
   md-list-item.partnerships-page-icon-list-item::after {
     min-height: 0;
   }
-  md-list-item.md-no-proxy.partnerships-page-icon-list-item {
-    padding: 32px 0px;
-  }
-  @media screen and (min-width: 600px) {
+  @media screen and (max-width: 600px) {
     md-list-item.md-no-proxy.partnerships-page-icon-list-item {
-      padding: 16px;
+      padding: 32px 0px;
     }
   }
   .partnerships-page-icon-description-text-box {
@@ -303,20 +301,21 @@
   @media screen and (max-width: 600px) {
     .partnerships-page-icon-description-text-box {
       font-size: inherit;
+      text-align: left;
     }
   }
   @media screen and (min-width: 600px) {
     .partnerships-page-icon-description-text-box {
       font-size: inherit;
-      padding-top: 20px;
+      margin: 20px 0 0 0;
+      text-align: center;
     }
   }
   @media screen and (min-width: 600px) {
     .partnerships-page-icon-description-text-box {
-      min-height: 95px;
+      min-height: calc(78px - 0.5vw);
     }
   }
-
   .partnerships-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
