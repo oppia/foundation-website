@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<section id="about">
+<section id="about" ng-controller="AboutPage">
   <md-card class="oppia-foundation-white-background"
            layout-fill
            layout="column"
@@ -52,8 +52,7 @@
                             home-page-description-text-box"
                      layout="column"
                      layout-gt-sm="row"
-                     layout-align="center"
-                     layout-fill>
+                     layout-align="center">
       <md-content class="oppia-foundation-green-background
                          oppia-foundation-mobile-and-tablet-bottom-padding-40
                          oppia-foundation-small-tablet-and-desktop-right-margin"
@@ -93,7 +92,54 @@
           See The Oppia Difference
         </md-button>
       </md-content>
-
+    </md-card-content>
+  </md-card>
+  <md-card layout-fill
+           class="oppia-foundation-white-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding">
+    <md-card-content class="home-page-display-size
+                            home-page-description-text-box"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="center space-between">
+      <md-content class="oppia-foundation-white-background"
+                  flex-gt-sm="50"
+                  layout="column">
+        <md-card-title class="oppia-foundation-green-text
+                              about-page-body-card-title">
+          <md-card-title-text>
+            <h1>
+              Our Features
+            </h1>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-no-margin
+                  home-page-large-text-header
+                  home-page-oppia-difference-text">
+          Built by former  educators, tutors, and learners from around the
+          globe, we've worked hard to ensure this platform and the lessons
+          we create are engaging, effective, and widely accessible.
+        </p>
+      </md-content>
+      <div flex-gt-sm="10"></div>
+      <md-content class="oppia-foundation-white-background
+                         oppia-foundation-green-text"
+                  flex-gt-sm="40"
+                  layout="column"
+                  layout-align-gt-sm="center start"
+                  layout-allign="center center">
+        <md-list class="oppia-foundation-small-tablet-and-desktop-top-margin"
+                 layout="column"
+                 layout-align-gt-sm="center start"
+                 layout-align="center center">
+          <md-list-item ng-repeat="feature in oppiaFeatures">
+            <div class="md-list-item-text">
+              {{feature}}
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-content>
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-small-tablet-and-desktop-vertical-padding
