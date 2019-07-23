@@ -16,15 +16,15 @@ oppiaFoundationWebsite.controller(
   'PartnershipsPage', ['$scope', function($scope) {
     $scope.partnershipsActions = [{
       iconFileName: 'Form icon',
-      iconFilePath: '/assets/icons/Icon_doc.png',
+      iconFilePath: '/assets/icons/icon_doc.png',
       text: '1. Fill out the interest form'
     }, {
       iconFileName: 'Phone icon',
-      iconFilePath: '/assets/icons/Icon_phone.png',
+      iconFilePath: '/assets/icons/icon_phone.png',
       text: '2. Schedule a 1:1 with our Partnerships Lead'
     }, {
       iconFileName: 'Handshake icon',
-      iconFilePath: '/assets/icons/Icon_shake.png',
+      iconFilePath: '/assets/icons/icon_shake.png',
       text: '3. Make change!'
     }];
   }]);
