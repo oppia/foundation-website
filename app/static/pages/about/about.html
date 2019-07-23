@@ -1,5 +1,101 @@
 <!DOCTYPE html>
 <section id="about">
+  <md-card class="oppia-foundation-white-background"
+           layout-fill
+           layout="column"
+           layout-gt-md="row">
+    <md-content class="oppia-foundation-mobile-bottom-padding-40
+                       oppia-foundation-mobile-and-tablet-top-padding-60
+                       oppia-foundation-mobile-and-tablet-horizontal-padding
+                       oppia-foundation-mobile-and-tablet-horizontal-padding
+                       oppia-foundation-tablet-and-desktop-horizontal-padding
+                       oppia-foundation-tablet-and-desktop-vertical-padding-40
+                       oppia-foundation-white-background
+                       oppia-foundation-dark-green-text"
+                flex-gt-md="50"
+                layout="column"
+                layout-align="center center">
+      <div class="about-page-hero-card-text-box"
+           layout="column">
+        <md-card-title class="about-page-body-card-title
+                              oppia-foundation-no-padding-bottom">
+          <md-card-title-text>
+            <h1>
+              Our Platform & Impact
+            </h1>
+          </md-card-title-text>
+        </md-card-title>
+        <h3 class="md-title
+                   about-page-subtitle-text-box">
+          Learn more about what we do and what we've accomplishes thus far.
+        </h3>
+        <div layout="column"
+             layout-align="center center"
+             layout-align-gt-md="center start"
+             class="about-page-hero-card-button-box">
+          <md-button class="oppia-foundation-green-button
+                            oppia-foundation-no-margin-left">
+            Oppia.Org
+          </md-button>
+        </div>
+      </div>
+    </md-content>
+    <img src="/assets/images/about/about_foundation_hero_image.jpg"
+         alt="About page hero image"
+         flex-gt-md="50">
+  </md-card>
+  <md-card layout-fill
+           class="oppia-foundation-green-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding">
+    <md-card-content class="home-page-display-size
+                            home-page-description-text-box"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="center"
+                     layout-fill>
+      <md-content class="oppia-foundation-green-background
+                         oppia-foundation-mobile-and-tablet-bottom-padding-40
+                         oppia-foundation-small-tablet-and-desktop-right-margin"
+                  flex-gt-sm="60">
+        <div class="macbook">
+          <div class="screen">
+            <div class="viewport" controls>
+              <video controls controlsList="nodownload"
+                     class="home-page-interactions-video">
+                <source src="/assets/videos/Interactions_video.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="base"></div>
+          <div class="notch"></div>
+        </div>
+      </md-content>
+      <md-content layout="column"
+                  layout-align="center center"
+                  layout-align-gt-sm="center"
+                  flex-gt-sm="40"
+                  class="oppia-foundation-green-background
+                         oppia-foundation-left-align-text
+                         oppia-foundation-white-text
+                         home-page-description-text-box">
+        <p class="oppia-foundation-no-margin
+                  home-page-large-text-header
+                  home-page-oppia-difference-text">
+          Oppia is an engaging new approach to online learning that caters
+          specifically to the unique needs of the world's most underserved youth.
+        </p>
+        <md-button class="oppia-foundation-white-button
+                          oppia-foundation-no-margin"
+                   href="/#!/about">
+          See The Oppia Difference
+        </md-button>
+      </md-content>
+
+    </md-card-content>
+  </md-card>
   <md-card layout-fill class="oppia-foundation-small-tablet-and-desktop-vertical-padding
                               oppia-foundation-mobile-and-tablet-top-padding
                               oppia-foundation-mobile-and-tablet-bottom-padding-40
@@ -127,6 +223,118 @@
     font-family: "Capriola", "Roboto", Arial, sans-serif;
     padding-left: 0;
     padding-right: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    .about-page-hero-card-text-box {
+      min-width: 550px;
+    }
+  }
+  .about-page-hero-card-button-box {
+    padding-top: 10px;
+  }
+  .home-page-display-size {
+    margin: auto;
+  }
+  @media screen and (min-width:1500px) {
+    .home-page-display-size {
+      width: 1500px;
+    }
+  }
+  .home-page-description-text-box {
+    max-width: 1000px;
+  }
+  .home-page-oppia-difference-text {
+    padding-bottom : 25px;
+  }
+  .macbook {
+    padding: 0 0 20px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .screen {
+    background: #000;
+    border-radius: 3% 3% 0.5% 0.5% / 5%;
+    margin: 0 auto;
+    /* for aspect ratio */
+    position: relative;
+    width: 80%;
+  }
+  .screen:before {
+    border: 2px solid #cacacc;
+    border-radius: 3% 3% 0.5% 0.5% / 5%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+    content: "";
+    display: block;
+    /* for aspect ratio ~67:100 */
+    padding-top: 67%;
+  }
+  .screen:after {
+    content: "";
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    bottom: 0.75%;
+    left: 0.5%;
+    padding-top: 1%;
+    width: 99%;
+  }
+  .viewport {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 6% 3.2%;
+  }
+  .base {
+    /* for aspect ratio */
+    position: relative;
+    width: 100%;
+  }
+  .base:before {
+    content: "";
+    display: block;
+    /* for aspect ratio ~33:1000*/
+    padding-top: 3.3%;
+    background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
+    border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+  }
+  .base::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+    content: "";
+    height: 53%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .notch {
+    background: #ddd;
+    border-radius: 0 0 7% 7% / 0 0 95% 95%;
+    box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3.5%;
+    /* for aspect ratio */
+    position: relative;
+    width: 14%;
+  }
+  .notch:before {
+    content: "";
+    display: block;
+    /* for aspect ratio ~1:10 */
+    padding-top: 10%;
+  }
+  video.home-page-interactions-video {
+    display: none;
+  }
+  @media screen and (min-width: 300px) {
+    video.home-page-interactions-video {
+      height: auto;
+      display: block;
+      width: 100%;
+    }
+  }
+  .home-page-large-text-header {
+    font-size: 24px;
   }
   .md-button.about-page-press-logo-button:hover,
   .md-button.about-page-press-logo-button:focus {
