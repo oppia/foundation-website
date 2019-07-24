@@ -102,11 +102,12 @@
                             home-page-description-text-box"
                      layout="column"
                      layout-gt-sm="row"
-                     layout-align="center space-between">
+                     layout-align="center">
       <md-content class="oppia-foundation-white-background"
                   flex-gt-sm="55"
                   layout="column">
         <md-card-title class="oppia-foundation-green-text
+                              oppia-foundation-uppercase-text
                               about-page-body-card-title">
           <md-card-title-text>
             <h1>
@@ -129,7 +130,7 @@
                   layout="column"
                   layout-align-gt-sm="center start"
                   layout-allign="center center">
-        <md-list class="oppia-foundation-small-tablet-and-desktop-top-margin"
+        <md-list class="oppia-foundation-small-tablet-and-desktop-top-margin-20"
                  layout="column"
                  layout-align-gt-sm="center start"
                  layout-align="center center">
@@ -140,6 +141,44 @@
           </md-list-item>
         </md-list>
       </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card layout-fill
+           class="oppia-foundation-green-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding">
+    <md-card-content class="home-page-display-size
+                            home-page-description-text-box"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="center">
+      <md-content class="oppia-foundation-green-background
+                         oppia-foundation-white-text"
+                  flex-gt-sm="50">
+        <md-card-title class="oppia-foundation-uppercase-text
+                              about-page-body-card-title">
+          <md-card-title-text>
+            <h1>
+              Our Outcomes
+            </h1>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-no-margin
+                  home-page-large-text-header
+                  home-page-oppia-difference-text">
+          We strive for effectiveness and excellence. That's why we continuosly
+          conduct user studies and randomized trials to ensure our lessons live
+          up to our high standards.
+        </p>
+      </md-content>
+      <div flex-gt-sm="5"></div>
+      <div layout="column"
+           layout-align="end"
+           flex-gt-sm="45">
+        <img src="/assets/images/about/partnerships_evidence.png"
+             class="partnerships-page-evidence-image"
+             alt="Evidence graph">
+      </div>
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-small-tablet-and-desktop-vertical-padding
@@ -381,6 +420,13 @@
   }
   .home-page-large-text-header {
     font-size: 24px;
+  }
+  .partnerships-page-evidence-image {
+    border: 0;
+    display: block;
+    margin: auto;
+    max-width: 380px;
+    padding: 20px 0;
   }
   .md-button.about-page-press-logo-button:hover,
   .md-button.about-page-press-logo-button:focus {

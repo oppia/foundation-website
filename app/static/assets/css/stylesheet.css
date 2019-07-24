@@ -452,8 +452,8 @@ Full-Width Styles
   .oppia-foundation-small-tablet-and-desktop-right-margin {
     margin-right: 40px;
   }
-  .oppia-foundation-small-tablet-and-desktop-top-margin {
-    margin-top: 40px;
+  .oppia-foundation-small-tablet-and-desktop-top-margin-20 {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 960px) {
