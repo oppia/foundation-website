@@ -336,6 +336,10 @@ Full-Width Styles
   padding-top: 0;
 }
 
+.oppia-foundation-no-padding-top {
+  padding-top: 0;
+}
+
 .oppia-foundation-no-horizontal-padding {
   padding-left: 0;
   padding-right: 0;
@@ -575,6 +579,10 @@ Full-Width Styles
 
 .oppia-foundation-left-align-text {
   text-align: left;
+}
+
+.oppia-foundation-right-align-text {
+  text-align: right;
 }
 
 .md-headline.oppia-foundation-headline {
