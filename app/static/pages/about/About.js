@@ -12,9 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.controller('AboutPage', ['$scope',
-  function($scope) {
+oppiaFoundationWebsite.controller('AboutPage', [
+  '$scope', 'LearnerProfilesService', function($scope, LearnerProfilesService) {
     $scope.oppiaFeatures = ['Audio Subtitles', 'Story-based Lessons',
       'Mobile-friendly Navigation', 'Low Bandwidth Required',
       'Translations To Local Dialects'];
+    $scope.impactTextContent = [{
+      number: '1,000,000+',
+      text: 'Learners served worldwide'
+    }, {
+      number: '20,000',
+      text: 'Lessons in our virtual library'
+    }, {
+      number: '1',
+      text: 'Randomized trial completed. More to come!'
+    }, {
+      number: '100+',
+      text: 'Volunteers from all over the globe'
+    }];
+    $scope.learnerProfiles = LearnerProfilesService.getLearnerProfiles();
   }]);

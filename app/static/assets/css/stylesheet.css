@@ -332,6 +332,10 @@ Full-Width Styles
   padding-bottom: 0;
 }
 
+.oppia-foundation-no-padding-top {
+  padding-top: 0;
+}
+
 .oppia-foundation-no-horizontal-padding {
   padding-left: 0;
   padding-right: 0;

@@ -107,7 +107,6 @@
                   flex-gt-sm="55"
                   layout="column">
         <md-card-title class="oppia-foundation-green-text
-                              oppia-foundation-uppercase-text
                               about-page-body-card-title">
           <md-card-title-text>
             <h1>
@@ -155,8 +154,7 @@
       <md-content class="oppia-foundation-green-background
                          oppia-foundation-white-text"
                   flex-gt-sm="50">
-        <md-card-title class="oppia-foundation-uppercase-text
-                              about-page-body-card-title">
+        <md-card-title class="about-page-body-card-title">
           <md-card-title-text>
             <h1>
               Our Outcomes
@@ -179,6 +177,104 @@
              class="partnerships-page-evidence-image"
              alt="Evidence graph">
       </div>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content layout="column"
+                     layout-align="center center"
+                     class="home-page-display-size
+                            home-page-description-text-box
+                            oppia-foundation-gray-background">
+      <md-card-title class="oppia-foundation-green-text
+                            oppia-foundation-no-padding-top
+                            about-page-body-card-title">
+        <md-card-title-text>
+          <h1>
+            Our Impact
+          </h1>
+        </md-card-title-text>
+      </md-card-title>
+      <md-content class="oppia-foundation-black-text
+                         oppia-foundation-desktop-margin-bottom-20
+                         oppia-foundation-gray-background"
+                  layout="column"
+                  layout-gt-md="row"
+                  layout-align="center center">
+        <md-list class="oppia-foundation-white-background
+                        oppia-foundation-mobile-and-tablet-margin-bottom-40
+                        oppia-foundation-small-tablet-and-desktop-right-margin"
+                 flex-gt-md="25">
+          <md-list-item ng-repeat="item in impactTextContent">
+            <md-content class="oppia-foundation-white-background">
+              <h4 class="oppia-foundation-bold-text">
+                {{item.number}}
+              </h4>
+              <p>
+                {{item.text}}
+              </p>
+            </md-content>
+            <md-divider ng-if="!$last"></md-divider>
+          </md-list-item>
+        </md-list>
+        <md-list class="oppia-foundation-white-background
+                        oppia-foundation-mobile-and-tablet-margin-bottom-20
+                        home-page-description-text-box"
+                 layout="column"
+                 layout-align="center start">
+          <md-list-item ng-repeat="learner in learnerProfiles"
+                        layout="row"
+                        layout-align="center">
+            <div class="oppia-foundation-button-horizontal-padding"
+                 flex="noshrink"
+                 hide-xs
+                 layout="column"
+                 layout-align="center center">
+              <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
+                   class="home-page-learner-profile-picture"
+                   alt="{{learner.fullName}}">
+            </div>
+            <md-content class="oppia-foundation-white-background
+                               oppia-foundation-tablet-and-destop-horizontal-padding-20
+                               home-page-student-testimonials">
+              <p>
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">
+                  &ldquo;
+                </span>
+                  {{learner.testimonial}}
+                <span class="oppia-foundation-green-text
+                             home-page-content-title">
+                  &rdquo;
+                </span>
+              </p>
+              <div layout-xs="row">
+                <div class="home-page-mobile-learner-profile-picture-container"
+                     hide-gt-xs
+                     layout="column"
+                     layout-align="start">
+                  <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
+                       class="home-page-learner-profile-picture"
+                       alt="{{learner.fullName}}">
+                </div>
+                <p class="home-page-student-info">
+                  - Student, {{learner.age}} years old, from {{learner.location}}
+                </p>
+              </div>
+              <md-divider ng-if="!$last"></md-divider>
+            </md-content>
+          </md-list-item>
+        </md-list>
+      </md-content>
+      <md-button class="oppia-foundation-green-button
+                        oppia-foundation-padding-top-40"
+                 href="/#!/about">
+        Learn More
+      </md-button>
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-small-tablet-and-desktop-vertical-padding
@@ -298,6 +394,9 @@
   </md-card>
 </section>
 <style>
+  md-card md-card-content {
+    padding: 0;
+  }
   .about-page-subtitle-text-box {
     max-width: 650px;
   }
@@ -427,6 +526,30 @@
     margin: auto;
     max-width: 380px;
     padding: 20px 0;
+  }
+  .home-page-student-testimonials {
+    padding-bottom: 15px;
+  }
+  .home-page-mobile-learner-profile-picture-container {
+    padding-right: 20px
+  }
+  .home-page-learner-profile-picture {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+  @media only screen and (max-width : 960px) {
+    .home-page-learner-profile-picture {
+      height: 60px;
+      width: 60px;
+    }
+  }
+  .home-page-student-info {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  .home-page-content-title {
+    font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
   .md-button.about-page-press-logo-button:hover,
   .md-button.about-page-press-logo-button:focus {
