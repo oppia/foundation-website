@@ -45,7 +45,7 @@
          flex-gt-md="50">
   </md-card>
   <md-card layout-fill
-           class="oppia-foundation-green-background
+           class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding">
     <md-card-content class="home-page-display-size
@@ -53,7 +53,7 @@
                      layout="column"
                      layout-gt-sm="row"
                      layout-align="center">
-      <md-content class="oppia-foundation-green-background
+      <md-content class="oppia-foundation-gray-background
                          oppia-foundation-mobile-and-tablet-bottom-padding-40
                          oppia-foundation-small-tablet-and-desktop-right-margin"
                   flex-gt-sm="60">
@@ -76,9 +76,9 @@
                   layout-align="center center"
                   layout-align-gt-sm="center"
                   flex-gt-sm="40"
-                  class="oppia-foundation-green-background
+                  class="oppia-foundation-gray-background
                          oppia-foundation-left-align-text
-                         oppia-foundation-white-text
+                         oppia-foundation-black-text
                          home-page-description-text-box">
         <p class="oppia-foundation-no-margin
                   home-page-large-text-header
@@ -86,8 +86,7 @@
           Oppia is an engaging new approach to online learning that caters
           specifically to the unique needs of the world's most underserved youth.
         </p>
-        <md-button class="oppia-foundation-white-button
-                          oppia-foundation-no-margin"
+        <md-button class="oppia-foundation-white-button"
                    href="/#!/about">
           See The Oppia Difference
         </md-button>
@@ -275,6 +274,76 @@
                  href="/#!/about">
         Learn More
       </md-button>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-green-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding"
+           layout-fill>
+    <md-card-content class="home-page-display-size
+                            home-page-description-text-box
+                            oppia-foundation-white-text"
+                     layout="column"
+                     layout-align="center center">
+      <md-card-title class="about-page-body-card-title
+                            oppia-foundation-no-padding-bottom">
+        <h3 class="md-display-1
+                   oppia-foundation-white-text
+                   about-page-body-card-title">
+          But enough of us talking about it...
+        </h3>
+      </md-card-title>
+      <md-content class="oppia-foundation-white-text
+                         oppia-foundation-green-background"
+                  layout="column"
+                  layout-align="center center">
+        <p>
+          Try Oppia out for yourself and experience our innovative approach to
+          online learning.
+        </p>
+        <md-button class="oppia-foundation-white-button
+                          oppia-foundation-no-margin
+                          about-page-check-out-oppia-button"
+                   href="https://oppia.org">
+          Go to Oppia.org
+        </md-button>
+      </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-fill>
+    <md-card-content class="home-page-display-size"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="center"
+                     layout-fill>
+      <md-content class="oppia-foundation-white-background
+                         home-page-description-text-box"
+                  layout="column"
+                  layout-align="center center">
+        <p class="home-page-large-text-header oppia-foundation-green-text">
+         Keep in touch by subscribing to our newsletter!
+        </p>
+        <p class="oppia-foundation-green-text">
+          If you have any questions, feel free to
+          <a class="home-page-email-us-link
+                    oppia-foundation-bold-text
+                    oppia-foundation-green-text"
+             href="mailto:{{ADMIN_EMAIL}}?subject={{QUESTION_EMAIL_SUBJECT}}">
+          send us an email</a> or fill out our
+          <a class="home-page-email-us-link
+                    oppia-foundation-bold-text
+                    oppia-foundation-green-text"
+             href="/#!/partnerships#get-in-touch">
+          Contact Us form</a>.
+        </p>
+        <md-button class="oppia-foundation-green-button"
+                   href="https://tinyletter.com/oppia">
+          Subscribe
+        </md-button>
+      </md-content>
     </md-card-content>
   </md-card>
   <md-card layout-fill class="oppia-foundation-small-tablet-and-desktop-vertical-padding
@@ -550,6 +619,13 @@
   }
   .home-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+  }
+  .about-page-check-out-oppia-button {
+    margin-top: 10px;
+    min-width: 200px;
+  }
+  .home-page-email-us-link {
+    text-decoration: underline;
   }
   .md-button.about-page-press-logo-button:hover,
   .md-button.about-page-press-logo-button:focus {

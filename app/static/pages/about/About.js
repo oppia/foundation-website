@@ -13,7 +13,10 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('AboutPage', [
-  '$scope', 'LearnerProfilesService', function($scope, LearnerProfilesService) {
+  'ADMIN_EMAIL_ADDRESS', 'LearnerProfilesService', '$scope',
+  function(ADMIN_EMAIL_ADDRESS, LearnerProfilesService, $scope) {
+    $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+    $scope.QUESTION_EMAIL_SUBJECT = 'Question%20about%20Oppia';
     $scope.oppiaFeatures = ['Audio Subtitles', 'Story-based Lessons',
       'Mobile-friendly Navigation', 'Low Bandwidth Required',
       'Translations To Local Dialects'];
