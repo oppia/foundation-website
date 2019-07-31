@@ -26,7 +26,7 @@
         </md-card-title>
         <h3 class="md-title
                    about-page-subtitle-text-box">
-          Learn more about what we do and what we've accomplishes thus far.
+          Learn more about what we do and what we've accomplished thus far.
         </h3>
         <div layout="column"
              layout-align="center center"
@@ -117,7 +117,8 @@
                   about-page-oppia-difference-text">
           Built by former educators, tutors, and learners from around the
           globe, we've worked hard to ensure this platform and the lessons
-          we create are engaging, effective, and widely accessible.
+          we create are engaging, effective, and widely accessible. Oppia's
+          features include...
         </p>
       </md-content>
       <div flex-gt-sm="5"></div>
@@ -132,8 +133,9 @@
                  layout-align-gt-sm="center start"
                  layout-align="center center">
           <md-list-item ng-repeat="feature in oppiaFeatures">
-            <div class="md-list-item-text">
-              {{feature}}
+            <div class="md-list-item-text
+                        oppia-foundation-center-align-text">
+              <p>{{feature}}</p>
             </div>
           </md-list-item>
         </md-list>
@@ -286,11 +288,10 @@
                      layout-align="center center">
       <md-card-title class="about-page-body-card-title
                             oppia-foundation-no-padding-bottom">
-        <h3 class="md-display-1
-                   oppia-foundation-white-text
+        <h1 class="oppia-foundation-white-text
                    about-page-body-card-title">
           But enough of us talking about it...
-        </h3>
+        </h1>
       </md-card-title>
       <md-content class="oppia-foundation-white-text
                          oppia-foundation-green-background"
