@@ -211,7 +211,8 @@
                  flex-gt-md="25">
           <md-list-item ng-repeat="item in impactTextContent">
             <md-content class="oppia-foundation-white-background">
-              <h4 class="oppia-foundation-bold-text">
+              <h4 class="oppia-foundation-bold-text
+                         about-page-number-impact">
                 {{item.number}}
               </h4>
               <p>
@@ -481,6 +482,9 @@
     max-width: 380px;
     padding: 20px 0;
   }
+  .about-page-number-impact {
+    letter-spacing: normal;
+  }
   .about-page-student-testimonials {
     padding-bottom: 15px;
   }
@@ -506,7 +510,7 @@
     font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
   .about-page-check-out-oppia-button {
-    margin-top: 10px;
+    margin: 10px 0;
     min-width: 200px;
   }
   .about-page-email-us-link {
