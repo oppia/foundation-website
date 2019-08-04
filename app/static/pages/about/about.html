@@ -185,7 +185,7 @@
            layout="column"
            layout-align="center center">
     <md-card-content layout="column"
-                     layout-align="center center"
+                     layout-align="center"
                      class="about-page-display-size
                             about-page-description-text-box
                             oppia-foundation-gray-background">
@@ -203,20 +203,18 @@
                          oppia-foundation-gray-background"
                   layout="column"
                   layout-gt-md="row"
-                  layout-align="center center">
+                  layout-align="center">
         <md-list class="oppia-foundation-white-background
                         oppia-foundation-mobile-and-tablet-margin-bottom-40
-                        oppia-foundation-small-tablet-and-desktop-right-margin"
-                 flex-gt-md="25">
+                        oppia-foundation-desktop-right-margin-40"
+                 flex-gt-md="35">
           <md-list-item ng-repeat="item in impactTextContent">
             <md-content class="oppia-foundation-white-background">
               <h4 class="oppia-foundation-bold-text
                          about-page-number-impact">
                 {{item.number}}
               </h4>
-              <p>
-                {{item.text}}
-              </p>
+              <p class="about-page-text-impact">{{item.text}}</p>
             </md-content>
             <md-divider ng-if="!$last"></md-divider>
           </md-list-item>
@@ -229,7 +227,7 @@
           <md-list-item ng-repeat="learner in learnerProfiles"
                         layout="row"
                         layout-align="center">
-            <div class="oppia-foundation-button-horizontal-padding"
+            <div class="about-page-mobile-learner-profile-picture-container"
                  flex="noshrink"
                  hide-xs
                  layout="column"
@@ -240,7 +238,9 @@
             </div>
             <md-content class="oppia-foundation-white-background
                                oppia-foundation-tablet-and-destop-horizontal-padding-20
-                               about-page-student-testimonials">
+                               about-page-student-testimonials"
+                        layout-gt-md="column"
+                        layout-align-gt-md="center">
               <p>
                 <span class="oppia-foundation-green-text
                              about-page-content-title">
@@ -253,8 +253,7 @@
                 </span>
               </p>
               <div layout-xs="row">
-                <div class="about-page-mobile-learner-profile-picture-container"
-                     hide-gt-xs
+                <div hide-gt-xs
                      layout="column"
                      layout-align="start">
                   <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
@@ -270,11 +269,14 @@
           </md-list-item>
         </md-list>
       </md-content>
-      <md-button class="oppia-foundation-green-button
-                        oppia-foundation-padding-top-40"
-                 href="/#!/about">
-        Learn More
-      </md-button>
+      <div layout="column"
+           layout-align="center center">
+        <md-button class="oppia-foundation-green-button
+                          oppia-foundation-padding-top-40"
+                   href="/#!/about">
+          Learn More
+        </md-button>
+      </div>
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-green-background
@@ -491,26 +493,37 @@
   .about-page-number-impact {
     letter-spacing: normal;
   }
+  @media only screen and (min-width : 1279px) {
+    .about-page-text-impact {
+      white-space: pre-line;
+    }
+  }
   .about-page-student-testimonials {
-    padding-bottom: 15px;
+    padding: 15px 0;
   }
   .about-page-mobile-learner-profile-picture-container {
-    padding-right: 20px
+    padding: 0 30px 0 20px
   }
   .about-page-learner-profile-picture {
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 120px;
+    width: 120px;
   }
-  @media only screen and (max-width : 960px) {
+  @media only screen and (max-width : 1279px) {
+    .about-page-learner-profile-picture {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  @media only screen and (max-width : 599px) {
     .about-page-learner-profile-picture {
       height: 60px;
       width: 60px;
+      margin-right: 20px;
     }
   }
   .about-page-student-info {
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: auto 0;
   }
   .about-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
