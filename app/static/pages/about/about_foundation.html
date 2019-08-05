@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <section id="aboutFoundation">
-  <md-card class="home-page-hero-card" layout-fill>
-    <div class="home-page-desktop-hero-slide">
+  <md-card class="about-foundation-page-hero-card" layout-fill>
+    <div class="about-foundation-page-desktop-hero-slide">
       <div class="oppia-foundation-clearfix"
            layout="column"
            layout-fill>
         <md-card-content layout="column"
                          layout-align="center center"
-                         class="home-page-welcome-image-overlay
+                         class="about-foundation-page-welcome-image-overlay
                                oppia-foundation-tablet-and-desktop-horizontal-padding">
           <div class="oppia-foundation-white-text
                       oppia-foundation-top-padding
                       oppia-foundation-center-align-text
-                      home-page-title-box"
+                      about-foundation-page-title-box"
                layout="column"
                layout-align="center center">
-            <img src="/assets/images/about_foundation/oppia_big_logo.png" class="about-page-oppia-logo" alt="Oppia logo">
+            <img alt="Oppia logo"
+                 class="about-foundation-page-oppia-logo"
+                 src="/assets/images/about_foundation/oppia_big_logo.png">
             <md-card-title class="oppia-foundation-no-horizontal-padding">
               <md-card-title-text>
                 <h1 class="oppia-foundation-uppercase-text">
@@ -23,7 +25,9 @@
                 </h1>
               </md-card-title-text>
             </md-card-title>
-            <h3 class="oppia-foundation-center-align-text home-page-title-box" style="max-width: 650px;">
+            <h3 class="oppia-foundation-center-align-text
+                       about-foundation-page-title-box
+                       about-foundation-page-hero-subtitle">
               Building a community to provide quality education to those who
               lack access to it
             </h3>
@@ -32,41 +36,95 @@
       </div>
     </div>
   </md-card>
+  <md-card class="oppia-foundation-white-background
+                  oppia-foundation-vertical-padding
+                  oppia-foundation-horizontal-padding"
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-no-padding
+                            about-foundation-page-description-text-box"
+                     layout-gt-sm="row"
+                     layout="column">
+      <div hide-gt-sm layout="column" layout-align="center center">
+        <img alt="Education Equality Infographic"
+             class="about-foundation-page-equality-infographic"
+             src="/assets/images/about_foundation/equity-infographic-3-we-need-data.jpg">
+      </div>
+      <md-content class="oppia-foundation-black-text
+                         oppia-foundation-white-background
+                         oppia-foundation-small-tablet-and-desktop-right-margin-60
+                         oppia-foundation-mobile-and-small-tablet-bottom-padding-20
+                         about-foundation-page-equality-text-container"
+                  flex-gt-sm="60">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3>
+              Millions of children are not receiving the education they deserve.
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-normal-font-weight">
+          Of the <span class="oppia-foundation-green-text">61 million children</span>
+          worldwide who cannot attend primary school, 17 million will never step
+          foot into a school if trends continue. Unfortunately, even those who
+          are in school may not be getting the effective education they need.
+        </p>
+      </md-content>
+      <div hide-xs hide-sm show-gt-sm layout="column" layout-align="center center">
+        <img alt="Education Equality Infographic"
+             class="about-foundation-page-equality-infographic"
+             src="/assets/images/about_foundation/equity-infographic-3-we-need-data.jpg">
+      </div>
+    </md-card-content>
+  </md-card>
 </section>
 <style>
-  .home-page-hero-card {
+  .about-foundation-page-hero-card {
     position: relative;
   }
-  .home-page-display-size {
+  .about-foundation-page-display-size {
     margin: auto;
   }
   @media screen and (min-width:1500px) {
-    .home-page-display-size {
+    .about-foundation-page-display-size {
       width: 1500px;
     }
   }
-  .home-page-title-box {
+  .about-foundation-page-title-box {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
     max-width: 850px;
   }
-  .home-page-welcome-image-overlay {
+  .about-foundation-page-welcome-image-overlay {
     background: rgba(38, 70, 83, 0.75);
     bottom: 0;
     position: absolute;
     top: 0;
     width: 100%;
   }
-  .home-page-desktop-hero-slide {
+  .about-foundation-page-desktop-hero-slide {
     background-image: url(
       '/assets/images/about_foundation/home_impact.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 550px;
   }
-  .home-page-description-text-box {
+  .about-foundation-page-description-text-box {
     max-width: 1000px;
   }
-  .about-page-oppia-logo {
+  .about-foundation-page-oppia-logo {
     width: 10em;
+  }
+  .about-foundation-page-hero-subtitle {
+    max-width: 650px;
+  }
+  .about-foundation-page-equality-infographic {
+    max-height: 320px;
+    max-width: 320px;
+  }
+  @media screen and (max-width: 959px) {
+    .about-foundation-page-equality-infographic {
+      margin-bottom: 40px;
+    }
   }
 </style>
