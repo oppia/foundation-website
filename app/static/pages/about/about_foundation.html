@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <section id="aboutFoundation">
-  <md-card class="about-foundation-page-hero-card" layout-fill>
+  <md-card class="about-foundation-page-hero-card"
+           layout-fill>
     <div class="about-foundation-page-desktop-hero-slide">
       <div class="oppia-foundation-clearfix"
            layout="column"
@@ -37,26 +38,24 @@
     </div>
   </md-card>
   <md-card class="oppia-foundation-white-background
-                  oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding"
            layout-fill
            layout="column"
            layout-align="center center">
     <md-card-content class="oppia-foundation-no-padding
+                            oppia-foundation-vertical-padding
                             about-foundation-page-description-text-box"
                      layout-gt-sm="row"
-                     layout="column">
+                     layout="column"
+                     layout-align="space-between">
       <div hide-gt-sm layout="column" layout-align="center center">
         <img alt="Education Equality Infographic"
              class="about-foundation-page-equality-infographic"
              src="/assets/images/about_foundation/equity-infographic-3-we-need-data.jpg">
       </div>
       <md-content class="oppia-foundation-black-text
-                         oppia-foundation-white-background
-                         oppia-foundation-small-tablet-and-desktop-right-margin-60
-                         oppia-foundation-mobile-and-small-tablet-bottom-padding-20
-                         about-foundation-page-equality-text-container"
-                  flex-gt-sm="60">
+                         oppia-foundation-white-background"
+                  flex-gt-sm="65">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3>
@@ -76,6 +75,38 @@
              class="about-foundation-page-equality-infographic"
              src="/assets/images/about_foundation/equity-infographic-3-we-need-data.jpg">
       </div>
+    </md-card-content>
+    <md-card-content class="oppia-foundation-no-padding
+                            oppia-foundation-bottom-padding
+                            about-foundation-page-description-text-box"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="space-between">
+      <div>
+        <img alt="Representative Student Photo"
+             class="about-foundation-page-student-photo"
+             src="/assets/images/about_foundation/20180826_161603.jpg">
+      </div>
+      <md-content class="oppia-foundation-black-text
+                         oppia-foundation-white-background"
+                  flex-gt-sm="60">
+        <md-card-title class="oppia-foundation-no-padding">
+          <md-card-title-text>
+            <h3>
+              We cannot ignore the potential quality education has to improve
+              people's lives.
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+        <p class="oppia-foundation-normal-font-weight">
+          Researchers have shown again and again that education has the power
+          to rejuvenate communities, increase economic growth, and disrupt the
+          cycle of poverty. UNESCO predicts that if we achieve universal primary
+          and secondary completion, we could lift more than
+          <span class="oppia-foundation-green-text">240 million</span> people
+          out of poverty.
+        </p>
+      </md-content>
     </md-card-content>
   </md-card>
 </section>
@@ -124,7 +155,16 @@
   }
   @media screen and (max-width: 959px) {
     .about-foundation-page-equality-infographic {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  .about-foundation-page-student-photo {
+    max-height: 350px;
+    max-width: 350px;
+  }
+  @media screen and (max-width: 959px) {
+    .about-foundation-page-student-photo {
+      margin-bottom: 20px;
     }
   }
 </style>
