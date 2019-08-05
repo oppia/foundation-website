@@ -13,7 +13,33 @@
          alt="Oppia Foundation logo">
   </md-nav-item>
   <span flex></span>
-  <md-nav-item md-nav-href="/about" hide-xs hide-sm>About</md-nav-item>
+  <uib-dropdown class="dropdown"
+                hide-xs
+                hide-sm
+                is-open="status.isopen">
+    <button class="about-dropdown-button"
+            ng-click="status.isopen = true"
+            uib-dropdown-toggle>
+      About <span class="caret navbar-caret"></span>
+    </button>
+    <ul class="dropdown-menu"
+        uib-dropdown-menu
+        role="menu"
+        aria-labelledby="single-button">
+      <li role="menuitem">
+        <a class="oppia-foundation-white-text"
+           href="#">
+          The Foundation
+        </a>
+      </li>
+      <li role="menuitem">
+        <a class="oppia-foundation-white-text"
+           href="/about">
+           The Oppia Platform
+          </a>
+        </li>
+    </ul>
+  </uib-dropdown>
   <md-nav-item md-nav-href="/partnerships" hide-xs hide-sm>Partnerships</md-nav-item>
   <md-nav-item md-nav-href="/volunteer" hide-xs hide-sm>Volunteer</md-nav-item>
   <md-button aria-label="Open links menu"
@@ -54,14 +80,13 @@
       position: fixed;
     }
   }
-  md-nav-bar ._md-nav-button-text {
+  md-nav-bar ._md-nav-button-text,
+  .dropdown-menu li a,
+  .about-dropdown-button {
     color: white;
     font-family: "Capriola", "Roboto", Arial, sans-serif;
     font-size: 12pt;
     font-weight: 600;
-  }
-  md-nav-bar .md-nav-item:hover {
-    background-color: rgba(5, 190, 178, 1);
   }
   md-nav-bar .md-nav-item:first-of-type {
     margin-left: 0;
@@ -99,5 +124,42 @@
     display: block;
     height: auto;
     width: 229px;
+  }
+  .about-dropdown-button {
+    background: #009688;
+    border: 0;
+    height: 100%;
+    padding: 12px 16px;
+    text-transform: uppercase
+  }
+  .about-dropdown-button:hover {
+    background-color: rgba(5, 190, 178, 1);
+  }
+  .about-dropdown-button:focus {
+    background-color: rgba(5, 190, 178, 1);
+    outline-width: 0;
+  }
+  .dropdown-menu {
+    background: #009688;
+    border-radius: 0;
+    margin: 0;
+  }
+  .dropdown-menu li a {
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a:focus {
+    background: white;
+    color: #009688;
+  }
+  .navbar-caret {
+    border-top: 8px dashed;
+    border-top: 6 px solid;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    color: white;
+    margin-left: 4px;
   }
 </style>
