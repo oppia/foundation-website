@@ -376,6 +376,10 @@ Full-Width Styles
   padding-top: 80px;
 }
 
+.oppia-foundation-top-padding-10 {
+  padding-top: 10px;
+}
+
 .oppia-foundation-vertical-padding {
   padding-top: 80px;
   padding-bottom: 80px;
