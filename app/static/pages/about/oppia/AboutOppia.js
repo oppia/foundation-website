@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-oppiaFoundationWebsite.controller('AboutPage', [
+oppiaFoundationWebsite.controller('AboutOppiaPage', [
   'ADMIN_EMAIL_ADDRESS', 'LearnerProfilesService', '$scope',
   function(ADMIN_EMAIL_ADDRESS, LearnerProfilesService, $scope) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
