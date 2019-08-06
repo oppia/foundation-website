@@ -169,47 +169,94 @@
            layout-align="center center">
     <md-card-content class="oppia-foundation-no-padding
                             about-foundation-page-description-text-box"
-                     layout="column">
-      <md-content class="oppia-foundation-white-background
-                         oppia-foundation-black-text"
-                  layout="column"
-                  layout-gt-sm="row"
-                  layout-align="space-between">
-        <div layout="column"
+                     layout="column"
+                     layout-gt-sm="row"
+                     layout-align="space-between">
+      <div layout="column"
              layout-align="center center">
           <img alt="Volunteer graphics"
                class="about-foundation-page-get-involved-image"
                src="/assets/images/about_foundation/home_get_involved.png">
+      </div>
+      <div flex-gt-sm="5"></div>
+      <md-content class="oppia-foundation-white-background
+                         oppia-foundation-black-text"
+                  flex-gt-sm="60"
+                  layout="column"
+                  layout-align="start">
+        <div>
+          <md-card-title class="oppia-foundation-no-padding">
+            <md-card-title-text>
+              <h3>
+                Built from a unified passion for educational equality
+              </h3>
+            </md-card-title-text>
+          </md-card-title>
         </div>
-        <div flex-gt-sm="5"></div>
-        <div layout="column"
-             layout-align="start"
-             flex-gt-sm="60">
-          <div>
-            <md-card-title class="oppia-foundation-no-padding">
-              <md-card-title-text>
-                <h3>
-                  Built from a unified passion for educational equality
-                </h3>
-              </md-card-title-text>
-            </md-card-title>
-            </div>
-          <p>
-              Our platform and everything else we’ve accomplished thus far is
-              due to the hard work and collaboration of dozens of passionate
-              volunteers. Take the next step and join our community today!
-          </p>
-          <md-card-actions class="oppia-foundation-no-margin
-                                oppia-foundation-top-padding-10"
-                         layout="column"
-                         layout-align-gt-sm="start"
-                         layout-align="center center">
-            <md-button class="oppia-foundation-green-button"
-                       href="/#!/volunteer">
-              Become A Volunteer
-            </md-button>
-          </md-card-actions>
-        </div>
+        <p>
+            Our platform and everything else we’ve accomplished thus far is
+            due to the hard work and collaboration of dozens of passionate
+            volunteers. Take the next step and join our community today!
+        </p>
+        <md-card-actions class="oppia-foundation-no-margin
+                              oppia-foundation-top-padding-10"
+                       layout="column"
+                       layout-align-gt-sm="start"
+                       layout-align="center center">
+          <md-button class="oppia-foundation-green-button"
+                     href="/#!/volunteer">
+            Become A Volunteer
+          </md-button>
+        </md-card-actions>
+      </md-content>
+    </md-card-content>
+  </md-card>
+  <md-card class="oppia-foundation-gray-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding"
+           layout="column"
+           layout-align="center center"
+           layout-fill>
+    <md-card-content class="oppia-foundation-no-padding
+                            about-foundation-page-description-text-box"
+                     layout="column">
+      <md-card-title class="oppia-foundation-no-horizontal-padding
+                            oppia-foundation-no-padding-top">
+        <md-card-title-text>
+          <h1 class="about-foundation-page-title-box">
+            There's a role for you to play
+          </h1>
+        </md-card-title-text>
+      </md-card-title>
+      <md-content class="oppia-foundation-gray-background
+                         oppia-foundation-black-text">
+        <h3 class="oppia-foundation-normal-font-weight">
+          Are you a part of a school, NGO, or other organization who shares our
+          passion for educational inequality?
+          <a class="oppia-foundation-green-text
+                    about-foundation-page-text-link"
+             href="/partnerships">
+            Consider becoming a partner today!
+        </a>
+        </h3>
+        <h3 class="oppia-foundation-normal-font-weight">
+          Do you have time, skills, or other resources you’d like to share to
+          help advance our mission?
+          <a class="oppia-foundation-green-text
+                    about-foundation-page-text-link"
+             href="/volunteer">
+            Join our large volunteer community!
+          </a>
+        </h3>
+        <h3 class="oppia-foundation-normal-font-weight">
+          If neither of those apply to you, we always appreciate
+          <a class="oppia-foundation-green-text
+                    about-foundation-page-text-link"
+             href="/donate">
+            donations
+          </a>
+          too!
+        </h3>
       </md-content>
     </md-card-content>
   </md-card>
@@ -285,5 +332,8 @@
     .about-foundation-page-get-involved-image {
       margin-bottom: 20px;
     }
+  }
+  .about-foundation-page-text-link:hover {
+    color: #009688;
   }
 </style>
