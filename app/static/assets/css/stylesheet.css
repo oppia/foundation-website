@@ -320,8 +320,16 @@ Full-Width Styles
   margin-top :0;
 }
 
+.oppia-foundation-no-margin-left {
+  margin-left: 0;
+}
+
 .oppia-foundation-no-padding {
-  padding :0;
+  padding: 0;
+}
+
+.oppia-foundation-no-padding-bottom {
+  padding-bottom: 0;
 }
 
 .oppia-foundation-no-padding-top {
@@ -455,6 +463,9 @@ Full-Width Styles
   .oppia-foundation-small-tablet-and-desktop-right-margin {
     margin-right: 40px;
   }
+  .oppia-foundation-small-tablet-and-desktop-top-margin-20 {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 960px) {
   .oppia-foundation-mobile-and-small-tablet-vertical-padding {
@@ -501,6 +512,9 @@ Full-Width Styles
   }
   .oppia-foundation-desktop-margin-bottom-20 {
     margin-bottom: 20px;
+  }
+  .oppia-foundation-desktop-right-margin-40 {
+    margin-right: 40px;
   }
 }
 
