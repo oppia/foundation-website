@@ -219,7 +219,7 @@
         </p>
         <md-button class="oppia-foundation-white-button
                           oppia-foundation-no-margin"
-                   href="/#!/about">
+                   href="/#!/about_oppia">
           See The Oppia Difference
         </md-button>
       </md-content>
@@ -249,35 +249,40 @@
            layout="column"
            layout-align="center center">
     <md-card-content layout="column"
-                     layout-align="center center"
+                     layout-align="center"
                      class="home-page-display-size
                             home-page-description-text-box
                             oppia-foundation-gray-background">
-      <h3 class="md-display-1
-                 home-page-content-title
-                 oppia-foundation-green-text
-                 oppia-foundation-margin-bottom-40">
-        Our impact and testimonials
-      </h3>
+      <div layout="column"
+           layout-align="center center">
+        <md-card-title class="oppia-foundation-no-padding-top
+                              oppia-foundation-no-horizontal-padding">
+          <md-card-title-text>
+            <h3 class="md-display-1
+                       home-page-content-title
+                       oppia-foundation-green-text">
+              Our Impact and Testimonials
+            </h3>
+          </md-card-title-text>
+        </md-card-title>
+      </div>
       <md-content class="oppia-foundation-black-text
                          oppia-foundation-desktop-margin-bottom-20
                          oppia-foundation-gray-background"
                   layout="column"
                   layout-gt-md="row"
-                  layout-align="center center">
+                  layout-align="center">
         <md-list class="oppia-foundation-white-background
                         oppia-foundation-mobile-and-tablet-margin-bottom-40
-                        oppia-foundation-small-tablet-and-desktop-right-margin"
-                 flex-gt-md="25">
+                        oppia-foundation-desktop-right-margin-40"
+                 flex-gt-md="35">
           <md-list-item ng-repeat="item in impactTextContent">
             <md-content class="oppia-foundation-white-background">
               <h4 class="oppia-foundation-bold-text
                          home-page-number-impact">
                 {{item.number}}
               </h4>
-              <p>
-                {{item.text}}
-              </p>
+              <p class="home-page-text-impact">{{item.text}}</p>
             </md-content>
             <md-divider ng-if="!$last"></md-divider>
           </md-list-item>
@@ -290,7 +295,7 @@
           <md-list-item ng-repeat="learner in learnerProfiles"
                         layout="row"
                         layout-align="center">
-            <div class="oppia-foundation-button-horizontal-padding"
+            <div class="home-page-mobile-learner-profile-picture-container"
                  flex="noshrink"
                  hide-xs
                  layout="column"
@@ -301,7 +306,9 @@
             </div>
             <md-content class="oppia-foundation-white-background
                                oppia-foundation-tablet-and-destop-horizontal-padding-20
-                               home-page-student-testimonials">
+                               home-page-student-testimonials"
+                        layout-gt-md="column"
+                        layout-align-gt-md="center">
               <p>
                 <span class="oppia-foundation-green-text
                              home-page-content-title">
@@ -314,8 +321,7 @@
                 </span>
               </p>
               <div layout-xs="row">
-                <div class="home-page-mobile-learner-profile-picture-container"
-                     hide-gt-xs
+                <div hide-gt-xs
                      layout="column"
                      layout-align="start">
                   <img ng-src="{{learner.profilePictureImageFilename}}?{{$index}}"
@@ -331,10 +337,13 @@
           </md-list-item>
         </md-list>
       </md-content>
-      <md-button class="oppia-foundation-green-button"
-                 href="/#!/about">
-        Learn More
-      </md-button>
+      <div layout="column"
+           layout-align="center center">
+        <md-button class="oppia-foundation-green-button"
+                   href="/#!/about">
+          Learn More
+        </md-button>
+      </div>
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-white-background
@@ -737,26 +746,37 @@
   .home-page-number-impact {
     letter-spacing: normal;
   }
+  @media only screen and (min-width : 1279px) {
+    .home-page-text-impact {
+      white-space: pre-line;
+    }
+  }
   .home-page-student-testimonials {
     padding-bottom: 15px;
   }
   .home-page-mobile-learner-profile-picture-container {
-    padding-right: 20px
+    padding: 0 30px 0 20px
   }
   .home-page-learner-profile-picture {
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 120px;
+    width: 120px;
   }
-  @media only screen and (max-width : 960px) {
+  @media only screen and (max-width : 1279px) {
+    .home-page-learner-profile-picture {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  @media only screen and (max-width : 599px) {
     .home-page-learner-profile-picture {
       height: 60px;
       width: 60px;
+      margin-right: 20px;
     }
   }
   .home-page-student-info {
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: auto 0;
   }
   md-tabs .md-tab {
     background-color: white;
