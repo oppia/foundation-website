@@ -84,11 +84,17 @@
            hide-sm
            show-gt-sm
            layout-fill
-           layout-gt-sm="row"
            layout="column"
-           class="oppia-foundation-gray-background
-                  oppia-foundation-horizontal-padding
-                  oppia-foundation-vertical-padding">
+           class="oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding
+                  volunteer-page-volunteer-info-card">
+    <div layout="column"
+         layout-align="center center">
+      <h3 class="oppia-foundation-margin-bottom-40
+                 oppia-foundation-white-text">
+        Read about some of our current volunteers below!
+      </h3>
+    </div>
     <md-card-content class="volunteer-page-display-size
                             oppia-foundation-no-padding
                             volunteer-page-desktop-tabs"
@@ -113,7 +119,7 @@
     </md-card-content>
   </md-card>
   <md-card id="mobile-design-card"
-           class="oppia-foundation-gray-background
+           class="volunteer-page-volunteer-info-card
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -121,11 +127,11 @@
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
+    <md-card-content class="volunteer-page-volunteer-info-card
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
-                         oppia-foundation-black-text
+      <md-content class="volunteer-page-volunteer-info-card
+                         oppia-foundation-white-text
                          volunteer-page-profile-text-box">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
@@ -179,20 +185,20 @@
     </profile-carousel>
   </md-card>
   <md-card id="mobile-research-card"
-           class="oppia-foundation-gray-background
-                  oppia-foundation-vertical-padding"
+           class="oppia-foundation-vertical-padding
+                  volunteer-page-volunteer-info-card"
            show-xs
            show-sm
            hide-gt-sm
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
-                            oppia-foundation-horizontal-padding"
+    <md-card-content class="oppia-foundation-horizontal-padding
+                            volunteer-page-volunteer-info-card"
                      layout="column">
-      <md-content class="oppia-foundation-gray-background
-                         oppia-foundation-black-text
-                         volunteer-page-profile-text-box">
+      <md-content class="oppia-foundation-white-text
+                         volunteer-page-profile-text-box
+                         volunteer-page-volunteer-info-card">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1 volunteer-page-content-title">
@@ -273,7 +279,7 @@
         </p>
         <p>
           Fill out this form or
-          <a class="email-us-link"
+          <a class="volunteer-page-email-us-link"
              href="mailto:{{ADMIN_EMAIL}}?subject={{VOLUNTEER_EMAIL_SUBJECT}}">
             send us an email</a>, and we&rsquo;ll get back to you as soon as we can!
         </p>
@@ -394,6 +400,9 @@
     float: right;
     margin: 0;
     width: auto;
+  }
+  .volunteer-page-volunteer-info-card {
+    background-color: #264653
   }
   .volunteer-page-desktop-tabs {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -535,5 +544,9 @@
   }
   .volunteer-page-mobile-carousel-container {
     padding-top: 20px;
+  }
+  .volunteer-page-email-us-link,
+  .volunteer-page-email-us-link:hover {
+    color: #009688;
   }
 </style>
