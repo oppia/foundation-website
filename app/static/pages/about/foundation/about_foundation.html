@@ -48,18 +48,25 @@
                             about-foundation-page-description-text-box"
                      layout-gt-sm="row"
                      layout="column"
-                     layout-align="space-between">
-      <div hide-gt-sm layout="column" layout-align="center center">
+                     layout-align-gt-sm="space-between"
+                     layout-align="center center">
+      <div hide-gt-sm layout="column" layout-align="center end" style="margin-bottom: 40px;">
         <img alt="Education Equality Infographic"
              class="about-foundation-page-equality-infographic"
              src="/assets/images/about/about_foundation/equity-infographic-3-we-need-data.jpg">
+        <a class="oppia-foundation-green-text
+                  oppia-foundation-right-align-text
+                  about-foundation-page-text-link"
+           href="http://uis.unesco.org/en/news/new-report-how-measure-equity-education">
+          Source: UNESCO
+        </a>
       </div>
       <md-content class="oppia-foundation-black-text
                          oppia-foundation-white-background"
                   flex-gt-sm="60">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3>
+            <h3 class="oppia-foundation-normal-letter-spacing">
               Millions of children are not receiving the education they deserve.
             </h3>
           </md-card-title-text>
@@ -79,10 +86,17 @@
           may not be getting the effective education they need.
         </p>
       </md-content>
-      <div hide-xs hide-sm show-gt-sm layout="column" layout-align="center center">
+      <div hide-xs hide-sm show-gt-sm layout="column" layout-align="center end">
         <img alt="Education Equality Infographic"
              class="about-foundation-page-equality-infographic"
              src="/assets/images/about/about_foundation/equity-infographic-3-we-need-data.jpg">
+        <a class="oppia-foundation-green-text
+                  oppia-foundation-right-align-text
+                  about-foundation-page-text-link
+                  about-foundation-page-equality-infographic"
+           href="http://uis.unesco.org/en/news/new-report-how-measure-equity-education">
+          Source: UNESCO
+        </a>
       </div>
     </md-card-content>
     <md-card-content class="oppia-foundation-no-padding
@@ -101,7 +115,7 @@
                   flex-gt-sm="60">
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3>
+            <h3 class="oppia-foundation-normal-letter-spacing">
               We cannot ignore the potential quality education has to improve
               people's lives.
             </h3>
@@ -142,7 +156,7 @@
         </div>
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
-            <h3>
+            <h3 class="oppia-foundation-normal-letter-spacing">
               Creating fun and effective learning for the world’s underserved
               students
             </h3>
@@ -198,7 +212,7 @@
         <div>
           <md-card-title class="oppia-foundation-no-padding">
             <md-card-title-text>
-              <h3>
+              <h3 class="oppia-foundation-normal-letter-spacing">
                 Built from a unified passion for educational equality
               </h3>
             </md-card-title-text>
@@ -310,13 +324,9 @@
     width: 10em;
   }
   .about-foundation-page-equality-infographic {
+    margin-bottom: 10px;
     max-height: 320px;
     max-width: 320px;
-  }
-  @media screen and (max-width: 959px) {
-    .about-foundation-page-equality-infographic {
-      margin-bottom: 20px;
-    }
   }
   .about-foundation-page-student-photo {
     max-height: 340px;

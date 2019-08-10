@@ -602,6 +602,10 @@ Full-Width Styles
   font-weight: normal;
 }
 
+.oppia-foundation-normal-letter-spacing {
+  letter-spacing: normal;
+}
+
 .md-button.oppia-foundation-white-button {
   background-color: rgba(255,255,255,1);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
