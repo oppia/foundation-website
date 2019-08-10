@@ -443,6 +443,10 @@ Full-Width Styles
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  .oppia-foundation-small-tablet-and-desktop-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .oppia-foundation-small-tablet-and-desktop-top-padding {
     padding-top: 80px;
   }
