@@ -15,16 +15,30 @@
 </md-toolbar>
 <md-list layout="column">
   <md-divider></md-divider>
-  <md-list-item ng-href="/about" ng-click="closeSideBar()">
+  <md-list-item ng-href="/#" ng-click="closeSideBar()">
     <div class="md-list-item-text" layout="row" layout-align="start" flex>
       <md-icon class="side-bar-icon"
-               md-svg-src="/assets/icons/round-info-24px.svg"
-               aria-label="About icon">
+               md-svg-src="/assets/icons/baseline-business-24px.svg"
+               aria-label="The Foundation icon">
       </md-icon>
       <h6 class="oppia-foundation-uppercase-text
                  oppia-foundation-white-text
                  side-bar-text-box">
-        About
+        About The Foundation
+      </h6>
+    </div>
+    <md-divider></md-divider>
+  </md-list-item>
+  <md-list-item ng-href="/about" ng-click="closeSideBar()">
+    <div class="md-list-item-text" layout="row" layout-align="start" flex>
+      <md-icon class="side-bar-icon"
+               md-svg-src="/assets/icons/baseline-class-24px.svg"
+               aria-label="The Oppia Platform icon">
+      </md-icon>
+      <h6 class="oppia-foundation-uppercase-text
+                 oppia-foundation-white-text
+                 side-bar-text-box">
+        About The Oppia Platform
       </h6>
     </div>
     <md-divider></md-divider>
@@ -83,6 +97,7 @@
   }
   .side-bar-text-box {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
+    letter-spacing: 0px;
   }
   .side-nav-oppia-foundation-icon {
     border: 0;

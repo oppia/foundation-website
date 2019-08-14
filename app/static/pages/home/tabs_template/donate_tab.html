@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<div class="oppia-foundation-white-background"
+     layout="column"
+     layout-align="center center">
+  <md-content class="oppia-foundation-horizontal-padding
+                     oppia-foundation-white-background
+                     home-page-donate-tab-content"
+              layout="row"
+              layout-align="center">
+    <p class="oppia-foundation-no-margin-top
+              home-page-action-result-text"
+       flex="50">
+      {{engagementDescriptionText.donate}}
+    </p>
+    <md-content class="oppia-foundation-gray-background
+                       oppia-foundation-no-margin-top
+                       oppia-foundation-button-horizontal-padding"
+                flex="50">
+      <ng-include src="situationDescriptionUrls.donate"></ng-include>
+    </md-content>
+  </md-content>
+  <md-button class="oppia-foundation-green-button
+                    oppia-foundation-margin-bottom-40"
+             href="/#!/donate">
+    Donate Now
+  </md-button>
+</div>
