@@ -18,10 +18,23 @@ import config
 from core.platform import gae_email_services
 
 
+def send_mail(email_subject, email_body, reply_to_email, recipient_email):
+    """Send an email to the given email address.
+
+    Args:
+        email_subject: str. Subject of the email.
+        email_body: str. Body (message) of the email.
+        reply_to_email: str. The email address that the admin will be replying
+            to.
+        recipient_email: str. The recipient email address.
+    """
+    gae_email_services.send_mail(
+        config.SYSTEM_EMAIL_ADDRESS, reply_to_email, recipient_email,
+        email_subject, email_body)
+
+
 def send_mail_to_admin(email_subject, email_body, reply_to_email):
     """Send an email to the admin email address.
-
-    The email is sent to the ADMIN_EMAIL_ADDRESS set in config.py.
 
     Args:
         email_subject: str. Subject of the email.
@@ -29,6 +42,5 @@ def send_mail_to_admin(email_subject, email_body, reply_to_email):
         reply_to_email: str. The email address that the admin will be replying
             to.
     """
-    gae_email_services.send_mail(
-        config.SYSTEM_EMAIL_ADDRESS, reply_to_email, config.ADMIN_EMAIL_ADDRESS,
-        email_subject, email_body)
+    send_mail(
+        email_subject, email_body, reply_to_email, config.ADMIN_EMAIL_ADDRESS)
