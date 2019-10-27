@@ -30,8 +30,27 @@ class SendEmailToAdminTest(app_engine_test_base.GenericTestBase):
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
         self.assertEqual(0, len(messages))
-        email_manager.send_mail_to_admin(
-            'subject', 'content', user_email)
+        email_manager.send_mail_to_admin('subject', 'content', user_email)
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))
+
+    def test_send_mail_to_specific_alias(self):
+        """Test send_mail sends mail to the specified email address."""
+        user_email = 'user1@example.com'
+        recipient_email = 'recipient@example.com'
+
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(0, len(messages))
+        messages = self.mail_stub.get_sent_messages(to=recipient_email)
+        self.assertEqual(0, len(messages))
+
+        email_manager.send_mail(
+            'subject', 'content', user_email, recipient_email)
+
+        messages = self.mail_stub.get_sent_messages(
+            to=config.ADMIN_EMAIL_ADDRESS)
+        self.assertEqual(0, len(messages))
+        messages = self.mail_stub.get_sent_messages(to=recipient_email)
         self.assertEqual(1, len(messages))

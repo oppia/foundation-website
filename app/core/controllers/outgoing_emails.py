@@ -24,7 +24,7 @@ import config
 
 
 class ForwardToAdminEmailHandler(base.BaseHandler):
-    """Handler for forwarding email to admin after email form is submitted."""
+    """Forwards messages from a webform to an administrative email address."""
 
     @classmethod
     def write_email_subject(cls, email_type):
@@ -89,7 +89,12 @@ class ForwardToAdminEmailHandler(base.BaseHandler):
         email_contents = ForwardToAdminEmailHandler.write_email_contents(
             payload['comment'], user_organization)
 
-        email_manager.send_mail_to_admin(
-            email_subject, email_contents, payload['email'])
+        if email_type == config.EMAIL_TYPE_VOLUNTEER:
+            email_manager.send_mail(
+                email_subject, email_contents, payload['email'],
+                config.VOLUNTEER_EMAIL_ADDRESS)
+        else:
+            email_manager.send_mail_to_admin(
+                email_subject, email_contents, payload['email'])
 
         self.render_json({})

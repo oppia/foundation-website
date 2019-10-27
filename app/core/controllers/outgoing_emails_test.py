@@ -106,21 +106,27 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
 
         self.assertEqual(0, len(messages))
         self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
         self.assertEqual(1, len(messages))
+        messages = self.mail_stub.get_sent_messages(
+            to=config.VOLUNTEER_EMAIL_ADDRESS)
+        self.assertEqual(0, len(messages))
 
         form_contents = {
             'email_type': config.EMAIL_TYPE_VOLUNTEER,
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
         }
-
-        self.assertEqual(1, len(messages))
         self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
-        self.assertEqual(2, len(messages))
+        self.assertEqual(1, len(messages))
+        messages = self.mail_stub.get_sent_messages(
+            to=config.VOLUNTEER_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))
 
         form_contents = {
             'email_type': config.EMAIL_TYPE_PARTNERSHIPS,
@@ -128,9 +134,11 @@ class ForwardEmailToAdminHandlerTests(app_engine_test_base.GenericTestBase):
             'email': 'user1@example.com',
             'comment': 'We are looking for partners.'
         }
-
-        self.assertEqual(2, len(messages))
         self.testapp.post_json(main.MAIL_HANDLER_URL, form_contents)
+
         messages = self.mail_stub.get_sent_messages(
             to=config.ADMIN_EMAIL_ADDRESS)
-        self.assertEqual(3, len(messages))
+        self.assertEqual(2, len(messages))
+        messages = self.mail_stub.get_sent_messages(
+            to=config.VOLUNTEER_EMAIL_ADDRESS)
+        self.assertEqual(1, len(messages))
