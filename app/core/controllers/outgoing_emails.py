@@ -24,7 +24,9 @@ import config
 
 
 class ForwardToAdminEmailHandler(base.BaseHandler):
-    """Handler for forwarding email to admin after email form is submitted."""
+    """Handler for forwarding email to one of the administrative email
+    addresses after the email form is submitted.
+    """
 
     @classmethod
     def write_email_subject(cls, email_type):
