@@ -13,36 +13,18 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller(
-  'PartnershipsPage', [
-    '$scope', '$http', '$mdDialog', '$log',
-    'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
-    function(
-        $scope, $http, $mdDialog, $log,
-        ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
-      $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
-      $scope.PARTNERSHIPS_EMAIL_SUBJECT = 'Partnering%20with%20Oppia';
-      $scope.formSubmitted = false;
-      $scope.submitContactUsForm = function(
-          fullName, email, organization, comment, evt) {
-        $scope.formSubmitted = true;
-        $http.post(MAILHANDLER_URL, {
-          email_type: 'PARTNERSHIPS',
-          name: fullName,
-          organization: organization,
-          email: email,
-          comment: comment,
-        }).then(function() {
-          $mdDialog.show(
-            $mdDialog.alert()
-              .clickOutsideToClose(true)
-              .title('Thank you!')
-              .textContent(THANKYOU_MESSAGE)
-              .ariaLabel('Thank you dialog')
-              .ok('Got it!')
-              .targetEvent(evt)
-          );
-        }, function(errorResponse) {
-          $log.error('Server error: ' + errorResponse.data.error);
-        });
-      };
-    }]);
+  'PartnershipsPage', ['$scope', function($scope) {
+    $scope.partnershipsActions = [{
+      iconFileName: 'Form icon',
+      iconFilePath: '/assets/icons/icon_doc.png',
+      text: '1. Fill out the interest form'
+    }, {
+      iconFileName: 'Phone icon',
+      iconFilePath: '/assets/icons/icon_phone.png',
+      text: '2. Schedule a 1:1 with our Partnerships Lead'
+    }, {
+      iconFileName: 'Handshake icon',
+      iconFilePath: '/assets/icons/icon_shake.png',
+      text: '3. Make change!'
+    }];
+  }]);
