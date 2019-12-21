@@ -49,7 +49,7 @@ oppiaFoundationWebsite.controller('HomePage', [
       text: 'Lessons in our virtual library'
     }, {
       number: '1',
-      text: 'Randomized trial completed (and more to come!)'
+      text: 'Randomized trial completed\n(and more to come!)'
     }, {
       number: '100+',
       text: 'Volunteers from all over the globe'

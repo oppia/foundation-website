@@ -27,9 +27,13 @@ oppiaFoundationWebsite.config(['$locationProvider', '$routeProvider',
         templateUrl: 'pages/home/home.html',
         projectTag: 'Home'
       })
+      .when('/about-oppia', {
+        templateUrl: 'pages/about/oppia/about_oppia.html',
+        projectTag: 'About Oppia'
+      })
       .when('/about', {
-        templateUrl: 'pages/about/about.html',
-        projectTag: 'About'
+        templateUrl: 'pages/about/foundation/about_foundation.html',
+        projectTag: 'About Foundation'
       })
       .when('/partnerships', {
         templateUrl: 'pages/partnerships/partnerships.html',
