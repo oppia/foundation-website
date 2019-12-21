@@ -453,6 +453,9 @@ Full-Width Styles
   .oppia-foundation-small-tablet-and-desktop-right-padding {
     padding-right: 40px;
   }
+  .oppia-foundation-small-tablet-and-desktop-bottom-padding {
+    padding-bottom: 40px;
+  }
   .oppia-foundation-small-tablet-and-desktop-right-margin {
     margin-right: 40px;
   }
@@ -589,6 +592,7 @@ Full-Width Styles
 }
 
 .md-button.oppia-foundation-white-button {
+  border: 3px outset rgba(255,255,255,.5);
   background-color: rgba(255,255,255,1);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -597,6 +601,7 @@ Full-Width Styles
   padding: 0px 15px;
   max-width: 250px;
   max-height: 50px;
+  opacity: 1;
 }
 
 .md-button.oppia-foundation-white-button:hover,
