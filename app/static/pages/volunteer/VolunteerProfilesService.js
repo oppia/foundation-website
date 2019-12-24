@@ -46,6 +46,9 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
     });
 
     var VolunteerProfilesService = {
+      getArtistProfiles: function() {
+        return volunteersByCategory.art;
+      },
       getDesignProfiles: function() {
         return volunteersByCategory.design;
       },

@@ -14,14 +14,14 @@
 
 oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
 
-  art: [{
+  artist: [{
     fullName: 'Tuna R. Terzi',
     profilePictureImageFilename: 'tuna.jpg',
     professionalQuote: 'Oppia turns to my drawings into little seeds for the ' + 
       'better world.',
     position: 'Artist'
   }], 
-  
+
   design: [{
     fullName: 'Mark Halpin',
     profilePictureImageFilename: 'mark.jpg',
