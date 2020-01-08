@@ -40,10 +40,7 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       return slides;
     };
     var volunteersByCategory = {};
-    Object.keys(VOLUNTEER_INFO).forEach(function(volunteerCategory) {
-
-      console.log(volunteerCategory);
-      
+    Object.keys(VOLUNTEER_INFO).forEach(function(volunteerCategory) {      
       volunteersByCategory[volunteerCategory] = getRandomProfiles(
         VOLUNTEER_INFO[volunteerCategory]);
     });
