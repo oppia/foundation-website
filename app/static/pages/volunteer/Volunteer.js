@@ -39,7 +39,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         'artist_description.html',
       development: '/pages/volunteer/work_description_templates/' +
         'development_description.html',
-      research: '/pages/volunteer/work_description_templates/' +
+      localOutreach: '/pages/volunteer/work_description_templates/' +
         'local_outreach_description.html',
       lessonCreation: '/pages/volunteer/work_description_templates/' +
         'lesson_creation_description.html',
