@@ -52,14 +52,8 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       getArtistProfiles: function() {
         return volunteersByCategory.art;
       },
-      getDesignProfiles: function() {
-        return volunteersByCategory.design;
-      },
       getDevelopmentProfiles: function() {
         return volunteersByCategory.development;
-      },
-      getResearchProfiles: function() {
-        return volunteersByCategory.research;
       },
       getLessonCreationProfiles: function() {
         return volunteersByCategory.lessonCreation;

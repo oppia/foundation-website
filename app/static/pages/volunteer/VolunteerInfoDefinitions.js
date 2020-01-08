@@ -22,29 +22,6 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Artist'
   }], 
 
-  design: [{
-    fullName: 'Mark Halpin',
-    profilePictureImageFilename: 'mark.jpg',
-    professionalQuote: 'I contribute to Oppia because of its remarkable ' +
-      'goal: to make a quality education available to those who may not have ' +
-      'easy access to it.',
-    position: 'Design Lead'
-  }, {
-    fullName: 'Jordan Movish',
-    profilePictureImageFilename: 'jordan.jpg',
-    professionalQuote: 'As a former teacher, I am motivated to create a ' +
-      'platform that gives everyone equal access to education. Working with ' +
-      'Oppia is a powerful opportunity to leverage design for social justice.',
-    position: 'UX Designer'
-  }, {
-    fullName: 'Rachel Chen',
-    profilePictureImageFilename: 'rachel.jpg',
-    professionalQuote: 'Oppia provides more students with access to ' +
-      'individualized learning experiences. Volunteering for Oppia allows me ' +
-      'to contribute to this meaningful cause.',
-    position: 'UX Designer'
-  }],
-
   development: [{
     fullName: 'Akshay Anand',
     profilePictureImageFilename: 'akshay.jpeg',
@@ -75,29 +52,6 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'and the impact it creates makes me hopeful for the future of ' +
       'education, and I want to be a part of that change.',
     position: 'Product Manager'
-  }],
-
-  research: [{
-    fullName: 'Kefeh Collins',
-    profilePictureImageFilename: 'kefeh.jpg',
-    professionalQuote: 'Oppia is giving a better perspective of how ' +
-      'knowledge sharing should be done. I wanted to be part of that.',
-    position: 'User Research Lead (Cameroon)'
-  }, {
-    fullName: 'Yulin Liu',
-    profilePictureImageFilename: 'yulin.jpg',
-    professionalQuote: 'I like that Oppia approaches designing better ' +
-      'lessons through testing with young learners and listening very ' +
-      'carefully to what they have to say!',
-    position: 'User Researcher (Boston)'
-  }, {
-    fullName: 'Kevin Lee',
-    profilePictureImageFilename: 'kevin.jpg',
-    professionalQuote: 'I joined Oppia because of its innovative approach ' +
-      'to tackling the lack of education. I stayed with Oppia because of its ' +
-      'great community, great opportunities to grow, and great impact for ' +
-      'social good.',
-    position: 'Researcher and Lesson Creator'
   }],
 
   lesson_creation: [{
