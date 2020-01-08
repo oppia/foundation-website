@@ -67,10 +67,10 @@
       <md-card-actions class="oppia-foundation-mobile-and-small-tablet-bottom-padding-40"
                        hide-gt-sm layout="row"
                        layout-align="center center">
-        <md-button ng-click="goToElement('mobile-research-card')"
+        <md-button ng-click="goToElement('mobile-local-outreach-card')"
                    class="oppia-foundation-no-margin
                           oppia-foundation-white-button">
-          Research
+          Local Outreach
         </md-button>
         <md-button ng-click="goToElement('mobile-lesson-creation-card')"
                    class="oppia-foundation-no-margin
@@ -178,7 +178,7 @@
                       corresponding-tab-name="development">
     </profile-carousel>
   </md-card>
-  <md-card id="mobile-research-card"
+  <md-card id="mobile-local-outreach-card"
            class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
@@ -196,11 +196,11 @@
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1 volunteer-page-content-title">
-              Research
+              Local Outreach
             </h3>
           </md-card-title-text>
         </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.research"></ng-include>
+        <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
         <md-button class="oppia-foundation-green-button"
                    href="https://goo.gl/forms/otv30JV3Ihv0dT3C3">
           Get involved
@@ -208,7 +208,7 @@
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="research">
+                      corresponding-tab-name="local_outreach">
     </profile-carousel>
   </md-card>
   <md-card id="mobile-lesson-creation-card"
@@ -420,7 +420,7 @@
   }
   .volunteer-page-development-tab-content,
   .volunteer-page-lesson-creation-tab-content,
-  .volunteer-page-research-tab-content,
+  .volunteer-page-local-outreach-tab-content,
   .volunteer-page-artist-tab-content {
     padding-bottom: 40px;
     padding-top: 40px;

@@ -41,6 +41,9 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
     };
     var volunteersByCategory = {};
     Object.keys(VOLUNTEER_INFO).forEach(function(volunteerCategory) {
+
+      console.log(volunteerCategory);
+      
       volunteersByCategory[volunteerCategory] = getRandomProfiles(
         VOLUNTEER_INFO[volunteerCategory]);
     });
@@ -60,6 +63,9 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       },
       getLessonCreationProfiles: function() {
         return volunteersByCategory.lessonCreation;
+      },
+      getLocalOutreachProfiles: function() {
+        return volunteersByCategory.localOutreach;
       },
       getSlidesForTab: function(tabName) {
         return volunteersByCategory[tabName.toLowerCase()];

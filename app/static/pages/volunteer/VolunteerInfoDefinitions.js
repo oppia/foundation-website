@@ -119,5 +119,13 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'know that Oppia\'s engaging and equitable lessons can help solve this ' +
       'problem. Every volunteer matters at Oppia.',
     position: 'Coordinator, Lesson Creation'
+  }],
+
+  local_outreach: [{
+    fullName: 'Kefeh Collins',
+    profilePictureImageFilename: 'kefeh.jpg',
+    professionalQuote: 'Oppia is giving a better perspective of how ' +
+      'knowledge sharing should be done. I wanted to be part of that.',
+    position: 'Local Outreach Lead (Cameroon)'
   }]
 });

@@ -28,8 +28,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Development',
       templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
     }, {
-      title: 'Research',
-      templateUrl: '/pages/volunteer/tabs_template/research_tab.html'
+      title: 'Local Outreach',
+      templateUrl: '/pages/volunteer/tabs_template/local_outreach_tab.html'
     }, {
       title: 'Lesson Creation',
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
@@ -40,7 +40,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       development: '/pages/volunteer/work_description_templates/' +
         'development_description.html',
       research: '/pages/volunteer/work_description_templates/' +
-        'research_description.html',
+        'local_outreach_description.html',
       lessonCreation: '/pages/volunteer/work_description_templates/' +
         'lesson_creation_description.html',
     };
