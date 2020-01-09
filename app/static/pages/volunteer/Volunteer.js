@@ -35,8 +35,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
     }];
     $scope.volunteerWorkDescriptionUrls = {
-      artist: '/pages/volunteer/work_description_templates/' +
-        'artist_description.html',
+      art: '/pages/volunteer/work_description_templates/' +
+        'art_description.html',
       development: '/pages/volunteer/work_description_templates/' +
         'development_description.html',
       localOutreach: '/pages/volunteer/work_description_templates/' +

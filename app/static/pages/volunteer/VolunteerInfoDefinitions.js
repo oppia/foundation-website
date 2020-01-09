@@ -14,7 +14,7 @@
 
 oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
 
-  artist: [{
+  art: [{
     fullName: 'Tuna R. Terzi',
     profilePictureImageFilename: 'tuna.jpg',
     professionalQuote: 'Oppia turns to my drawings into little seeds for the ' + 
