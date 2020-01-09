@@ -17,8 +17,15 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   art: [{
     fullName: 'Tuna R. Terzi',
     profilePictureImageFilename: 'tuna.jpg',
-    professionalQuote: 'Oppia turns to my drawings into little seeds for the ' + 
+    professionalQuote: 'Oppia turns my drawings into little seeds for the ' + 
       'better world.',
+    position: 'Artist'
+  }, {
+    fullName: 'Mark Halpin',
+    profilePictureImageFilename: 'mark.jpg',
+    professionalQuote: 'I contribute to Oppia because of its remarkable ' + 
+      'goal: to make a quality education available to those who may not have ' +
+      'easy access to it.',
     position: 'Artist'
   }], 
 
@@ -52,6 +59,14 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'and the impact it creates makes me hopeful for the future of ' +
       'education, and I want to be a part of that change.',
     position: 'Product Manager'
+  }, {
+    fullName: 'Kevin Lee',
+    profilePictureImageFilename: 'kevin.jpg',
+    professionalQuote: 'I joined Oppia because of its innovative approach ' +
+      'to tackling the lack of education. I stayed with Oppia because of its ' +
+      'great community, great opportunities to grow, and great impact for ' +
+      'social good.',
+    position: 'Developer'
   }],
 
   lesson_creation: [{
