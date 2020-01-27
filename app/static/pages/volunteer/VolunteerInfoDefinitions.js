@@ -96,5 +96,12 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     professionalQuote: 'Oppia is giving a better perspective of how ' +
       'knowledge sharing should be done. I wanted to be part of that.',
     position: 'Local Outreach Lead (Cameroon)'
+  }, {
+    fullName: 'Sam',
+    profilePictureImageFilename: 'sam.jpg',
+    professionalQuote: 'I believe more students will perform better if ' +
+      'introduced to Oppia. Oppia is here to broaden the learning ' +
+      'experience of students in and outside of the classroom.', 
+    position: 'Local Outreach Lead (Ghana)'
   }]
 });
