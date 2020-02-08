@@ -22,25 +22,25 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
     $scope.formSubmitted = false;
     $scope.tabs = [{
-      title: 'Design',
-      templateUrl: '/pages/volunteer/tabs_template/design_tab.html'
+      title: 'Art',
+      templateUrl: '/pages/volunteer/tabs_template/art_tab.html'
     }, {
       title: 'Development',
       templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
     }, {
-      title: 'Research',
-      templateUrl: '/pages/volunteer/tabs_template/research_tab.html'
+      title: 'Local Outreach',
+      templateUrl: '/pages/volunteer/tabs_template/local_outreach_tab.html'
     }, {
       title: 'Lesson Creation',
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
     }];
     $scope.volunteerWorkDescriptionUrls = {
-      design: '/pages/volunteer/work_description_templates/' +
-        'design_description.html',
+      art: '/pages/volunteer/work_description_templates/' +
+        'art_description.html',
       development: '/pages/volunteer/work_description_templates/' +
         'development_description.html',
-      research: '/pages/volunteer/work_description_templates/' +
-        'research_description.html',
+      localOutreach: '/pages/volunteer/work_description_templates/' +
+        'local_outreach_description.html',
       lessonCreation: '/pages/volunteer/work_description_templates/' +
         'lesson_creation_description.html',
     };

@@ -54,6 +54,32 @@
              class="volunteer-page-global-graphics"
              alt="Global graphics">
       </div>
+      <md-card-actions hide-gt-sm layout="row" layout-align="center center">
+        <md-button ng-click="goToElement('mobile-art-card')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Art
+        </md-button>
+        <md-button ng-click="goToElement('mobile-development-card')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Development
+        </md-button>
+      </md-card-actions>
+      <md-card-actions class="oppia-foundation-mobile-and-small-tablet-bottom-padding-40"
+                       hide-gt-sm layout="row"
+                       layout-align="center center">
+        <md-button ng-click="goToElement('mobile-local-outreach-card')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Local Outreach
+        </md-button>
+        <md-button ng-click="goToElement('mobile-lesson-creation-card')"
+                   class="oppia-foundation-no-margin
+                          oppia-foundation-white-button">
+          Lesson Creation
+        </md-button>
+      </md-card-actions>
     </md-card-content>
     <md-card-actions class="oppia-foundation-no-margin
                             volunteer-page-apply-button"
@@ -106,7 +132,8 @@
       </md-content>
     </md-card-content>
   </md-card>
-  <md-card class="volunteer-page-volunteer-info-card
+  <md-card id="mobile-art-card"
+           class="oppia-foundation-gray-background
                   oppia-foundation-vertical-padding"
            show-xs
            show-sm
@@ -123,19 +150,19 @@
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1 volunteer-page-content-title">
-              Design
+              Art
             </h3>
           </md-card-title-text>
         </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.design"></ng-include>
+        <ng-include src="volunteerWorkDescriptionUrls.art"></ng-include>
         <md-button class="oppia-foundation-green-button"
-                   href="https://goo.gl/forms/rOG9c6jirmSmWnyF2">
+                   href="https://forms.gle/7tHG1MB6RRawR16u7">
           Get involved
         </md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="design">
+                      corresponding-tab-name="art">
     </profile-carousel>
     <md-card-content class="oppia-foundation-horizontal-padding
                             volunteer-page-volunteer-info-card"
@@ -161,8 +188,18 @@
     <profile-carousel carousel-type="mobile"
                       corresponding-tab-name="development">
     </profile-carousel>
-    <md-card-content class="oppia-foundation-horizontal-padding
-                            volunteer-page-volunteer-info-card"
+  </md-card>
+  <md-card id="mobile-local-outreach-card"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-vertical-padding"
+           show-xs
+           show-sm
+           hide-gt-sm
+           layout-fill
+           layout="column"
+           layout-align="center center">
+    <md-card-content class="oppia-foundation-gray-background
+                            oppia-foundation-horizontal-padding"
                      layout="column">
       <md-content class="oppia-foundation-white-text
                          volunteer-page-profile-text-box
@@ -170,19 +207,19 @@
         <md-card-title class="oppia-foundation-no-padding">
           <md-card-title-text>
             <h3 class="md-display-1 volunteer-page-content-title">
-              Research
+              Local Outreach
             </h3>
           </md-card-title-text>
         </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.research"></ng-include>
+        <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
         <md-button class="oppia-foundation-green-button"
-                   href="https://goo.gl/forms/otv30JV3Ihv0dT3C3">
+                   href="https://forms.gle/7tHG1MB6RRawR16u7">
           Get involved
         </md-button>
       </md-content>
     </md-card-content>
     <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="research">
+                      corresponding-tab-name="local_outreach">
     </profile-carousel>
     <md-card-content class="oppia-foundation-horizontal-padding
                             volunteer-page-volunteer-info-card"
@@ -199,7 +236,7 @@
         </md-card-title>
         <ng-include src="volunteerWorkDescriptionUrls.lessonCreation"></ng-include>
         <md-button class="oppia-foundation-green-button"
-                   href="https://goo.gl/forms/w1JtEtRDpGMCk3aB3">
+                   href="https://forms.gle/7tHG1MB6RRawR16u7">
           Get involved
         </md-button>
       </md-content>
@@ -303,8 +340,8 @@
   }
   .volunteer-page-development-tab-content,
   .volunteer-page-lesson-creation-tab-content,
-  .volunteer-page-research-tab-content,
-  .volunteer-page-design-tab-content {
+  .volunteer-page-local-outreach-tab-content,
+  .volunteer-page-art-tab-content {
     padding-bottom: 40px;
     padding-top: 40px;
   }

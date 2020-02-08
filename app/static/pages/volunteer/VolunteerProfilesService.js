@@ -46,17 +46,17 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
     });
 
     var VolunteerProfilesService = {
-      getDesignProfiles: function() {
-        return volunteersByCategory.design;
+      getArtProfiles: function() {
+        return volunteersByCategory.art;
       },
       getDevelopmentProfiles: function() {
         return volunteersByCategory.development;
       },
-      getResearchProfiles: function() {
-        return volunteersByCategory.research;
-      },
       getLessonCreationProfiles: function() {
         return volunteersByCategory.lessonCreation;
+      },
+      getLocalOutreachProfiles: function() {
+        return volunteersByCategory.localOutreach;
       },
       getSlidesForTab: function(tabName) {
         return volunteersByCategory[tabName.toLowerCase()];
