@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <div layout="row" class="oppia-foundation-white-background">
+  <profile-carousel carousel-type="desktop"
+                    corresponding-tab-name="lesson_creation">
+  </profile-carousel>
+
   <md-content class="oppia-foundation-horizontal-padding
                      oppia-foundation-white-background
-                     volunteer-page-lesson-creation-tab-content"
-              layout="column"
-              layout-align="start">
+                     volunteer-page-lesson-creation-tab-content">
     <p class="oppia-foundation-no-margin-top">
       Oppia’s lesson creation team is responsible for creating a set of highly
       effective and enjoyable lessons that students around the world can use for
@@ -17,13 +19,13 @@
       attitude towards learning. Currently, we're focusing on basic mathematics,
       but intend to expand to other subjects in the future.
     </p>
+    <div class="oppia-foundation-dotted-spaced-line">
+      <br>
+    </div>
     <ng-include src="volunteerWorkDescriptionUrls.lessonCreation"></ng-include>
     <md-button class="oppia-foundation-green-button"
                href="https://forms.gle/7tHG1MB6RRawR16u7">
       Get involved
     </md-button>
   </md-content>
-  <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="lesson_creation">
-  </profile-carousel>
 </div>

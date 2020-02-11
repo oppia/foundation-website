@@ -704,6 +704,14 @@ md-sidenav {
   z-index: 1;
 }
 
+.oppia-foundation-dotted-spaced-line {
+  background-image: linear-gradient(
+    to right, #333 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: center;
+  background-size: 15px 1.5px;
+  background-repeat: repeat-x;
+}
+
 .headroom {
   will-change: transform;
   transition: transform 200ms linear;
