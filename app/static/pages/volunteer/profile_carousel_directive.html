@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <div layout="row"
      layout-align="center center"
-     class="oppia-foundation-horizontal-padding
-            volunteer-page-desktop-carousel-container"
      ng-if="displayDesktopCarousel">
   <uib-carousel uib-carousel
                 active="activeSlideIndex"
@@ -11,17 +9,18 @@
     <uib-slide uib-slide
                ng-repeat="slide in slides track by $index"
                index="$index">
-      <md-card class="oppia-foundation-gray-background
-                      oppia-foundation-no-margin">
-        <img class="volunteer-page-carousel-profile-picture"
-             ng-src="{{slide.profilePictureImageFilename}}"
-             alt="Volunteer profile image">
+      <img class="volunteer-page-carousel-profile-picture"
+           ng-src="{{slide.profilePictureImageFilename}}"
+           alt="Volunteer profile image">
+      <md-card class="oppia-foundation-white-background
+                      oppia-foundation-no-margin
+                      volunteer-page-desktop-carousel-quote-container">
         <md-card-content layout="column"
-                         class="oppia-foundation-gray-background
+                         class="oppia-foundation-white-background
                                 oppia-foundation-horizontal-padding
                                 volunteer-page-profile-text-box
-                                volunteer-page-carousel-profile-text-size">
-          <span class="oppia-foundation-left-align-text">
+                                volunteer-page-desktop-carousel-quote-box">
+          <span class="volunteer-page-carousel-quote-text">
             &ldquo;{{slide.professionalQuote}}&rdquo;
           </span>
           <cite class="oppia-foundation-cite-text-box">

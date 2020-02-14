@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
+<div class="oppia-foundation-white-background
+            oppia-foundation-small-tablet-and-desktop-vertical-padding-60"
+     layout="row">
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="local_outreach">
+                    corresponding-tab-name="local_outreach"
+                    flex="45">
   </profile-carousel>
   <md-content class="oppia-foundation-horizontal-padding
                      oppia-foundation-white-background
-                     volunteer-page-local-outreach-tab-content">
+                     volunteer-page-local-outreach-tab-content"
+              flex="55">
     <p class="oppia-foundation-no-margin-top">
       Although the Oppia Foundation does a lot of work remotely to reach students around the world, we need passionate volunteers
       to help us make Oppia an even better resource for the most underserved learners in their own communities! Local Outreach volunteers
@@ -19,9 +23,5 @@
       If you're passionate about bringing educational equality directly to your local neighborhood, sign up to be a Local Outreach volunteer today!
     </p>
     <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://forms.gle/7tHG1MB6RRawR16u7">
-      Get involved
-    </md-button>
   </md-content>
 </div>

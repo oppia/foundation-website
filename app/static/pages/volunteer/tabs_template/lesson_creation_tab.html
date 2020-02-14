@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
+<div class="oppia-foundation-white-background
+            oppia-foundation-small-tablet-and-desktop-vertical-padding-60"
+     layout="row">
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="lesson_creation">
+                    corresponding-tab-name="lesson_creation"
+                    flex="45">
   </profile-carousel>
-
   <md-content class="oppia-foundation-horizontal-padding
                      oppia-foundation-white-background
-                     volunteer-page-lesson-creation-tab-content">
+                     volunteer-page-lesson-creation-tab-content"
+              flex="55">
     <p class="oppia-foundation-no-margin-top">
       Oppia’s lesson creation team is responsible for creating a set of highly
       effective and enjoyable lessons that students around the world can use for
@@ -23,9 +26,5 @@
       <br>
     </div>
     <ng-include src="volunteerWorkDescriptionUrls.lessonCreation"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://forms.gle/7tHG1MB6RRawR16u7">
-      Get involved
-    </md-button>
   </md-content>
 </div>

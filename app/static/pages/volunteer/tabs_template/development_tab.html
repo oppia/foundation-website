@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
+<div class="oppia-foundation-white-background
+            oppia-foundation-small-tablet-and-desktop-vertical-padding-60"
+     layout="row" >
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="development">
+                    corresponding-tab-name="development"
+                    flex="45">
   </profile-carousel>
   <md-content class="oppia-foundation-horizontal-padding
                      oppia-foundation-white-background
-                     volunteer-page-development-tab-content">
+                     volunteer-page-development-tab-content"
+              flex="55">
     <p class="oppia-foundation-no-margin-top">
       Oppia enables authors to collaborate on creating high-quality lessons at
       scale. As a developer, you'll be contributing to the technology that makes
@@ -18,9 +22,5 @@
       <br>
     </div>
     <ng-include src="volunteerWorkDescriptionUrls.development"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://github.com/oppia/oppia/wiki">
-      Get involved
-    </md-button>
   </md-content>
 </div>

@@ -114,7 +114,10 @@
                             volunteer-page-desktop-tabs"
                      layout="column"
                      layout-fill>
-      <md-content layout-fill>
+      <md-content class="oppia-foundation-horizontal-padding
+                         oppia-foundation-white-background
+                         volunteer-page-desktop-tab-container"
+                  layout-fill>
         <md-tabs md-dynamic-height
                  md-border-bottom
                  md-selected="activeTabIndex"
@@ -154,6 +157,7 @@
             </h3>
           </md-card-title-text>
         </md-card-title>
+
         <ng-include src="volunteerWorkDescriptionUrls.art"></ng-include>
         <md-button class="oppia-foundation-green-button"
                    href="https://forms.gle/7tHG1MB6RRawR16u7">
@@ -317,7 +321,11 @@
   }
   .volunteer-page-desktop-tabs {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -moz-box-shawdow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  .volunteer-page-desktop-tab-container {
+    padding-top: 10px;
   }
   md-tabs .md-tab {
     background-color: white;
@@ -342,8 +350,8 @@
   .volunteer-page-lesson-creation-tab-content,
   .volunteer-page-local-outreach-tab-content,
   .volunteer-page-art-tab-content {
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   .volunteer-page-description-headline-padding {
     padding-bottom: 20px;
@@ -364,18 +372,19 @@
       background-color: white;
     }
   }
+  li.volunteer-page-description-list-item {
+    margin:0 0 10px 0;
+  }
   .volunteer-page-mobile-profile-carousel {
     min-height: 500px;
-  }
-  .carousel-inner {
-    height: 500px;
   }
   .carousel-control.left, .carousel-control.right {
     background-image: none;
   }
   a.left.carousel-control, a.right.carousel-control {
-    top: 20%;
+    top: 125px;
     height: 39px;
+    color: #808080;
   }
   .carousel-indicators {
     left: auto;
@@ -396,8 +405,15 @@
     width: 10px;
   }
   .volunteer-page-carousel-profile-picture {
-    height: 250px;
-    width: 350px;
+    border-radius: 50%;
+    height: 95px;
+    margin: auto;
+    position: relative;
+    width: 95px;
+    z-index: 2;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
   }
   .volunteer-page-profile-text-box,
   .volunteer-page-description-text-box {
@@ -411,13 +427,11 @@
       max-width: 550px;
     }
   }
-  @media screen and (min-width: 350px) {
-    uib-carousel uib-slide {
-      width: 350px;
-    }
+  .volunteer-page-carousel-quote-text {
+    margin-bottom: 5px;
+    text-align: left;
   }
   .volunteer-page-quote-overlay {
-    z-index: 11;
     position: relative;
     bottom: 50px;
   }
@@ -429,8 +443,22 @@
       margin-right: auto;
     }
   }
+  .volunteer-page-desktop-carousel-quote-container {
+    bottom: 45px;
+    margin: auto;
+    max-width: 67%;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  .volunteer-page-desktop-carousel-quote-box {
+    font-size: 12pt;
+    padding-top: 75px;
+  }
   .volunteer-page-mobile-carousel-quote-box {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 16px 20px;
     max-width: 300px;
@@ -449,9 +477,6 @@
   }
   md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
-  }
-  .volunteer-page-desktop-carousel-container {
-    padding-top: 40px;
   }
   .volunteer-page-mobile-carousel-container {
     padding-top: 20px;
