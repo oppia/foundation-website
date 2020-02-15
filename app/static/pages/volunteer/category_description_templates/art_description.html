@@ -1,0 +1,41 @@
+<!-- Mobile and Tablet(<960px) -->
+<div show-xs
+     show-sm
+     hide-gt-sm>
+  <div class="volunteer-page-category-description-text"
+       ng-class="{less:hideArtCategoryDescription}">
+    <p>
+      Creative artwork is a key part of our story-based lessons and general
+      non-profit activities. We are always working on a variety of projects
+      <a ng-if="hideArtCategoryDescription">...</a> around the world, so we could
+      use help from artists and graphic designers from all backgrounds and
+      specialties!
+    </p>
+    <p class="oppia-foundation-no-margin-bottom">
+      Contributing to Oppia is a great opportunity to grow your skills, work with
+      an international team of creators and artists, and positively impact the
+      lives of millions of students.
+    </p>
+  </div>
+  <button class="oppia-foundation-green-text
+                 volunteer-page-read-more-button"
+          ng-click="hideArtCategoryDescription = !hideArtCategoryDescription">
+    {{hideArtCategoryDescription ? 'See more' : 'Hide'}}
+  </button>
+</div>
+<!-- Desktop -->
+<div hide-xs
+     hide-sm
+     show-gt-sm>
+  <p>
+  Creative artwork is a key part of our story-based lessons and general
+  non-profit activities. We are always working on a variety of projects
+  around the world, so we could use help from artists and graphic designers
+  from all backgrounds and specialties!
+  </p>
+  <p>
+    Contributing to Oppia is a great opportunity to grow your skills, work with
+    an international team of creators and artists, and positively impact the
+    lives of millions of students.
+  </p>
+</div>
