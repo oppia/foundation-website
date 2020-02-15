@@ -13,11 +13,8 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('VolunteerPage', [
-  '$scope', '$document', '$http', '$mdDialog', '$log', '$window', '$timeout',
-  'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
-  function(
-      $scope, $document, $http, $mdDialog, $log, $window, $timeout,
-      ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
+  '$scope', '$document', '$window', '$timeout', 'ADMIN_EMAIL_ADDRESS',
+  function($scope, $document, $window, $timeout, ADMIN_EMAIL_ADDRESS) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
     $scope.formSubmitted = false;
@@ -98,29 +95,5 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       } else {
         throw Error('No such element');
       }
-    };
-    $scope.submitContactUsForm = function(fullName, email, comment, evt) {
-      $scope.formSubmitted = true;
-      $http.post(MAILHANDLER_URL, {
-        email_type: 'VOLUNTEER',
-        name: fullName,
-        email: email,
-        comment: comment,
-      }).then(function() {
-        ga(
-          'send', 'event', 'Submit Form', 'Submit Volunteer form', 'Volunteer');
-
-        $mdDialog.show(
-          $mdDialog.alert()
-            .clickOutsideToClose(true)
-            .title('Thank you!')
-            .textContent(THANKYOU_MESSAGE)
-            .ariaLabel('Thank you dialog')
-            .ok('Got it!')
-            .targetEvent(evt)
-        );
-      }, function(errorResponse) {
-        $log.error('Server error: ' + errorResponse.data.error);
-      });
     };
   }]);
