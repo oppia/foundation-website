@@ -312,6 +312,10 @@ Full-Width Styles
   margin: 0;
 }
 
+.oppia-foundation-no-margin-bottom {
+  margin-bottom: 0;
+}
+
 .oppia-foundation-no-margin-top {
   margin-top :0;
 }
@@ -401,6 +405,10 @@ Full-Width Styles
   .oppia-foundation-mobile-and-tablet-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .oppia-foundation-mobile-and-tablet-horizontal-padding-20 {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .oppia-foundation-mobile-and-tablet-vertical-padding {
     padding-top: 80px;

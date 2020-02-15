@@ -34,6 +34,16 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Lesson Creation',
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
     }];
+    $scope.volunteerCategoryDescriptionUrls = {
+      art: '/pages/volunteer/category_description_templates/' +
+        'art_description.html',
+      development: '/pages/volunteer/category_description_templates/' +
+        'development_description.html',
+      localOutreach: '/pages/volunteer/category_description_templates/' +
+        'local_outreach_description.html',
+      lessonCreation: '/pages/volunteer/category_description_templates/' +
+        'lesson_creation_description.html',
+    };
     $scope.volunteerWorkDescriptionUrls = {
       art: '/pages/volunteer/work_description_templates/' +
         'art_description.html',
@@ -45,6 +55,10 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         'lesson_creation_description.html',
     };
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
+    $scope.hideArtCategoryDescription = true;
+    $scope.hideDevelopmentCategoryDescription = true;
+    $scope.hideLessonCreationCategoryDescription = true;
+    $scope.hideLocalOutreachCategoryDescription = true;
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
     }
