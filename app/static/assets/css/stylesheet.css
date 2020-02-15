@@ -401,6 +401,10 @@ Full-Width Styles
   margin-bottom: 40px;
 }
 
+.oppia-foundation-margin-bottom-80 {
+  margin-bottom: 80px;
+}
+
 @media screen and (max-width: 1279px) {
   .oppia-foundation-mobile-and-tablet-horizontal-padding {
     padding-left: 40px;

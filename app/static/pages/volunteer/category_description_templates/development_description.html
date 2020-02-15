@@ -1,8 +1,34 @@
-<p>
-  Oppia enables authors to collaborate on creating high-quality lessons at
-  scale. As a developer, you'll be contributing to the technology that makes
-  it all possible! The
-  <a href="https://github.com/oppia/oppia">Oppia codebase</a> is open
-  source, developed by a community of volunteers from all around the world
-  who want to use their skills to make a difference.
-</p>
+<!--Mobile-->
+<div show-xs
+     show-sm
+     hide-gt-sm>
+  <div class="volunteer-page-category-description-text"
+       ng-class="{less:hideDevelopmentCategoryDescription}">
+    <p>
+      Oppia enables authors to collaborate on creating high-quality lessons at
+      scale. As a developer, you'll be contributing to the technology that makes
+      it all possible! The
+      <a href="https://github.com/oppia/oppia">Oppia codebase</a> is open
+      source, developed by a community of volunteers from all around the world
+      who want to use their skills to make a difference.
+    </p>
+  </div>
+  <button class="oppia-foundation-green-text
+                 volunteer-page-read-more-button"
+          ng-click="hideDevelopmentCategoryDescription = !hideDevelopmentCategoryDescription">
+    {{hideDevelopmentCategoryDescription ? 'See more' : 'Hide'}}
+  </button>
+</div>
+<!--Desktop-->
+<div hide-xs
+     hide-sm
+     show-gt-sm>
+  <p>
+    Oppia enables authors to collaborate on creating high-quality lessons at
+    scale. As a developer, you'll be contributing to the technology that makes
+    it all possible! The
+    <a href="https://github.com/oppia/oppia">Oppia codebase</a> is open
+    source, developed by a community of volunteers from all around the world
+    who want to use their skills to make a difference.
+  </p>
+</div>

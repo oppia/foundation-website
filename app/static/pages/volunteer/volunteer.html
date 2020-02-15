@@ -75,7 +75,7 @@
            layout="column"
            class="oppia-foundation-horizontal-padding
                   oppia-foundation-vertical-padding
-                  volunteer-page-volunteer-info-card">
+                  volunteer-page-dark-green-background">
     <div layout="column"
          layout-align="center center">
       <h3 class="oppia-foundation-margin-bottom-40
@@ -110,19 +110,19 @@
     </md-card-content>
   </md-card>
   <md-card class="oppia-foundation-vertical-padding
-                  volunteer-page-volunteer-info-card"
+                  volunteer-page-dark-green-background"
            show-xs
            show-sm
            hide-gt-sm
            layout-fill
            layout="column"
            layout-align="center center">
-    <md-card-content class="volunteer-page-volunteer-info-card
+    <md-card-content class="volunteer-page-dark-green-background
                             oppia-foundation-horizontal-padding"
                      layout="column">
-      <md-content class="volunteer-page-volunteer-info-card
+      <md-content class="volunteer-page-dark-green-background
                          volunteer-page-profile-text-box">
-        <div class="volunteer-page-volunteer-info-card">
+        <div class="volunteer-page-dark-green-background">
           <h3 class="oppia-foundation-margin-bottom-40
                      oppia-foundation-white-text">
             We have volunteers working on all aspects of Oppia, including art,
@@ -130,7 +130,8 @@
           </h3>
         </div>
         <div class="oppia-foundation-white-background
-                    oppia-foundation-mobile-and-tablet-vertical-padding-20">
+                    oppia-foundation-mobile-and-tablet-vertical-padding-20
+                    oppia-foundation-margin-bottom-80">
           <md-card-title class="oppia-foundation-no-padding
                                 oppia-foundation-mobile-and-tablet-horizontal-padding-20">
             <md-card-title-text>
@@ -152,88 +153,79 @@
             <ng-include src="volunteerCategoryDescriptionUrls.art"></ng-include>
           </div>
         </div>
+        <div class="oppia-foundation-white-background
+                    oppia-foundation-mobile-and-tablet-vertical-padding-20
+                    oppia-foundation-margin-bottom-80">
+          <md-card-title class="oppia-foundation-no-padding
+                                oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <md-card-title-text>
+              <h3 class="md-display-1
+                         volunteer-page-content-title
+                         oppia-foundation-green-text">
+                Development
+              </h3>
+            </md-card-title-text>
+          </md-card-title>
+          <profile-carousel carousel-type="mobile"
+                            corresponding-tab-name="development">
+          </profile-carousel>
+          <div class="oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <ng-include src="volunteerWorkDescriptionUrls.development"></ng-include>
+            <div class="oppia-foundation-dotted-spaced-line">
+              <br>
+            </div>
+            <ng-include src="volunteerCategoryDescriptionUrls.development"></ng-include>
+          </div>
+        </div>
+        <div class="oppia-foundation-white-background
+                    oppia-foundation-mobile-and-tablet-vertical-padding-20
+                    oppia-foundation-margin-bottom-80">
+          <md-card-title class="oppia-foundation-no-padding
+                                oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <md-card-title-text>
+              <h3 class="md-display-1
+                         volunteer-page-content-title
+                         oppia-foundation-green-text">
+                Local Outreach
+              </h3>
+            </md-card-title-text>
+          </md-card-title>
+          <profile-carousel carousel-type="mobile"
+                            corresponding-tab-name="local_outreach">
+          </profile-carousel>
+          <div class="oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
+            <div class="oppia-foundation-dotted-spaced-line">
+              <br>
+            </div>
+            <ng-include src="volunteerCategoryDescriptionUrls.localOutreach"></ng-include>
+          </div>
+        </div>
+        <div class="oppia-foundation-white-background
+                    oppia-foundation-mobile-and-tablet-vertical-padding-20">
+          <md-card-title class="oppia-foundation-no-padding
+                                oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <md-card-title-text>
+              <h3 class="md-display-1
+                         volunteer-page-content-title
+                         oppia-foundation-green-text">
+                Lesson Creation
+              </h3>
+            </md-card-title-text>
+          </md-card-title>
+          <profile-carousel carousel-type="mobile"
+                            corresponding-tab-name="lesson_creation">
+          </profile-carousel>
+          <div class="oppia-foundation-mobile-and-tablet-horizontal-padding-20">
+            <ng-include src="volunteerWorkDescriptionUrls.lessonCreation"></ng-include>
+            <div class="oppia-foundation-dotted-spaced-line">
+              <br>
+            </div>
+            <ng-include src="volunteerCategoryDescriptionUrls.lessonCreation"></ng-include>
+          </div>
+        </div>
       </md-content>
     </md-card-content>
-    <md-card-content class="oppia-foundation-horizontal-padding
-                            volunteer-page-volunteer-info-card"
-                     layout="column">
-      <md-content class="oppia-foundation-white-background
-                         oppia-foundation-white-text
-                         volunteer-page-profile-text-box
-                         volunteer-page-volunteer-info-card">
-        <md-card-title class="oppia-foundation-no-padding">
-          <md-card-title-text>
-            <h3 class="md-display-1 volunteer-page-content-title">
-              Development
-            </h3>
-          </md-card-title-text>
-        </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.development"></ng-include>
-        <md-button class="oppia-foundation-green-button"
-                   href="https://github.com/oppia/oppia/wiki">
-          Get involved
-        </md-button>
-      </md-content>
-    </md-card-content>
-    <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="development">
-    </profile-carousel>
-  </md-card>
-  <md-card id="mobile-local-outreach-card"
-           class="oppia-foundation-gray-background
-                  oppia-foundation-vertical-padding"
-           show-xs
-           show-sm
-           hide-gt-sm
-           layout-fill
-           layout="column"
-           layout-align="center center">
-    <md-card-content class="oppia-foundation-gray-background
-                            oppia-foundation-horizontal-padding"
-                     layout="column">
-      <md-content class="oppia-foundation-white-text
-                         volunteer-page-profile-text-box
-                         volunteer-page-volunteer-info-card">
-        <md-card-title class="oppia-foundation-no-padding">
-          <md-card-title-text>
-            <h3 class="md-display-1 volunteer-page-content-title">
-              Local Outreach
-            </h3>
-          </md-card-title-text>
-        </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
-        <md-button class="oppia-foundation-green-button"
-                   href="https://forms.gle/7tHG1MB6RRawR16u7">
-          Get involved
-        </md-button>
-      </md-content>
-    </md-card-content>
-    <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="local_outreach">
-    </profile-carousel>
-    <md-card-content class="oppia-foundation-horizontal-padding
-                            volunteer-page-volunteer-info-card"
-                     layout="column">
-      <md-content class="oppia-foundation-white-text
-                         volunteer-page-profile-text-box
-                         volunteer-page-volunteer-info-card">
-        <md-card-title class="oppia-foundation-no-padding">
-          <md-card-title-text>
-            <h3 class="md-display-1 volunteer-page-content-title">
-              Lesson Creation
-            </h3>
-          </md-card-title-text>
-        </md-card-title>
-        <ng-include src="volunteerWorkDescriptionUrls.lessonCreation"></ng-include>
-        <md-button class="oppia-foundation-green-button"
-                   href="https://forms.gle/7tHG1MB6RRawR16u7">
-          Get involved
-        </md-button>
-      </md-content>
-    </md-card-content>
-    <profile-carousel carousel-type="mobile"
-                      corresponding-tab-name="lesson_creation">
-    </profile-carousel>
   </md-card>
   <md-card class="oppia-foundation-vertical-padding
                   oppia-foundation-horizontal-padding"
@@ -302,7 +294,7 @@
   .volunteer-page-apply-button {
     margin: 10px 0;
   }
-  .volunteer-page-volunteer-info-card {
+  .volunteer-page-dark-green-background {
     background-color: #264653
   }
   .volunteer-page-desktop-tabs {
@@ -338,25 +330,6 @@
   .volunteer-page-art-tab-content {
     padding-bottom: 20px;
     padding-top: 20px;
-  }
-  .volunteer-page-description-headline-padding {
-    padding-bottom: 20px;
-  }
-  .volunteer-page-form {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  }
-  @media screen and (min-width: 600px) {
-    .volunteer-page-form {
-      width: 500px;
-    }
-  }
-  .volunteer-page-contact-us-form-card {
-    background-color: #F4F4F4;
-  }
-  @media screen and (min-width: 960px) {
-    .volunteer-page-contact-us-form-card {
-      background-color: white;
-    }
   }
   li.volunteer-page-description-list-item {
     margin:0 0 10px 0;

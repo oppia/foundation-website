@@ -1,13 +1,44 @@
-<p>
-  Although the Oppia Foundation does a lot of work remotely to reach students
-  around the world, we need passionate volunteers to help us make Oppia an even
-  better resource for the most underserved learners in their own communities!
-  Local Outreach volunteers host seminars, talk to schools, reach out to
-  parents, and more in order to raise awareness about Oppia to local students
-  and families. These volunteers also play a key role in telling us how we can
-  make Oppia an even better resource for the students they work with.
-</p>
-<p>
-  If you're passionate about bringing educational equality directly to your
-  local neighborhood, sign up to be a Local Outreach volunteer today!
-</p>
+<!--Mobile-->
+<div show-xs
+     show-sm
+     hide-gt-sm>
+  <div class="volunteer-page-category-description-text"
+       ng-class="{less:hideLocalOutreachCategoryDescription}">
+    <p>
+      Although the Oppia Foundation does a lot of work remotely to reach students
+      around the world, we need passionate volunteers to help us make Oppia an even
+      better resource for the most underserved learners in their own communities!
+      Local Outreach volunteers host seminars, talk to schools, reach out to
+      parents, and more in order to raise awareness about Oppia to local students
+      and families. These volunteers also play a key role in telling us how we can
+      make Oppia an even better resource for the students they work with.
+    </p>
+    <p>
+      If you're passionate about bringing educational equality directly to your
+      local neighborhood, sign up to be a Local Outreach volunteer today!
+    </p>
+  </div>
+  <button class="oppia-foundation-green-text
+                  volunteer-page-read-more-button"
+           ng-click="hideLocalOutreachCategoryDescription = !hideLocalOutreachCategoryDescription">
+    {{hideLocalOutreachCategoryDescription ? 'See more' : 'Hide'}}
+  </button>
+</div>
+<!--Desktop-->
+<div hide-xs
+     hide-sm
+     show-gt-sm>
+  <p>
+    Although the Oppia Foundation does a lot of work remotely to reach students
+    around the world, we need passionate volunteers to help us make Oppia an even
+    better resource for the most underserved learners in their own communities!
+    Local Outreach volunteers host seminars, talk to schools, reach out to
+    parents, and more in order to raise awareness about Oppia to local students
+    and families. These volunteers also play a key role in telling us how we can
+    make Oppia an even better resource for the students they work with.
+  </p>
+  <p>
+    If you're passionate about bringing educational equality directly to your
+    local neighborhood, sign up to be a Local Outreach volunteer today!
+  </p>
+</div>
