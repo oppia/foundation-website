@@ -232,28 +232,25 @@
            layout="column"
            layout-fill>
     <md-card-content layout="column"
+                     layout-align="center center"
                      class="volunteer-page-display-size
                             oppia-foundation-no-padding">
       <md-content class="oppia-foundation-black-text
                          oppia-foundation-white-background
                          volunteer-page-description-text-box">
         <p class="volunteer-page-show-interest-text">
-          If you're interested in becoming a Volunteer Developer, you can get
-          started today by connecting with us on Github! For other roles, simply
-          let us know what you&#39;re interested in working on and a lead will
-          reach out to you shortly.
+          If you're interested in helping out, simply let us know what you&#39;
+          re interested in working on and a lead will reach out to you shortly!
+          You can fill out the form below (or go to
+          <a href="https://github.com/oppia/oppia">
+            Github</a>
+          if you're interested in contributing to the codebase as a developer).
         </p>
         <md-card-actions class="oppia-foundation-no-margin
                                 volunteer-page-show-interest-button-row"
                          layout-gt-xs="row"
                          layout="column"
                          layout-align="center center">
-          <md-button class="oppia-foundation-white-button
-                            volunteer-page-interest-button"
-                     href="https://github.com/oppia/oppia">
-            Go To Github
-          </md-button>
-          <div class="volunteer-page-volunteer-button-gap"></div>
           <md-button class="oppia-foundation-green-button
                             volunteer-page-interest-button"
                      href="https://forms.gle/rhFYoLLSFr3JEZHy8">
@@ -324,13 +321,6 @@
   md-tabs-canvas {
     background: white;
   }
-  .volunteer-page-development-tab-content,
-  .volunteer-page-lesson-creation-tab-content,
-  .volunteer-page-local-outreach-tab-content,
-  .volunteer-page-art-tab-content {
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
   li.volunteer-page-description-list-item {
     margin:0 0 10px 0;
   }
@@ -365,10 +355,10 @@
   }
   .volunteer-page-carousel-profile-picture {
     border-radius: 50%;
-    height: 95px;
+    height: 125px;
     margin: auto;
     position: relative;
-    width: 95px;
+    width: 125px;
     z-index: 2;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
@@ -392,7 +382,7 @@
   }
   .volunteer-page-quote-overlay {
     position: relative;
-    bottom: 50px;
+    bottom: 65px;
   }
   @media screen and (min-width: 100px) {
     .volunteer-page-quote-overlay {
@@ -402,7 +392,7 @@
     }
   }
   .volunteer-page-desktop-carousel-quote-container {
-    bottom: 45px;
+    bottom: 65px;
     margin: auto;
     width: 67%;
     max-width: 500px;
@@ -413,13 +403,13 @@
   }
   .volunteer-page-desktop-carousel-quote-box {
     font-size: 12pt;
-    padding-top: 75px;
+    padding-top: 95px;
   }
   .volunteer-page-mobile-carousel-quote-box {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    padding: 75px 20px 16px 20px;
+    padding: 95px 20px 16px 20px;
     width: 55vw;
     max-width: 300px;
     font-size: 10pt;
@@ -427,11 +417,6 @@
   .volunteer-page-display-size {
     max-width: 1500px;
     margin: auto;
-  }
-  @media screen and (min-width:1500px) {
-    .volunteer-page-display-size {
-      width: 1500px;
-    }
   }
   .volunteer-page-content-title {
     font-family: "Capriola", "Roboto", Arial, sans-serif;
