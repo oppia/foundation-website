@@ -16,8 +16,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
   '$scope', '$document', '$window', '$timeout', 'ADMIN_EMAIL_ADDRESS',
   function($scope, $document, $window, $timeout, ADMIN_EMAIL_ADDRESS) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+    $scope.OPPIA_GITHUB_WIKI_LINK = 'https://github.com/oppia/oppia/wiki';
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
-    $scope.formSubmitted = false;
     $scope.tabs = [{
       title: 'Art',
       templateUrl: '/pages/volunteer/tabs_template/art_tab.html'
