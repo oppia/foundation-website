@@ -9,15 +9,15 @@
     <uib-slide uib-slide
                ng-repeat="slide in slides track by $index"
                index="$index">
-      <div class="volunteer-page-carousel-profile-picture"
-           ng-style="{
-            'background-image':'url({{slide.profilePictureImageFilename}})'
-           }"
-           alt="Volunteer profile image">
-      </div>
       <md-card class="oppia-foundation-white-background
                       oppia-foundation-no-margin
                       volunteer-page-desktop-carousel-quote-container">
+         <div class="volunteer-page-desktop-carousel-profile-picture"
+              ng-style="{
+               'background-image':'url({{slide.profilePictureImageFilename}})'
+              }"
+              alt="Volunteer profile image">
+        </div>
         <md-card-content layout="column"
                          class="oppia-foundation-white-background
                                 oppia-foundation-horizontal-padding
@@ -51,7 +51,7 @@
     <uib-slide uib-slide
                ng-repeat="slide in slides track by $index"
                index="$index">
-      <div class="volunteer-page-carousel-profile-picture"
+      <div class="volunteer-page-mobile-carousel-profile-picture"
            ng-style="{
             'background-image':'url({{slide.profilePictureImageFilename}})'
            }"

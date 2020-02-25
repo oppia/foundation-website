@@ -334,11 +334,10 @@
   a.left.carousel-control, a.right.carousel-control {
     top: 125px;
     height: 39px;
-    color: #808080;
   }
   .carousel-indicators {
     left: auto;
-    margin-left: 0px;
+    margin: 10px 0;
     position: static;
     width: auto;
   }
@@ -354,7 +353,17 @@
     padding: 6px;
     width: 10px;
   }
-  .volunteer-page-carousel-profile-picture {
+  .volunteer-page-desktop-carousel-profile-picture {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px 6px 0 0;
+    display: inline-block;
+    margin: auto;
+    min-height: 250px;
+    min-width: 100%;
+  }
+  .volunteer-page-mobile-carousel-profile-picture {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -380,6 +389,9 @@
     .volunteer-page-profile-text-box {
       max-width: 550px;
     }
+    a.left.carousel-control, a.right.carousel-control {
+      color: #808080;
+    }
   }
   .volunteer-page-carousel-quote-text {
     margin-bottom: 5px;
@@ -397,18 +409,14 @@
     }
   }
   .volunteer-page-desktop-carousel-quote-container {
-    bottom: 65px;
-    margin: auto;
-    width: 67%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 5px;
+    max-width: 350px;
+    border-radius: 0 0 8px 8px;
   }
   .volunteer-page-desktop-carousel-quote-box {
+    border-radius: 0 0 8px 8px;
     font-size: 12pt;
-    padding-top: 95px;
+    padding-top: 45px;
   }
   .volunteer-page-mobile-carousel-quote-box {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
