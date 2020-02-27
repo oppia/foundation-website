@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
-  <md-content class="oppia-foundation-horizontal-padding
-                     oppia-foundation-white-background
-                     volunteer-page-development-tab-content"
-              layout="column"
-              layout-align="start">
-    <p class="oppia-foundation-no-margin-top">
-      Oppia enables authors to collaborate on creating high-quality lessons at
-      scale. As a developer, you'll be contributing to the technology that makes
-      it all possible! The
-      <a href="https://github.com/oppia/oppia">Oppia codebase</a> is open
-      source, developed by a community of volunteers from all around the world
-      who want to use their skills to make a difference.
-    </p>
-    <ng-include src="volunteerWorkDescriptionUrls.development"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://github.com/oppia/oppia/wiki">
-      Get involved
-    </md-button>
-  </md-content>
+<div class="oppia-foundation-white-background
+            oppia-foundation-small-tablet-and-desktop-vertical-padding-60"
+     layout="row" >
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="development">
+                    corresponding-tab-name="development"
+                    flex="45">
   </profile-carousel>
+  <div class="oppia-foundation-horizontal-padding
+              oppia-foundation-white-background"
+              flex="55">
+    <ng-include src="volunteerCategoryDescriptionUrls.development"></ng-include>
+    <div class="oppia-foundation-dotted-spaced-line">
+      <br>
+    </div>
+    <ng-include src="volunteerWorkDescriptionUrls.development"></ng-include>
+  </div>
 </div>

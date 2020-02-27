@@ -13,14 +13,11 @@
 // limitations under the License.
 
 oppiaFoundationWebsite.controller('VolunteerPage', [
-  '$scope', '$document', '$http', '$mdDialog', '$log', '$window', '$timeout',
-  'ADMIN_EMAIL_ADDRESS', 'MAILHANDLER_URL', 'THANKYOU_MESSAGE',
-  function(
-      $scope, $document, $http, $mdDialog, $log, $window, $timeout,
-      ADMIN_EMAIL_ADDRESS, MAILHANDLER_URL, THANKYOU_MESSAGE) {
+  '$scope', '$document', '$window', '$timeout', 'ADMIN_EMAIL_ADDRESS',
+  function($scope, $document, $window, $timeout, ADMIN_EMAIL_ADDRESS) {
     $scope.ADMIN_EMAIL = ADMIN_EMAIL_ADDRESS;
+    $scope.OPPIA_GITHUB_WIKI_LINK = 'https://github.com/oppia/oppia/wiki';
     $scope.VOLUNTEER_EMAIL_SUBJECT = 'Volunteer%20with%20Oppia';
-    $scope.formSubmitted = false;
     $scope.tabs = [{
       title: 'Art',
       templateUrl: '/pages/volunteer/tabs_template/art_tab.html'
@@ -34,6 +31,16 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Lesson Creation',
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
     }];
+    $scope.volunteerCategoryDescriptionUrls = {
+      art: '/pages/volunteer/category_description_templates/' +
+        'art_description.html',
+      development: '/pages/volunteer/category_description_templates/' +
+        'development_description.html',
+      localOutreach: '/pages/volunteer/category_description_templates/' +
+        'local_outreach_description.html',
+      lessonCreation: '/pages/volunteer/category_description_templates/' +
+        'lesson_creation_description.html',
+    };
     $scope.volunteerWorkDescriptionUrls = {
       art: '/pages/volunteer/work_description_templates/' +
         'art_description.html',
@@ -45,6 +52,10 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
         'lesson_creation_description.html',
     };
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
+    $scope.hideArtCategoryDescription = true;
+    $scope.hideDevelopmentCategoryDescription = true;
+    $scope.hideLessonCreationCategoryDescription = true;
+    $scope.hideLocalOutreachCategoryDescription = true;
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
     }
@@ -84,29 +95,5 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       } else {
         throw Error('No such element');
       }
-    };
-    $scope.submitContactUsForm = function(fullName, email, comment, evt) {
-      $scope.formSubmitted = true;
-      $http.post(MAILHANDLER_URL, {
-        email_type: 'VOLUNTEER',
-        name: fullName,
-        email: email,
-        comment: comment,
-      }).then(function() {
-        ga(
-          'send', 'event', 'Submit Form', 'Submit Volunteer form', 'Volunteer');
-
-        $mdDialog.show(
-          $mdDialog.alert()
-            .clickOutsideToClose(true)
-            .title('Thank you!')
-            .textContent(THANKYOU_MESSAGE)
-            .ariaLabel('Thank you dialog')
-            .ok('Got it!')
-            .targetEvent(evt)
-        );
-      }, function(errorResponse) {
-        $log.error('Server error: ' + errorResponse.data.error);
-      });
     };
   }]);

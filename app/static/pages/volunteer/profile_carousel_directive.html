@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <div layout="row"
      layout-align="center center"
-     class="oppia-foundation-horizontal-padding
-            volunteer-page-desktop-carousel-container"
      ng-if="displayDesktopCarousel">
   <uib-carousel uib-carousel
                 active="activeSlideIndex"
@@ -11,17 +9,21 @@
     <uib-slide uib-slide
                ng-repeat="slide in slides track by $index"
                index="$index">
-      <md-card class="oppia-foundation-gray-background
-                      oppia-foundation-no-margin">
-        <img class="volunteer-page-carousel-profile-picture"
-             ng-src="{{slide.profilePictureImageFilename}}"
-             alt="Volunteer profile image">
+      <md-card class="oppia-foundation-white-background
+                      oppia-foundation-no-margin
+                      volunteer-page-desktop-carousel-quote-container">
+         <div class="volunteer-page-desktop-carousel-profile-picture"
+              ng-style="{
+               'background-image':'url({{slide.profilePictureImageFilename}})'
+              }"
+              alt="Volunteer profile image">
+        </div>
         <md-card-content layout="column"
-                         class="oppia-foundation-gray-background
+                         class="oppia-foundation-white-background
                                 oppia-foundation-horizontal-padding
                                 volunteer-page-profile-text-box
-                                volunteer-page-carousel-profile-text-size">
-          <span class="oppia-foundation-left-align-text">
+                                volunteer-page-desktop-carousel-quote-box">
+          <span class="volunteer-page-carousel-quote-text">
             &ldquo;{{slide.professionalQuote}}&rdquo;
           </span>
           <cite class="oppia-foundation-cite-text-box">
@@ -49,21 +51,22 @@
     <uib-slide uib-slide
                ng-repeat="slide in slides track by $index"
                index="$index">
-      <img class="volunteer-page-carousel-profile-picture"
-           ng-src="{{slide.profilePictureImageFilename}}"
+      <div class="volunteer-page-mobile-carousel-profile-picture"
+           ng-style="{
+            'background-image':'url({{slide.profilePictureImageFilename}})'
+           }"
            alt="Volunteer profile image">
+      </div>
       <div class="volunteer-page-quote-overlay"
            layout="column"
            layout-align="center center"
            show-xs
            show-sm
            hide-gt-sm>
-        <md-card-content class="volunteer-page-mobile-carousel-quote-box
-                                oppia-foundation-gray-background
-                                volunteer-page-horizontal-padding
-                                volunteer-page-carousel-profile-text-size"
+        <md-card-content class="oppia-foundation-white-background
+                                volunteer-page-mobile-carousel-quote-box"
                          layout="column">
-          <span class="oppia-foundation-left-align-text">
+          <span class="volunteer-page-carousel-quote-text">
             &ldquo;{{slide.professionalQuote}}&rdquo;
           </span>
           <cite class="oppia-foundation-cite-text-box">
