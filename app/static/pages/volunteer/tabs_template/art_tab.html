@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
-  <md-content class="oppia-foundation-horizontal-padding
-                     oppia-foundation-white-background
-                     volunteer-page-art-tab-content"
-              layout="column"
-              layout-align="start">
-    <p class="oppia-foundation-no-margin-top">
-      Creative artwork is a key part of our story-based lessons and general non-profit activities. We are always working on a variety of projects around the world, so we could use help from artists and graphic designers from all backgrounds and specialties!
-    </p>
-    <p>
-      Contributing to Oppia is a great opportunity to grow your skills, work with an international team of creators and artists, and positively impact the lives of millions of students.
-    </p>
-    <ng-include src="volunteerWorkDescriptionUrls.art"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://forms.gle/7tHG1MB6RRawR16u7">
-      Get involved
-    </md-button>
-  </md-content>
+<div layout="row" class="oppia-foundation-white-background
+                         oppia-foundation-small-tablet-and-desktop-vertical-padding-60">
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="art">
+                    corresponding-tab-name="art"
+                    flex="45">
   </profile-carousel>
+  <div class="oppia-foundation-horizontal-padding
+              oppia-foundation-white-background"
+              flex="55">
+    <ng-include src="volunteerCategoryDescriptionUrls.art"></ng-include>
+    <div class="oppia-foundation-dotted-spaced-line">
+      <br>
+    </div>
+    <ng-include src="volunteerWorkDescriptionUrls.art"></ng-include>
+  </div>
 </div>

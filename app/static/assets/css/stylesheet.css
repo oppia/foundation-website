@@ -191,10 +191,6 @@ footer p {
   font-size: 12px;
 }
 
-a.email-us-link {
-  color: rgb(63, 63, 224);
-}
-
 footer a {
   color: white;
 }
@@ -316,6 +312,10 @@ Full-Width Styles
   margin: 0;
 }
 
+.oppia-foundation-no-margin-bottom {
+  margin-bottom: 0;
+}
+
 .oppia-foundation-no-margin-top {
   margin-top :0;
 }
@@ -401,10 +401,18 @@ Full-Width Styles
   margin-bottom: 40px;
 }
 
+.oppia-foundation-margin-bottom-80 {
+  margin-bottom: 80px;
+}
+
 @media screen and (max-width: 1279px) {
   .oppia-foundation-mobile-and-tablet-horizontal-padding {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .oppia-foundation-mobile-and-tablet-horizontal-padding-20 {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .oppia-foundation-mobile-and-tablet-vertical-padding {
     padding-top: 80px;
@@ -451,11 +459,22 @@ Full-Width Styles
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  .oppia-foundation-small-tablet-and-desktop-vertical-padding-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .oppia-foundation-small-tablet-and-desktop-horizontal-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .oppia-foundation-small-tablet-and-desktop-top-padding {
     padding-top: 80px;
   }
   .oppia-foundation-small-tablet-and-desktop-right-padding {
     padding-right: 40px;
+  }
+  .oppia-foundation-small-tablet-and-desktop-bottom-padding {
+    padding-bottom: 40px;
   }
   .oppia-foundation-small-tablet-and-desktop-right-margin-60 {
     margin-right: 60px;
@@ -607,6 +626,7 @@ Full-Width Styles
 }
 
 .md-button.oppia-foundation-white-button {
+  border: 3px outset rgba(255,255,255,.5);
   background-color: rgba(255,255,255,1);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -615,6 +635,7 @@ Full-Width Styles
   padding: 0px 15px;
   max-width: 250px;
   max-height: 50px;
+  opacity: 1;
 }
 
 .md-button.oppia-foundation-white-button:hover,
@@ -697,6 +718,14 @@ md-sidenav {
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+.oppia-foundation-dotted-spaced-line {
+  background-image: linear-gradient(
+    to right, #333 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: center;
+  background-size: 15px 1.5px;
+  background-repeat: repeat-x;
 }
 
 .headroom {

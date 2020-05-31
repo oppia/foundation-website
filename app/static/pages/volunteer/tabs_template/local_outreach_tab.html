@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<div layout="row" class="oppia-foundation-white-background">
-  <md-content class="oppia-foundation-horizontal-padding
-                     oppia-foundation-white-background
-                     volunteer-page-local-outreach-tab-content"
-              layout="column"
-              layout-align="start">
-    <p class="oppia-foundation-no-margin-top">
-      Although the Oppia Foundation does a lot of work remotely to reach students around the world, we need passionate volunteers
-      to help us make Oppia an even better resource for the most underserved learners in their own communities! Local Outreach volunteers
-      host seminars, talk to schools, reach out to parents, and more in order to raise awareness about Oppia to local students and families.
-      These volunteers also play a key role in telling us how we can make Oppia an even better resource for the students they work with.
-    </p>
-    <p>
-      If you're passionate about bringing educational equality directly to your local neighborhood, sign up to be a Local Outreach volunteer today!
-    </p>
-    <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
-    <md-button class="oppia-foundation-green-button"
-               href="https://forms.gle/7tHG1MB6RRawR16u7">
-      Get involved
-    </md-button>
-  </md-content>
+<div class="oppia-foundation-white-background
+            oppia-foundation-small-tablet-and-desktop-vertical-padding-60"
+     layout="row">
   <profile-carousel carousel-type="desktop"
-                    corresponding-tab-name="local_outreach">
+                    corresponding-tab-name="local_outreach"
+                    flex="45">
   </profile-carousel>
+  <div class="oppia-foundation-horizontal-padding
+                     oppia-foundation-white-background"
+              flex="55">
+    <ng-include src="volunteerCategoryDescriptionUrls.localOutreach"></ng-include>
+    <div class="oppia-foundation-dotted-spaced-line">
+      <br>
+    </div>
+    <ng-include src="volunteerWorkDescriptionUrls.localOutreach"></ng-include>
+  </div>
 </div>
