@@ -26,7 +26,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
     }, {
       title: 'Learner Feedback',
-      templateUrl: '/pages/volunteer/tabs_template/local_outreach_tab.html'
+      templateUrl: '/pages/volunteer/tabs_template/learner_feedback_tab.html'
     }, {
       title: 'Lesson Creation',
       templateUrl: '/pages/volunteer/tabs_template/lesson_creation_tab.html'
@@ -37,7 +37,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       development: '/pages/volunteer/category_description_templates/' +
         'development_description.html',
       localOutreach: '/pages/volunteer/category_description_templates/' +
-        'local_outreach_description.html',
+        'learner_feedback_description.html',
       lessonCreation: '/pages/volunteer/category_description_templates/' +
         'lesson_creation_description.html',
     };
@@ -47,7 +47,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       development: '/pages/volunteer/work_description_templates/' +
         'development_description.html',
       localOutreach: '/pages/volunteer/work_description_templates/' +
-        'local_outreach_description.html',
+        'learner_feedback_description.html',
       lessonCreation: '/pages/volunteer/work_description_templates/' +
         'lesson_creation_description.html',
     };
