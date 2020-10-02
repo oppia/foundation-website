@@ -1,0 +1,30 @@
+<!--Mobile-->
+<div show-xs
+     show-sm
+     hide-gt-sm>
+  <div class="volunteer-page-category-description-text"
+       ng-class="{less:hideLearnerFeedbackCategoryDescription}">
+    <p>
+      Oppia’s Learner Feedback Program focuses on understanding students’ expectations, behaviors, and needs. Local volunteers conduct studies with students by working through lessons and gathering feedback. This feedback allows us to create content that is fun and easily digestible.This feedback is critical in helping us better align our lessons with the core needs and goals of students. It also enables us to help future students more effectively.
+    </p>
+    <p>
+      If you are passionate about education and want to make a difference in your local community, sign up to be a Learner Feedback Program volunteer and help us create the best platform for students around the world!
+    </p>
+  </div>
+  <button class="oppia-foundation-green-text
+                  volunteer-page-read-more-button"
+           ng-click="hideLearnerFeedbackCategoryDescription = !hideLearnerFeedbackCategoryDescription">
+    {{hideLearnerFeedbackCategoryDescription ? 'See more' : 'Hide'}}
+  </button>
+</div>
+<!--Desktop-->
+<div hide-xs
+     hide-sm
+     show-gt-sm>
+  <p>
+    Oppia’s Learner Feedback Program focuses on understanding students’ expectations, behaviors, and needs. Local volunteers conduct studies with students by working through lessons and gathering feedback. This feedback allows us to create content that is fun and easily digestible.This feedback is critical in helping us better align our lessons with the core needs and goals of students. It also enables us to help future students more effectively.
+  </p>
+  <p>
+    If you are passionate about education and want to make a difference in your local community, sign up to be a Learner Feedback Program volunteer and help us create the best platform for students around the world!
+  </p>
+</div>
