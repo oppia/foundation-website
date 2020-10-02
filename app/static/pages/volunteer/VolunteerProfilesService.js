@@ -52,11 +52,11 @@ oppiaFoundationWebsite.factory('VolunteerProfilesService', [
       getDevelopmentProfiles: function() {
         return volunteersByCategory.development;
       },
+      getLearnerFeedbackProfiles: function() {
+        return volunteersByCategory.learnerFeedback;
+      },
       getLessonCreationProfiles: function() {
         return volunteersByCategory.lessonCreation;
-      },
-      getLocalOutreachProfiles: function() {
-        return volunteersByCategory.learnerFeedback;
       },
       getSlidesForTab: function(tabName) {
         return volunteersByCategory[tabName.toLowerCase()];
