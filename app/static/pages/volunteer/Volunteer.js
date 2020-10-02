@@ -25,7 +25,7 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
       title: 'Development',
       templateUrl: '/pages/volunteer/tabs_template/development_tab.html'
     }, {
-      title: 'Local Outreach',
+      title: 'Learner Feedback',
       templateUrl: '/pages/volunteer/tabs_template/local_outreach_tab.html'
     }, {
       title: 'Lesson Creation',
