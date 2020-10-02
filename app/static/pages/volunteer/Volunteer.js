@@ -54,8 +54,8 @@ oppiaFoundationWebsite.controller('VolunteerPage', [
     $scope.activeTabIndex = $window.sessionStorage.getItem('activeTabIndex');
     $scope.hideArtCategoryDescription = true;
     $scope.hideDevelopmentCategoryDescription = true;
+    $scope.hideLearnerFeedbackCategoryDescription = true;
     $scope.hideLessonCreationCategoryDescription = true;
-    $scope.hideLocalOutreachCategoryDescription = true;
     if ($scope.activeTabIndex === null) {
       $scope.activeTabIndex = 0;
     }
