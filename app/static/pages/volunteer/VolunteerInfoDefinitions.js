@@ -92,7 +92,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
 
   local_outreach: [{
     fullName: 'Riya Sogani',
-    profilePictureImageFilename: 'akshay.jpeg',
+    profilePictureImageFilename: 'riya.png',
     professionalQuote: 'Oppia has given me the opportunity to profoundly ' +
       'impact the lives of many underprivileged children by providing them ' +
       'with free quality education. I am grateful to be a part of this ' +
@@ -100,7 +100,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Learner Feedback Program Volunteer'
   }, {
     fullName: 'Yamama Shaka\'a',
-    profilePictureImageFilename: 'apurv.png',
+    profilePictureImageFilename: 'yamama.jpeg',
     professionalQuote: 'I am really fascinated by Oppia\'s vision of ' +
       'supporting underprivileged students around the world and helping them ' +
       'learn math and other things in fun ways. Oppia does not only help to ' +
