@@ -17,17 +17,17 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   art: [{
     fullName: 'Tuna R. Terzi',
     profilePictureImageFilename: 'tuna.jpg',
-    professionalQuote: 'Oppia turns my drawings into little seeds for the ' + 
+    professionalQuote: 'Oppia turns my drawings into little seeds for the ' +
       'better world.',
     position: 'Artist'
   }, {
     fullName: 'Mark Halpin',
     profilePictureImageFilename: 'mark.jpg',
-    professionalQuote: 'I contribute to Oppia because of its remarkable ' + 
+    professionalQuote: 'I contribute to Oppia because of its remarkable ' +
       'goal: to make a quality education available to those who may not have ' +
       'easy access to it.',
     position: 'Artist'
-  }], 
+  }],
 
   development: [{
     fullName: 'Akshay Anand',
@@ -38,12 +38,11 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'subject to the world.',
     position: 'Full-Stack Developer and QA Lead'
   }, {
-    fullName: 'Apurv Bajaj',
-    profilePictureImageFilename: 'apurv.png',
-    professionalQuote: 'Oppia gives me an opportunity to help the world move ' +
-      'towards a better tomorrow -- a tomorrow where everyone receives ' +
-      'quality education, regardless of where they are or what traditional ' +
-      'resources they have access to.',
+    fullName: 'Kevin Thomas',
+    profilePictureImageFilename: 'kevin-thomas.jpg',
+    professionalQuote: 'Making quality education accessible and fun to ' +
+      'experience is something that is important to me. I enjoy contributing ' +
+      'to Oppia because it does exactly this.',
     position: 'Developer Workflow Lead'
   }, {
     fullName: 'Nithesh Hariharan',
@@ -101,7 +100,7 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     profilePictureImageFilename: 'sam.jpg',
     professionalQuote: 'I believe more students will perform better if ' +
       'introduced to Oppia. Oppia is here to broaden the learning ' +
-      'experience of students in and outside of the classroom.', 
+      'experience of students in and outside of the classroom.',
     position: 'Local Outreach Lead (Ghana)'
   }]
 });
