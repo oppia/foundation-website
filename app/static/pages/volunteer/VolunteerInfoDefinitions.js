@@ -68,6 +68,27 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
     position: 'Developer'
   }],
 
+  learner_feedback: [{
+    fullName: 'Riya Sogani',
+    profilePictureImageFilename: 'riya.png',
+    professionalQuote: 'Oppia has given me the opportunity to profoundly ' +
+      'impact the lives of many underprivileged children by providing them ' +
+      'with free quality education. I am grateful to be a part of this ' +
+      'venture.',
+    position: 'Learner Feedback Program Volunteer'
+  }, {
+    fullName: 'Yamama Shaka\'a',
+    profilePictureImageFilename: 'yamama.jpeg',
+    professionalQuote: 'I am really fascinated by Oppia\'s vision of ' +
+      'supporting underprivileged students around the world and helping them ' +
+      'learn math and other things in fun ways. Oppia does not only help to ' +
+      'teach students, it also helps them to love what they learn so the ' +
+      'learning process becomes more effective and fun.  Working with Oppia ' +
+      'was a really great experience for me.  I learned something new each ' +
+      'day.',
+    position: 'Former Learner Feedback Program Volunteer'
+  }],
+
   lesson_creation: [{
     fullName: 'Anmol Shukla',
     profilePictureImageFilename: 'anmol.jpg',
@@ -87,20 +108,5 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'know that Oppia\'s engaging and equitable lessons can help solve this ' +
       'problem. Every volunteer matters at Oppia.',
     position: 'Coordinator, Lesson Creation'
-  }],
-
-  local_outreach: [{
-    fullName: 'Kefeh Collins',
-    profilePictureImageFilename: 'kefeh.jpg',
-    professionalQuote: 'Oppia is giving a better perspective of how ' +
-      'knowledge sharing should be done. I wanted to be part of that.',
-    position: 'Local Outreach Lead (Cameroon)'
-  }, {
-    fullName: 'Sam',
-    profilePictureImageFilename: 'sam.jpg',
-    professionalQuote: 'I believe more students will perform better if ' +
-      'introduced to Oppia. Oppia is here to broaden the learning ' +
-      'experience of students in and outside of the classroom.',
-    position: 'Local Outreach Lead (Ghana)'
   }]
 });
