@@ -53,7 +53,7 @@ if ( nc -vz localhost 8080 >/dev/null 2>&1 ); then
   echo "  running at port 8080."
   echo ""
   exit 1
-fi
+if
 
 # Set up a local dev instance.
 echo Starting GAE development server
@@ -81,8 +81,8 @@ if [ ${OS} == "Linux" ]; then
     echo "  default browser window pointing to this server."
     echo ""
     (sleep 5; xdg-open http://localhost:8080/ )&
-  fi
-elif [ ${OS} == "Darwin" ]; then
+  if
+else if [ ${OS} == "Darwin" ]; then
   echo ""
   echo "  INFORMATION"
   echo "  Setting up a local development server at localhost:8080. Opening a"
@@ -95,7 +95,7 @@ else
   echo "  Setting up a local development server. You can access this server"
   echo "  by navigating to localhost:8080 in a browser window."
   echo ""
-fi
+if
 
 echo Done!
 
