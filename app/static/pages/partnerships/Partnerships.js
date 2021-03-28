@@ -16,15 +16,22 @@ oppiaFoundationWebsite.controller(
   'PartnershipsPage', ['$scope', function($scope) {
     $scope.partnershipsActions = [{
       iconFileName: 'Form icon',
-      iconFilePath: '/assets/icons/icon_doc.png',
+      iconFilePath: '/assets/icons/icon_fill.svg',
       text: '1. Fill out the interest form'
     }, {
       iconFileName: 'Phone icon',
-      iconFilePath: '/assets/icons/icon_phone.png',
-      text: '2. Schedule a 1:1 with our Partnerships Lead'
+      iconFilePath: '/assets/icons/icon_call.svg',
+      text: '2. Schedule a 1:1 call with our Partnerships Lead'
     }, {
       iconFileName: 'Handshake icon',
-      iconFilePath: '/assets/icons/icon_shake.png',
+      iconFilePath: '/assets/icons/icon_change.svg',
       text: '3. Make change!'
     }];
+
+    $scope.partnerBenefitsTextContent = [
+      'Access to Oppia-specific tips for curriculum building and lesson usage',
+      'Personalized guidance for how to best make use of Oppia\'s lessons ' +
+      'for the learners you work with',
+      'Direct support and collaboration with one of the Oppia Partnership Leads'
+    ];
   }]);
