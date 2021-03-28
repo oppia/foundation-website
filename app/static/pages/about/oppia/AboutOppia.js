@@ -24,7 +24,7 @@ oppiaFoundationWebsite.controller('AboutOppiaPage', [
       number: '1,000,000+',
       text: 'Learners served worldwide'
     }, {
-      number: '20,000',
+      number: '2,000',
       text: 'Lessons in our virtual library'
     }, {
       number: '1',
