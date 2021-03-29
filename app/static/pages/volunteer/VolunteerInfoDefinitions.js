@@ -36,15 +36,14 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'invested in the ideals of it, which is to provide an easy to use ' +
       'learning platform in which anyone can share their knowledge about a ' +
       'subject to the world.',
-    position: 'Full-Stack Developer and QA Lead'
+    position: 'Full-Stack Developer'
   }, {
-    fullName: 'Apurv Bajaj',
-    profilePictureImageFilename: 'apurv.png',
-    professionalQuote: 'Oppia gives me an opportunity to help the world move ' +
-      'towards a better tomorrow -- a tomorrow where everyone receives ' +
-      'quality education, regardless of where they are or what traditional ' +
-      'resources they have access to.',
-    position: 'Developer Workflow Lead'
+    fullName: 'Kevin Thomas',
+    profilePictureImageFilename: 'kevin-thomas.jpg',
+    professionalQuote: 'Making quality education accessible and fun to ' +
+      'experience is something that is important to me. I enjoy contributing ' +
+      'to Oppia because it does exactly this.',
+    position: 'Full-Stack Developer'
   }, {
     fullName: 'Nithesh Hariharan',
     profilePictureImageFilename: 'nithesh.jpg',
@@ -59,14 +58,6 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'and the impact it creates makes me hopeful for the future of ' +
       'education, and I want to be a part of that change.',
     position: 'Product Manager'
-  }, {
-    fullName: 'Kevin Lee',
-    profilePictureImageFilename: 'kevin.jpg',
-    professionalQuote: 'I joined Oppia because of its innovative approach ' +
-      'to tackling the lack of education. I stayed with Oppia because of its ' +
-      'great community, great opportunities to grow, and great impact for ' +
-      'social good.',
-    position: 'Developer'
   }],
 
   learner_feedback: [{
@@ -91,16 +82,18 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
   }],
 
   lesson_creation: [{
+    fullName: 'Anubhuti Varshney',
+    profilePictureImageFilename: 'anubhuti.jpg',
+    professionalQuote: 'Volunteering with Oppia gives me immense ' +
+      'satisfaction because it aligns with a tenet I firmly believe in: ' +
+      'everyone should have access to basic education. I\'m glad to be a ' +
+      'part of the organization!',
+    position: 'Translations/Voiceovers Coordinator'
+  }, {
     fullName: 'Anmol Shukla',
     profilePictureImageFilename: 'anmol.jpg',
     professionalQuote: 'I strongly identify with Oppia\'s objective of ' +
       'providing free, enjoyable and accessible education to all.',
-    position: 'Developer and Lesson Creator'
-  }, {
-    fullName: 'Dawson Eliasen',
-    profilePictureImageFilename: 'dawson.jpg',
-    professionalQuote: 'I find it incredibly fulfilling to be a member of ' +
-      'such a rich community of learners.',
     position: 'Developer and Lesson Creator'
   }, {
     fullName: 'Joe Yannaphol',
