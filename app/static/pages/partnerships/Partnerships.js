@@ -68,11 +68,12 @@ oppiaFoundationWebsite.controller(
     }, {
       question: 'Can the Oppia lessons be used in my region?',
       answerInMarkdown: (
-        `Yes! [Oppia's classroom lessons](https://www.oppia.org/learn/math) are
+        `Yes! Oppia's [classroom lessons](https://www.oppia.org/learn/math) are
         high-quality, engaging sessions designed to be accessible and
         applicable for any region. We have tested these lessons and found them
-        to be effective in small-scale studies. Users can also create and
-        upload their own lessons to the Oppia platform.` + '\n\n' +
+        to be effective in small-scale studies. Users can also [create and
+        upload](https://www.oppia.org/community-library) their own lessons to
+        the Oppia platform.` + '\n\n' +
         `If it would help to have a mapping from your region's curriculum to
         our lessons, please let us know (and, if possible, send a copy of the
         curriculum) at
