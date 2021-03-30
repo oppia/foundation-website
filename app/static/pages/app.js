@@ -14,7 +14,7 @@
 
 var oppiaFoundationWebsite = angular.module(
   'oppiaFoundationWebsite', ['ngMaterial', 'ngMessages', 'ngRoute', 'duScroll',
-    'ui.bootstrap', 'headroom']);
+    'ui.bootstrap', 'headroom', 'ng-showdown']);
 
 for (var constantName in constants) {
   oppiaFoundationWebsite.constant(constantName, constants[constantName]);

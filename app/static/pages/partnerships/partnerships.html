@@ -48,95 +48,73 @@
               <li class="partnerships-page-welcome-text-bullet-list">
                 Created over
                 <span class="oppia-foundation-bold-text
-                             oppia-foundation-green-text">200,000</span>
+                             oppia-foundation-green-text">2,000</span>
                 personalized lessons
               </li>
             </ul>
           </md-content>
         </div>
       </md-content>
-      <img  hide-xs
-            hide-sm
-            hide-md
-            flex="45"
-            layout="column"
-           src="/assets/images/partnerships/partnerships_hero_image_desktop.jpeg"
+      <img hide-xs
+           hide-sm
+           hide-md
+           flex="45"
+           layout="column"
+           src="/assets/images/partnerships/partnerships_hero_image.png"
            alt="Partnerships page hero image - Desktop view">
       <img hide-gt-md
-           src="/assets/images/partnerships/partnerships_hero_image_mobile.jpeg"
+           src="/assets/images/partnerships/partnerships_hero_image.png"
            alt="Partnerships page hero image - Mobile view">
     </md-card-content>
   </md-card>
+
   <md-card layout-fill
            layout-align="center center"
            class="oppia-foundation-gray-background
-                  oppia-foundation-vertical-padding
-                  oppia-foundation-horizontal-padding">
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding">
     <md-card-content layout="column"
-                     layout-gt-sm="row"
-                     layout-align="center space-between"
+                     layout-align="center center"
                      class="oppia-foundation-no-padding
                             partnerships-page-display-size">
-      <md-content layout="column"
-                  layout-align="center start"
-                  class="oppia-foundation-gray-background
-                         oppia-foundation-black-text
-                         oppia-foundation-small-tablet-and-desktop-right-padding"
-                  flex-gt-sm="60">
-        <md-card-title class="oppia-foundation-no-padding-top"
-                       layout-align="center start">
-          <md-card-title-text class="oppia-foundation-green-text
-                                     partnerships-page-title-box">
+      <md-card-title class="oppia-foundation-no-padding-top"
+                     layout-align="center start">
+        <md-card-title-text class="oppia-foundation-green-text
+                                   partnerships-page-title-box">
             <h3 class="partnerships-page-content-title">
-              Benefits of being an Oppia partner
+                Benefits of being an Oppia partner
             </h3>
           </md-card-title-text>
         </md-card-title>
-        <ol class="partnerships-page-welcome-text-bullet-list">
-          <li class="partnerships-page-welcome-text-bullet-list">
-            Access to Oppia-specific curriculum building and instructions tips
-          </li>
-          <li class="partnerships-page-welcome-text-bullet-list">
-            Personalized guidance for how to best leverage our lessons for your
-            beneficiaries
-          </li>
-          <li class="partnerships-page-welcome-text-bullet-list">
-            Direct support from our Partnerships Lead
-          </li>
-        </ol>
-      </md-content>
-      <md-content class="oppia-foundation-gray-background"
-                  layout="column"
-                  layout-align="center">
-        <md-content layout="column"
-                    class="oppia-foundation-white-background
-                           oppia-foundation-no-padding
-                           partnerships-page-volunteer-testimonial-box">
-          <p>
-            <span class="oppia-foundation-green-text
-                         partnerships-page-content-title">
-              &ldquo;
-            </span>
-            Students are definitely enjoying it much more than the school
-            counterpart, and teachers seem to be learning better teaching as
-            well.
-            <span class="oppia-foundation-green-text
-                         partnerships-page-content-title">
-              &rdquo;
-            </span>
-          </p>
-          <cite class="oppia-foundation-right-align-text
-                       partnerships-page-volunteeer-credential-box">
-            <span class="oppia-foundation-bold-text">
-              - Nalin Bhardwaj
-            </span>
-            <p class="oppia-foundation-no-margin"></p>
-            <span class="oppia-foundation-italic-text">
-              Contributor
-            </span>
-          </cite>
-        </md-content>
-      </md-content>
+        <md-list flex
+                 layout-gt-sm="row"
+                 layout="column"
+                 layout-align="space-between center">
+          <md-list-item class="partnerships-page-benefits-list-item"
+                        flex="33"
+                        layout="column"
+                        layout-align="center"
+                        ng-repeat="item in partnerBenefitsTextContent track by $index">
+            <md-content class="oppia-foundation-white-background
+                               partnerships-page-benefits-text"
+                        layout="row">
+              <md-content class="oppia-foundation-white-background"
+                          flex="5"
+                          flex-gt-sm="10">
+                <p class="oppia-foundation-white-background
+                          oppia-foundation-green-text
+                          oppia-foundation-bold-text">
+                  {{$index + 1}}.
+                </p>
+              </md-content>
+              <md-content class="oppia-foundation-white-background">
+                <p>
+                  {{item}}
+                </p>
+              </md-content>
+            </md-content>
+          </md-list-item>
+        </md-list>
     </md-card-content>
   </md-card>
 
@@ -194,6 +172,73 @@
                  href="https://forms.gle/Y71U8FdhQwZpicJj8">
         Fill Out Interest Form
       </md-button>
+    </md-card-content>
+  </md-card>
+
+  <!--
+    This is a bookmark for direct deeplinking (using the URL
+    /partnerships#faqs).
+  -->
+  <a id="faqs"></a>
+
+  <md-card layout-fill
+           layout-align="center center"
+           class="oppia-foundation-gray-background
+                  oppia-foundation-horizontal-padding
+                  oppia-foundation-vertical-padding">
+    <md-card-content layout="column"
+                     layout-fill
+                     layout-align="center center"
+                     class="oppia-foundation-no-padding
+                            partnerships-page-display-size">
+      <md-card-title class="oppia-foundation-no-padding-top"
+                     layout-align="center start">
+        <md-card-title-text class="oppia-foundation-green-text
+                                   partnerships-page-title-box">
+          <h3 class="partnerships-page-content-title">
+            Frequently asked questions
+          </h3>
+        </md-card-title-text>
+      </md-card-title>
+
+      <md-list layout="column"
+               layout-align="center start"
+               layout-fill>
+        <md-list-item ng-repeat="faq in partnershipFaqs" flex="100"
+                      layout="column"
+                      layout-align="space-between center"
+                      layout-fill>
+          <md-card layout-fill>
+            <md-card-content class="oppia-foundation-white-background"
+                             layout="row"
+                             layout-align="space-between"
+                             ng-click="faqOpenStatus[$index] = !faqOpenStatus[$index]">
+              <md-content flex="90"
+                          layout="column"
+                          class="oppia-foundation-white-background">
+                <md-content class="oppia-foundation-white-background">
+                  <p class="oppia-foundation-white-background
+                            oppia-foundation-bold-text">
+                    {{faq.question}}
+                  </p>
+                </md-content>
+                <md-content ng-show="faqOpenStatus[$index]"
+                            class="oppia-foundation-white-background
+                                   partnerships-page-faq-show-hide"
+                            markdown-to-html="faq.answerInMarkdown">
+                </md-content>
+              </md-content>
+              <md-content class="oppia-foundation-no-margin
+                                 oppia-foundation-white-background">
+                <md-icon class="oppia-foundation-green-text"
+                         ng-show="!faqOpenStatus[$index]">add_circle</md-icon>
+                <md-icon class="oppia-foundation-green-text"
+                         ng-show="faqOpenStatus[$index]">remove_circle</md-icon>
+              </md-content>
+            </md-card-content>
+          </md-card>
+        </md-list-item>
+      </md-list>
     </md-card-content>
   </md-card>
 </section>
@@ -328,6 +373,60 @@
     font-family: "Capriola", "Roboto", Arial, sans-serif;
   }
   .partnerships-page-display-size {
+    margin: auto;
     max-width: 1000px;
+  }
+
+  md-list-item.partnerships-page-benefits-list-item::before,
+  md-list-item.partnerships-page-benefits-list-item::after {
+    min-height: 0;
+  }
+  md-list-item.md-no-proxy.partnerships-page-benefits-list-item {
+    padding: 16px 0px;
+  }
+  @media screen and (min-width: 600px) {
+    md-list-item.md-no-proxy.partnerships-page-benefits-list-item {
+      padding: 16px;
+      width: 90%;
+    }
+  }
+  .partnerships-page-benefits-text {
+    overflow: hidden;
+    padding: 16px;
+  }
+  @media screen and (min-width: 960px) {
+    .partnerships-page-benefits-text {
+      min-height: 235px;
+    }
+  }
+  @media screen and (min-width: 981px) and (max-width: 990px) {
+    .partnerships-page-benefits-text {
+      min-height: 260px;
+    }
+  }
+  @media screen and (min-width: 1070px) and (max-width:1579px) {
+    .partnerships-page-benefits-text {
+      min-height: 210px;
+    }
+  }
+  @media screen and (min-width: 1580px) {
+    .partnerships-page-benefits-text {
+      min-height: 250px;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .partnerships-page-benefits-text {
+      max-width: 750px;
+    }
+  }
+
+  .partnerships-page-faq-show-hide {
+    max-height: 500px;
+    overflow-y: hidden;
+    transition: all linear 0.3s;
+  }
+  .partnerships-page-faq-show-hide.ng-hide {
+    max-height: 0;
+    opacity: 0;
   }
 </style>
