@@ -1,7 +1,6 @@
 # [Oppia Foundation website](https://oppiafoundation.org/)
 
 [![CircleCI](https://circleci.com/gh/oppia/foundation-website/tree/master.svg?style=svg)](https://circleci.com/gh/oppia/foundation-website/tree/master)
-[![Build Status](https://travis-ci.org/oppia/foundation-website.svg?branch=master)](https://travis-ci.org/oppia/foundation-website)
 
 Main page of the (newly-redesigned) Oppia Foundation website.
 
