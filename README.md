@@ -4,7 +4,7 @@
 
 Main page of the (newly-redesigned) Oppia Foundation website.
 
-The site is written using AngularJS, and is built on top of Google App Engine
+The site is written using AngularJS, and is built on top of Google App Engine.
 
 ## Contributing
 
