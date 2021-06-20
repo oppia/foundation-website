@@ -67,18 +67,17 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'impact the lives of many underprivileged children by providing them ' +
       'with free quality education. I am grateful to be a part of this ' +
       'venture.',
-    position: 'Learner Feedback Program Volunteer'
+    position: 'Learner Feedback Program Volunteer, India'
   }, {
-    fullName: 'Yamama Shaka\'a',
-    profilePictureImageFilename: 'yamama.jpeg',
-    professionalQuote: 'I am really fascinated by Oppia\'s vision of ' +
-      'supporting underprivileged students around the world and helping them ' +
-      'learn math and other things in fun ways. Oppia does not only help to ' +
-      'teach students, it also helps them to love what they learn so the ' +
-      'learning process becomes more effective and fun.  Working with Oppia ' +
-      'was a really great experience for me.  I learned something new each ' +
-      'day.',
-    position: 'Former Learner Feedback Program Volunteer'
+    fullName: 'Wala Awad',
+    profilePictureImageFilename: 'wala.jpg',
+    professionalQuote: 'Oppia has given me the chance to feel that I am ' +
+      'causing a positive ripple effect around me. It is delightful to see ' +
+      'underprivileged children\'s lives improving because of Oppia\'s ' +
+      'lessons. These lessons taught them more than just mathematics in ' +
+      'joyful ways: they enhanced their confidence, technical skills, and ' +
+      'reading and writing skills!',
+    position: 'Learner Feedback Program Volunteer, Palestine'
   }],
 
   lesson_creation: [{
@@ -96,11 +95,12 @@ oppiaFoundationWebsite.constant('VOLUNTEER_INFO', {
       'providing free, enjoyable and accessible education to all.',
     position: 'Developer and Lesson Creator'
   }, {
-    fullName: 'Joe Yannaphol',
-    profilePictureImageFilename: 'joe.jpg',
-    professionalQuote: 'I\'ve witnessed education disparity in Thailand and ' +
-      'know that Oppia\'s engaging and equitable lessons can help solve this ' +
-      'problem. Every volunteer matters at Oppia.',
-    position: 'Coordinator, Lesson Creation'
+    fullName: 'Nitya Sunkad',
+    profilePictureImageFilename: 'nitya.jpg',
+    professionalQuote: 'I love to write, and volunteering with Oppia as a ' +
+      'lesson creator has enabled me to apply my writing skills towards a ' +
+      'good cause. Every child should have access to quality educational ' +
+      'topics and, with Oppia, I have the opportunity to make a difference.',
+    position: 'Math Lesson Creator'
   }]
 });
